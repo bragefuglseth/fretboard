@@ -7,8 +7,8 @@
         <object class="GtkToggleButton" id="button">
           <property name="halign">center</property>
           <property name="valign">center</property>
-          <property name="width-request">36</property>
-          <property name="height-request">36</property>
+          <property name="width-request">38</property>
+          <property name="height-request">38</property>
         </object>
       </child>
   </template>

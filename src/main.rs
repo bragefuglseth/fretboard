@@ -21,6 +21,7 @@
 mod application;
 mod chord_diagram;
 mod chord_diagram_toggle;
+mod chord_diagram_top_toggle;
 mod config;
 mod window;
 

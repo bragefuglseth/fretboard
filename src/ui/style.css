@@ -2,16 +2,33 @@
   outline: 2px solid green;
 }
 
-chord-diagram-toggle button {
+chord-diagram-toggle button, chord-diagram-top-toggle button{
   border-radius: 50%;
   background: transparent;
   padding: 0;
+  transition-duration: 150ms;
+}
+
+chord-diagram-toggle button:checked {
+  background: @accent_bg_color;
 }
 
 chord-diagram-toggle button:hover {
   background: rgba(153, 153, 153, 0.3);
 }
 
-chord-diagram-toggle button:checked {
+chord-diagram-toggle button:checked:hover {
   background: @accent_bg_color;
+}
+
+chord-diagram-top-toggle image {
+  color: rgba(153, 153, 153, 0.4);
+}
+
+chord-diagram-top-toggle image.open {
+  color: @accent_bg_color;
+}
+
+chord-diagram-top-toggle button:hover {
+  background: rgba(153, 153, 153, 0.3);
 }

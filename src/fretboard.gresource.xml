@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
+  <gresource prefix="/dev/bragefuglseth/Fretboard/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks" alias="dot-symbolic.svg">assets/icons/dot-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="circle-outline-thick-symbolic.svg">assets/icons/circle-outline-thick-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="cross-large-symbolic.svg">assets/icons/cross-large-symbolic.svg</file>
+  </gresource>
+
   <gresource prefix="/dev/bragefuglseth/Fretboard">
+    <!-- UI files -->
     <file preprocess="xml-stripblanks" alias="window.ui">ui/window.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram.ui">ui/chord-diagram.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram-toggle.ui">ui/chord-diagram-toggle.ui</file>
-
+    <file preprocess="xml-stripblanks" alias="chord-diagram-top-toggle.ui">ui/chord-diagram-top-toggle.ui</file>
     <file alias="style.css">ui/style.css</file>
-
     <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop.svg">ui/chord-diagram-backdrop.svg</file>
   </gresource>
 </gresources>

@@ -18,10 +18,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+use crate::chord_diagram::FretboardChordDiagram;
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
-use crate::chord_diagram::FretboardChordDiagram;
 
 mod imp {
     use super::*;
