@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="FretboardChordDiagramToggle" parent="GtkWidget">
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+      <child>
+        <object class="GtkToggleButton" id="button">
+          <property name="halign">center</property>
+          <property name="valign">center</property>
+          <property name="width-request">36</property>
+          <property name="height-request">36</property>
+        </object>
+      </child>
+  </template>
+</interface>

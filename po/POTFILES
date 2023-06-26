@@ -1,0 +1,4 @@
+data/dev.bragefuglseth.Fretboard.desktop.in
+data/dev.bragefuglseth.Fretboard.appdata.xml.in
+data/dev.bragefuglseth.Fretboard.gschema.xml
+src/window.ui

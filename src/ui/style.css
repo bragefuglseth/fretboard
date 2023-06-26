@@ -1,0 +1,17 @@
+.debug {
+  outline: 2px solid green;
+}
+
+chord-diagram-toggle button {
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+}
+
+chord-diagram-toggle button:hover {
+  background: rgba(153, 153, 153, 0.3);
+}
+
+chord-diagram-toggle button:checked {
+  background: @accent_bg_color;
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=fretboard
+Exec=fretboard
+Icon=dev.bragefuglseth.Fretboard
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
