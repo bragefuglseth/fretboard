@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/dev/bragefuglseth/Fretboard/icons/scalable/actions/">
-    <file preprocess="xml-stripblanks" alias="dot-symbolic.svg">assets/icons/dot-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="circle-outline-thick-symbolic.svg">assets/icons/circle-outline-thick-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="cross-large-symbolic.svg">assets/icons/cross-large-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="up-large-symbolic.svg">assets/icons/up-large-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="down-large-symbolic.svg">assets/icons/down-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="dot-symbolic.svg">ui/icons/dot-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="circle-outline-thick-symbolic.svg">ui/icons/circle-outline-thick-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="cross-large-symbolic.svg">ui/icons/cross-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="up-large-symbolic.svg">ui/icons/up-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="down-large-symbolic.svg">ui/icons/down-large-symbolic.svg</file>
   </gresource>
 
   <gresource prefix="/dev/bragefuglseth/Fretboard">
