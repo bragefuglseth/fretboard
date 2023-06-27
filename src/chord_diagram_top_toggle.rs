@@ -74,6 +74,10 @@ impl Default for FretboardChordDiagramTopToggle {
 }
 
 impl FretboardChordDiagramTopToggle {
+    pub fn new() -> Self {
+        Self::default()
+    }
+
     pub fn button(&self) -> gtk::ToggleButton {
         self.imp().button.get()
     }

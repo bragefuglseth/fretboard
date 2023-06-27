@@ -3,6 +3,10 @@ use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleS
 use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
+use std::cell::RefCell;
+
+const STRINGS: usize = 6;
+const FRETS: usize = 5;
 
 mod imp {
     use super::*;
@@ -11,79 +15,14 @@ mod imp {
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-diagram.ui")]
     pub struct FretboardChordDiagram {
         #[template_child]
+        top_row: TemplateChild<gtk::Box>,
+        #[template_child]
         diagram_backdrop: TemplateChild<gtk::Picture>,
         #[template_child]
-        string_1_top: TemplateChild<FretboardChordDiagramTopToggle>,
-        #[template_child]
-        string_2_top: TemplateChild<FretboardChordDiagramTopToggle>,
-        #[template_child]
-        string_3_top: TemplateChild<FretboardChordDiagramTopToggle>,
-        #[template_child]
-        string_4_top: TemplateChild<FretboardChordDiagramTopToggle>,
-        #[template_child]
-        string_5_top: TemplateChild<FretboardChordDiagramTopToggle>,
-        #[template_child]
-        string_6_top: TemplateChild<FretboardChordDiagramTopToggle>,
-        #[template_child]
-        string_1_fret_1: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_1_fret_2: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_1_fret_3: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_1_fret_4: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_1_fret_5: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_2_fret_1: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_2_fret_2: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_2_fret_3: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_2_fret_4: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_2_fret_5: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_3_fret_1: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_3_fret_2: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_3_fret_3: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_3_fret_4: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_3_fret_5: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_4_fret_1: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_4_fret_2: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_4_fret_3: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_4_fret_4: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_4_fret_5: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_5_fret_1: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_5_fret_2: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_5_fret_3: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_5_fret_4: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_5_fret_5: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_6_fret_1: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_6_fret_2: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_6_fret_3: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_6_fret_4: TemplateChild<FretboardChordDiagramToggle>,
-        #[template_child]
-        string_6_fret_5: TemplateChild<FretboardChordDiagramToggle>,
+        grid: TemplateChild<gtk::Grid>,
+
+        top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
+        toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
     }
 
     #[glib::object_subclass]
@@ -112,60 +51,31 @@ mod imp {
                 "/dev/bragefuglseth/Fretboard/chord-diagram-backdrop.svg",
             ));
 
-            let group_1 = self.string_1_top.button();
+            // Setup top toggles
+            for _ in 0..STRINGS {
+                let top_toggle = FretboardChordDiagramTopToggle::new();
+                self.top_row.append(&top_toggle);
+                self.top_toggles.borrow_mut().push(top_toggle);
+            }
 
-            self.string_1_fret_1.button().set_group(Some(&group_1));
-            self.string_1_fret_2.button().set_group(Some(&group_1));
-            self.string_1_fret_3.button().set_group(Some(&group_1));
-            self.string_1_fret_4.button().set_group(Some(&group_1));
-            self.string_1_fret_5.button().set_group(Some(&group_1));
+            // Setup toggles
+            for string_num in 0..STRINGS {
+                let mut current_string_toggles = Vec::new();
 
-            let group_2 = self.string_2_top.button();
+                for fret_num in 0..FRETS {
+                    let toggle = FretboardChordDiagramToggle::new();
+                    toggle.button().set_group(Some(
+                        &self.top_toggles.borrow().get(string_num).unwrap().button(),
+                    ));
 
-            self.string_2_fret_1.button().set_group(Some(&group_2));
-            self.string_2_fret_2.button().set_group(Some(&group_2));
-            self.string_2_fret_3.button().set_group(Some(&group_2));
-            self.string_2_fret_4.button().set_group(Some(&group_2));
-            self.string_2_fret_5.button().set_group(Some(&group_2));
+                    self.grid
+                        .attach(&toggle, string_num as i32, fret_num as i32, 1, 1);
 
-            let group_3 = self.string_3_top.button();
+                    current_string_toggles.push(toggle.button());
+                }
 
-            self.string_3_fret_1.button().set_group(Some(&group_3));
-            self.string_3_fret_2.button().set_group(Some(&group_3));
-            self.string_3_fret_3.button().set_group(Some(&group_3));
-            self.string_3_fret_4.button().set_group(Some(&group_3));
-            self.string_3_fret_5.button().set_group(Some(&group_3));
-
-            let group_4 = self.string_4_top.button();
-
-            self.string_4_fret_1.button().set_group(Some(&group_4));
-            self.string_4_fret_2.button().set_group(Some(&group_4));
-            self.string_4_fret_3.button().set_group(Some(&group_4));
-            self.string_4_fret_4.button().set_group(Some(&group_4));
-            self.string_4_fret_5.button().set_group(Some(&group_4));
-
-            let group_5 = self.string_5_top.button();
-
-            self.string_5_fret_1.button().set_group(Some(&group_5));
-            self.string_5_fret_2.button().set_group(Some(&group_5));
-            self.string_5_fret_3.button().set_group(Some(&group_5));
-            self.string_5_fret_4.button().set_group(Some(&group_5));
-            self.string_5_fret_5.button().set_group(Some(&group_5));
-
-            let group_6 = self.string_6_top.button();
-
-            self.string_6_fret_1.button().set_group(Some(&group_6));
-            self.string_6_fret_2.button().set_group(Some(&group_6));
-            self.string_6_fret_3.button().set_group(Some(&group_6));
-            self.string_6_fret_4.button().set_group(Some(&group_6));
-            self.string_6_fret_5.button().set_group(Some(&group_6));
-
-            self.string_1_top.set_state(TopToggleState::Open);
-            self.string_2_top.set_state(TopToggleState::Open);
-            self.string_3_top.set_state(TopToggleState::Open);
-            self.string_4_top.set_state(TopToggleState::Open);
-            self.string_5_top.set_state(TopToggleState::Open);
-            self.string_6_top.set_state(TopToggleState::Open);
+                self.toggles.borrow_mut().push(current_string_toggles);
+            }
         }
 
         fn dispose(&self) {
