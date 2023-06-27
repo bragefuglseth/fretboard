@@ -21,7 +21,7 @@ mod imp {
         #[template_child]
         grid: TemplateChild<gtk::Grid>,
 
-        pub chord: RefCell<Vec<Option<usize>>>,
+        pub chord: RefCell<[Option<usize>; 6]>,
 
         pub top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
         pub toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
@@ -34,7 +34,7 @@ mod imp {
                 diagram_backdrop: Default::default(),
                 grid: Default::default(),
 
-                chord: RefCell::new(vec![None, None, None, None, None, None]),
+                chord: RefCell::new([None, None, None, None, None, None]),
 
                 top_toggles: Default::default(),
                 toggles: Default::default(),
@@ -119,7 +119,7 @@ impl Default for FretboardChordDiagram {
 }
 
 impl FretboardChordDiagram {
-    pub fn set_chord(&self, chord: Vec<Option<usize>>) {
+    pub fn set_chord(&self, chord: [Option<usize>; 6]) {
         self.imp().chord.replace(chord);
 
         self.update_toggles();

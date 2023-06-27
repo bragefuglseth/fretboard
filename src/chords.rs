@@ -5,7 +5,7 @@ use serde::Deserialize;
 #[derive(Debug, Deserialize)]
 pub struct Chord {
     pub name: String,
-    pub positions: Vec<Vec<Option<usize>>>,
+    pub positions: Vec<[Option<usize>; 6]>,
 }
 
 pub fn load_chords() -> Vec<Chord> {

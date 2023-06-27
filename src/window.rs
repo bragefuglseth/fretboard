@@ -86,7 +86,7 @@ impl FretboardWindow {
 
         let chords = self.imp().chords.borrow();
         let a_maj = chords.iter()
-            .find(|chord| chord.name == "Dm")
+            .find(|chord| chord.name.to_lowercase() == "C".to_lowercase())
             .map(|chord| chord.positions[0].clone())
             .unwrap();
 
