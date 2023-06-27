@@ -24,6 +24,7 @@ use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use std::cell::RefCell;
+use rayon::prelude::*;
 
 mod imp {
     use super::*;
@@ -85,8 +86,8 @@ impl FretboardWindow {
         self.imp().chords.replace(load_chords());
 
         let chords = self.imp().chords.borrow();
-        let a_maj = chords.iter()
-            .find(|chord| chord.name.to_lowercase() == "C".to_lowercase())
+        let a_maj = chords.par_iter()
+            .find_first(|chord| chord.name.to_lowercase() == "C".to_lowercase())
             .map(|chord| chord.positions[0].clone())
             .unwrap();
 
