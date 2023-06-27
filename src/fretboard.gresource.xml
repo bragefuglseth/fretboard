@@ -7,12 +7,13 @@
   </gresource>
 
   <gresource prefix="/dev/bragefuglseth/Fretboard">
-    <!-- UI files -->
     <file preprocess="xml-stripblanks" alias="window.ui">ui/window.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram.ui">ui/chord-diagram.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram-toggle.ui">ui/chord-diagram-toggle.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram-top-toggle.ui">ui/chord-diagram-top-toggle.ui</file>
     <file alias="style.css">ui/style.css</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop.svg">ui/chord-diagram-backdrop.svg</file>
+
+    <file compressed="true" preprocess="json-stripblanks">chords.json</file>
   </gresource>
 </gresources>

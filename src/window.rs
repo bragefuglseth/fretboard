@@ -19,9 +19,11 @@
  */
 
 use crate::chord_diagram::FretboardChordDiagram;
+use crate::chords::{Chord, load_chords};
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
+use std::cell::RefCell;
 
 mod imp {
     use super::*;
@@ -34,6 +36,8 @@ mod imp {
         pub header_bar: TemplateChild<gtk::HeaderBar>,
         #[template_child]
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
+
+        pub chords: RefCell<Vec<Chord>>,
     }
 
     #[glib::object_subclass]
@@ -51,7 +55,13 @@ mod imp {
         }
     }
 
-    impl ObjectImpl for FretboardWindow {}
+    impl ObjectImpl for FretboardWindow {
+        fn constructed(&self) {
+            self.parent_constructed();
+
+            self.obj().setup_chords();
+        }
+    }
     impl WidgetImpl for FretboardWindow {}
     impl WindowImpl for FretboardWindow {}
     impl ApplicationWindowImpl for FretboardWindow {}
@@ -69,5 +79,17 @@ impl FretboardWindow {
         glib::Object::builder()
             .property("application", application)
             .build()
+    }
+
+    fn setup_chords(&self) {
+        self.imp().chords.replace(load_chords());
+
+        let chords = self.imp().chords.borrow();
+        let a_maj = chords.iter()
+            .find(|chord| chord.name == "Dm")
+            .map(|chord| chord.positions[0].clone())
+            .unwrap();
+
+        self.imp().chord_diagram.set_chord(a_maj);
     }
 }

@@ -11,7 +11,7 @@ const FRETS: usize = 5;
 mod imp {
     use super::*;
 
-    #[derive(Default, gtk::CompositeTemplate)]
+    #[derive(gtk::CompositeTemplate)]
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-diagram.ui")]
     pub struct FretboardChordDiagram {
         #[template_child]
@@ -25,6 +25,21 @@ mod imp {
 
         pub top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
         pub toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
+    }
+
+    impl Default for FretboardChordDiagram {
+        fn default() -> Self {
+            FretboardChordDiagram {
+                top_row: Default::default(),
+                diagram_backdrop: Default::default(),
+                grid: Default::default(),
+
+                chord: RefCell::new(vec![None, None, None, None, None, None]),
+
+                top_toggles: Default::default(),
+                toggles: Default::default(),
+            }
+        }
     }
 
     #[glib::object_subclass]
@@ -79,8 +94,6 @@ mod imp {
                 self.toggles.borrow_mut().push(current_string_toggles);
             }
 
-            self.chord.replace(vec![None, Some(3), Some(2), Some(0), Some(1), Some(0)]);
-
             self.obj().update_toggles();
         }
 
@@ -106,6 +119,12 @@ impl Default for FretboardChordDiagram {
 }
 
 impl FretboardChordDiagram {
+    pub fn set_chord(&self, chord: Vec<Option<usize>>) {
+        self.imp().chord.replace(chord);
+
+        self.update_toggles();
+    }
+
     fn update_toggles(&self) {
         let chord = self.imp().chord.borrow();
         let top_toggles = self.imp().top_toggles.borrow();
@@ -118,7 +137,12 @@ impl FretboardChordDiagram {
                 None => top_toggle.set_state(TopToggleState::Muted),
                 Some(0) => top_toggle.set_state(TopToggleState::Open),
                 Some(n) if *n < FRETS => {
-                    toggles.get(string).unwrap().get(*n - 1).unwrap().set_active(true);
+                    toggles
+                        .get(string)
+                        .unwrap()
+                        .get(*n - 1)
+                        .unwrap()
+                        .set_active(true);
                 }
                 Some(_) => top_toggle.set_state(TopToggleState::Muted),
             }
