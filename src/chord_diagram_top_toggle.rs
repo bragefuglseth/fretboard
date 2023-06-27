@@ -85,12 +85,13 @@ impl FretboardChordDiagramTopToggle {
     pub fn set_state(&self, state: TopToggleState) {
         let imp = self.imp();
 
-        imp.state.set(state);
-
         imp.button.set_active(match state {
             TopToggleState::Off => false,
             TopToggleState::Open | TopToggleState::Muted => true,
         });
+
+        imp.state.set(state);
+        self.update_icon();
 
         imp.recently_toggled.set(false);
     }
@@ -106,8 +107,8 @@ impl FretboardChordDiagramTopToggle {
                 } else {
                     imp.state.set(TopToggleState::Off);
                 }
-                imp.recently_toggled.set(true);
 
+                imp.recently_toggled.set(true);
                 toggle.update_icon();
             }));
 

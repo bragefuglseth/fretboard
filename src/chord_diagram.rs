@@ -3,7 +3,7 @@ use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleS
 use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
-use std::cell::RefCell;
+use std::cell::{Cell, RefCell};
 
 const STRINGS: usize = 6;
 const FRETS: usize = 5;
@@ -21,8 +21,10 @@ mod imp {
         #[template_child]
         grid: TemplateChild<gtk::Grid>,
 
-        top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
-        toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
+        pub chord: RefCell<Vec<Option<usize>>>,
+
+        pub top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
+        pub toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
     }
 
     #[glib::object_subclass]
@@ -76,6 +78,10 @@ mod imp {
 
                 self.toggles.borrow_mut().push(current_string_toggles);
             }
+
+            self.chord.replace(vec![None, Some(3), Some(2), Some(0), Some(1), Some(0)]);
+
+            self.obj().update_toggles();
         }
 
         fn dispose(&self) {
@@ -96,5 +102,26 @@ glib::wrapper! {
 impl Default for FretboardChordDiagram {
     fn default() -> Self {
         glib::Object::new()
+    }
+}
+
+impl FretboardChordDiagram {
+    fn update_toggles(&self) {
+        let chord = self.imp().chord.borrow();
+        let top_toggles = self.imp().top_toggles.borrow();
+        let toggles = self.imp().toggles.borrow();
+
+        for string in 0..STRINGS {
+            let top_toggle = top_toggles.get(string).unwrap();
+
+            match chord.get(string).expect("chords vec has len of 6") {
+                None => top_toggle.set_state(TopToggleState::Muted),
+                Some(0) => top_toggle.set_state(TopToggleState::Open),
+                Some(n) if *n < FRETS => {
+                    toggles.get(string).unwrap().get(*n - 1).unwrap().set_active(true);
+                }
+                Some(_) => top_toggle.set_state(TopToggleState::Muted),
+            }
+        }
     }
 }
