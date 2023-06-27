@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="FretboardBarreSpin" parent="GtkWidget">
+      <child>
+        <object class="GtkBox">
+          <property name="orientation">vertical</property>
+          <child>
+            <object class="GtkButton" id="decrement_button">
+              <property name="icon-name">up-large-symbolic</property>
+              <property name="halign">center</property>
+              <property name="valign">center</property>
+              <property name="width-request">38</property>
+              <property name="height-request">38</property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkLabel" id="label">
+              <property name="halign">center</property>
+              <property name="valign">center</property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkButton" id="increment_button">
+              <property name="icon-name">down-large-symbolic</property>
+              <property name="halign">center</property>
+              <property name="valign">center</property>
+              <property name="width-request">38</property>
+              <property name="height-request">38</property>
+            </object>
+          </child>
+        </object>
+      </child>
+  </template>
+</interface>

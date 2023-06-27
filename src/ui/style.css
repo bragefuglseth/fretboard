@@ -2,6 +2,20 @@
   outline: 2px solid green;
 }
 
+barre-spin button {
+  border-radius: 50%;
+  background: transparent;
+}
+
+barre-spin button:hover {
+  background: rgba(153, 153, 153, 0.3);
+}
+
+barre-spin label {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 chord-diagram-toggle button, chord-diagram-top-toggle button{
   border-radius: 50%;
   background: transparent;

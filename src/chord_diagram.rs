@@ -11,7 +11,8 @@ const FRETS: usize = 5;
 mod imp {
     use super::*;
 
-    #[derive(gtk::CompositeTemplate)]
+    #[derive(Default, gtk::CompositeTemplate, glib::Properties)]
+    #[properties(wrapper = super::FretboardChordDiagram)]
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-diagram.ui")]
     pub struct FretboardChordDiagram {
         #[template_child]
@@ -23,23 +24,11 @@ mod imp {
 
         pub chord: RefCell<[Option<usize>; 6]>,
 
+        #[property(get, set)]
+        pub barre: Cell<u8>,
+
         pub top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
         pub toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
-    }
-
-    impl Default for FretboardChordDiagram {
-        fn default() -> Self {
-            FretboardChordDiagram {
-                top_row: Default::default(),
-                diagram_backdrop: Default::default(),
-                grid: Default::default(),
-
-                chord: RefCell::new([None, None, None, None, None, None]),
-
-                top_toggles: Default::default(),
-                toggles: Default::default(),
-            }
-        }
     }
 
     #[glib::object_subclass]
@@ -61,6 +50,18 @@ mod imp {
     }
 
     impl ObjectImpl for FretboardChordDiagram {
+        fn properties() -> &'static [glib::ParamSpec] {
+            Self::derived_properties()
+        }
+
+        fn set_property(&self, id: usize, value: &glib::Value, pspec: &glib::ParamSpec) {
+            self.derived_set_property(id, value, pspec)
+        }
+
+        fn property(&self, id: usize, pspec: &glib::ParamSpec) -> glib::Value {
+            self.derived_property(id, pspec)
+        }
+
         fn constructed(&self) {
             self.parent_constructed();
 

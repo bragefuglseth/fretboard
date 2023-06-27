@@ -20,6 +20,7 @@
 
 use crate::chord_diagram::FretboardChordDiagram;
 use crate::chords::{Chord, load_chords};
+use crate::barre_spin::FretboardBarreSpin;
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
@@ -36,7 +37,11 @@ mod imp {
         #[template_child]
         pub header_bar: TemplateChild<gtk::HeaderBar>,
         #[template_child]
+        pub filler: TemplateChild<gtk::Revealer>,
+        #[template_child]
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
+        #[template_child]
+        pub barre_spin: TemplateChild<FretboardBarreSpin>,
 
         pub chords: RefCell<Vec<Chord>>,
     }
@@ -60,7 +65,7 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
-            self.obj().setup_chords();
+            self.obj().init();
         }
     }
     impl WidgetImpl for FretboardWindow {}
@@ -80,6 +85,21 @@ impl FretboardWindow {
         glib::Object::builder()
             .property("application", application)
             .build()
+    }
+
+    fn init(&self) {
+        // on narrow window width, hide filler
+        self.bind_property("default-width", &self.imp().filler.get(), "reveal-child")
+            .transform_to(|_, window_width: i32| if window_width > 420 { Some(true) } else { Some(false) })
+            .sync_create()
+            .build();
+
+        self.imp().chord_diagram.bind_property("barre", &self.imp().barre_spin.get(), "value")
+            .sync_create()
+            .bidirectional()
+            .build();
+
+        self.setup_chords();
     }
 
     fn setup_chords(&self) {
