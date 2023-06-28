@@ -332,7 +332,12 @@ impl FretboardChordDiagram {
     }
 }
 
+// find barre length of *adjusted* chords (lowest fingered fret is positioned @ 1)
 fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
+    if chord.iter().filter(|&&option| option == Some(1 as usize)).count().lt(&2) {
+        return 0;
+    }
+
     let mut barre_length = 0;
 
     let chord_reversed = chord.iter().rev().enumerate();
