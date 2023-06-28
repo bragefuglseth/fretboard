@@ -1,7 +1,3 @@
-// notat til brage i morgen: få den andre brytergreia til å sende ut signal om når den er endret.
-// det er ikke det samme som å finne ut barregreia til akkorden når den blir endret.
-// barrelengden burde kanskje også separeres.
-
 use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
 use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use adw::subclass::prelude::*;
@@ -128,20 +124,50 @@ mod imp {
                 self.toggles.borrow_mut().push(current_string_toggles);
             }
 
-            // obj.connect_barre_notify(glib::clone!(@weak obj => move |_| {
-            //     obj.update_chord();
-            // }));
+            style_manager.bind_property("dark", &self.barre_2_image.get(), "file")
+            .transform_to(|_, is_dark| {
+                let suffix = if is_dark { "dark" } else { "light" };
+                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg");
+                Some(gio::File::for_uri(&uri))
+            })
+            .sync_create()
+            .build();
 
-            self.barre_2_image
-                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-2-light.svg"));
-            self.barre_3_image
-                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-3-light.svg"));
-            self.barre_4_image
-                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-4-light.svg"));
-            self.barre_5_image
-                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-5-light.svg"));
-            self.barre_6_image
-                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-6-light.svg"));
+            style_manager.bind_property("dark", &self.barre_3_image.get(), "file")
+            .transform_to(|_, is_dark| {
+                let suffix = if is_dark { "dark" } else { "light" };
+                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg");
+                Some(gio::File::for_uri(&uri))
+            })
+            .sync_create()
+            .build();
+
+            style_manager.bind_property("dark", &self.barre_4_image.get(), "file")
+            .transform_to(|_, is_dark| {
+                let suffix = if is_dark { "dark" } else { "light" };
+                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg");
+                Some(gio::File::for_uri(&uri))
+            })
+            .sync_create()
+            .build();
+
+            style_manager.bind_property("dark", &self.barre_5_image.get(), "file")
+            .transform_to(|_, is_dark| {
+                let suffix = if is_dark { "dark" } else { "light" };
+                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg");
+                Some(gio::File::for_uri(&uri))
+            })
+            .sync_create()
+            .build();
+
+            style_manager.bind_property("dark", &self.barre_6_image.get(), "file")
+            .transform_to(|_, is_dark| {
+                let suffix = if is_dark { "dark" } else { "light" };
+                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg");
+                Some(gio::File::for_uri(&uri))
+            })
+            .sync_create()
+            .build();
 
             self.obj().update_visuals();
         }

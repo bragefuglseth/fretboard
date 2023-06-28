@@ -24,6 +24,11 @@
     <file preprocess="xml-stripblanks" alias="barre-4-light.svg">ui/assets/barre-4-light.svg</file>
     <file preprocess="xml-stripblanks" alias="barre-5-light.svg">ui/assets/barre-5-light.svg</file>
     <file preprocess="xml-stripblanks" alias="barre-6-light.svg">ui/assets/barre-6-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-2-dark.svg">ui/assets/barre-2-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-3-dark.svg">ui/assets/barre-3-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-4-dark.svg">ui/assets/barre-4-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-5-dark.svg">ui/assets/barre-5-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-6-dark.svg">ui/assets/barre-6-dark.svg</file>
 
     <file compressed="true" preprocess="json-stripblanks">chords.json</file>
   </gresource>

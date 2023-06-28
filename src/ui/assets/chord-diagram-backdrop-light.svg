@@ -25,9 +25,14 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="2.0000001"
-     inkscape:cx="7.9999998"
-     inkscape:cy="226.49999"
-     inkscape:current-layer="layer1">
+     inkscape:cx="90.249995"
+     inkscape:cy="147.49999"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="grid2510"
@@ -80,22 +85,22 @@
        id="path6803"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 1,63 H 261"
        id="path5772"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 1,125 H 261"
        id="path6233"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 1,187 H 261"
        id="path6235"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 1,249 H 261"
        id="path6237"
        sodipodi:nodetypes="cc" />
