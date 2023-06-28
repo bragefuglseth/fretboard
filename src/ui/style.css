@@ -46,3 +46,11 @@ chord-diagram-top-toggle image.open {
 chord-diagram-top-toggle button:hover {
   background: rgba(153, 153, 153, 0.3);
 }
+
+.fretboard-chord-entry {
+  background: transparent;
+  font-size: 2rem;
+  padding: 0.2em;
+  font-weight: bold;
+  border-radius: 12px;
+}

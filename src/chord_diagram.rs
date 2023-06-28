@@ -124,50 +124,60 @@ mod imp {
                 self.toggles.borrow_mut().push(current_string_toggles);
             }
 
-            style_manager.bind_property("dark", &self.barre_2_image.get(), "file")
-            .transform_to(|_, is_dark| {
-                let suffix = if is_dark { "dark" } else { "light" };
-                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg");
-                Some(gio::File::for_uri(&uri))
-            })
-            .sync_create()
-            .build();
+            style_manager
+                .bind_property("dark", &self.barre_2_image.get(), "file")
+                .transform_to(|_, is_dark| {
+                    let suffix = if is_dark { "dark" } else { "light" };
+                    let uri =
+                        format!("resource:///dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg");
+                    Some(gio::File::for_uri(&uri))
+                })
+                .sync_create()
+                .build();
 
-            style_manager.bind_property("dark", &self.barre_3_image.get(), "file")
-            .transform_to(|_, is_dark| {
-                let suffix = if is_dark { "dark" } else { "light" };
-                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg");
-                Some(gio::File::for_uri(&uri))
-            })
-            .sync_create()
-            .build();
+            style_manager
+                .bind_property("dark", &self.barre_3_image.get(), "file")
+                .transform_to(|_, is_dark| {
+                    let suffix = if is_dark { "dark" } else { "light" };
+                    let uri =
+                        format!("resource:///dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg");
+                    Some(gio::File::for_uri(&uri))
+                })
+                .sync_create()
+                .build();
 
-            style_manager.bind_property("dark", &self.barre_4_image.get(), "file")
-            .transform_to(|_, is_dark| {
-                let suffix = if is_dark { "dark" } else { "light" };
-                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg");
-                Some(gio::File::for_uri(&uri))
-            })
-            .sync_create()
-            .build();
+            style_manager
+                .bind_property("dark", &self.barre_4_image.get(), "file")
+                .transform_to(|_, is_dark| {
+                    let suffix = if is_dark { "dark" } else { "light" };
+                    let uri =
+                        format!("resource:///dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg");
+                    Some(gio::File::for_uri(&uri))
+                })
+                .sync_create()
+                .build();
 
-            style_manager.bind_property("dark", &self.barre_5_image.get(), "file")
-            .transform_to(|_, is_dark| {
-                let suffix = if is_dark { "dark" } else { "light" };
-                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg");
-                Some(gio::File::for_uri(&uri))
-            })
-            .sync_create()
-            .build();
+            style_manager
+                .bind_property("dark", &self.barre_5_image.get(), "file")
+                .transform_to(|_, is_dark| {
+                    let suffix = if is_dark { "dark" } else { "light" };
+                    let uri =
+                        format!("resource:///dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg");
+                    Some(gio::File::for_uri(&uri))
+                })
+                .sync_create()
+                .build();
 
-            style_manager.bind_property("dark", &self.barre_6_image.get(), "file")
-            .transform_to(|_, is_dark| {
-                let suffix = if is_dark { "dark" } else { "light" };
-                let uri = format!("resource:///dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg");
-                Some(gio::File::for_uri(&uri))
-            })
-            .sync_create()
-            .build();
+            style_manager
+                .bind_property("dark", &self.barre_6_image.get(), "file")
+                .transform_to(|_, is_dark| {
+                    let suffix = if is_dark { "dark" } else { "light" };
+                    let uri =
+                        format!("resource:///dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg");
+                    Some(gio::File::for_uri(&uri))
+                })
+                .sync_create()
+                .build();
 
             self.obj().update_visuals();
         }
@@ -239,7 +249,8 @@ impl FretboardChordDiagram {
 
         let difference = find_lowest_non_zero_fret(chord).unwrap_or(0) as i32 - new_pos as i32;
 
-        let new_chord: [Option<usize>; 6] = chord.iter()
+        let new_chord: [Option<usize>; 6] = chord
+            .iter()
             .map(|&val| {
                 val.map(|note| {
                     if note == 0 {
@@ -316,10 +327,7 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
         }
 
         let next = chord_reversed_next.next();
-        if next == Some(&Some(0 as usize))
-            || next == Some(&None)
-            || val == &Some(0 as usize)
-        {
+        if next == Some(&Some(0 as usize)) || next == Some(&None) || val == &Some(0 as usize) {
             break;
         }
     }
@@ -328,7 +336,12 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
 }
 
 fn find_lowest_non_zero_fret(chord: [Option<usize>; 6]) -> Option<u8> {
-    chord.iter().filter_map(|&option| option).filter(|&val| val > 0).min().map(|val| val as u8)
+    chord
+        .iter()
+        .filter_map(|&option| option)
+        .filter(|&val| val > 0)
+        .min()
+        .map(|val| val as u8)
 }
 
 fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] {
@@ -339,11 +352,7 @@ fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] {
                 if value == 0 {
                     0
                 } else {
-                    value - (if barre == 0 {
-                        barre
-                    } else {
-                        barre - 1
-                    }) as usize
+                    value - (if barre == 0 { barre } else { barre - 1 }) as usize
                 }
             })
         })

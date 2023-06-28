@@ -28,6 +28,7 @@
             <property name="vexpand">true</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
+            <property name="spacing">24</property>
             <child>
               <object class="GtkBox">
                 <child>
@@ -53,6 +54,18 @@
                     <property name="margin-top">17</property>
                   </object>
                 </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entry">
+                <property name="width-request">262</property>
+                <property name="hexpand">false</property>
+                <property name="halign">center</property>
+                <property name="xalign">0.5</property>
+                <property name="placeholder-text">Chord Name</property>
+                <style>
+                  <class name="fretboard-chord-entry" />
+                </style>
               </object>
             </child>
           </object>

@@ -1,9 +1,9 @@
 use adw::subclass::prelude::*;
+use glib::subclass::Signal;
 use gtk::glib;
 use gtk::prelude::*;
-use std::cell::Cell;
 use once_cell::sync::Lazy;
-use glib::subclass::Signal;
+use std::cell::Cell;
 
 const MIN_VALUE: u8 = 1;
 const MAX_VALUE: u8 = 12;

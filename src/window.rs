@@ -22,11 +22,13 @@ use crate::barre_spin::FretboardBarreSpin;
 use crate::chord_diagram::FretboardChordDiagram;
 use crate::chords::{load_chords, Chord};
 use adw::subclass::prelude::*;
+use glib::closure_local;
 use gtk::prelude::*;
 use gtk::{gio, glib};
-use glib::closure_local;
 use rayon::prelude::*;
 use std::cell::RefCell;
+
+const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
 
 mod imp {
     use super::*;
@@ -43,6 +45,8 @@ mod imp {
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
         #[template_child]
         pub barre_spin: TemplateChild<FretboardBarreSpin>,
+        #[template_child]
+        pub entry: TemplateChild<gtk::Entry>,
 
         pub chords: RefCell<Vec<Chord>>,
     }
@@ -104,10 +108,6 @@ impl FretboardWindow {
         let barre_spin = self.imp().barre_spin.get();
         let chord_diagram = self.imp().chord_diagram.get();
 
-        // barre_spin.connect_value_notify(glib::clone!(@weak chord_diagram => move |val| {
-        //     chord_diagram.update_neck_position(val);
-        // }));
-
         barre_spin.connect_closure(
             "user-changed-value",
             false,
@@ -116,18 +116,25 @@ impl FretboardWindow {
             }),
         );
 
-        self.setup_chords();
-    }
-
-    fn setup_chords(&self) {
+        // load chords
         self.imp().chords.replace(load_chords());
 
+        self.imp()
+            .entry
+            .connect_changed(glib::clone!(@weak self as win => move |entry| {
+                win.load_chord_from_name(&entry.text());
+            }));
+
+        self.load_chord_from_name("C");
+    }
+
+    fn load_chord_from_name(&self, name: &str) {
         let chords = self.imp().chords.borrow();
         let chord = chords
             .par_iter()
-            .find_first(|chord| chord.name.to_lowercase() == "F".to_lowercase())
+            .find_first(|chord| chord.name.to_lowercase() == name.to_lowercase())
             .map(|chord| chord.positions[0].clone())
-            .unwrap();
+            .unwrap_or(EMPTY_CHORD);
 
         self.imp().chord_diagram.set_chord(chord);
         self.imp()
