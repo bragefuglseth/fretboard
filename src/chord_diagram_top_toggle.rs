@@ -96,6 +96,10 @@ impl FretboardChordDiagramTopToggle {
         imp.recently_toggled.set(false);
     }
 
+    pub fn state(&self) -> TopToggleState {
+        self.imp().state.get()
+    }
+
     fn setup_callbacks(&self) {
         let imp = self.imp();
 

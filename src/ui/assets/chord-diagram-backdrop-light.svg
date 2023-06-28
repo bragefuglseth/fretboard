@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="262"
+   height="312"
+   viewBox="0 0 262 312"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="chord-diagram-backdrop-light.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="true"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#181818"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="7.9999998"
+     inkscape:cy="226.49999"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2510"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16518">
+      <path
+         style="color:#000000;fill:#999999;fill-opacity:0.4;-inkscape-stroke:none"
+         d="m 13,2 h 236 c 6.11129,0 11,4.8887089 11,11 v 286 c 0,6.11129 -4.88871,11 -11,11 H 13 C 6.8887089,310 2,305.11129 2,299 V 13 C 2,6.8887089 6.8887089,2 13,2 Z"
+         id="path16520"
+         sodipodi:nodetypes="sssssssss" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2564"
+       width="260"
+       height="310"
+       x="1"
+       y="1"
+       rx="12"
+       ry="12" />
+    <path
+       style="fill:none;stroke:#d9d9d9;stroke-width:2;stroke-opacity:1"
+       d="M 53,311 V 1"
+       id="path6797"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#d9d9d9;stroke-width:2;stroke-opacity:1"
+       d="M 105,311 V 1"
+       id="path6799"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#d9d9d9;stroke-width:2;stroke-opacity:1"
+       d="M 157,311 V 1"
+       id="path6801"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#d9d9d9;stroke-width:2;stroke-opacity:1"
+       d="M 209,311 V 1"
+       id="path6803"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1,63 H 261"
+       id="path5772"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1,125 H 261"
+       id="path6233"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1,187 H 261"
+       id="path6235"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#999999;fill-opacity:0.4;stroke:#d9d9d9;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1,249 H 261"
+       id="path6237"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

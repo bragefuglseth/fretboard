@@ -18,14 +18,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-use crate::chord_diagram::FretboardChordDiagram;
-use crate::chords::{Chord, load_chords};
 use crate::barre_spin::FretboardBarreSpin;
+use crate::chord_diagram::FretboardChordDiagram;
+use crate::chords::{load_chords, Chord};
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
-use std::cell::RefCell;
 use rayon::prelude::*;
+use std::cell::RefCell;
 
 mod imp {
     use super::*;
@@ -90,14 +90,22 @@ impl FretboardWindow {
     fn init(&self) {
         // on narrow window width, hide filler
         self.bind_property("default-width", &self.imp().filler.get(), "reveal-child")
-            .transform_to(|_, window_width: i32| if window_width > 420 { Some(true) } else { Some(false) })
+            .transform_to(|_, window_width: i32| {
+                if window_width > 420 {
+                    Some(true)
+                } else {
+                    Some(false)
+                }
+            })
             .sync_create()
             .build();
 
-        self.imp().chord_diagram.bind_property("barre", &self.imp().barre_spin.get(), "value")
-            .sync_create()
-            .bidirectional()
-            .build();
+        let barre_spin = self.imp().barre_spin.get();
+        let chord_diagram = self.imp().chord_diagram.get();
+
+        // barre_spin.connect_value_notify(glib::clone!(@weak chord_diagram => move |val| {
+        //     chord_diagram.update_neck_position(val);
+        // }));
 
         self.setup_chords();
     }
@@ -106,11 +114,15 @@ impl FretboardWindow {
         self.imp().chords.replace(load_chords());
 
         let chords = self.imp().chords.borrow();
-        let a_maj = chords.par_iter()
-            .find_first(|chord| chord.name.to_lowercase() == "C".to_lowercase())
+        let chord = chords
+            .par_iter()
+            .find_first(|chord| chord.name.to_lowercase() == "F".to_lowercase())
             .map(|chord| chord.positions[0].clone())
             .unwrap();
 
-        self.imp().chord_diagram.set_chord(a_maj);
+        self.imp().chord_diagram.set_chord(chord);
+        self.imp()
+            .barre_spin
+            .set_value(self.imp().chord_diagram.neck_position());
     }
 }

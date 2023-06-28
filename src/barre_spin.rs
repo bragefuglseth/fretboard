@@ -3,7 +3,7 @@ use gtk::glib;
 use gtk::prelude::*;
 use std::cell::Cell;
 
-const MIN_VALUE: u8 = 0;
+const MIN_VALUE: u8 = 1;
 const MAX_VALUE: u8 = 12;
 
 mod imp {
@@ -20,7 +20,7 @@ mod imp {
         #[template_child]
         pub label: TemplateChild<gtk::Label>,
 
-        #[property(get, set, minimum = MIN_VALUE, maximum = MAX_VALUE)]
+        #[property(get, set, minimum = MIN_VALUE, maximum = MAX_VALUE, default = MIN_VALUE)]
         pub value: Cell<u8>,
     }
 
@@ -94,21 +94,37 @@ impl FretboardBarreSpin {
             .build();
 
         self.bind_property("value", &self.imp().increment_button.get(), "sensitive")
-            .transform_to(|_, value: u8| if value < MAX_VALUE { Some(true) } else { Some(false) })
+            .transform_to(|_, value: u8| {
+                if value < MAX_VALUE {
+                    Some(true)
+                } else {
+                    Some(false)
+                }
+            })
             .sync_create()
             .build();
 
         self.bind_property("value", &self.imp().decrement_button.get(), "sensitive")
-            .transform_to(|_, value: u8| if value > MIN_VALUE { Some(true) } else { Some(false) })
+            .transform_to(|_, value: u8| {
+                if value > MIN_VALUE {
+                    Some(true)
+                } else {
+                    Some(false)
+                }
+            })
             .sync_create()
             .build();
 
-        self.imp().increment_button.connect_clicked(glib::clone!(@weak self as spin => move |_| {
-            spin.set_value(spin.value() + 1);
-        }));
+        self.imp()
+            .increment_button
+            .connect_clicked(glib::clone!(@weak self as spin => move |_| {
+                spin.set_value(spin.value() + 1);
+            }));
 
-        self.imp().decrement_button.connect_clicked(glib::clone!(@weak self as spin => move |_| {
-            spin.set_value(spin.value() - 1);
-        }));
+        self.imp()
+            .decrement_button
+            .connect_clicked(glib::clone!(@weak self as spin => move |_| {
+                spin.set_value(spin.value() - 1);
+            }));
     }
 }

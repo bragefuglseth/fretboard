@@ -14,8 +14,16 @@
     <file preprocess="xml-stripblanks" alias="chord-diagram-toggle.ui">ui/chord-diagram-toggle.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram-top-toggle.ui">ui/chord-diagram-top-toggle.ui</file>
     <file preprocess="xml-stripblanks" alias="barre-spin.ui">ui/barre-spin.ui</file>
+
     <file alias="style.css">ui/style.css</file>
-    <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop.svg">ui/chord-diagram-backdrop.svg</file>
+
+    <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop-light.svg">ui/assets/chord-diagram-backdrop-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop-dark.svg">ui/assets/chord-diagram-backdrop-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-2-light.svg">ui/assets/barre-2-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-3-light.svg">ui/assets/barre-3-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-4-light.svg">ui/assets/barre-4-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-5-light.svg">ui/assets/barre-5-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-6-light.svg">ui/assets/barre-6-light.svg</file>
 
     <file compressed="true" preprocess="json-stripblanks">chords.json</file>
   </gresource>

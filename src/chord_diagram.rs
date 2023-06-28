@@ -1,8 +1,12 @@
+// notat til brage i morgen: få den andre brytergreia til å sende ut signal om når den er endret.
+// det er ikke det samme som å finne ut barregreia til akkorden når den blir endret.
+// barrelengden burde kanskje også separeres.
+
 use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
 use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use adw::subclass::prelude::*;
-use gtk::glib;
 use gtk::prelude::*;
+use gtk::{gio, glib};
 use std::cell::{Cell, RefCell};
 
 const STRINGS: usize = 6;
@@ -11,21 +15,33 @@ const FRETS: usize = 5;
 mod imp {
     use super::*;
 
-    #[derive(Default, gtk::CompositeTemplate, glib::Properties)]
-    #[properties(wrapper = super::FretboardChordDiagram)]
+    #[derive(Default, glib::Properties, gtk::CompositeTemplate)]
+    #[properties( wrapper = super::FretboardChordDiagram )]
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-diagram.ui")]
     pub struct FretboardChordDiagram {
         #[template_child]
-        top_row: TemplateChild<gtk::Box>,
+        pub top_row: TemplateChild<gtk::Box>,
         #[template_child]
-        diagram_backdrop: TemplateChild<gtk::Picture>,
+        pub diagram_backdrop: TemplateChild<gtk::Picture>,
         #[template_child]
-        grid: TemplateChild<gtk::Grid>,
+        pub barre_overlay_stack: TemplateChild<gtk::Stack>,
+        #[template_child]
+        pub barre_2_image: TemplateChild<gtk::Picture>,
+        #[template_child]
+        pub barre_3_image: TemplateChild<gtk::Picture>,
+        #[template_child]
+        pub barre_4_image: TemplateChild<gtk::Picture>,
+        #[template_child]
+        pub barre_5_image: TemplateChild<gtk::Picture>,
+        #[template_child]
+        pub barre_6_image: TemplateChild<gtk::Picture>,
+        #[template_child]
+        pub grid: TemplateChild<gtk::Grid>,
 
-        pub chord: RefCell<[Option<usize>; 6]>,
+        pub chord: Cell<[Option<usize>; 6]>,
 
         #[property(get, set)]
-        pub barre: Cell<u8>,
+        pub neck_position: Cell<u8>,
 
         pub top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
         pub toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
@@ -65,13 +81,25 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
-            self.diagram_backdrop.set_resource(Some(
-                "/dev/bragefuglseth/Fretboard/chord-diagram-backdrop.svg",
-            ));
+            let style_manager = adw::StyleManager::default();
+
+            style_manager.bind_property("dark", &self.diagram_backdrop.get(), "file")
+                .transform_to(|_, style_is_dark| {
+                    let suffix = if style_is_dark { "dark" } else { "light" };
+                    let uri = format!("resource:///dev/bragefuglseth/Fretboard/chord-diagram-backdrop-{suffix}.svg");
+                    Some(gio::File::for_uri(&uri))
+                })
+                .sync_create()
+                .build();
+
+            let obj = self.obj();
 
             // Setup top toggles
             for _ in 0..STRINGS {
                 let top_toggle = FretboardChordDiagramTopToggle::new();
+                top_toggle
+                    .button()
+                    .connect_clicked(glib::clone!(@weak obj => move |_| obj.update_chord()));
                 self.top_row.append(&top_toggle);
                 self.top_toggles.borrow_mut().push(top_toggle);
             }
@@ -82,6 +110,11 @@ mod imp {
 
                 for fret_num in 0..FRETS {
                     let toggle = FretboardChordDiagramToggle::new();
+                    toggle
+                        .button()
+                        .connect_clicked(glib::clone!(@weak obj => move |_| {
+                            obj.update_chord()
+                        }));
                     toggle.button().set_group(Some(
                         &self.top_toggles.borrow().get(string_num).unwrap().button(),
                     ));
@@ -95,7 +128,22 @@ mod imp {
                 self.toggles.borrow_mut().push(current_string_toggles);
             }
 
-            self.obj().update_toggles();
+            // obj.connect_barre_notify(glib::clone!(@weak obj => move |_| {
+            //     obj.update_chord();
+            // }));
+
+            self.barre_2_image
+                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-2-light.svg"));
+            self.barre_3_image
+                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-3-light.svg"));
+            self.barre_4_image
+                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-4-light.svg"));
+            self.barre_5_image
+                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-5-light.svg"));
+            self.barre_6_image
+                .set_resource(Some("/dev/bragefuglseth/Fretboard/barre-6-light.svg"));
+
+            self.obj().update_visuals();
         }
 
         fn dispose(&self) {
@@ -121,20 +169,60 @@ impl Default for FretboardChordDiagram {
 
 impl FretboardChordDiagram {
     pub fn set_chord(&self, chord: [Option<usize>; 6]) {
-        self.imp().chord.replace(chord);
+        self.imp().chord.set(chord);
 
-        self.update_toggles();
+        let barre = find_barre(chord);
+        self.set_neck_position(if barre == 0 { 1 } else { barre });
+
+        self.update_visuals();
+        self.update_barre_visuals();
     }
 
-    fn update_toggles(&self) {
-        let chord = self.imp().chord.borrow();
+    fn update_chord(&self) {
         let top_toggles = self.imp().top_toggles.borrow();
         let toggles = self.imp().toggles.borrow();
+
+        let mut chord: [Option<usize>; 6] = [None; 6];
+
+        for i in 0..STRINGS {
+            let top_toggle = top_toggles.get(i).unwrap();
+
+            if matches!(top_toggle.state(), TopToggleState::Muted) {
+                *chord.get_mut(i).unwrap() = None;
+            } else if matches!(top_toggle.state(), TopToggleState::Open) {
+                *chord.get_mut(i).unwrap() = Some(0);
+            } else {
+                let pos = toggles
+                    .get(i)
+                    .unwrap()
+                    .iter()
+                    .position(|toggle| toggle.is_active())
+                    .unwrap()
+                    + 1;
+                *chord.get_mut(i).unwrap() = Some(pos);
+            }
+        }
+
+        self.imp().chord.set(chord);
+        self.update_barre_visuals();
+    }
+
+    fn update_neck_position(&self, new_pos: u8) {}
+
+    fn update_visuals(&self) {
+        let chord = self.imp().chord.get();
+        let barre = find_barre(chord);
+
+        let top_toggles = self.imp().top_toggles.borrow();
+        let toggles = self.imp().toggles.borrow();
+
+        // Adjust chord so it's positioned relative to the barre on the fretboard
+        let adjusted_chord = adjust_chord(chord, barre);
 
         for string in 0..STRINGS {
             let top_toggle = top_toggles.get(string).unwrap();
 
-            match chord.get(string).expect("chords vec has len of 6") {
+            match adjusted_chord.get(string).expect("chord has len of 6") {
                 None => top_toggle.set_state(TopToggleState::Muted),
                 Some(0) => top_toggle.set_state(TopToggleState::Open),
                 Some(n) if *n < FRETS => {
@@ -149,4 +237,56 @@ impl FretboardChordDiagram {
             }
         }
     }
+
+    fn update_barre_visuals(&self) {
+        let chord = self.imp().chord.get();
+
+        let chord = adjust_chord(chord, self.neck_position());
+
+        let mut barre_length = 0;
+
+        let chord_reversed = chord.iter().rev().enumerate();
+
+        let mut chord_reversed_next = chord.iter().rev();
+        chord_reversed_next.next();
+
+        for (num, val) in chord_reversed {
+            if val == &Some(1 as usize) {
+                barre_length = num + 1;
+            }
+
+            let next = chord_reversed_next.next();
+            if next == Some(&Some(0 as usize))
+                || next == Some(&None)
+                || val == &Some(0 as usize)
+            {
+                break;
+            }
+        }
+
+        let barre_stack = self.imp().barre_overlay_stack.get();
+        barre_stack.set_visible_child_name(match barre_length {
+            2 => "barre-2",
+            3 => "barre-3",
+            4 => "barre-4",
+            5 => "barre-5",
+            6 => "barre-6",
+            _ => "empty",
+        });
+    }
+}
+
+fn find_barre(chord: [Option<usize>; 6]) -> u8 {
+    chord.iter().filter_map(|&option| option).min().unwrap_or(0) as u8
+}
+
+fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] {
+    chord
+        .iter()
+        .map(|option| {
+            option.map(|value| value - (if barre == 0 { barre } else { barre - 1 }) as usize)
+        })
+        .collect::<Vec<Option<usize>>>()
+        .try_into()
+        .unwrap()
 }
