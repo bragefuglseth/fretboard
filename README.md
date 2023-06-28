@@ -7,5 +7,6 @@ Mostly functional at this point, but there's a few things that need to be ironed
 - Tooltips, labels and translation infrastructure
 - App metadata
 - Weird flickering sometimes when changing chords
+- Other fun bugs (mostly related to the chord diagram editing)
 
 ![screenshot](/data/screenshots/screenshot-1.png)
