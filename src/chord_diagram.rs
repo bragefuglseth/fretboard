@@ -1,11 +1,11 @@
 use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
 use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use adw::subclass::prelude::*;
+use glib::subclass::Signal;
 use gtk::prelude::*;
 use gtk::{gio, glib};
-use std::cell::{Cell, RefCell};
-use glib::subclass::Signal;
 use once_cell::sync::Lazy;
+use std::cell::{Cell, RefCell};
 
 const STRINGS: usize = 6;
 const FRETS: usize = 5;
@@ -65,9 +65,8 @@ mod imp {
 
     impl ObjectImpl for FretboardChordDiagram {
         fn signals() -> &'static [Signal] {
-            static SIGNALS: Lazy<Vec<glib::subclass::Signal>> = Lazy::new(|| {
-                vec![Signal::builder("user-changed-chord").build()]
-            });
+            static SIGNALS: Lazy<Vec<glib::subclass::Signal>> =
+                Lazy::new(|| vec![Signal::builder("user-changed-chord").build()]);
             SIGNALS.as_ref()
         }
 
@@ -224,13 +223,11 @@ impl FretboardChordDiagram {
 
         let adjusted_chord = adjust_chord(chord, find_lowest_non_zero_fret(chord).unwrap_or(0));
 
-        self.set_neck_position(
-            if find_barre_length(adjusted_chord) > 0 {
-                lowest_fret.unwrap_or(1)
-            } else {
-                1
-            }
-        );
+        self.set_neck_position(if find_barre_length(adjusted_chord) > 0 {
+            lowest_fret.unwrap_or(1)
+        } else {
+            1
+        });
 
         self.update_visuals();
         self.update_barre_visuals();
@@ -349,7 +346,11 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
         }
 
         let next = chord_reversed_next.next();
-        if next == Some(&Some(0 as usize)) || next == Some(&None) || val == &Some(0 as usize) || val == &None {
+        if next == Some(&Some(0 as usize))
+            || next == Some(&None)
+            || val == &Some(0 as usize)
+            || val == &None
+        {
             break;
         }
     }

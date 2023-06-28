@@ -160,7 +160,10 @@ impl FretboardWindow {
         let name = chords
             .par_iter()
             .find_first(|chord| {
-                chord.positions.par_iter().any(|&position| position == query_chord)
+                chord
+                    .positions
+                    .par_iter()
+                    .any(|&position| position == query_chord)
             })
             .map(|chord| chord.name.to_owned())
             .unwrap_or(String::from(""));
