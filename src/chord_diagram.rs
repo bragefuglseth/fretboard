@@ -349,7 +349,7 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
         }
 
         let next = chord_reversed_next.next();
-        if next == Some(&Some(0 as usize)) || next == Some(&None) || val == &Some(0 as usize) {
+        if next == Some(&Some(0 as usize)) || next == Some(&None) || val == &Some(0 as usize) || val == &None {
             break;
         }
     }
