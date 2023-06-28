@@ -105,8 +105,20 @@ impl FretboardWindow {
             .sync_create()
             .build();
 
-        let barre_spin = self.imp().barre_spin.get();
         let chord_diagram = self.imp().chord_diagram.get();
+
+        let win: FretboardWindow = self.clone();
+
+        chord_diagram.connect_closure(
+            "user-changed-chord",
+            false,
+            closure_local!(move |diagram: FretboardChordDiagram| {
+                let chord = diagram.imp().chord.get();
+                win.lookup_chord_name(chord);
+            }),
+        );
+
+        let barre_spin = self.imp().barre_spin.get();
 
         barre_spin.connect_closure(
             "user-changed-value",
@@ -126,6 +138,7 @@ impl FretboardWindow {
             }));
 
         self.load_chord_from_name("C");
+        self.lookup_chord_name(self.imp().chord_diagram.get().imp().chord.get());
     }
 
     fn load_chord_from_name(&self, name: &str) {
@@ -140,5 +153,18 @@ impl FretboardWindow {
         self.imp()
             .barre_spin
             .set_value(self.imp().chord_diagram.neck_position());
+    }
+
+    fn lookup_chord_name(&self, query_chord: [Option<usize>; 6]) {
+        let chords = self.imp().chords.borrow();
+        let name = chords
+            .par_iter()
+            .find_first(|chord| {
+                chord.positions.par_iter().any(|&position| position == query_chord)
+            })
+            .map(|chord| chord.name.to_owned())
+            .unwrap_or(String::from(""));
+
+        self.imp().entry.set_text(&name);
     }
 }

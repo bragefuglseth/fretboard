@@ -4,6 +4,8 @@ use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use std::cell::{Cell, RefCell};
+use glib::subclass::Signal;
+use once_cell::sync::Lazy;
 
 const STRINGS: usize = 6;
 const FRETS: usize = 5;
@@ -62,6 +64,13 @@ mod imp {
     }
 
     impl ObjectImpl for FretboardChordDiagram {
+        fn signals() -> &'static [Signal] {
+            static SIGNALS: Lazy<Vec<glib::subclass::Signal>> = Lazy::new(|| {
+                vec![Signal::builder("user-changed-chord").build()]
+            });
+            SIGNALS.as_ref()
+        }
+
         fn properties() -> &'static [glib::ParamSpec] {
             Self::derived_properties()
         }
@@ -95,7 +104,10 @@ mod imp {
                 let top_toggle = FretboardChordDiagramTopToggle::new();
                 top_toggle
                     .button()
-                    .connect_clicked(glib::clone!(@weak obj => move |_| obj.update_chord()));
+                    .connect_clicked(glib::clone!(@weak obj => move |_| {
+                        obj.update_chord();
+                        obj.emit_by_name::<()>("user-changed-chord", &[]);
+                    }));
                 self.top_row.append(&top_toggle);
                 self.top_toggles.borrow_mut().push(top_toggle);
             }
@@ -109,7 +121,8 @@ mod imp {
                     toggle
                         .button()
                         .connect_clicked(glib::clone!(@weak obj => move |_| {
-                            obj.update_chord()
+                            obj.update_chord();
+                            obj.emit_by_name::<()>("user-changed-chord", &[]);
                         }));
                     toggle.button().set_group(Some(
                         &self.top_toggles.borrow().get(string_num).unwrap().button(),
