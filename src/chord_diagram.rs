@@ -208,7 +208,16 @@ impl FretboardChordDiagram {
         self.imp().chord.set(chord);
 
         let lowest_fret = find_lowest_non_zero_fret(chord);
-        self.set_neck_position(lowest_fret.unwrap_or(1));
+
+        let adjusted_chord = adjust_chord(chord, find_lowest_non_zero_fret(chord).unwrap_or(0));
+
+        self.set_neck_position(
+            if find_barre_length(adjusted_chord) > 0 {
+                lowest_fret.unwrap_or(1)
+            } else {
+                1
+            }
+        );
 
         self.update_visuals();
         self.update_barre_visuals();
