@@ -2,6 +2,10 @@
 
 Master any guitar chord. Fretboard lets you look up guitar chords by name or shape.
 
-Or, at least, that's the plan. The code is messy in many places, the guitar neck position spin button doesn't really work at all, there is no field to type in chord names, and the barre drawing looks bad in dark mode. All of this will be fixed soon™.
+Mostly functional at this point, but there's a few things that need to be ironed out:
+
+- Tooltips, labels and translation infrastructure
+- App metadata
+- Weird flickering sometimes when changing chords
 
 ![screenshot](/data/screenshots/screenshot-1.png)
