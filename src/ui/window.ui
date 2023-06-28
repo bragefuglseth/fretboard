@@ -28,7 +28,7 @@
             <property name="vexpand">true</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
-            <property name="spacing">24</property>
+            <property name="spacing">36</property>
             <child>
               <object class="GtkBox">
                 <child>
