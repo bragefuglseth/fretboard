@@ -154,6 +154,7 @@ dependencies = [
  "gettext-rs",
  "gtk4",
  "libadwaita",
+ "once_cell",
  "rayon",
  "serde",
  "serde_json",

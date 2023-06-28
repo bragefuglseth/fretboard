@@ -197,8 +197,8 @@ impl FretboardChordDiagram {
     pub fn set_chord(&self, chord: [Option<usize>; 6]) {
         self.imp().chord.set(chord);
 
-        let barre = find_barre(chord);
-        self.set_neck_position(if barre == 0 { 1 } else { barre });
+        let lowest_fret = find_lowest_non_zero_fret(chord);
+        self.set_neck_position(lowest_fret.unwrap_or(1));
 
         self.update_visuals();
         self.update_barre_visuals();
@@ -224,7 +224,8 @@ impl FretboardChordDiagram {
                     .iter()
                     .position(|toggle| toggle.is_active())
                     .unwrap()
-                    + 1;
+                    + self.imp().neck_position.get() as usize;
+
                 *chord.get_mut(i).unwrap() = Some(pos);
             }
         }
@@ -233,17 +234,35 @@ impl FretboardChordDiagram {
         self.update_barre_visuals();
     }
 
-    fn update_neck_position(&self, new_pos: u8) {}
+    pub fn update_neck_position(&self, new_pos: u8) {
+        let chord = self.imp().chord.get();
+
+        let difference = find_lowest_non_zero_fret(chord).unwrap_or(0) as i32 - new_pos as i32;
+
+        let new_chord: [Option<usize>; 6] = chord.iter()
+            .map(|&val| {
+                val.map(|note| {
+                    if note == 0 {
+                        0
+                    } else {
+                        (note as i32 - difference) as usize
+                    }
+                })
+            })
+            .collect::<Vec<Option<usize>>>()
+            .try_into()
+            .unwrap();
+
+        self.set_chord(new_chord);
+    }
 
     fn update_visuals(&self) {
         let chord = self.imp().chord.get();
-        let barre = find_barre(chord);
+        // Adjust chord so it's positioned relatively to the neck position
+        let adjusted_chord = adjust_chord(chord, self.neck_position());
 
         let top_toggles = self.imp().top_toggles.borrow();
         let toggles = self.imp().toggles.borrow();
-
-        // Adjust chord so it's positioned relative to the barre on the fretboard
-        let adjusted_chord = adjust_chord(chord, barre);
 
         for string in 0..STRINGS {
             let top_toggle = top_toggles.get(string).unwrap();
@@ -269,26 +288,7 @@ impl FretboardChordDiagram {
 
         let chord = adjust_chord(chord, self.neck_position());
 
-        let mut barre_length = 0;
-
-        let chord_reversed = chord.iter().rev().enumerate();
-
-        let mut chord_reversed_next = chord.iter().rev();
-        chord_reversed_next.next();
-
-        for (num, val) in chord_reversed {
-            if val == &Some(1 as usize) {
-                barre_length = num + 1;
-            }
-
-            let next = chord_reversed_next.next();
-            if next == Some(&Some(0 as usize))
-                || next == Some(&None)
-                || val == &Some(0 as usize)
-            {
-                break;
-            }
-        }
+        let barre_length = find_barre_length(chord);
 
         let barre_stack = self.imp().barre_overlay_stack.get();
         barre_stack.set_visible_child_name(match barre_length {
@@ -302,15 +302,50 @@ impl FretboardChordDiagram {
     }
 }
 
-fn find_barre(chord: [Option<usize>; 6]) -> u8 {
-    chord.iter().filter_map(|&option| option).min().unwrap_or(0) as u8
+fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
+    let mut barre_length = 0;
+
+    let chord_reversed = chord.iter().rev().enumerate();
+
+    let mut chord_reversed_next = chord.iter().rev();
+    chord_reversed_next.next();
+
+    for (num, val) in chord_reversed {
+        if val == &Some(1 as usize) {
+            barre_length = num + 1;
+        }
+
+        let next = chord_reversed_next.next();
+        if next == Some(&Some(0 as usize))
+            || next == Some(&None)
+            || val == &Some(0 as usize)
+        {
+            break;
+        }
+    }
+
+    barre_length
+}
+
+fn find_lowest_non_zero_fret(chord: [Option<usize>; 6]) -> Option<u8> {
+    chord.iter().filter_map(|&option| option).filter(|&val| val > 0).min().map(|val| val as u8)
 }
 
 fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] {
     chord
         .iter()
         .map(|option| {
-            option.map(|value| value - (if barre == 0 { barre } else { barre - 1 }) as usize)
+            option.map(|value| {
+                if value == 0 {
+                    0
+                } else {
+                    value - (if barre == 0 {
+                        barre
+                    } else {
+                        barre - 1
+                    }) as usize
+                }
+            })
         })
         .collect::<Vec<Option<usize>>>()
         .try_into()

@@ -24,6 +24,7 @@ use crate::chords::{load_chords, Chord};
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
+use glib::closure_local;
 use rayon::prelude::*;
 use std::cell::RefCell;
 
@@ -106,6 +107,14 @@ impl FretboardWindow {
         // barre_spin.connect_value_notify(glib::clone!(@weak chord_diagram => move |val| {
         //     chord_diagram.update_neck_position(val);
         // }));
+
+        barre_spin.connect_closure(
+            "user-changed-value",
+            false,
+            closure_local!(move |_spin: FretboardBarreSpin, value: u8| {
+                chord_diagram.update_neck_position(value);
+            }),
+        );
 
         self.setup_chords();
     }

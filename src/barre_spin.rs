@@ -2,6 +2,8 @@ use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
 use std::cell::Cell;
+use once_cell::sync::Lazy;
+use glib::subclass::Signal;
 
 const MIN_VALUE: u8 = 1;
 const MAX_VALUE: u8 = 12;
@@ -44,6 +46,15 @@ mod imp {
     }
 
     impl ObjectImpl for FretboardBarreSpin {
+        fn signals() -> &'static [Signal] {
+            static SIGNALS: Lazy<Vec<glib::subclass::Signal>> = Lazy::new(|| {
+                vec![Signal::builder("user-changed-value")
+                    .param_types([u8::static_type()])
+                    .build()]
+            });
+            SIGNALS.as_ref()
+        }
+
         fn properties() -> &'static [glib::ParamSpec] {
             Self::derived_properties()
         }
@@ -119,12 +130,14 @@ impl FretboardBarreSpin {
             .increment_button
             .connect_clicked(glib::clone!(@weak self as spin => move |_| {
                 spin.set_value(spin.value() + 1);
+                spin.emit_by_name::<()>("user-changed-value", &[&spin.value()]);
             }));
 
         self.imp()
             .decrement_button
             .connect_clicked(glib::clone!(@weak self as spin => move |_| {
                 spin.set_value(spin.value() - 1);
+                spin.emit_by_name::<()>("user-changed-value", &[&spin.value()]);
             }));
     }
 }
