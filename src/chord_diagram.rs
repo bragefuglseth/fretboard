@@ -12,10 +12,11 @@ const STRINGS: usize = 6;
 const FRETS: usize = 5;
 
 // These are always shown in fret position 1
-const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 6] = [
+const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 7] = [
     [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
     [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
     [None, None, Some(0), Some(2), Some(3), Some(2)],    // D
+    [None, None, Some(0), Some(2), Some(3), Some(3)],
     [Some(0), Some(2), Some(2), Some(0), Some(0), Some(0)], // Em
     [Some(0), Some(2), Some(0), Some(0), Some(0), Some(0)], // Em7
     [Some(3), Some(2), Some(0), Some(0), Some(0), Some(3)], // G
@@ -310,9 +311,7 @@ impl FretboardChordDiagram {
             SpinMessage::Decrement => -1,
         };
 
-        if chord.iter().all(|&value| {
-            matches!(value, None | Some(0))
-        }) {
+        if chord.iter().all(|&value| matches!(value, None | Some(0))) {
             let new_pos = (self.neck_position() as i32 + change) as u8;
             self.set_neck_position(new_pos);
             return;
