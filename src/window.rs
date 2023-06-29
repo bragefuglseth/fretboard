@@ -45,6 +45,8 @@ mod imp {
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
         #[template_child]
         pub entry: TemplateChild<FretboardChordNameEntry>,
+        #[template_child]
+        pub feedback_stack: TemplateChild<gtk::Stack>,
 
         pub chords: RefCell<Vec<Chord>>,
     }
@@ -131,18 +133,23 @@ impl FretboardWindow {
 
     fn load_chord_from_name(&self, name: &str) {
         let chords = self.imp().chords.borrow();
-        let chord = chords
+        let chord_opt = chords
             .par_iter()
             .find_first(|chord| chord.name.to_lowercase() == name.to_lowercase())
-            .map(|chord| chord.positions[0].clone())
-            .unwrap_or(EMPTY_CHORD);
+            .map(|chord| chord.positions[0].clone());
 
-        self.imp().chord_diagram.set_chord(chord);
+        if let Some(chord) = chord_opt {
+            self.imp().chord_diagram.set_chord(chord);
+            self.imp().feedback_stack.set_visible_child_name("empty");
+        } else {
+            self.imp().chord_diagram.set_chord(EMPTY_CHORD);
+            self.imp().feedback_stack.set_visible_child_name("label");
+        }
     }
 
     fn lookup_chord_name(&self, query_chord: [Option<usize>; 6]) {
         let chords = self.imp().chords.borrow();
-        let name = chords
+        let name_opt = chords
             .par_iter()
             .find_first(|chord| {
                 chord
@@ -150,10 +157,16 @@ impl FretboardWindow {
                     .par_iter()
                     .any(|&position| position == query_chord)
             })
-            .map(|chord| chord.name.to_owned())
-            .unwrap_or(String::from(""));
+            .map(|chord| chord.name.to_owned());
 
-        self.imp().entry.imp().entry_buffer.replace(name.to_string());
-        self.imp().entry.entry().set_text(&name);
+        if let Some(name) = name_opt {
+            self.imp().entry.imp().entry_buffer.replace(name.to_string());
+            self.imp().entry.entry().set_text(&name);
+            self.imp().feedback_stack.set_visible_child_name("empty");
+        } else {
+            self.imp().entry.imp().entry_buffer.replace(String::from(""));
+            self.imp().entry.entry().set_text("");
+            self.imp().feedback_stack.set_visible_child_name("label");
+        }
     }
 }
