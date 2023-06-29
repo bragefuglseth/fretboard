@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <template class="FretboardChordNameEntry" parent="GtkWidget">
-      <child>
-        <object class="GtkOverlay">
-          <child>
-            <object class="GtkEntry" id="entry">
-              <property name="width-request">262</property>
-              <property name="hexpand">false</property>
-              <property name="halign">start</property>
-              <property name="margin-start">25</property>
-              <property name="xalign">0.5</property>
-              <property name="placeholder-text">Chord Name</property>
-            </object>
-          </child>
-        </object>
-      </child>
+    <property name="hexpand">false</property>
+    <property name="halign">start</property>
+    <property name="margin-start">25</property>
+    <child>
+      <object class="GtkOverlay">
+        <child>
+          <object class="GtkText" id="entry">
+            <property name="css-name">entry</property>
+            <property name="hexpand">true</property>
+            <property name="xalign">0.5</property>
+            <property name="width-request">262</property>
+            <property name="placeholder-text">Chord Name</property>
+            <property name="max-length">15</property>
+          </object>
+        </child>
+        <child type="overlay">
+          <object class="GtkRevealer" id="revealer">
+            <property name="transition-type">crossfade</property>
+            <property name="transition-duration">150</property>
+            <property name="halign">end</property>
+            <property name="margin-end">6</property>
+            <child>
+              <object class="GtkButton" id="button">
+                <property name="halign">end</property>
+                <property name="valign">center</property>
+                <property name="icon-name">checkmark-large-symbolic</property>
+                <style>
+                  <class name="flat" />
+                  <class name="circular" />
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <style>
+      <class name="fretboard-chord-name-entry" />
+    </style>
   </template>
 </interface>

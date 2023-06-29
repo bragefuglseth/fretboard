@@ -10,7 +10,11 @@ mod imp {
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-name-entry.ui")]
     pub struct FretboardChordNameEntry {
         #[template_child]
-        pub entry: TemplateChild<gtk::Entry>,
+        pub entry: TemplateChild<gtk::Text>,
+        #[template_child]
+        pub revealer: TemplateChild<gtk::Revealer>,
+        #[template_child]
+        pub button: TemplateChild<gtk::Button>,
 
         pub entry_buffer: RefCell<String>,
     }
@@ -25,7 +29,6 @@ mod imp {
             klass.bind_template();
 
             klass.set_layout_manager_type::<gtk::BinLayout>();
-            klass.set_css_name("chord-name-entry");
         }
 
         fn instance_init(obj: &glib::subclass::InitializingObject<Self>) {
@@ -37,21 +40,25 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
+            let revealer = self.revealer.get();
+
             self.entry.connect_changed(glib::clone!(@weak self as entry_wrapper => move |entry| {
                 if &entry.text().as_str() != &entry_wrapper.entry_buffer.borrow().clone() {
-                    entry.set_secondary_icon_name(Some("checkmark-large-symbolic"));
+                    entry_wrapper.revealer.set_reveal_child(true);
                 } else {
-                    entry.set_secondary_icon_name(None);
+                    entry_wrapper.revealer.set_reveal_child(false);
                 }
             }));
 
-            self.entry.connect_activate(|entry| {
-                entry.set_secondary_icon_name(None);
-            });
+            self.entry.connect_activate(glib::clone!(@weak revealer => move |_| {
+                revealer.set_reveal_child(false);
+            }));
 
-            self.entry.connect_icon_release(|entry, _| {
-                entry.emit_by_name::<()>("activate", &[]);
-            });
+            let entry = self.entry.get();
+
+            self.button.connect_clicked(glib::clone!(@weak entry => move |_|{
+                entry.emit_activate();
+            }));
         }
 
         fn dispose(&self) {
@@ -76,7 +83,7 @@ impl Default for FretboardChordNameEntry {
 }
 
 impl FretboardChordNameEntry {
-    pub fn entry(&self) -> gtk::Entry {
+    pub fn entry(&self) -> gtk::Text {
         self.imp().entry.get()
     }
 }

@@ -47,9 +47,17 @@ chord-diagram-top-toggle button:hover {
   background: rgba(153, 153, 153, 0.3);
 }
 
-chord-name-entry entry {
-  font-size: 2rem;
-  padding: 0.2em 0.5em;
+.fretboard-chord-name-entry entry {
+  font-size: 1.8rem;
+  padding: 6px;
   font-weight: bold;
   border-radius: 12px;
+}
+
+.fretboard-chord-name-entry entry placeholder {
+  color: rgba(125, 125, 125, 0.6);
+}
+
+.fretboard-chord-name-entry button image {
+  opacity: 0.5;
 }
