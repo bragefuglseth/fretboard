@@ -6,6 +6,7 @@
     <file preprocess="xml-stripblanks" alias="cross-large-symbolic.svg">ui/icons/cross-large-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="up-large-symbolic.svg">ui/icons/up-large-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="down-large-symbolic.svg">ui/icons/down-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="checkmark-large-symbolic.svg">ui/icons/checkmark-large-symbolic.svg</file>
   </gresource>
 
   <gresource prefix="/dev/bragefuglseth/Fretboard">

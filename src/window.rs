@@ -48,6 +48,8 @@ mod imp {
         #[template_child]
         pub entry: TemplateChild<gtk::Entry>,
 
+        pub entry_buffer: RefCell<String>,
+
         pub chords: RefCell<Vec<Chord>>,
     }
 
@@ -134,8 +136,18 @@ impl FretboardWindow {
 
         let entry = self.imp().entry.get();
 
+        entry.connect_changed(glib::clone!(@weak self as win => move |entry| {
+            if &entry.text().as_str() != &win.imp().entry_buffer.borrow().clone() {
+                entry.set_secondary_icon_name(Some("checkmark-large-symbolic"));
+            } else {
+                entry.set_secondary_icon_name(None);
+            }
+        }));
+
         entry.connect_activate(glib::clone!(@weak self as win => move |entry| {
             win.load_chord_from_name(&entry.text());
+            win.imp().entry_buffer.replace(entry.text().as_str().to_string());
+            entry.set_secondary_icon_name(None);
         }));
 
         // load chords
@@ -171,6 +183,7 @@ impl FretboardWindow {
             .map(|chord| chord.name.to_owned())
             .unwrap_or(String::from(""));
 
+        self.imp().entry_buffer.replace(name.to_string());
         self.imp().entry.set_text(&name);
     }
 }

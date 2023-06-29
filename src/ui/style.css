@@ -48,9 +48,8 @@ chord-diagram-top-toggle button:hover {
 }
 
 .fretboard-chord-entry {
-  background: transparent;
   font-size: 2rem;
-  padding: 0.2em;
+  padding: 0.2em 0.5em;
   font-weight: bold;
   border-radius: 12px;
 }
