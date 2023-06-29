@@ -48,8 +48,8 @@
                     <property name="orientation">vertical</property>
                     <property name="halign">start</property>
                     <property name="valign">center</property>
-                    <property name="spacing">36</property>
-                    <property name="margin-bottom">36</property>
+                    <property name="spacing">24</property>
+                    <property name="margin-bottom">24</property>
                     <child>
                       <object class="FretboardChordDiagram" id="chord_diagram">
               </object>
