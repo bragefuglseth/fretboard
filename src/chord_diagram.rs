@@ -11,18 +11,8 @@ use std::cell::{Cell, RefCell};
 const STRINGS: usize = 6;
 const FRETS: usize = 4;
 
-// These are always shown in fret position 1
-const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 9] = [
-    [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
-    [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
-    [None, None, Some(0), Some(2), Some(3), Some(2)],    // D
-    [None, None, Some(0), Some(2), Some(0), Some(2)],    // D6
-    [None, None, Some(0), Some(2), Some(3), Some(3)], // Dsus4
-    [Some(0), Some(2), Some(2), Some(0), Some(0), Some(0)], // Em
-    [Some(0), Some(2), Some(0), Some(0), Some(0), Some(0)], // Em7
-    [Some(3), Some(2), Some(0), Some(0), Some(0), Some(3)], // G
-    [Some(3), Some(2), Some(0), Some(0), Some(0), Some(0)], // G6
-];
+// special case when drawing chords
+const D: [Option<usize>; 6] = [None, None, Some(0), Some(2), Some(3), Some(2)];
 
 pub enum SpinMessage {
     Increment,
@@ -258,10 +248,11 @@ impl FretboardChordDiagram {
     pub fn set_chord(&self, chord: [Option<usize>; 6]) {
         self.imp().chord.set(chord);
 
+        let lowest_non_zero_fret = find_lowest_non_zero_fret(chord).unwrap_or(0);
+        let has_barre = find_barre_length(adjust_chord(chord, lowest_non_zero_fret)) > 1;
+
         self.set_neck_position(
-            if SPECIAL_CASE_CHORDS
-                .iter()
-                .any(|&special_chord| special_chord == chord)
+            if lowest_non_zero_fret == 2 && !has_barre
             {
                 1
             } else {
@@ -429,6 +420,10 @@ fn find_lowest_non_zero_fret(chord: [Option<usize>; 6]) -> Option<u8> {
 }
 
 fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] {
+    if chord == D {
+        return chord;
+    }
+
     chord
         .iter()
         .map(|option| {
