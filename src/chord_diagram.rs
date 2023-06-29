@@ -12,14 +12,16 @@ const STRINGS: usize = 6;
 const FRETS: usize = 5;
 
 // These are always shown in fret position 1
-const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 7] = [
+const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 9] = [
     [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
     [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
     [None, None, Some(0), Some(2), Some(3), Some(2)],    // D
-    [None, None, Some(0), Some(2), Some(3), Some(3)],
+    [None, None, Some(0), Some(2), Some(0), Some(2)],    // D6
+    [None, None, Some(0), Some(2), Some(3), Some(3)], // Dsus4
     [Some(0), Some(2), Some(2), Some(0), Some(0), Some(0)], // Em
     [Some(0), Some(2), Some(0), Some(0), Some(0), Some(0)], // Em7
     [Some(3), Some(2), Some(0), Some(0), Some(0), Some(3)], // G
+    [Some(3), Some(2), Some(0), Some(0), Some(0), Some(0)], // G6
 ];
 
 pub enum SpinMessage {
