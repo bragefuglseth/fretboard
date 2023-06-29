@@ -150,6 +150,10 @@ impl FretboardWindow {
             entry.set_secondary_icon_name(None);
         }));
 
+        entry.connect_icon_release(|entry, _| {
+            entry.emit_by_name::<()>("activate", &[]);
+        });
+
         // load chords
         self.imp().chords.replace(load_chords());
         self.load_chord_from_name("C");
