@@ -47,18 +47,7 @@
             <property name="spacing">36</property>
             <property name="margin-bottom">36</property>
             <child>
-              <object class="GtkBox">
-                <child>
-                  <object class="FretboardChordDiagram" id="chord_diagram">
-                  </object>
-                </child>
-                <child>
-                  <object class="FretboardBarreSpin" id="barre_spin">
-                    <property name="valign">start</property>
-                    <property name="margin-end">10</property>
-                    <property name="margin-top">17</property>
-                  </object>
-                </child>
+              <object class="FretboardChordDiagram" id="chord_diagram">
               </object>
             </child>
             <child>

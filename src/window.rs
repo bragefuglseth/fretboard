@@ -18,7 +18,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-use crate::barre_spin::FretboardBarreSpin;
 use crate::chord_diagram::FretboardChordDiagram;
 use crate::chords::{load_chords, Chord};
 use adw::subclass::prelude::*;
@@ -43,8 +42,6 @@ mod imp {
         pub filler: TemplateChild<gtk::Revealer>,
         #[template_child]
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
-        #[template_child]
-        pub barre_spin: TemplateChild<FretboardBarreSpin>,
         #[template_child]
         pub entry: TemplateChild<gtk::Entry>,
 
@@ -120,20 +117,6 @@ impl FretboardWindow {
             }),
         );
 
-        let barre_spin = self.imp().barre_spin.get();
-
-        let win: FretboardWindow = self.clone();
-
-        barre_spin.connect_closure(
-            "user-changed-value",
-            false,
-            closure_local!(move |_spin: FretboardBarreSpin, value: u8| {
-                chord_diagram.update_neck_position(value);
-                let chord = chord_diagram.imp().chord.get();
-                win.lookup_chord_name(chord);
-            }),
-        );
-
         let entry = self.imp().entry.get();
 
         entry.connect_changed(glib::clone!(@weak self as win => move |entry| {
@@ -169,9 +152,6 @@ impl FretboardWindow {
             .unwrap_or(EMPTY_CHORD);
 
         self.imp().chord_diagram.set_chord(chord);
-        self.imp()
-            .barre_spin
-            .set_value(self.imp().chord_diagram.neck_position());
     }
 
     fn lookup_chord_name(&self, query_chord: [Option<usize>; 6]) {

@@ -3,85 +3,96 @@
   <template class="FretboardChordDiagram" parent="GtkWidget">
     <child>
       <object class="GtkBox">
-        <property name="orientation">vertical</property>
         <child>
-          <object class="GtkBox" id="top_row">
-            <property name="homogeneous">true</property>
-            <property name="margin-bottom">6</property>
-            <!-- top toggles go here -->
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkBox" id="top_row">
+                <property name="homogeneous">true</property>
+                <property name="margin-bottom">6</property>
+                <!-- top toggles go here -->
+              </object>
+            </child>
+            <child>
+              <object class="GtkOverlay">
+                <child>
+                  <object class="GtkPicture" id="diagram_backdrop">
+                    <property name="can-shrink">false</property>
+                    <property name="margin-start">25</property>
+                    <property name="margin-end">25</property>
+                  </object>
+                </child>
+                <child type="overlay">
+                  <object class="GtkStack" id="barre_overlay_stack">
+                    <property name="transition-type">crossfade</property>
+                    <property name="transition-duration">150</property>
+                    <child>
+                      <object class="GtkStackPage">
+                        <property name="name">empty</property>
+                        <property name="child">
+                          <object class="GtkBox">
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkStackPage">
+                        <property name="name">barre-2</property>
+                        <property name="child">
+                          <object class="GtkPicture" id="barre_2_image"></object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkStackPage">
+                        <property name="name">barre-3</property>
+                        <property name="child">
+                          <object class="GtkPicture" id="barre_3_image"></object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkStackPage">
+                        <property name="name">barre-4</property>
+                        <property name="child">
+                          <object class="GtkPicture" id="barre_4_image"></object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkStackPage">
+                        <property name="name">barre-5</property>
+                        <property name="child">
+                          <object class="GtkPicture" id="barre_5_image"></object>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkStackPage">
+                        <property name="name">barre-6</property>
+                        <property name="child">
+                          <object class="GtkPicture" id="barre_6_image"></object>
+                        </property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="overlay">
+                  <object class="GtkGrid" id="grid">
+                    <property name="hexpand">true</property>
+                    <property name="vexpand">true</property>
+                    <!-- toggles go here -->
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
         </child>
         <child>
-          <object class="GtkOverlay">
-            <child>
-              <object class="GtkPicture" id="diagram_backdrop">
-                <property name="can-shrink">false</property>
-                <property name="margin-start">25</property>
-                <property name="margin-end">25</property>
-              </object>
-            </child>
-            <child type="overlay">
-              <object class="GtkStack" id="barre_overlay_stack">
-                <property name="transition-type">crossfade</property>
-                <property name="transition-duration">150</property>
-                <child>
-                  <object class="GtkStackPage">
-                    <property name="name">empty</property>
-                    <property name="child">
-                      <object class="GtkBox">
-                      </object>
-                    </property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage">
-                    <property name="name">barre-2</property>
-                    <property name="child">
-                      <object class="GtkPicture" id="barre_2_image"></object>
-                    </property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage">
-                    <property name="name">barre-3</property>
-                    <property name="child">
-                      <object class="GtkPicture" id="barre_3_image"></object>
-                    </property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage">
-                    <property name="name">barre-4</property>
-                    <property name="child">
-                      <object class="GtkPicture" id="barre_4_image"></object>
-                    </property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage">
-                    <property name="name">barre-5</property>
-                    <property name="child">
-                      <object class="GtkPicture" id="barre_5_image"></object>
-                    </property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage">
-                    <property name="name">barre-6</property>
-                    <property name="child">
-                      <object class="GtkPicture" id="barre_6_image"></object>
-                    </property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child type="overlay">
-              <object class="GtkGrid" id="grid">
-                <property name="hexpand">true</property>
-                <property name="vexpand">true</property>
-                <!-- toggles go here -->
-              </object>
-            </child>
+          <object class="FretboardBarreSpin" id="barre_spin">
+            <property name="valign">start</property>
+            <property name="margin-end">10</property>
+            <property name="margin-top">17</property>
           </object>
         </child>
       </object>

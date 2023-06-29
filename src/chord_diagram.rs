@@ -1,7 +1,8 @@
+use crate::barre_spin::FretboardBarreSpin;
 use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
 use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use adw::subclass::prelude::*;
-use glib::subclass::Signal;
+use glib::{closure_local, subclass::Signal};
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use once_cell::sync::Lazy;
@@ -9,6 +10,21 @@ use std::cell::{Cell, RefCell};
 
 const STRINGS: usize = 6;
 const FRETS: usize = 5;
+
+// These are always shown in fret position 1
+const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 6] = [
+    [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
+    [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
+    [None, None, Some(0), Some(2), Some(3), Some(2)],    // D
+    [Some(0), Some(2), Some(2), Some(0), Some(0), Some(0)], // Em
+    [Some(0), Some(2), Some(0), Some(0), Some(0), Some(0)], // Em7
+    [Some(3), Some(2), Some(0), Some(0), Some(0), Some(3)], // G
+];
+
+pub enum SpinMessage {
+    Increment,
+    Decrement,
+}
 
 mod imp {
     use super::*;
@@ -35,6 +51,8 @@ mod imp {
         pub barre_6_image: TemplateChild<gtk::Picture>,
         #[template_child]
         pub grid: TemplateChild<gtk::Grid>,
+        #[template_child]
+        pub barre_spin: TemplateChild<FretboardBarreSpin>,
 
         pub chord: Cell<[Option<usize>; 6]>,
 
@@ -191,6 +209,24 @@ mod imp {
                 .sync_create()
                 .build();
 
+            let barre_spin = self.barre_spin.get();
+
+            let obj = obj.clone();
+
+            barre_spin.connect_closure(
+                "user-changed-value",
+                false,
+                closure_local!(move |_spin: FretboardBarreSpin, string: &str| {
+                    let message = match string {
+                        "increment" => SpinMessage::Increment,
+                        "decrement" => SpinMessage::Decrement,
+                        _ => panic!("unknown message from spin button"),
+                    };
+                    obj.update_neck_position(message);
+                    obj.emit_by_name::<()>("user-changed-chord", &[]);
+                }),
+            );
+
             self.obj().update_visuals();
         }
 
@@ -219,19 +255,18 @@ impl FretboardChordDiagram {
     pub fn set_chord(&self, chord: [Option<usize>; 6]) {
         self.imp().chord.set(chord);
 
-        let lowest_fret = find_lowest_non_zero_fret(chord);
+        self.set_neck_position(
+            if SPECIAL_CASE_CHORDS
+                .iter()
+                .any(|&special_chord| special_chord == chord)
+            {
+                1
+            } else {
+                find_lowest_non_zero_fret(chord).unwrap_or(1)
+            },
+        );
 
-        // Old code, might be useful when introducing special casing for various chords:
-
-        // let adjusted_chord = adjust_chord(chord, find_lowest_non_zero_fret(chord).unwrap_or(0));
-
-        // self.set_neck_position(if find_barre_length(adjusted_chord) > 0 {
-        //     lowest_fret.unwrap_or(1)
-        // } else {
-        //     1
-        // });
-
-        self.set_neck_position(lowest_fret.unwrap_or(1));
+        self.imp().barre_spin.set_value(self.neck_position());
 
         self.update_visuals();
         self.update_barre_visuals();
@@ -267,10 +302,13 @@ impl FretboardChordDiagram {
         self.update_barre_visuals();
     }
 
-    pub fn update_neck_position(&self, new_pos: u8) {
+    pub fn update_neck_position(&self, message: SpinMessage) {
         let chord = self.imp().chord.get();
 
-        let difference = find_lowest_non_zero_fret(chord).unwrap_or(0) as i32 - new_pos as i32;
+        let change = match message {
+            SpinMessage::Increment => 1,
+            SpinMessage::Decrement => -1,
+        };
 
         let new_chord: [Option<usize>; 6] = chord
             .iter()
@@ -279,7 +317,7 @@ impl FretboardChordDiagram {
                     if note == 0 {
                         0
                     } else {
-                        (note as i32 - difference) as usize
+                        (note as i32 + change) as usize
                     }
                 })
             })
@@ -338,7 +376,12 @@ impl FretboardChordDiagram {
 
 // find barre length of *adjusted* chords (lowest fingered fret is positioned @ 1)
 fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
-    if chord.iter().filter(|&&option| option == Some(1 as usize)).count().lt(&2) {
+    if chord
+        .iter()
+        .filter(|&&option| option == Some(1 as usize))
+        .count()
+        .lt(&2)
+    {
         return 0;
     }
 

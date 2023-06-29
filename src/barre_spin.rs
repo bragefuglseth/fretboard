@@ -49,7 +49,7 @@ mod imp {
         fn signals() -> &'static [Signal] {
             static SIGNALS: Lazy<Vec<glib::subclass::Signal>> = Lazy::new(|| {
                 vec![Signal::builder("user-changed-value")
-                    .param_types([u8::static_type()])
+                    .param_types([str::static_type()])
                     .build()]
             });
             SIGNALS.as_ref()
@@ -130,14 +130,14 @@ impl FretboardBarreSpin {
             .increment_button
             .connect_clicked(glib::clone!(@weak self as spin => move |_| {
                 spin.set_value(spin.value() + 1);
-                spin.emit_by_name::<()>("user-changed-value", &[&spin.value()]);
+                spin.emit_by_name::<()>("user-changed-value", &[&"increment"]);
             }));
 
         self.imp()
             .decrement_button
             .connect_clicked(glib::clone!(@weak self as spin => move |_| {
                 spin.set_value(spin.value() - 1);
-                spin.emit_by_name::<()>("user-changed-value", &[&spin.value()]);
+                spin.emit_by_name::<()>("user-changed-value", &[&"decrement"]);
             }));
     }
 }
