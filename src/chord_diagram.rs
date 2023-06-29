@@ -9,7 +9,7 @@ use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
 
 const STRINGS: usize = 6;
-const FRETS: usize = 5;
+const FRETS: usize = 4;
 
 // These are always shown in fret position 1
 const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 9] = [
