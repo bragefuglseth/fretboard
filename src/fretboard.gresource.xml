@@ -15,6 +15,7 @@
     <file preprocess="xml-stripblanks" alias="chord-diagram-toggle.ui">ui/chord-diagram-toggle.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram-top-toggle.ui">ui/chord-diagram-top-toggle.ui</file>
     <file preprocess="xml-stripblanks" alias="barre-spin.ui">ui/barre-spin.ui</file>
+    <file preprocess="xml-stripblanks" alias="chord-name-entry.ui">ui/chord-name-entry.ui</file>
 
     <file alias="style.css">ui/style.css</file>
 

@@ -55,16 +55,7 @@
               </object>
                     </child>
                     <child>
-                      <object class="GtkEntry" id="entry">
-                        <property name="width-request">262</property>
-                        <property name="hexpand">false</property>
-                        <property name="halign">start</property>
-                        <property name="margin-start">25</property>
-                        <property name="xalign">0.5</property>
-                        <property name="placeholder-text">Chord Name</property>
-                        <style>
-                          <class name="fretboard-chord-entry" />
-                        </style>
+                      <object class="FretboardChordNameEntry" id="entry">
                       </object>
                     </child>
                   </object>

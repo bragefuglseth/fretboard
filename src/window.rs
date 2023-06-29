@@ -20,6 +20,7 @@
 
 use crate::chord_diagram::FretboardChordDiagram;
 use crate::chords::{load_chords, Chord};
+use crate::chord_name_entry::FretboardChordNameEntry;
 use adw::subclass::prelude::*;
 use glib::closure_local;
 use gtk::prelude::*;
@@ -43,9 +44,7 @@ mod imp {
         #[template_child]
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
         #[template_child]
-        pub entry: TemplateChild<gtk::Entry>,
-
-        pub entry_buffer: RefCell<String>,
+        pub entry: TemplateChild<FretboardChordNameEntry>,
 
         pub chords: RefCell<Vec<Chord>>,
     }
@@ -119,23 +118,10 @@ impl FretboardWindow {
 
         let entry = self.imp().entry.get();
 
-        entry.connect_changed(glib::clone!(@weak self as win => move |entry| {
-            if &entry.text().as_str() != &win.imp().entry_buffer.borrow().clone() {
-                entry.set_secondary_icon_name(Some("checkmark-large-symbolic"));
-            } else {
-                entry.set_secondary_icon_name(None);
-            }
-        }));
-
-        entry.connect_activate(glib::clone!(@weak self as win => move |entry| {
+        entry.entry().connect_activate(glib::clone!(@weak self as win => move |entry| {
             win.load_chord_from_name(&entry.text());
-            win.imp().entry_buffer.replace(entry.text().as_str().to_string());
-            entry.set_secondary_icon_name(None);
+            win.imp().entry.get().imp().entry_buffer.replace(entry.text().as_str().to_string());
         }));
-
-        entry.connect_icon_release(|entry, _| {
-            entry.emit_by_name::<()>("activate", &[]);
-        });
 
         // load chords
         self.imp().chords.replace(load_chords());
@@ -167,7 +153,7 @@ impl FretboardWindow {
             .map(|chord| chord.name.to_owned())
             .unwrap_or(String::from(""));
 
-        self.imp().entry_buffer.replace(name.to_string());
-        self.imp().entry.set_text(&name);
+        self.imp().entry.imp().entry_buffer.replace(name.to_string());
+        self.imp().entry.entry().set_text(&name);
     }
 }
