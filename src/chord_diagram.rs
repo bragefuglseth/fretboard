@@ -409,9 +409,12 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
     let mut chord_reversed_next = chord.iter().rev();
     chord_reversed_next.next();
 
+    let mut note_count = 0;
+
     for (num, val) in chord_reversed {
         if val == &Some(1 as usize) {
             barre_length = num + 1;
+            note_count += 1;
         }
 
         let next = chord_reversed_next.next();
@@ -423,8 +426,11 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
             break;
         }
     }
-
-    barre_length
+    if note_count > 1 {
+        barre_length
+    } else {
+        0
+    }
 }
 
 fn find_lowest_non_zero_fret(chord: [Option<usize>; 6]) -> Option<u8> {
