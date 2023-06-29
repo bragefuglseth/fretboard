@@ -351,7 +351,7 @@ impl FretboardChordDiagram {
             match adjusted_chord.get(string).expect("chord has len of 6") {
                 None => top_toggle.set_state(TopToggleState::Muted),
                 Some(0) => top_toggle.set_state(TopToggleState::Open),
-                Some(n) if *n < FRETS => {
+                Some(n) if *n <= FRETS => {
                     toggles
                         .get(string)
                         .unwrap()
