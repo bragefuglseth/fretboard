@@ -120,23 +120,26 @@ impl FretboardWindow {
 
         let barre_spin = self.imp().barre_spin.get();
 
+        let win: FretboardWindow = self.clone();
+
         barre_spin.connect_closure(
             "user-changed-value",
             false,
             closure_local!(move |_spin: FretboardBarreSpin, value: u8| {
                 chord_diagram.update_neck_position(value);
+                let chord = chord_diagram.imp().chord.get();
+                win.lookup_chord_name(chord);
             }),
         );
 
+        let entry = self.imp().entry.get();
+
+        entry.connect_activate(glib::clone!(@weak self as win => move |entry| {
+            win.load_chord_from_name(&entry.text());
+        }));
+
         // load chords
         self.imp().chords.replace(load_chords());
-
-        self.imp()
-            .entry
-            .connect_changed(glib::clone!(@weak self as win => move |entry| {
-                win.load_chord_from_name(&entry.text());
-            }));
-
         self.load_chord_from_name("C");
         self.lookup_chord_name(self.imp().chord_diagram.get().imp().chord.get());
     }
