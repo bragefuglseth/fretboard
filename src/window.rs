@@ -19,8 +19,8 @@
  */
 
 use crate::chord_diagram::FretboardChordDiagram;
-use crate::chords::{load_chords, Chord};
 use crate::chord_name_entry::FretboardChordNameEntry;
+use crate::chords::{load_chords, Chord};
 use adw::subclass::prelude::*;
 use glib::closure_local;
 use gtk::prelude::*;
@@ -120,10 +120,12 @@ impl FretboardWindow {
 
         let entry = self.imp().entry.get();
 
-        entry.entry().connect_activate(glib::clone!(@weak self as win => move |entry| {
-            win.load_chord_from_name(&entry.text());
-            win.imp().entry.get().imp().entry_buffer.replace(entry.text().as_str().to_string());
-        }));
+        entry
+            .entry()
+            .connect_activate(glib::clone!(@weak self as win => move |entry| {
+                win.load_chord_from_name(&entry.text());
+                win.imp().entry.get().imp().entry_buffer.replace(entry.text().as_str().to_string());
+            }));
 
         // load chords
         self.imp().chords.replace(load_chords());
@@ -160,11 +162,19 @@ impl FretboardWindow {
             .map(|chord| chord.name.to_owned());
 
         if let Some(name) = name_opt {
-            self.imp().entry.imp().entry_buffer.replace(name.to_string());
+            self.imp()
+                .entry
+                .imp()
+                .entry_buffer
+                .replace(name.to_string());
             self.imp().entry.entry().set_text(&name);
             self.imp().feedback_stack.set_visible_child_name("empty");
         } else {
-            self.imp().entry.imp().entry_buffer.replace(String::from(""));
+            self.imp()
+                .entry
+                .imp()
+                .entry_buffer
+                .replace(String::from(""));
             self.imp().entry.entry().set_text("");
             self.imp().feedback_stack.set_visible_child_name("label");
         }

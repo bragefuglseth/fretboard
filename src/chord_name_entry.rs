@@ -43,22 +43,29 @@ mod imp {
             let revealer = self.revealer.get();
 
             self.entry.connect_changed(glib::clone!(@weak self as entry_wrapper => move |entry| {
-                if &entry.text().as_str() != &entry_wrapper.entry_buffer.borrow().clone() {
+                let entry_text = entry.text().as_str().to_owned();
+
+                if &entry_text != &entry_wrapper.entry_buffer.borrow().clone()  && entry_text != "" {
+                    entry_wrapper.revealer.set_visible(true);
                     entry_wrapper.revealer.set_reveal_child(true);
                 } else {
+                    entry_wrapper.revealer.set_visible(false);
                     entry_wrapper.revealer.set_reveal_child(false);
                 }
             }));
 
-            self.entry.connect_activate(glib::clone!(@weak revealer => move |_| {
-                revealer.set_reveal_child(false);
-            }));
+            self.entry
+                .connect_activate(glib::clone!(@weak revealer => move |_| {
+                    revealer.set_visible(false);
+                    revealer.set_reveal_child(false);
+                }));
 
             let entry = self.entry.get();
 
-            self.button.connect_clicked(glib::clone!(@weak entry => move |_|{
-                entry.emit_activate();
-            }));
+            self.button
+                .connect_clicked(glib::clone!(@weak entry => move |_|{
+                    entry.emit_activate();
+                }));
         }
 
         fn dispose(&self) {

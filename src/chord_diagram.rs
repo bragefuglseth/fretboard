@@ -14,16 +14,16 @@ const FRETS: usize = 4;
 // These are always shown in fret position 1
 const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 17] = [
     [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
-    [None, Some(0), Some(2), Some(2), None, Some(0)], // A5
+    [None, Some(0), Some(2), Some(2), None, Some(0)],    // A5
     [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
     [None, Some(0), Some(2), Some(2), Some(3), Some(0)], // Asus4
     [None, Some(2), Some(0), Some(2), Some(0), Some(2)], // Bm7
     [None, Some(3), Some(2), Some(0), Some(0), Some(0)], // Cmaj7
-    [None, None, Some(0), Some(2), Some(3), Some(2)], // D
-    [None, None, Some(0), Some(2), Some(3), None], // D5
-    [None, None, Some(0), Some(2), Some(0), Some(2)], // D6
-    [None, None, Some(0), Some(2), Some(2), Some(2)], // Dmaj7
-    [None, None, Some(0), Some(2), Some(3), Some(3)], // Dsus4
+    [None, None, Some(0), Some(2), Some(3), Some(2)],    // D
+    [None, None, Some(0), Some(2), Some(3), None],       // D5
+    [None, None, Some(0), Some(2), Some(0), Some(2)],    // D6
+    [None, None, Some(0), Some(2), Some(2), Some(2)],    // Dmaj7
+    [None, None, Some(0), Some(2), Some(3), Some(3)],    // Dsus4
     [Some(0), Some(2), Some(2), Some(0), Some(0), Some(0)], // Em
     [Some(0), Some(2), Some(2), Some(0), Some(2), Some(0)], // Em6
     [Some(0), Some(2), Some(0), Some(0), Some(0), Some(0)], // Em7
@@ -346,7 +346,9 @@ impl FretboardChordDiagram {
         };
 
         let backdrop = self.imp().diagram_backdrop.get();
-        backdrop.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/chord-diagram-backdrop-{suffix}.svg")));
+        backdrop.set_resource(Some(&format!(
+            "/dev/bragefuglseth/Fretboard/chord-diagram-backdrop-{suffix}.svg"
+        )));
 
         let barre_2 = self.imp().barre_2_image.get();
         let barre_3 = self.imp().barre_3_image.get();
@@ -354,11 +356,21 @@ impl FretboardChordDiagram {
         let barre_5 = self.imp().barre_5_image.get();
         let barre_6 = self.imp().barre_6_image.get();
 
-        barre_2.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg")));
-        barre_3.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg")));
-        barre_4.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg")));
-        barre_5.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg")));
-        barre_6.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg")));
+        barre_2.set_resource(Some(&format!(
+            "/dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg"
+        )));
+        barre_3.set_resource(Some(&format!(
+            "/dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg"
+        )));
+        barre_4.set_resource(Some(&format!(
+            "/dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg"
+        )));
+        barre_5.set_resource(Some(&format!(
+            "/dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg"
+        )));
+        barre_6.set_resource(Some(&format!(
+            "/dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg"
+        )));
     }
 }
 

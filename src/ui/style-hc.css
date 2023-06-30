@@ -9,3 +9,11 @@ chord-diagram-top-toggle image.open {
 chord-diagram-top-toggle button:checked:hover {
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
+
+.fretboard-chord-name-entry entry placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.fretboard-chord-name-entry button image {
+  opacity: 1;
+}
