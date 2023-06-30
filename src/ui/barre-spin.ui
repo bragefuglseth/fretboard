@@ -11,6 +11,9 @@
               <property name="valign">center</property>
               <property name="width-request">38</property>
               <property name="height-request">38</property>
+              <style>
+                <class name="flat" />
+              </style>
             </object>
           </child>
           <child>
@@ -26,6 +29,9 @@
               <property name="valign">center</property>
               <property name="width-request">38</property>
               <property name="height-request">38</property>
+              <style>
+                <class name="flat" />
+              </style>
             </object>
           </child>
         </object>

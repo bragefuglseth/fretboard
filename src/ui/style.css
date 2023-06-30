@@ -18,7 +18,6 @@ barre-spin label {
 
 chord-diagram-toggle button, chord-diagram-top-toggle button{
   border-radius: 50%;
-  background: transparent;
   padding: 0;
   transition-duration: 150ms;
 }
@@ -33,6 +32,11 @@ chord-diagram-toggle button:hover {
 
 chord-diagram-toggle button:checked:hover {
   background: @accent_bg_color;
+}
+
+chord-diagram-top-toggle button:checked{
+  background: transparent;
+  box-shadow: none;
 }
 
 chord-diagram-top-toggle image {

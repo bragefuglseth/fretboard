@@ -18,6 +18,8 @@
     <file preprocess="xml-stripblanks" alias="chord-name-entry.ui">ui/chord-name-entry.ui</file>
 
     <file alias="style.css">ui/style.css</file>
+    <file alias="style-hc.css">ui/style-hc.css</file>
+    <file alias="style-hc-dark.css">ui/style-hc-dark.css</file>
 
     <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop-light.svg">ui/assets/chord-diagram-backdrop-light.svg</file>
     <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop-dark.svg">ui/assets/chord-diagram-backdrop-dark.svg</file>

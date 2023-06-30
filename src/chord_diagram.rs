@@ -114,18 +114,19 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
+            let obj = self.obj();
+
             let style_manager = adw::StyleManager::default();
 
-            style_manager.bind_property("dark", &self.diagram_backdrop.get(), "file")
-                .transform_to(|_, style_is_dark| {
-                    let suffix = if style_is_dark { "dark" } else { "light" };
-                    let uri = format!("resource:///dev/bragefuglseth/Fretboard/chord-diagram-backdrop-{suffix}.svg");
-                    Some(gio::File::for_uri(&uri))
-                })
-                .sync_create()
-                .build();
+            style_manager.connect_dark_notify(glib::clone!(@weak obj => move |_| {
+                obj.update_style();
+            }));
 
-            let obj = self.obj();
+            style_manager.connect_high_contrast_notify(glib::clone!(@weak obj => move |_| {
+                obj.update_style();
+            }));
+
+            obj.update_style();
 
             // Setup top toggles
             for _ in 0..STRINGS {
@@ -164,61 +165,6 @@ mod imp {
 
                 self.toggles.borrow_mut().push(current_string_toggles);
             }
-
-            style_manager
-                .bind_property("dark", &self.barre_2_image.get(), "file")
-                .transform_to(|_, is_dark| {
-                    let suffix = if is_dark { "dark" } else { "light" };
-                    let uri =
-                        format!("resource:///dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg");
-                    Some(gio::File::for_uri(&uri))
-                })
-                .sync_create()
-                .build();
-
-            style_manager
-                .bind_property("dark", &self.barre_3_image.get(), "file")
-                .transform_to(|_, is_dark| {
-                    let suffix = if is_dark { "dark" } else { "light" };
-                    let uri =
-                        format!("resource:///dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg");
-                    Some(gio::File::for_uri(&uri))
-                })
-                .sync_create()
-                .build();
-
-            style_manager
-                .bind_property("dark", &self.barre_4_image.get(), "file")
-                .transform_to(|_, is_dark| {
-                    let suffix = if is_dark { "dark" } else { "light" };
-                    let uri =
-                        format!("resource:///dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg");
-                    Some(gio::File::for_uri(&uri))
-                })
-                .sync_create()
-                .build();
-
-            style_manager
-                .bind_property("dark", &self.barre_5_image.get(), "file")
-                .transform_to(|_, is_dark| {
-                    let suffix = if is_dark { "dark" } else { "light" };
-                    let uri =
-                        format!("resource:///dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg");
-                    Some(gio::File::for_uri(&uri))
-                })
-                .sync_create()
-                .build();
-
-            style_manager
-                .bind_property("dark", &self.barre_6_image.get(), "file")
-                .transform_to(|_, is_dark| {
-                    let suffix = if is_dark { "dark" } else { "light" };
-                    let uri =
-                        format!("resource:///dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg");
-                    Some(gio::File::for_uri(&uri))
-                })
-                .sync_create()
-                .build();
 
             let barre_spin = self.barre_spin.get();
 
@@ -389,7 +335,34 @@ impl FretboardChordDiagram {
             _ => "empty",
         });
     }
+
+    fn update_style(&self) {
+        let app_style = adw::StyleManager::default();
+
+        // in hight contrast mode, just use the dark mode assets for light mode and vice versa
+        let suffix = match (app_style.is_dark(), app_style.is_high_contrast()) {
+            (false, false) | (true, true) => "light",
+            (true, false) | (false, true) => "dark",
+        };
+
+        let backdrop = self.imp().diagram_backdrop.get();
+        backdrop.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/chord-diagram-backdrop-{suffix}.svg")));
+
+        let barre_2 = self.imp().barre_2_image.get();
+        let barre_3 = self.imp().barre_3_image.get();
+        let barre_4 = self.imp().barre_4_image.get();
+        let barre_5 = self.imp().barre_5_image.get();
+        let barre_6 = self.imp().barre_6_image.get();
+
+        barre_2.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg")));
+        barre_3.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg")));
+        barre_4.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg")));
+        barre_5.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg")));
+        barre_6.set_resource(Some(&format!("/dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg")));
+    }
 }
+
+// ChordOPS 😎️
 
 // find barre length of *adjusted* chords (lowest fingered fret is positioned @ 1)
 fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
