@@ -17,6 +17,9 @@ The easiest way to contribute is to suggest improvement to the chord database. I
 
 If you want to contribute major changes, please discuss them beforehand to verify that they are suitable for the project.
 
+### Building From Source
+The recommended way to build Fretboard from source is to use [GNOME Builder](https://flathub.org/apps/org.gnome.Builder). Clone this repository, and run the project by clicking on the play button in the header bar.
+
 ## Roadmap
 
 The app is pretty much done at this point. The only new feature that's currently planned is the ability to look up more ways to play a chord.
