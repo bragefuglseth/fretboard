@@ -58,6 +58,10 @@ mod imp {
         type ParentType = adw::ApplicationWindow;
 
         fn class_init(klass: &mut Self::Class) {
+            klass.install_action("win.empty-chord", None, move |win, _, _| {
+                win.empty_chord();
+            });
+
             klass.bind_template();
         }
 
@@ -131,6 +135,12 @@ impl FretboardWindow {
         self.imp().chords.replace(load_chords());
         self.load_chord_from_name("C");
         self.lookup_chord_name(self.imp().chord_diagram.get().imp().chord.get());
+    }
+
+    fn empty_chord(&self) {
+        self.imp().chord_diagram.set_chord(EMPTY_CHORD);
+        self.imp().entry.imp().entry.set_text("");
+        self.imp().feedback_stack.set_visible_child_name("empty");
     }
 
     fn load_chord_from_name(&self, name: &str) {

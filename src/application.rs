@@ -93,6 +93,10 @@ impl FretboardApplication {
             .activate(move |app: &Self, _, _| app.show_about())
             .build();
         self.add_action_entries([quit_action, about_action]);
+
+        self.set_accels_for_action("window.close", &["<Ctrl>W"]);
+
+        self.set_accels_for_action("win.empty-chord", &["<Ctrl>E"]);
     }
 
     fn show_about(&self) {
