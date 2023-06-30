@@ -2,6 +2,7 @@ use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
 use std::cell::Cell;
+use gettextrs::gettext;
 
 #[derive(Default, Clone, Copy, Debug)]
 pub enum TopToggleState {
@@ -148,5 +149,12 @@ impl FretboardChordDiagramTopToggle {
                 TopToggleState::Open => "open",
                 TopToggleState::Muted => "muted",
             });
+
+        let tooltip_text = match imp.state.get() {
+                TopToggleState::Off | TopToggleState::Muted => gettext("Open String"),
+                TopToggleState::Open => gettext("Mute String"),
+        };
+
+        self.imp().button.set_tooltip_text(Some(&tooltip_text));
     }
 }

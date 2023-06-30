@@ -12,7 +12,7 @@
             <property name="hexpand">true</property>
             <property name="xalign">0.5</property>
             <property name="width-request">262</property>
-            <property name="placeholder-text" translatable="yes">Chord Name</property>
+            <property name="placeholder-text" translatable="yes" comments="translators: keep this short! use only 'chord' or 'name' instead of both if necessary.">Chord Name</property>
             <property name="max-length">15</property>
           </object>
         </child>
@@ -25,9 +25,10 @@
             <property name="margin-end">6</property>
             <child>
               <object class="GtkButton" id="button">
+                <property name="icon-name">checkmark-large-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Confirm</property>
                 <property name="halign">end</property>
                 <property name="valign">center</property>
-                <property name="icon-name">checkmark-large-symbolic</property>
                 <style>
                   <class name="flat" />
                   <class name="circular" />

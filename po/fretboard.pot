@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the fretboard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fretboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-30 21:59+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in:3
+msgid "fretboard"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:7
+msgid "No description"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:6
+msgid "Window width"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:10
+msgid "Window height"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:14
+msgid "Window maximized state"
+msgstr ""
+
+#: src/chord_diagram_top_toggle.rs:154
+msgid "Open String"
+msgstr ""
+
+#: src/chord_diagram_top_toggle.rs:155
+msgid "Mute String"
+msgstr ""
+
+#: src/ui/window.ui:19
+msgid "Main Menu"
+msgstr ""
+
+#: src/ui/window.ui:108
+msgid "_Empty Chord"
+msgstr ""
+
+#: src/ui/window.ui:112
+msgid "_About Fretboard"
+msgstr ""
+
+#: src/ui/barre-spin.ui:10
+msgid "Move Up"
+msgstr ""
+
+#: src/ui/barre-spin.ui:29
+msgid "Move Down"
+msgstr ""
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/ui/chord-name-entry.ui:15
+msgid "Chord Name"
+msgstr ""
+
+#: src/ui/chord-name-entry.ui:29
+msgid "Confirm"
+msgstr ""

@@ -1,4 +1,7 @@
 data/dev.bragefuglseth.Fretboard.desktop.in
 data/dev.bragefuglseth.Fretboard.appdata.xml.in
 data/dev.bragefuglseth.Fretboard.gschema.xml
-src/window.ui
+src/chord_diagram_top_toggle.rs
+src/ui/window.ui
+src/ui/barre-spin.ui
+src/ui/chord-name-entry.ui
