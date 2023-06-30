@@ -1,8 +1,12 @@
 [Desktop Entry]
-Name=fretboard
+Name=Fretboard
+Comment=Look up guitar chords
 Exec=fretboard
 Icon=dev.bragefuglseth.Fretboard
 Terminal=false
 Type=Application
-Categories=GTK;
+Categories=GTK;Education;
+Keywords=guitar;chords
 StartupNotify=true
+# Translators: Do NOT translate or transliterate this text (these are enum types)!
+X-Purism-FormFactor=Workstation;Mobile;

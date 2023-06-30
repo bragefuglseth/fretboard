@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-30 21:59+0200\n"
+"POT-Creation-Date: 2023-06-30 23:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in:3
-msgid "fretboard"
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:8
+msgid "Fretboard"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:7
-msgid "No description"
+#: data/dev.bragefuglseth.Fretboard.desktop.in:4
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:10
+msgid "Look up guitar chords"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in:10
+msgid "guitar;chords"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:9
+msgid "Brage Fuglseth"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:13
+msgid ""
+"How was that chord played again? Fretboard lets you find guitar chords by "
+"typing their name or plotting them into an interactive guitar neck. No "
+"matter if you are are a beginner or an advanced player, you can use "
+"Fretboard to practice, learn, and master your favorite songs!"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:28
+msgid "guitar"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:29
+msgid "chords"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:71
+msgid "Initial release."
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:6
@@ -37,11 +67,12 @@ msgstr ""
 msgid "Window maximized state"
 msgstr ""
 
-#: src/chord_diagram_top_toggle.rs:154
+#. translators: "open" is a verb here, not an adjective
+#: src/chord_diagram_top_toggle.rs:155
 msgid "Open String"
 msgstr ""
 
-#: src/chord_diagram_top_toggle.rs:155
+#: src/chord_diagram_top_toggle.rs:156
 msgid "Mute String"
 msgstr ""
 

@@ -21,6 +21,7 @@
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
+use gettextrs::gettext;
 
 use crate::config::VERSION;
 use crate::FretboardWindow;
@@ -107,9 +108,17 @@ impl FretboardApplication {
             .application_icon("dev.bragefuglseth.Fretboard")
             .developer_name("Brage Fuglseth")
             .version(VERSION)
-            .developers(vec!["Brage Fuglseth"])
+            .developers(vec!["Brage Fuglseth https://bragefuglseth.dev"])
+            .website("https://github.com/bragefuglseth/fretboard")
+            .issue_url("https://github.com/bragefuglseth/fretboard/issues")
+            .license_type(gtk::License::Gpl30)
             .copyright("© 2023 Brage Fuglseth")
             .build();
+
+        about.add_acknowledgement_section(
+            Some(&gettext("Original chord data from")),
+            &["Chord Collection https://github.com/T-vK/chord-collection"],
+        );
 
         about.present();
     }
