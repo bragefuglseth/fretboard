@@ -13,7 +13,7 @@ Suggestions and contributions are more than welcome. However, please take the fo
 - Only Flatpak is officially supported.
 - The feature set is intentionally restricted. Don't let this discourage you from coming with suggestions, just keep in mind that some things might be technically difficult or out of scope for the app.
 
-The easiest way to contribute is to suggest improvement to the chord database. It works splendidly for popular chords, but has some rough edges. If you get a chord you think is odd when typing a specific name, or don't get the name you'd expect from plotting one into the interactive guitar neck, please [open an issue](https://github.com/bragefuglseth/fretboard/issues).
+The easiest way to contribute is to suggest improvement to the chord database. It works splendidly for popular chords, but has some rough edges. If you get a chord you think is odd when typing a specific name, or don't get the name you'd expect from plotting one on the interactive guitar neck, please [open an issue](https://github.com/bragefuglseth/fretboard/issues).
 
 If you want to contribute major changes, please discuss them beforehand to verify that they are suitable for the project.
 
