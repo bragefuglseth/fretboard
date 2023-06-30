@@ -4,7 +4,7 @@ use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleS
 use adw::subclass::prelude::*;
 use glib::{closure_local, subclass::Signal};
 use gtk::prelude::*;
-use gtk::{gio, glib};
+use gtk::glib;
 use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
 
