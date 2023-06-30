@@ -22,13 +22,17 @@ use crate::chord_diagram::FretboardChordDiagram;
 use crate::chord_name_entry::FretboardChordNameEntry;
 use crate::chords::{load_chords, Chord};
 use adw::subclass::prelude::*;
-use glib::closure_local;
+use glib::{signal::Inhibit, closure_local};
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use rayon::prelude::*;
 use std::cell::RefCell;
+use once_cell::sync::OnceCell;
+use std::path::PathBuf;
+use std::fs::File;
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
+const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
 
 mod imp {
     use super::*;
@@ -49,6 +53,8 @@ mod imp {
         pub feedback_stack: TemplateChild<gtk::Stack>,
 
         pub chords: RefCell<Vec<Chord>>,
+
+        pub settings: OnceCell<gio::Settings>,
     }
 
     #[glib::object_subclass]
@@ -74,11 +80,28 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
-            self.obj().init();
+            let obj = self.obj();
+
+            obj.setup_settings();
+            obj.load_window_size();
+
+            obj.init();
         }
     }
     impl WidgetImpl for FretboardWindow {}
-    impl WindowImpl for FretboardWindow {}
+    impl WindowImpl for FretboardWindow {
+        fn close_request(&self) -> Inhibit {
+            // Save window size
+            self.obj()
+                .save_window_size()
+                .expect("able to save window state");
+
+            self.obj().save_current_chord();
+
+            // Don't inhibit the default handler
+            self.parent_close_request()
+        }
+    }
     impl ApplicationWindowImpl for FretboardWindow {}
     impl AdwApplicationWindowImpl for FretboardWindow {}
 }
@@ -94,6 +117,46 @@ impl FretboardWindow {
         glib::Object::builder()
             .property("application", application)
             .build()
+    }
+
+    fn setup_settings(&self) {
+        let settings = gio::Settings::new("dev.bragefuglseth.Fretboard");
+        self.imp()
+            .settings
+            .set(settings)
+            .expect("`settings` has not been set");
+    }
+
+    fn settings(&self) -> &gio::Settings {
+        self.imp()
+            .settings
+            .get()
+            .expect("`settings` have been set in `setup_settings`.")
+    }
+
+    pub fn save_window_size(&self) -> Result<(), glib::BoolError> {
+        // Get the size of the window
+        let size = self.default_size();
+
+        // Set the window state in `settings`
+        self.settings().set_int("window-width", size.0)?;
+        self.settings().set_int("window-height", size.1)?;
+        self.settings()
+            .set_boolean("is-maximized", self.is_maximized())?;
+
+        Ok(())
+    }
+
+    fn load_window_size(&self) {
+        let width = self.settings().int("window-width");
+        let height = self.settings().int("window-height");
+        let is_maximized = self.settings().boolean("is-maximized");
+
+        self.set_default_size(width, height);
+
+        if is_maximized {
+            self.maximize();
+        }
     }
 
     fn init(&self) {
@@ -116,9 +179,8 @@ impl FretboardWindow {
         chord_diagram.connect_closure(
             "user-changed-chord",
             false,
-            closure_local!(move |diagram: FretboardChordDiagram| {
-                let chord = diagram.imp().chord.get();
-                win.lookup_chord_name(chord);
+            closure_local!(move |_: FretboardChordDiagram| {
+                win.lookup_chord_name();
             }),
         );
 
@@ -133,14 +195,32 @@ impl FretboardWindow {
 
         // load chords
         self.imp().chords.replace(load_chords());
-        self.load_chord_from_name("C");
-        self.lookup_chord_name(self.imp().chord_diagram.get().imp().chord.get());
+        self.load_stored_chord();
     }
 
     fn empty_chord(&self) {
         self.imp().chord_diagram.set_chord(EMPTY_CHORD);
         self.imp().entry.imp().entry.set_text("");
         self.imp().feedback_stack.set_visible_child_name("empty");
+    }
+
+    fn save_current_chord(&self) {
+        let chord = &self.imp().chord_diagram.imp().chord.get();
+
+        let file = File::create(data_path()).expect("able to create file");
+        serde_json::to_writer(file, &chord)
+            .expect("able to write file");
+    }
+
+    fn load_stored_chord(&self) {
+        let chord: [Option<usize>; 6] = if let Ok(file) = File::open(data_path()) {
+            serde_json::from_reader(file).expect("able to read file")
+        } else {
+            INITIAL_CHORD
+        };
+
+        self.imp().chord_diagram.set_chord(chord);
+        self.lookup_chord_name();
     }
 
     fn load_chord_from_name(&self, name: &str) {
@@ -159,7 +239,9 @@ impl FretboardWindow {
         }
     }
 
-    fn lookup_chord_name(&self, query_chord: [Option<usize>; 6]) {
+    fn lookup_chord_name(&self) {
+        let query_chord = self.imp().chord_diagram.imp().chord.get();
+
         let chords = self.imp().chords.borrow();
         let name_opt = chords
             .par_iter()
@@ -189,4 +271,12 @@ impl FretboardWindow {
             self.imp().feedback_stack.set_visible_child_name("label");
         }
     }
+}
+
+fn data_path() -> PathBuf {
+    let mut path = glib::user_data_dir();
+    path.push("dev.bragefuglseth.Fretboard");
+    std::fs::create_dir_all(&path).expect("Could not create directory.");
+    path.push("chord.json");
+    path
 }

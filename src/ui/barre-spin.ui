@@ -7,6 +7,7 @@
           <child>
             <object class="GtkButton" id="decrement_button">
               <property name="icon-name">up-large-symbolic</property>
+              <property name="tooltip-text" translatable="yes">Move Up</property>
               <property name="halign">center</property>
               <property name="valign">center</property>
               <property name="width-request">38</property>
@@ -25,6 +26,7 @@
           <child>
             <object class="GtkButton" id="increment_button">
               <property name="icon-name">down-large-symbolic</property>
+              <property name="tooltip-text" translatable="yes">Move Down</property>
               <property name="halign">center</property>
               <property name="valign">center</property>
               <property name="width-request">38</property>

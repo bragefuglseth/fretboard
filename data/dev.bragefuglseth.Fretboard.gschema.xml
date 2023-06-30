@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="fretboard">
 	<schema id="dev.bragefuglseth.Fretboard" path="/dev/bragefuglseth/Fretboard/">
+	  <key name="window-width" type="i">
+			<default>450</default>
+			<summary>Window width</summary>
+		</key>
+		<key name="window-height" type="i">
+			<default>550</default>
+			<summary>Window height</summary>
+		</key>
+		<key name="is-maximized" type="b">
+			<default>false</default>
+			<summary>Window maximized state</summary>
+		</key>
 	</schema>
 </schemalist>
