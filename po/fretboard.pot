@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-30 23:28+0200\n"
+"POT-Creation-Date: 2023-07-01 11:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,10 +37,10 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.appdata.xml.in:13
 msgid ""
-"How was that chord played again? Fretboard lets you find guitar chords by "
-"typing their name or plotting them into an interactive guitar neck. No "
-"matter if you are are a beginner or an advanced player, you can use "
-"Fretboard to practice, learn, and master your favorite songs!"
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their name or plotting them on an interactive guitar neck. No matter "
+"if you are are a beginner or an advanced guitarist, you can use Fretboard to "
+"practice, learn, and master your favorite songs!"
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.appdata.xml.in:28
