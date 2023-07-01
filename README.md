@@ -2,7 +2,7 @@
 
 # Fretboard
 
-How was that chord played, again? Fretboard lets you find guitar chords by typing their name or plotting them on an interactive guitar neck. No matter if you are are a beginner or an advanced guitarist, you can use Fretboard to practice, learn, and master your favorite songs!
+How was that chord played, again? Fretboard lets you find guitar chords by typing their names or plotting them on an interactive guitar neck. No matter if you are a beginner or an advanced guitarist, you can use Fretboard to practice, learn, and master your favorite songs!
 
 ![screenshot](/data/screenshots/screenshot-1.png)
 
