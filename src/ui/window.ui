@@ -84,7 +84,7 @@
                                   <object class="GtkLabel" id="feedback_label">
                                     <property name="wrap">true</property>
                                     <property name="justify">center</property>
-                                    <property name="label">Matching chord not found</property>
+                                    <property name="label">No matching chord found</property>
                                   </object>
                                 </property>
                               </object>
