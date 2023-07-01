@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-01 04:18+0200\n"
+"POT-Creation-Date: 2023-07-01 04:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in:3
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:8
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:7
 msgid "Fretboard"
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in:4
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:10
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:9
 msgid "Look up guitar chords"
 msgstr ""
 
@@ -31,11 +31,11 @@ msgstr ""
 msgid "guitar;chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:9
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:8
 msgid "Brage Fuglseth"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:13
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:11
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their name or plotting them on an interactive guitar neck. No matter "
@@ -53,6 +53,10 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:14
 msgid "Window maximized state"
+msgstr ""
+
+#: src/application.rs:119
+msgid "Original chord data from"
 msgstr ""
 
 #. translators: "open" is a verb here, not an adjective
