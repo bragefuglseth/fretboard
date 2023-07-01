@@ -26,6 +26,12 @@ else
   application_id = base_id
 endif
 
+meson.add_dist_script(
+  'build-aux/dist-vendor.sh',
+  meson.project_source_root(),
+  meson.project_build_root() / 'meson-dist' / '@0@-@1@'.format(meson.project_name(), meson.project_version()),
+)
+
 subdir('data')
 subdir('src')
 subdir('po')
