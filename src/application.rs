@@ -18,13 +18,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+use crate::{
+    config::{VERSION, APP_ID},
+    FretboardWindow,
+};
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
-use gettextrs::gettext;
-
-use crate::config::VERSION;
-use crate::FretboardWindow;
 
 mod imp {
     use super::*;
@@ -44,6 +44,7 @@ mod imp {
             self.parent_constructed();
             let obj = self.obj();
             obj.setup_gactions();
+            obj.set_resource_base_path(Some("/dev/bragefuglseth/Fretboard/"));
             obj.set_accels_for_action("app.quit", &["<primary>q"]);
         }
     }
@@ -105,7 +106,7 @@ impl FretboardApplication {
         let about = adw::AboutWindow::builder()
             .transient_for(&window)
             .application_name("Fretboard")
-            .application_icon("dev.bragefuglseth.Fretboard")
+            .application_icon(APP_ID)
             .developer_name("Brage Fuglseth")
             .version(VERSION)
             .developers(vec!["Brage Fuglseth https://bragefuglseth.dev"])
@@ -114,11 +115,6 @@ impl FretboardApplication {
             .license_type(gtk::License::Gpl30)
             .copyright("© 2023 Brage Fuglseth")
             .build();
-
-        about.add_acknowledgement_section(
-            Some(&gettext("Original chord data from")),
-            &["Chord Collection https://github.com/T-vK/chord-collection"],
-        );
 
         about.present();
     }

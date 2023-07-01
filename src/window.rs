@@ -18,9 +18,12 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-use crate::chord_diagram::FretboardChordDiagram;
-use crate::chord_name_entry::FretboardChordNameEntry;
-use crate::chords::{load_chords, Chord};
+use crate::{
+    chord_diagram::FretboardChordDiagram,
+    chord_name_entry::FretboardChordNameEntry,
+    chords::{load_chords, Chord},
+    config::{APP_ID},
+};
 use adw::subclass::prelude::*;
 use glib::{signal::Inhibit, closure_local};
 use gtk::prelude::*;
@@ -84,6 +87,10 @@ mod imp {
 
             obj.setup_settings();
             obj.load_window_size();
+
+            if APP_ID.ends_with("Devel") {
+                obj.add_css_class("devel");
+            }
 
             obj.init();
         }

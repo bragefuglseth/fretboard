@@ -31,7 +31,7 @@ mod window;
 use self::application::FretboardApplication;
 use self::window::FretboardWindow;
 
-use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
+use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR, APP_ID};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};
 use gtk::prelude::*;
 use gtk::{gio, glib};
@@ -52,7 +52,7 @@ fn main() -> glib::ExitCode {
     // application windows, integration with the window manager/compositor, and
     // desktop features such as file opening and single-instance applications.
     let app = FretboardApplication::new(
-        "dev.bragefuglseth.Fretboard",
+        APP_ID,
         &gio::ApplicationFlags::empty(),
     );
 

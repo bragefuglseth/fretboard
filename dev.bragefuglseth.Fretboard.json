@@ -36,10 +36,13 @@
             "name" : "fretboard",
             "builddir" : true,
             "buildsystem" : "meson",
+            "config-opts": [
+                "-Dprofile=development"
+            ],
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "file:///var/home/brage/Projects"
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }
