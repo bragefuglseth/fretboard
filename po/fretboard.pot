@@ -8,11 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2023-07-01 11:59+0200\n"
-=======
-"POT-Creation-Date: 2023-07-01 04:58+0200\n"
->>>>>>> e43ff05178609329a10dd3e3796dc85488af7f91
+"POT-Creation-Date: 2023-07-01 15:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,21 +41,18 @@ msgid ""
 "typing their name or plotting them on an interactive guitar neck. No matter "
 "if you are are a beginner or an advanced guitarist, you can use Fretboard to "
 "practice, learn, and master your favorite songs!"
-<<<<<<< HEAD
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:28
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:20
 msgid "guitar"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:29
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:21
 msgid "chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:71
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:56
 msgid "Initial release."
-=======
->>>>>>> e43ff05178609329a10dd3e3796dc85488af7f91
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:6
@@ -72,10 +65,6 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:14
 msgid "Window maximized state"
-msgstr ""
-
-#: src/application.rs:119
-msgid "Original chord data from"
 msgstr ""
 
 #. translators: "open" is a verb here, not an adjective
