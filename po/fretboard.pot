@@ -8,7 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2023-07-01 11:59+0200\n"
+=======
+"POT-Creation-Date: 2023-07-01 04:58+0200\n"
+>>>>>>> e43ff05178609329a10dd3e3796dc85488af7f91
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +22,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in:3
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:8
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:7
 msgid "Fretboard"
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in:4
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:10
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:9
 msgid "Look up guitar chords"
 msgstr ""
 
@@ -31,16 +35,17 @@ msgstr ""
 msgid "guitar;chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:9
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:8
 msgid "Brage Fuglseth"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:13
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:11
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their name or plotting them on an interactive guitar neck. No matter "
 "if you are are a beginner or an advanced guitarist, you can use Fretboard to "
 "practice, learn, and master your favorite songs!"
+<<<<<<< HEAD
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.appdata.xml.in:28
@@ -53,6 +58,8 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.appdata.xml.in:71
 msgid "Initial release."
+=======
+>>>>>>> e43ff05178609329a10dd3e3796dc85488af7f91
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:6
@@ -67,13 +74,17 @@ msgstr ""
 msgid "Window maximized state"
 msgstr ""
 
+#: src/application.rs:119
+msgid "Original chord data from"
+msgstr ""
+
 #. translators: "open" is a verb here, not an adjective
 #: src/chord_diagram_top_toggle.rs:155
-msgid "Open String"
+msgid "Open"
 msgstr ""
 
 #: src/chord_diagram_top_toggle.rs:156
-msgid "Mute String"
+msgid "Mute"
 msgstr ""
 
 #: src/ui/window.ui:19
