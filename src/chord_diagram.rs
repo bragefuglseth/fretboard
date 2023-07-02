@@ -143,7 +143,7 @@ mod imp {
 
             // Setup toggles
             for string_num in 0..STRINGS {
-                let mut current_string_toggles = Vec::new();
+                let mut current_string_toggles = Vec::with_capacity(FRETS);
 
                 for fret_num in 0..FRETS {
                     let toggle = FretboardChordDiagramToggle::new();
