@@ -339,7 +339,7 @@ impl FretboardChordDiagram {
     fn update_style(&self) {
         let app_style = adw::StyleManager::default();
 
-        // in hight contrast mode, just use the dark mode assets for light mode and vice versa
+        // in high contrast mode, just use the dark mode assets for light mode and vice versa
         let suffix = match (app_style.is_dark(), app_style.is_high_contrast()) {
             (false, false) | (true, true) => "light",
             (true, false) | (false, true) => "dark",
