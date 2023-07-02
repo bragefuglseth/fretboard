@@ -253,23 +253,12 @@ impl FretboardWindow {
             })
             .map(|chord| chord.name.to_owned());
 
-        if let Some(name) = name_opt {
-            self.imp()
-                .entry
-                .imp()
-                .entry_buffer
-                .replace(name.to_string());
-            self.imp().entry.entry().set_text(&name);
-            self.imp().feedback_stack.set_visible_child_name("empty");
-        } else {
-            self.imp()
-                .entry
-                .imp()
-                .entry_buffer
-                .replace(String::from(""));
-            self.imp().entry.entry().set_text("");
-            self.imp().feedback_stack.set_visible_child_name("label");
-        }
+        let name = name_opt.unwrap_or_default();
+        self.imp().entry.imp().entry_buffer.replace(name.clone());
+        self.imp().entry.entry().set_text(&name);
+        self.imp()
+            .feedback_stack
+            .set_visible_child_name(if !name.is_empty() { "empty" } else { "label" });
     }
 }
 
