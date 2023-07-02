@@ -44,14 +44,9 @@ mod imp {
 
             self.entry.connect_changed(glib::clone!(@weak self as entry_wrapper => move |entry| {
                 let entry_text = entry.text().as_str().to_owned();
-
-                if entry_text != entry_wrapper.entry_buffer.borrow().clone()  && !entry_text.is_empty() {
-                    entry_wrapper.revealer.set_visible(true);
-                    entry_wrapper.revealer.set_reveal_child(true);
-                } else {
-                    entry_wrapper.revealer.set_visible(false);
-                    entry_wrapper.revealer.set_reveal_child(false);
-                }
+                let changed = entry_text != *entry_wrapper.entry_buffer.borrow() && !entry_text.is_empty();
+                entry_wrapper.revealer.set_visible(changed);
+                entry_wrapper.revealer.set_reveal_child(changed);
             }));
 
             self.entry
