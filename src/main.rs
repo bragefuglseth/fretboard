@@ -31,7 +31,7 @@ mod window;
 use self::application::FretboardApplication;
 use self::window::FretboardWindow;
 
-use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR, APP_ID};
+use config::{APP_ID, GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};
 use gtk::prelude::*;
 use gtk::{gio, glib};
@@ -51,10 +51,7 @@ fn main() -> glib::ExitCode {
     // Create a new GtkApplication. The application manages our main loop,
     // application windows, integration with the window manager/compositor, and
     // desktop features such as file opening and single-instance applications.
-    let app = FretboardApplication::new(
-        APP_ID,
-        &gio::ApplicationFlags::empty(),
-    );
+    let app = FretboardApplication::new(APP_ID, &gio::ApplicationFlags::empty());
 
     // Run the application. This function will block until the application
     // exits. Upon return, we have our exit code to return to the shell. (This

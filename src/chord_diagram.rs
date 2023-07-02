@@ -3,8 +3,8 @@ use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
 use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use adw::subclass::prelude::*;
 use glib::{closure_local, subclass::Signal};
-use gtk::prelude::*;
 use gtk::glib;
+use gtk::prelude::*;
 use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
 

@@ -22,17 +22,17 @@ use crate::{
     chord_diagram::FretboardChordDiagram,
     chord_name_entry::FretboardChordNameEntry,
     chords::{load_chords, Chord},
-    config::{APP_ID},
+    config::APP_ID,
 };
 use adw::subclass::prelude::*;
-use glib::{signal::Inhibit, closure_local};
+use glib::{closure_local, signal::Inhibit};
 use gtk::prelude::*;
 use gtk::{gio, glib};
+use once_cell::sync::OnceCell;
 use rayon::prelude::*;
 use std::cell::RefCell;
-use once_cell::sync::OnceCell;
-use std::path::PathBuf;
 use std::fs::File;
+use std::path::PathBuf;
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
@@ -215,8 +215,7 @@ impl FretboardWindow {
         let chord = &self.imp().chord_diagram.imp().chord.get();
 
         let file = File::create(data_path()).expect("able to create file");
-        serde_json::to_writer(file, &chord)
-            .expect("able to write file");
+        serde_json::to_writer(file, &chord).expect("able to write file");
     }
 
     fn load_stored_chord(&self) {
