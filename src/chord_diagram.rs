@@ -3,8 +3,8 @@ use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
 use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use adw::subclass::prelude::*;
 use glib::{closure_local, subclass::Signal};
-use gtk::prelude::*;
 use gtk::glib;
+use gtk::prelude::*;
 use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
 
@@ -143,7 +143,7 @@ mod imp {
 
             // Setup toggles
             for string_num in 0..STRINGS {
-                let mut current_string_toggles = Vec::new();
+                let mut current_string_toggles = Vec::with_capacity(FRETS);
 
                 for fret_num in 0..FRETS {
                     let toggle = FretboardChordDiagramToggle::new();
@@ -339,7 +339,7 @@ impl FretboardChordDiagram {
     fn update_style(&self) {
         let app_style = adw::StyleManager::default();
 
-        // in hight contrast mode, just use the dark mode assets for light mode and vice versa
+        // in high contrast mode, just use the dark mode assets for light mode and vice versa
         let suffix = match (app_style.is_dark(), app_style.is_high_contrast()) {
             (false, false) | (true, true) => "light",
             (true, false) | (false, true) => "dark",
@@ -380,7 +380,7 @@ impl FretboardChordDiagram {
 fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
     if chord
         .iter()
-        .filter(|&&option| option == Some(1 as usize))
+        .filter(|&&option| option == Some(1_usize))
         .count()
         .lt(&2)
     {
@@ -397,16 +397,16 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
     let mut note_count = 0;
 
     for (num, val) in chord_reversed {
-        if val == &Some(1 as usize) {
+        if val == &Some(1_usize) {
             barre_length = num + 1;
             note_count += 1;
         }
 
         let next = chord_reversed_next.next();
-        if next == Some(&Some(0 as usize))
+        if next == Some(&Some(0_usize))
             || next == Some(&None)
-            || val == &Some(0 as usize)
-            || val == &None
+            || val == &Some(0_usize)
+            || val.is_none()
         {
             break;
         }

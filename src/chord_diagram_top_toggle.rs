@@ -1,8 +1,8 @@
 use adw::subclass::prelude::*;
+use gettextrs::gettext;
 use gtk::glib;
 use gtk::prelude::*;
 use std::cell::Cell;
-use gettextrs::gettext;
 
 #[derive(Default, Clone, Copy, Debug)]
 pub enum TopToggleState {
@@ -151,9 +151,9 @@ impl FretboardChordDiagramTopToggle {
             });
 
         let tooltip_text = match imp.state.get() {
-                // translators: "open" is a verb here, not an adjective
-                TopToggleState::Off | TopToggleState::Muted => gettext("Open"),
-                TopToggleState::Open => gettext("Mute"),
+            // translators: "open" is a verb here, not an adjective
+            TopToggleState::Off | TopToggleState::Muted => gettext("Open"),
+            TopToggleState::Open => gettext("Mute"),
         };
 
         self.imp().button.set_tooltip_text(Some(&tooltip_text));

@@ -105,24 +105,12 @@ impl FretboardBarreSpin {
             .build();
 
         self.bind_property("value", &self.imp().increment_button.get(), "sensitive")
-            .transform_to(|_, value: u8| {
-                if value < MAX_VALUE {
-                    Some(true)
-                } else {
-                    Some(false)
-                }
-            })
+            .transform_to(|_, value: u8| Some(value < MAX_VALUE))
             .sync_create()
             .build();
 
         self.bind_property("value", &self.imp().decrement_button.get(), "sensitive")
-            .transform_to(|_, value: u8| {
-                if value > MIN_VALUE {
-                    Some(true)
-                } else {
-                    Some(false)
-                }
-            })
+            .transform_to(|_, value: u8| Some(value > MIN_VALUE))
             .sync_create()
             .build();
 

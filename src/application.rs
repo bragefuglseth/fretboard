@@ -19,7 +19,7 @@
  */
 
 use crate::{
-    config::{VERSION, APP_ID},
+    config::{APP_ID, VERSION},
     FretboardWindow,
 };
 use adw::subclass::prelude::*;

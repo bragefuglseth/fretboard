@@ -22,17 +22,17 @@ use crate::{
     chord_diagram::FretboardChordDiagram,
     chord_name_entry::FretboardChordNameEntry,
     chords::{load_chords, Chord},
-    config::{APP_ID},
+    config::APP_ID,
 };
 use adw::subclass::prelude::*;
-use glib::{signal::Inhibit, closure_local};
+use glib::{closure_local, signal::Inhibit};
 use gtk::prelude::*;
 use gtk::{gio, glib};
+use once_cell::sync::OnceCell;
 use rayon::prelude::*;
 use std::cell::RefCell;
-use once_cell::sync::OnceCell;
-use std::path::PathBuf;
 use std::fs::File;
+use std::path::PathBuf;
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
@@ -169,13 +169,7 @@ impl FretboardWindow {
     fn init(&self) {
         // on narrow window width, hide filler
         self.bind_property("default-width", &self.imp().filler.get(), "reveal-child")
-            .transform_to(|_, window_width: i32| {
-                if window_width > 420 {
-                    Some(true)
-                } else {
-                    Some(false)
-                }
-            })
+            .transform_to(|_, window_width: i32| Some(window_width > 420))
             .sync_create()
             .build();
 
@@ -215,8 +209,7 @@ impl FretboardWindow {
         let chord = &self.imp().chord_diagram.imp().chord.get();
 
         let file = File::create(data_path()).expect("able to create file");
-        serde_json::to_writer(file, &chord)
-            .expect("able to write file");
+        serde_json::to_writer(file, &chord).expect("able to write file");
     }
 
     fn load_stored_chord(&self) {
@@ -235,7 +228,7 @@ impl FretboardWindow {
         let chord_opt = chords
             .par_iter()
             .find_first(|chord| chord.name.to_lowercase() == name.to_lowercase())
-            .map(|chord| chord.positions[0].clone());
+            .map(|chord| chord.positions[0]);
 
         if let Some(chord) = chord_opt {
             self.imp().chord_diagram.set_chord(chord);
@@ -260,23 +253,12 @@ impl FretboardWindow {
             })
             .map(|chord| chord.name.to_owned());
 
-        if let Some(name) = name_opt {
-            self.imp()
-                .entry
-                .imp()
-                .entry_buffer
-                .replace(name.to_string());
-            self.imp().entry.entry().set_text(&name);
-            self.imp().feedback_stack.set_visible_child_name("empty");
-        } else {
-            self.imp()
-                .entry
-                .imp()
-                .entry_buffer
-                .replace(String::from(""));
-            self.imp().entry.entry().set_text("");
-            self.imp().feedback_stack.set_visible_child_name("label");
-        }
+        let name = name_opt.unwrap_or_default();
+        self.imp().entry.imp().entry_buffer.replace(name.clone());
+        self.imp().entry.entry().set_text(&name);
+        self.imp()
+            .feedback_stack
+            .set_visible_child_name(if !name.is_empty() { "empty" } else { "label" });
     }
 }
 
