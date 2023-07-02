@@ -380,7 +380,7 @@ impl FretboardChordDiagram {
 fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
     if chord
         .iter()
-        .filter(|&&option| option == Some(1 as usize))
+        .filter(|&&option| option == Some(1_usize))
         .count()
         .lt(&2)
     {
@@ -397,16 +397,16 @@ fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
     let mut note_count = 0;
 
     for (num, val) in chord_reversed {
-        if val == &Some(1 as usize) {
+        if val == &Some(1_usize) {
             barre_length = num + 1;
             note_count += 1;
         }
 
         let next = chord_reversed_next.next();
-        if next == Some(&Some(0 as usize))
+        if next == Some(&Some(0_usize))
             || next == Some(&None)
-            || val == &Some(0 as usize)
-            || val == &None
+            || val == &Some(0_usize)
+            || val.is_none()
         {
             break;
         }

@@ -235,7 +235,7 @@ impl FretboardWindow {
         let chord_opt = chords
             .par_iter()
             .find_first(|chord| chord.name.to_lowercase() == name.to_lowercase())
-            .map(|chord| chord.positions[0].clone());
+            .map(|chord| chord.positions[0]);
 
         if let Some(chord) = chord_opt {
             self.imp().chord_diagram.set_chord(chord);
