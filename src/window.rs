@@ -169,13 +169,7 @@ impl FretboardWindow {
     fn init(&self) {
         // on narrow window width, hide filler
         self.bind_property("default-width", &self.imp().filler.get(), "reveal-child")
-            .transform_to(|_, window_width: i32| {
-                if window_width > 420 {
-                    Some(true)
-                } else {
-                    Some(false)
-                }
-            })
+            .transform_to(|_, window_width: i32| Some(window_width > 420))
             .sync_create()
             .build();
 
