@@ -12,7 +12,7 @@ const STRINGS: usize = 6;
 const FRETS: usize = 5;
 
 // These are always shown in fret position 1
-const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 17] = [
+const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 18] = [
     [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
     [None, Some(0), Some(2), Some(2), None, Some(0)],    // A5
     [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
@@ -27,6 +27,7 @@ const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 17] = [
     [Some(0), Some(2), Some(2), Some(0), Some(0), Some(0)], // Em
     [Some(0), Some(2), Some(2), Some(0), Some(2), Some(0)], // Em6
     [Some(0), Some(2), Some(0), Some(0), Some(0), Some(0)], // Em7
+    [Some(0), Some(2), Some(2), None, Some(0), Some(2)], // Esus2
     [Some(0), Some(2), Some(2), Some(2), Some(0), Some(0)], // Esus4
     [Some(3), Some(2), Some(0), Some(0), Some(0), Some(3)], // G
     [Some(3), Some(2), Some(0), Some(0), Some(0), Some(0)], // G6
