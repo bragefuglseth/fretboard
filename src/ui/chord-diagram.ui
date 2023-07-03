@@ -24,6 +24,8 @@
                 </child>
                 <child type="overlay">
                   <object class="GtkStack" id="barre_overlay_stack">
+                    <property name="valign">start</property>
+                    <property name="halign">center</property>
                     <property name="transition-type">crossfade</property>
                     <property name="transition-duration">150</property>
                     <child>

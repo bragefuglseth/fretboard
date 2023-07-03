@@ -3,8 +3,8 @@
 
 <svg
    width="262"
-   height="250"
-   viewBox="0 0 262 250"
+   height="312"
+   viewBox="0 0 262 312"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#181818"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="8.8388348"
-     inkscape:cx="118.39796"
-     inkscape:cy="274.5837"
+     inkscape:zoom="2.5282067"
+     inkscape:cx="71.39448"
+     inkscape:cy="195.79096"
      inkscape:current-layer="layer1"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
@@ -37,7 +37,7 @@
        type="xygrid"
        id="grid2510"
        originx="0"
-       originy="0" />
+       originy="1.1920929e-07" />
   </sodipodi:namedview>
   <defs
      id="defs2">
@@ -59,29 +59,29 @@
        style="fill:none;stroke:#404040;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        id="rect2564"
        width="260"
-       height="248"
+       height="310"
        x="1"
-       y="1"
+       y="0.99999988"
        rx="12"
-       ry="12" />
+       ry="11.999999" />
     <path
        style="fill:none;stroke:#404040;stroke-width:2;stroke-opacity:1"
-       d="M 53,249 V 1"
+       d="M 53,311 V 1"
        id="path6797"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#404040;stroke-width:2;stroke-opacity:1"
-       d="M 105,249 V 1"
+       d="M 105,311 V 1"
        id="path6799"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#404040;stroke-width:2;stroke-opacity:1"
-       d="M 157,249 V 1"
+       d="M 157,311 V 1"
        id="path6801"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#404040;stroke-width:2;stroke-opacity:1"
-       d="M 209,249 V 1"
+       d="M 209,311 V 1"
        id="path6803"
        sodipodi:nodetypes="cc" />
     <path
@@ -98,6 +98,11 @@
        style="fill:none;fill-opacity:0.4;stroke:#404040;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 1,187 H 261"
        id="path6235"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.4;stroke:#404040;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1,249 H 261"
+       id="path410"
        sodipodi:nodetypes="cc" />
   </g>
 </svg>
