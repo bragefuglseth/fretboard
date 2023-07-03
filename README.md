@@ -4,6 +4,8 @@
 
 How was that chord played, again? Fretboard lets you find guitar chords by typing their names or plotting them on an interactive guitar neck. No matter if you are a beginner or an advanced guitarist, you can use Fretboard to practice, learn, and master your favorite songs!
 
+<a href='https://flathub.org/apps/dev.bragefuglseth.Fretboard'><img width='240' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.png'/></a>
+
 ![screenshot](/data/screenshots/screenshot-1.png)
 
 ## Contributing
