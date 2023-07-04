@@ -23,20 +23,23 @@ pub fn load_chords() -> Vec<Chord> {
         let mut chunk_iter = chunk.iter();
         let name = chunk_iter.next().unwrap();
 
-        let positions: Vec<[Option<usize>; 6]> = chunk_iter.map(|line| {
-            line.split(|c: char| c.is_whitespace()).map(|c| {
-                match c {
-                    "x" => None,
-                    num => Some(num.parse::<usize>().unwrap()),
-                }
+        let positions: Vec<[Option<usize>; 6]> = chunk_iter
+            .map(|line| {
+                line.split(|c: char| c.is_whitespace())
+                    .map(|c| match c {
+                        "x" => None,
+                        num => Some(num.parse::<usize>().unwrap()),
+                    })
+                    .collect::<Vec<_>>()
+                    .try_into()
+                    .unwrap()
             })
-            .collect::<Vec<_>>()
-            .try_into()
-            .unwrap()
-        })
-        .collect();
+            .collect();
 
-        chords.push(Chord {name: name.to_string(), positions});
+        chords.push(Chord {
+            name: name.to_string(),
+            positions,
+        });
     }
 
     chords
