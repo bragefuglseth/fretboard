@@ -21,7 +21,7 @@
 use crate::{
     chord_diagram::FretboardChordDiagram,
     chord_name_entry::FretboardChordNameEntry,
-    chords::{load_chords, Chord},
+    database::ChordsDatabase,
     config::APP_ID,
 };
 use adw::subclass::prelude::*;
@@ -29,7 +29,6 @@ use glib::{closure_local, signal::Inhibit};
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use once_cell::sync::OnceCell;
-use rayon::prelude::*;
 use std::cell::RefCell;
 use std::fs::File;
 use std::path::PathBuf;
@@ -40,7 +39,7 @@ const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some
 mod imp {
     use super::*;
 
-    #[derive(Debug, Default, gtk::CompositeTemplate)]
+    #[derive(Default, gtk::CompositeTemplate)]
     #[template(resource = "/dev/bragefuglseth/Fretboard/window.ui")]
     pub struct FretboardWindow {
         // Template widgets
@@ -55,7 +54,7 @@ mod imp {
         #[template_child]
         pub feedback_stack: TemplateChild<gtk::Stack>,
 
-        pub chords: RefCell<Vec<Chord>>,
+        pub database: RefCell<ChordsDatabase>,
 
         pub settings: OnceCell<gio::Settings>,
     }
@@ -181,7 +180,7 @@ impl FretboardWindow {
             "user-changed-chord",
             false,
             closure_local!(move |_: FretboardChordDiagram| {
-                win.lookup_chord_name();
+                win.load_name_from_chord();
             }),
         );
 
@@ -190,12 +189,10 @@ impl FretboardWindow {
         entry
             .entry()
             .connect_activate(glib::clone!(@weak self as win => move |entry| {
-                win.load_chord_from_name(&entry.text());
+                win.load_chord_from_name();
                 win.imp().entry.get().imp().entry_buffer.replace(entry.text().as_str().to_string());
             }));
 
-        // load chords
-        self.imp().chords.replace(load_chords());
         self.load_stored_chord();
     }
 
@@ -220,15 +217,12 @@ impl FretboardWindow {
         };
 
         self.imp().chord_diagram.set_chord(chord);
-        self.lookup_chord_name();
+        self.load_name_from_chord();
     }
 
-    fn load_chord_from_name(&self, name: &str) {
-        let chords = self.imp().chords.borrow();
-        let chord_opt = chords
-            .par_iter()
-            .find_first(|chord| chord.name.to_lowercase() == name.to_lowercase())
-            .map(|chord| chord.positions[0]);
+    fn load_chord_from_name(&self) {
+        let name = self.imp().entry.get().imp().entry.text().to_string();
+        let chord_opt = self.imp().database.borrow().chord_from_name(&name);
 
         if let Some(chord) = chord_opt {
             self.imp().chord_diagram.set_chord(chord);
@@ -239,19 +233,10 @@ impl FretboardWindow {
         }
     }
 
-    fn lookup_chord_name(&self) {
+    fn load_name_from_chord(&self) {
         let query_chord = self.imp().chord_diagram.imp().chord.get();
 
-        let chords = self.imp().chords.borrow();
-        let name_opt = chords
-            .par_iter()
-            .find_first(|chord| {
-                chord
-                    .positions
-                    .par_iter()
-                    .any(|&position| position == query_chord)
-            })
-            .map(|chord| chord.name.to_owned());
+        let name_opt = self.imp().database.borrow().name_from_chord(query_chord);
 
         let name = name_opt.unwrap_or_default();
         self.imp().entry.imp().entry_buffer.replace(name.clone());

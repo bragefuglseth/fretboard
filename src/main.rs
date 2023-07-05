@@ -24,7 +24,7 @@ mod chord_diagram;
 mod chord_diagram_toggle;
 mod chord_diagram_top_toggle;
 mod chord_name_entry;
-mod chords;
+mod database;
 mod config;
 mod window;
 
