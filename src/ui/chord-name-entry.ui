@@ -13,7 +13,6 @@
             <property name="xalign">0.5</property>
             <property name="width-request">262</property>
             <property name="placeholder-text" translatable="yes" comments="translators: keep this short! use only 'chord' or 'name' instead of both if necessary.">Chord Name</property>
-            <property name="max-length">15</property>
           </object>
         </child>
         <child type="overlay">
