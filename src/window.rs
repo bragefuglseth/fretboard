@@ -19,10 +19,8 @@
  */
 
 use crate::{
-    chord_diagram::FretboardChordDiagram,
-    chord_name_entry::FretboardChordNameEntry,
-    database::ChordsDatabase,
-    config::APP_ID,
+    chord_diagram::FretboardChordDiagram, chord_name_algorithm::calculate_chord_name,
+    chord_name_entry::FretboardChordNameEntry, config::APP_ID, database::ChordsDatabase,
 };
 use adw::subclass::prelude::*;
 use glib::{closure_local, signal::Inhibit};
@@ -238,7 +236,14 @@ impl FretboardWindow {
 
         let name_opt = self.imp().database.borrow().name_from_chord(query_chord);
 
-        let name = name_opt.unwrap_or_default();
+        let name = if let Some(name) = name_opt {
+            name
+        } else if let Some(name) = calculate_chord_name(query_chord) {
+            name
+        } else {
+            Default::default()
+        };
+
         self.imp().entry.imp().entry_buffer.replace(name.clone());
         self.imp().entry.entry().set_text(&name);
         self.imp()
