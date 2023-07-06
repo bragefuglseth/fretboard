@@ -50,7 +50,6 @@
                     <property name="orientation">vertical</property>
                     <property name="halign">start</property>
                     <property name="valign">center</property>
-                    <property name="spacing">24</property>
                     <property name="margin-top">12</property>
                     <property name="margin-bottom">24</property>
                     <child>
@@ -59,6 +58,7 @@
                     </child>
                     <child>
                       <object class="FretboardChordNameEntry" id="entry">
+                        <property name="margin-top">24</property>
                       </object>
                     </child>
                     <child>
@@ -70,6 +70,7 @@
                           <object class="GtkStack" id="feedback_stack">
                             <property name="transition-type">crossfade</property>
                             <property name="transition-duration">150</property>
+                            <property name="margin-top">12</property>
                             <child>
                               <object class="GtkStackPage">
                                 <property name="name">empty</property>
