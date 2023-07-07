@@ -59,14 +59,16 @@ pub fn calculate_chord_name(chord: [Option<usize>; 6]) -> Option<String> {
         [0, 4, 8] => "aug",
         [0, 4, 8, 11] => "augmaj11",
         [0, 4, 8, 10] => "aug7",
-        [0, 2, 4, 7, 11] => "maj9", // the 2 here is really just the 14th semitone wrapping around
-        [0, 2, 3, 7, 10] => "m9",   // same here
+        [0, 2, 4, 7, 11] => "maj9",
+        [0, 2, 3, 7, 10] => "m9",
         [0, 2, 4, 7, 10] => "9",
         [0, 2, 4, 5, 7, 11] => "maj11",
         [0, 2, 3, 5, 7, 10] => "m11",
         [0, 2, 4, 5, 7, 10] => "11",
         [0, 2, 4, 7] => "add9",
         [0, 2, 3, 7] => "madd9",
+        [0, 4, 5, 7] => "add11",
+        [0, 4, 5, 7, 10] => "7add11",
         _ => return None,
     };
 
