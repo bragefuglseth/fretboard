@@ -64,6 +64,7 @@ pub fn calculate_chord_name(chord: [Option<usize>; 6]) -> Option<String> {
         [0, 2, 4, 7, 10] => "9",
         [0, 2, 4, 5, 7, 11] => "maj11",
         [0, 2, 3, 5, 7, 10] => "m11",
+        [0, 2, 4, 5, 7, 10] => "11",
         [0, 2, 4, 7] => "add9",
         [0, 2, 3, 7] => "madd9",
         _ => return None,
