@@ -16,7 +16,7 @@ barre-spin label {
   font-weight: bold;
 }
 
-chord-diagram-toggle button, chord-diagram-top-toggle button{
+chord-diagram-toggle button, .fretboard-chord-diagram-top-toggle button{
   border-radius: 50%;
   padding: 0;
   transition-duration: 150ms;
@@ -34,20 +34,20 @@ chord-diagram-toggle button:checked:hover {
   background: @accent_bg_color;
 }
 
-chord-diagram-top-toggle button:checked{
+.fretboard-chord-diagram-top-toggle button:checked{
   background: transparent;
   box-shadow: none;
 }
 
-chord-diagram-top-toggle image {
+.fretboard-chord-diagram-top-toggle, .fretboard-chord-diagram-top-toggle image {
   color: rgba(153, 153, 153, 0.4);
 }
 
-chord-diagram-top-toggle image.open {
+.fretboard-chord-diagram-top-toggle.open, .fretboard-chord-diagram-top-toggle image.open {
   color: @accent_bg_color;
 }
 
-chord-diagram-top-toggle button:hover {
+.fretboard-chord-diagram-top-toggle button:hover {
   background: rgba(153, 153, 153, 0.3);
 }
 
@@ -65,3 +65,12 @@ chord-diagram-top-toggle button:hover {
 .fretboard-chord-name-entry button image {
   opacity: 0.5;
 }
+
+.fretboard-chord-preview-dot {
+  background: transparent;
+  border-radius: 50%;
+}
+
+.fretboard-chord-preview-dot.active {
+  background: @accent_bg_color;
+} 

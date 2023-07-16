@@ -42,7 +42,6 @@ mod imp {
             klass.bind_template();
 
             klass.set_layout_manager_type::<gtk::BinLayout>();
-            klass.set_css_name("chord-diagram-top-toggle");
         }
 
         fn instance_init(obj: &glib::subclass::InitializingObject<Self>) {
@@ -61,6 +60,7 @@ mod imp {
             self.parent_constructed();
 
             let obj = self.obj();
+            obj.add_css_class("fretboard-chord-diagram-top-toggle");
             obj.setup_callbacks();
         }
     }

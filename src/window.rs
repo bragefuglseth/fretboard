@@ -20,7 +20,8 @@
 
 use crate::{
     chord_diagram::FretboardChordDiagram, chord_name_algorithm::calculate_chord_name,
-    chord_name_entry::FretboardChordNameEntry, config::APP_ID, database::ChordsDatabase,
+    chord_name_entry::FretboardChordNameEntry, chord_preview::FretboardChordPreview,
+    config::APP_ID, database::ChordsDatabase,
 };
 use adw::subclass::prelude::*;
 use glib::{closure_local, signal::Inhibit};
@@ -42,6 +43,8 @@ mod imp {
     pub struct FretboardWindow {
         // Template widgets
         #[template_child]
+        pub navigation_stack: TemplateChild<adw::Leaflet>,
+        #[template_child]
         pub header_bar: TemplateChild<gtk::HeaderBar>,
         #[template_child]
         pub filler: TemplateChild<gtk::Revealer>,
@@ -51,6 +54,8 @@ mod imp {
         pub entry: TemplateChild<FretboardChordNameEntry>,
         #[template_child]
         pub feedback_stack: TemplateChild<gtk::Stack>,
+        #[template_child]
+        pub variants_page: TemplateChild<gtk::Box>,
 
         pub database: RefCell<ChordsDatabase>,
 
@@ -66,6 +71,12 @@ mod imp {
         fn class_init(klass: &mut Self::Class) {
             klass.install_action("win.empty-chord", None, move |win, _, _| {
                 win.empty_chord();
+            });
+            klass.install_action("win.chord-view", None, move |win, _, _| {
+                win.chord_view();
+            });
+            klass.install_action("win.more-variants", None, move |win, _, _| {
+                win.more_variants();
             });
 
             klass.bind_template();
@@ -192,6 +203,10 @@ impl FretboardWindow {
             }));
 
         self.load_stored_chord();
+
+        let chord_preview =
+            FretboardChordPreview::with_chord([None, Some(3), Some(2), Some(0), Some(1), Some(0)]);
+        self.imp().variants_page.append(&chord_preview);
     }
 
     fn empty_chord(&self) {
@@ -224,7 +239,9 @@ impl FretboardWindow {
 
         if let Some(chord) = chord_opt {
             self.imp().chord_diagram.set_chord(chord);
-            self.imp().feedback_stack.set_visible_child_name("empty");
+            self.imp()
+                .feedback_stack
+                .set_visible_child_name("chord-actions");
         } else {
             self.imp().chord_diagram.set_chord(EMPTY_CHORD);
             self.imp().feedback_stack.set_visible_child_name("label");
@@ -248,7 +265,23 @@ impl FretboardWindow {
         self.imp().entry.entry().set_text(&name);
         self.imp()
             .feedback_stack
-            .set_visible_child_name(if !name.is_empty() { "empty" } else { "label" });
+            .set_visible_child_name(if !name.is_empty() {
+                "chord-actions"
+            } else {
+                "label"
+            });
+    }
+
+    fn chord_view(&self) {
+        self.imp()
+            .navigation_stack
+            .set_visible_child_name("chord-view");
+    }
+
+    fn more_variants(&self) {
+        self.imp()
+            .navigation_stack
+            .set_visible_child_name("more-variants");
     }
 }
 

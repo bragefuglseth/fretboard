@@ -16,6 +16,7 @@
     <file preprocess="xml-stripblanks" alias="chord-diagram-top-toggle.ui">ui/chord-diagram-top-toggle.ui</file>
     <file preprocess="xml-stripblanks" alias="barre-spin.ui">ui/barre-spin.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-name-entry.ui">ui/chord-name-entry.ui</file>
+    <file preprocess="xml-stripblanks" alias="chord-preview.ui">ui/chord-preview.ui</file>
 
     <file alias="style.css">ui/style.css</file>
     <file alias="style-hc.css">ui/style-hc.css</file>
@@ -33,6 +34,19 @@
     <file preprocess="xml-stripblanks" alias="barre-4-dark.svg">ui/assets/barre-4-dark.svg</file>
     <file preprocess="xml-stripblanks" alias="barre-5-dark.svg">ui/assets/barre-5-dark.svg</file>
     <file preprocess="xml-stripblanks" alias="barre-6-dark.svg">ui/assets/barre-6-dark.svg</file>
+
+    <file preprocess="xml-stripblanks" alias="chord-preview-backdrop-light.svg">ui/assets/chord-preview-backdrop-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="chord-preview-backdrop-dark.svg">ui/assets/chord-preview-backdrop-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-2-light.svg">ui/assets/prv-barre-2-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-3-light.svg">ui/assets/prv-barre-3-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-4-light.svg">ui/assets/prv-barre-4-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-5-light.svg">ui/assets/prv-barre-5-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-6-light.svg">ui/assets/prv-barre-6-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-2-dark.svg">ui/assets/prv-barre-2-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-3-dark.svg">ui/assets/prv-barre-3-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-4-dark.svg">ui/assets/prv-barre-4-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-5-dark.svg">ui/assets/prv-barre-5-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-6-dark.svg">ui/assets/prv-barre-6-dark.svg</file>
 
     <file compressed="true">chords.txt</file>
   </gresource>
