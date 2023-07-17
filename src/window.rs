@@ -55,7 +55,9 @@ mod imp {
         #[template_child]
         pub feedback_stack: TemplateChild<gtk::Stack>,
         #[template_child]
-        pub variants_page: TemplateChild<gtk::Box>,
+        pub variants_window_title: TemplateChild<adw::WindowTitle>,
+        #[template_child]
+        pub variants_container: TemplateChild<gtk::FlowBox>,
 
         pub database: RefCell<ChordsDatabase>,
 
@@ -203,10 +205,6 @@ impl FretboardWindow {
             }));
 
         self.load_stored_chord();
-
-        let chord_preview =
-            FretboardChordPreview::with_chord([None, Some(3), Some(2), Some(0), Some(1), Some(0)]);
-        self.imp().variants_page.append(&chord_preview);
     }
 
     fn empty_chord(&self) {
@@ -235,10 +233,11 @@ impl FretboardWindow {
 
     fn load_chord_from_name(&self) {
         let name = self.imp().entry.get().imp().entry.text().to_string();
-        let chord_opt = self.imp().database.borrow().chord_from_name(&name);
+        let db = self.imp().database.borrow();
+        let chord_opt = db.chord_from_name(&name).map(|c| c.positions.get(0).unwrap());
 
         if let Some(chord) = chord_opt {
-            self.imp().chord_diagram.set_chord(chord);
+            self.imp().chord_diagram.set_chord(*chord);
             self.imp()
                 .feedback_stack
                 .set_visible_child_name("chord-actions");
@@ -279,6 +278,30 @@ impl FretboardWindow {
     }
 
     fn more_variants(&self) {
+        let imp = self.imp();
+        let entry_text = imp.entry.entry().text();
+        let chord_name = entry_text.as_str();
+
+        let db = imp.database.borrow();
+
+        let variants = db
+            .chord_from_name(chord_name)
+            .map(|chord| &chord.positions)
+            .cloned()
+            .unwrap_or_else(|| Vec::new());
+
+        let var_con = imp.variants_container.get();
+        while let Some(child) = var_con.first_child() {
+            var_con.remove(&child);
+        }
+
+        for variant in variants {
+            let preview = FretboardChordPreview::with_chord(variant);
+            var_con.insert(&preview, -1);
+        }
+
+        imp.variants_window_title.set_title(chord_name);
+
         self.imp()
             .navigation_stack
             .set_visible_child_name("more-variants");

@@ -3,7 +3,7 @@ use gtk::prelude::*;
 use rayon::prelude::*;
 
 #[derive(Debug)]
-struct Chord {
+pub struct Chord {
     pub name: String,
     pub positions: Vec<[Option<usize>; 6]>,
 }
@@ -54,11 +54,10 @@ impl ChordsDatabase {
         ChordsDatabase(chords)
     }
 
-    pub fn chord_from_name(&self, name: &str) -> Option<[Option<usize>; 6]> {
+    pub fn chord_from_name(&self, name: &str) -> Option<&Chord> {
         self.0
             .par_iter()
             .find_first(|chord| chord.name.to_lowercase() == name.to_lowercase())
-            .map(|chord| chord.positions[0])
     }
 
     pub fn name_from_chord(&self, query_chord: [Option<usize>; 6]) -> Option<String> {

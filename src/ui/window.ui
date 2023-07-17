@@ -133,10 +133,37 @@
                 <property name="orientation">vertical</property>
                 <child>
                   <object class="AdwHeaderBar">
+                    <property name="title-widget">
+                      <object class="AdwWindowTitle" id="variants_window_title"></object>
+                    </property>
                     <child type="start">
                       <object class="GtkButton">
                         <property name="icon-name">go-previous-symbolic</property>
                         <property name="action-name">win.chord-view</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow">
+                    <property name="hscrollbar-policy">never</property>
+                    <property name="vexpand">true</property>
+                    <child>
+                      <object class="AdwClamp">
+                        <property name="maximum-size">1000</property>
+                        <property name="tightening-threshold">700</property>
+                        <child>
+                          <object class="GtkFlowBox" id="variants_container">
+                            <property name="selection-mode">none</property>
+                            <property name="margin-top">24</property>
+                            <property name="margin-bottom">24</property>
+                            <property name="margin-start">24</property>
+                            <property name="margin-end">24</property>
+                            <property name="row-spacing">24</property>
+                            <property name="column-spacing">24</property>
+                            <property name="valign">start</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>

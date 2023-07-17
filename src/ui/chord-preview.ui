@@ -5,9 +5,12 @@
     <property name="valign">center</property>
     <child>
       <object class="GtkBox">
+        <property name="width-request">180</property>
+        <property name="margin-start">20</property>
         <child>
           <object class="GtkBox">
             <property name="orientation">vertical</property>
+            <property name="hexpand">false</property>
             <child>
               <object class="GtkBox" id="top_row">
                 <property name="margin-bottom">4</property>
