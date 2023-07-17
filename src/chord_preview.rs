@@ -14,6 +14,8 @@ mod imp {
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-preview.ui")]
     pub struct FretboardChordPreview {
         #[template_child]
+        pub button: TemplateChild<gtk::Button>,
+        #[template_child]
         pub top_row: TemplateChild<gtk::Box>,
         #[template_child]
         pub diagram_backdrop: TemplateChild<gtk::Picture>,
@@ -60,8 +62,6 @@ mod imp {
     impl ObjectImpl for FretboardChordPreview {
         fn constructed(&self) {
             self.parent_constructed();
-
-
 
             for string_num in 0..STRINGS {
                 let mut dot_column = Vec::new();
@@ -140,6 +140,10 @@ impl FretboardChordPreview {
         preview
     }
 
+    pub fn button(&self) -> gtk::Button {
+        self.imp().button.get()
+    }
+
     pub fn set_chord(&self, chord: [Option<usize>; 6]) {
         let imp = self.imp();
         imp.chord.set(chord);
@@ -174,7 +178,8 @@ impl FretboardChordPreview {
                     .add_css_class("active"),
             }
 
-            imp.neck_position_label.set_label(&neck_position.to_string());
+            imp.neck_position_label
+                .set_label(&neck_position.to_string());
         }
 
         let barre_length = find_barre_length(adjusted_chord);
@@ -190,7 +195,7 @@ impl FretboardChordPreview {
         });
     }
 
-    pub fn reset_visuals(&self) {
+    fn reset_visuals(&self) {
         let imp = self.imp();
 
         for top_symbol in imp.top_symbols.borrow().iter() {

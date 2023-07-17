@@ -57,6 +57,8 @@ mod imp {
         #[template_child]
         pub variants_window_title: TemplateChild<adw::WindowTitle>,
         #[template_child]
+        pub variants_scrolled_window: TemplateChild<gtk::ScrolledWindow>,
+        #[template_child]
         pub variants_container: TemplateChild<gtk::FlowBox>,
 
         pub database: RefCell<ChordsDatabase>,
@@ -234,7 +236,9 @@ impl FretboardWindow {
     fn load_chord_from_name(&self) {
         let name = self.imp().entry.get().imp().entry.text().to_string();
         let db = self.imp().database.borrow();
-        let chord_opt = db.chord_from_name(&name).map(|c| c.positions.get(0).unwrap());
+        let chord_opt = db
+            .chord_from_name(&name)
+            .map(|c| c.positions.get(0).unwrap());
 
         if let Some(chord) = chord_opt {
             self.imp().chord_diagram.set_chord(*chord);
@@ -297,10 +301,21 @@ impl FretboardWindow {
 
         for variant in variants {
             let preview = FretboardChordPreview::with_chord(variant);
+
+            preview.button().connect_clicked(
+                glib::clone!(@weak self as win, @weak preview => move |_| {
+                    let chord = preview.imp().chord.get();
+                    win.imp().chord_diagram.set_chord(chord);
+                    win.chord_view();
+                }),
+            );
+
             var_con.insert(&preview, -1);
         }
 
         imp.variants_window_title.set_title(chord_name);
+        imp.variants_scrolled_window
+            .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 
         self.imp()
             .navigation_stack

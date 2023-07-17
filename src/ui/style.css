@@ -74,3 +74,7 @@ chord-diagram-toggle button:checked:hover {
 .fretboard-chord-preview-dot.active {
   background: @accent_bg_color;
 } 
+
+.fretboard-chord-preview-button {
+  padding: 12px 0;
+}

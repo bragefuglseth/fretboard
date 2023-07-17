@@ -11,6 +11,7 @@
     <child>
       <object class="AdwLeaflet" id="navigation_stack">
         <property name="can-unfold">false</property>
+        <property name="can-navigate-back">true</property>
         <child>
           <object class="AdwLeafletPage">
             <property name="name">chord-view</property>
@@ -145,7 +146,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkScrolledWindow">
+                  <object class="GtkScrolledWindow" id="variants_scrolled_window">
                     <property name="hscrollbar-policy">never</property>
                     <property name="vexpand">true</property>
                     <child>
@@ -159,8 +160,8 @@
                             <property name="margin-bottom">24</property>
                             <property name="margin-start">24</property>
                             <property name="margin-end">24</property>
-                            <property name="row-spacing">24</property>
-                            <property name="column-spacing">24</property>
+                            <property name="row-spacing">12</property>
+                            <property name="column-spacing">12</property>
                             <property name="valign">start</property>
                           </object>
                         </child>
