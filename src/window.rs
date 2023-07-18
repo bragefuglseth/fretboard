@@ -283,13 +283,13 @@ impl FretboardWindow {
 
     fn more_variants(&self) {
         let imp = self.imp();
-        let entry_text = imp.entry.entry().text();
-        let chord_name = entry_text.as_str();
+        let chord_name = imp.entry.imp().entry_buffer.borrow();
+
 
         let db = imp.database.borrow();
 
         let variants = db
-            .chord_from_name(chord_name)
+            .chord_from_name(&chord_name)
             .map(|chord| &chord.positions)
             .cloned()
             .unwrap_or_else(|| Vec::new());
@@ -313,7 +313,7 @@ impl FretboardWindow {
             var_con.insert(&preview, -1);
         }
 
-        imp.variants_window_title.set_title(chord_name);
+        imp.variants_window_title.set_title(&chord_name);
         imp.variants_scrolled_window
             .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 

@@ -64,7 +64,7 @@
                             </child>
                             <child>
                               <object class="FretboardChordNameEntry" id="entry">
-                                <property name="margin-top">12</property>
+                                <property name="margin-top">24</property>
                               </object>
                             </child>
                             <child>
@@ -76,7 +76,7 @@
                                   <object class="GtkStack" id="feedback_stack">
                                     <property name="transition-type">crossfade</property>
                                     <property name="transition-duration">150</property>
-                                    <property name="margin-top">16</property>
+                                    <property name="margin-top">8</property>
                                     <child>
                                       <object class="GtkStackPage">
                                         <property name="name">empty</property>
@@ -101,13 +101,41 @@
                                       <object class="GtkStackPage">
                                         <property name="name">chord-actions</property>
                                         <property name="child">
-                                          <object class="GtkButton" id="more_variants">
-                                            <property name="label" translatable="yes">More Variants</property>
+                                          <object class="GtkBox">
                                             <property name="halign">center</property>
-                                            <property name="action-name">win.more-variants</property>
-                                            <style>
-                                              <class name="pill" />
-                                            </style>
+                                            <property name="spacing">12px</property>
+                                            <child>
+                                              <object class="GtkButton" id="star">
+                                                <property name="icon-name">non-starred</property>
+                                                <property name="action-name">win.more-variants</property>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkButton" id="more_variants">
+                                                <property name="action-name">win.more-variants</property>
+                                                <child>
+                                                  <object class="GtkBox">
+                                                    <property name="spacing">6</property>
+                                                    <child>
+                                                      <object class="GtkLabel">
+                                                        <property name="label">View Variants</property>
+                                                      </object>
+                                                    </child>
+                                                    <child>
+                                                      <object class="GtkImage">
+                                                        <property name="icon-name">go-next-symbolic</property>
+                                                      </object>
+                                                    </child>
+                                                  </object>
+                                                </child>
+                                                <style>
+                                                  <class name="flat" />
+                                                </style>
+                                              </object>
+                                            </child>
                                           </object>
                                         </property>
                                       </object>
