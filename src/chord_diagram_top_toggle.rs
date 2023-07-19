@@ -26,7 +26,7 @@ mod imp {
         // these two booleans are used to avoid side effects when changing button state.
         // the system is pretty bad architecturally, but it works, and the madness is contained
         // within this module, so I don't see much reason for changing it.
-        pub programatically_toggled: Cell<bool>,
+        pub programmatically_toggled: Cell<bool>,
         pub recently_toggled: Cell<bool>,
 
         pub state: Cell<TopToggleState>,
@@ -91,12 +91,12 @@ impl FretboardChordDiagramTopToggle {
     pub fn set_state(&self, state: TopToggleState) {
         let imp = self.imp();
 
-        imp.programatically_toggled.set(true);
+        imp.programmatically_toggled.set(true);
         imp.button.set_active(match state {
             TopToggleState::Off => false,
             TopToggleState::Open | TopToggleState::Muted => true,
         });
-        imp.programatically_toggled.set(false);
+        imp.programmatically_toggled.set(false);
 
         imp.state.set(state);
         self.update_icon();
@@ -114,7 +114,7 @@ impl FretboardChordDiagramTopToggle {
         // A hacky way to get the button state to update properly, better solutions are welcome :)
         imp.button
             .connect_toggled(glib::clone!(@weak imp, @weak self as toggle => move |_| {
-                if !imp.programatically_toggled.get() {
+                if !imp.programmatically_toggled.get() {
                     if imp.button.is_active() {
                         imp.state.set(TopToggleState::Open);
                     } else {
