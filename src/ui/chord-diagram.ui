@@ -3,6 +3,8 @@
   <template class="FretboardChordDiagram" parent="GtkWidget">
     <child>
       <object class="GtkBox">
+        <property name="hexpand">false</property>
+        <property name="halign">start</property>
         <child>
           <object class="GtkBox">
             <property name="orientation">vertical</property>

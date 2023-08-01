@@ -45,10 +45,6 @@ mod imp {
         #[template_child]
         pub navigation_stack: TemplateChild<adw::Leaflet>,
         #[template_child]
-        pub header_bar: TemplateChild<gtk::HeaderBar>,
-        #[template_child]
-        pub filler: TemplateChild<gtk::Revealer>,
-        #[template_child]
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
         #[template_child]
         pub entry: TemplateChild<FretboardChordNameEntry>,
@@ -179,12 +175,6 @@ impl FretboardWindow {
     }
 
     fn init(&self) {
-        // on narrow window width, hide filler
-        self.bind_property("default-width", &self.imp().filler.get(), "reveal-child")
-            .transform_to(|_, window_width: i32| Some(window_width > 420))
-            .sync_create()
-            .build();
-
         let chord_diagram = self.imp().chord_diagram.get();
 
         let win: FretboardWindow = self.clone();

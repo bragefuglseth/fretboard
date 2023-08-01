@@ -19,7 +19,7 @@
               <object class="GtkBox">
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkHeaderBar" id="header_bar">
+                  <object class="AdwHeaderBar" id="header_bar">
                     <child type="end">
                       <object class="GtkMenuButton">
                         <property name="icon-name">open-menu-symbolic</property>
@@ -38,110 +38,99 @@
                     <property name="hscrollbar-policy">never</property>
                     <child>
                       <object class="GtkBox">
+                        <property name="orientation">vertical</property>
                         <property name="halign">center</property>
                         <property name="valign">center</property>
-                        <property name="vexpand">true</property>
                         <child>
-                          <object class="GtkRevealer" id="filler">
-                            <property name="transition-type">slide-left</property>
-                            <property name="transition-duration">150</property>
+                          <object class="AdwClamp">
+                            <property name="maximum-size">458</property>
+                            <property name="valign">center</property>
+                            <property name="vexpand">true</property>
                             <child>
-                              <object class="GtkBox">
-                                <property name="width-request">46</property>
+                              <object class="FretboardChordDiagram" id="chord_diagram">
+                                <property name="halign">end</property>
                               </object>
                             </child>
                           </object>
                         </child>
                         <child>
-                          <object class="GtkBox">
-                            <property name="orientation">vertical</property>
-                            <property name="halign">start</property>
-                            <property name="valign">center</property>
-                            <property name="margin-top">12</property>
-                            <property name="margin-bottom">24</property>
-                            <child>
-                              <object class="FretboardChordDiagram" id="chord_diagram"></object>
-                            </child>
+                          <object class="AdwClamp">
+                            <property name="maximum-size">370</property>
                             <child>
                               <object class="FretboardChordNameEntry" id="entry">
-                                <property name="margin-top">24</property>
+                                <property name="margin-top">35</property>
+                                <property name="margin-start">25</property>
+                                <property name="margin-end">25</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStack" id="feedback_stack">
+                            <property name="transition-type">crossfade</property>
+                            <property name="transition-duration">150</property>
+                            <property name="margin-top">8</property>
+                            <child>
+                              <object class="GtkStackPage">
+                                <property name="name">empty</property>
+                                <property name="child">
+                                  <object class="GtkBox" />
+                                </property>
                               </object>
                             </child>
                             <child>
-                              <object class="AdwClamp">
-                                <property name="halign">start</property>
-                                <property name="margin-start">25</property>
-                                <property name="maximum-size">262</property>
-                                <child>
-                                  <object class="GtkStack" id="feedback_stack">
-                                    <property name="transition-type">crossfade</property>
-                                    <property name="transition-duration">150</property>
-                                    <property name="margin-top">8</property>
+                              <object class="GtkStackPage">
+                                <property name="name">label</property>
+                                <property name="child">
+                                  <object class="GtkLabel" id="feedback_label">
+                                    <property name="wrap">true</property>
+                                    <property name="justify">center</property>
+                                    <property name="label">Chord not found</property>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkStackPage">
+                                <property name="name">chord-actions</property>
+                                <property name="child">
+                                  <object class="GtkBox">
+                                    <property name="halign">center</property>
+                                    <property name="spacing">12px</property>
                                     <child>
-                                      <object class="GtkStackPage">
-                                        <property name="name">empty</property>
-                                        <property name="child">
-                                          <object class="GtkBox" />
-                                        </property>
+                                      <object class="GtkButton" id="star">
+                                        <property name="icon-name">non-starred</property>
+                                        <property name="action-name">win.more-variants</property>
+                                        <style>
+                                          <class name="flat" />
+                                        </style>
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkStackPage">
-                                        <property name="name">label</property>
-                                        <property name="child">
-                                          <object class="GtkLabel" id="feedback_label">
-                                            <property name="wrap">true</property>
-                                            <property name="justify">center</property>
-                                            <property name="label">Chord not found</property>
-                                          </object>
-                                        </property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkStackPage">
-                                        <property name="name">chord-actions</property>
-                                        <property name="child">
+                                      <object class="GtkButton" id="more_variants">
+                                        <property name="action-name">win.more-variants</property>
+                                        <child>
                                           <object class="GtkBox">
-                                            <property name="halign">center</property>
-                                            <property name="spacing">12px</property>
+                                            <property name="spacing">6</property>
                                             <child>
-                                              <object class="GtkButton" id="star">
-                                                <property name="icon-name">non-starred</property>
-                                                <property name="action-name">win.more-variants</property>
-                                                <style>
-                                                  <class name="flat" />
-                                                </style>
+                                              <object class="GtkLabel">
+                                                <property name="label">View Variants</property>
                                               </object>
                                             </child>
                                             <child>
-                                              <object class="GtkButton" id="more_variants">
-                                                <property name="action-name">win.more-variants</property>
-                                                <child>
-                                                  <object class="GtkBox">
-                                                    <property name="spacing">6</property>
-                                                    <child>
-                                                      <object class="GtkLabel">
-                                                        <property name="label">View Variants</property>
-                                                      </object>
-                                                    </child>
-                                                    <child>
-                                                      <object class="GtkImage">
-                                                        <property name="icon-name">go-next-symbolic</property>
-                                                      </object>
-                                                    </child>
-                                                  </object>
-                                                </child>
-                                                <style>
-                                                  <class name="flat" />
-                                                </style>
+                                              <object class="GtkImage">
+                                                <property name="icon-name">go-next-symbolic</property>
                                               </object>
                                             </child>
                                           </object>
-                                        </property>
+                                        </child>
+                                        <style>
+                                          <class name="flat" />
+                                        </style>
                                       </object>
                                     </child>
                                   </object>
-                                </child>
+                                </property>
                               </object>
                             </child>
                           </object>
@@ -163,7 +152,7 @@
                 <child>
                   <object class="AdwHeaderBar">
                     <property name="title-widget">
-                      <object class="AdwWindowTitle" id="variants_window_title"></object>
+                      <object class="AdwWindowTitle" id="variants_window_title" />
                     </property>
                     <child type="start">
                       <object class="GtkButton">

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <template class="FretboardChordNameEntry" parent="GtkWidget">
-    <property name="hexpand">false</property>
-    <property name="halign">start</property>
-    <property name="margin-start">25</property>
     <child>
       <object class="GtkOverlay">
         <child>
           <object class="GtkText" id="entry">
             <property name="css-name">entry</property>
-            <property name="hexpand">true</property>
             <property name="xalign">0.5</property>
-            <property name="width-request">262</property>
             <property name="placeholder-text" translatable="yes" comments="translators: keep this short! use only 'chord' or 'name' instead of both if necessary.">Chord Name</property>
           </object>
         </child>
