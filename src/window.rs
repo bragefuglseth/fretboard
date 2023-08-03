@@ -24,7 +24,7 @@ use crate::{
     config::APP_ID, database::ChordsDatabase,
 };
 use adw::subclass::prelude::*;
-use glib::{closure_local, signal::Inhibit};
+use glib::closure_local;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use once_cell::sync::OnceCell;
@@ -105,7 +105,7 @@ mod imp {
     }
     impl WidgetImpl for FretboardWindow {}
     impl WindowImpl for FretboardWindow {
-        fn close_request(&self) -> Inhibit {
+        fn close_request(&self) -> glib::Propagation {
             // Save window size
             self.obj()
                 .save_window_size()
@@ -114,7 +114,7 @@ mod imp {
             self.obj().save_current_chord();
 
             // Don't inhibit the default handler
-            self.parent_close_request()
+            glib::Propagation::Proceed
         }
     }
     impl ApplicationWindowImpl for FretboardWindow {}
