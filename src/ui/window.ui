@@ -22,6 +22,7 @@
                     <child type="start">
                       <object class="GtkButton" id="bookmarks_button">
                         <property name="icon-name">library-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Bookmarks</property>
                       </object>
                     </child>
                     <child type="end">
@@ -88,7 +89,7 @@
                                   <object class="GtkLabel" id="feedback_label">
                                     <property name="wrap">true</property>
                                     <property name="justify">center</property>
-                                    <property name="label">Chord not found</property>
+                                    <property name="label" translatable="yes">Chord not found</property>
                                     <style>
                                       <class name="dim-label" />
                                     </style>
@@ -121,7 +122,8 @@
                                             <property name="spacing">6</property>
                                             <child>
                                               <object class="GtkLabel">
-                                                <property name="label">View Variants</property>
+                                                <property name="use-underline">true</property>
+                                                <property name="label" translatable="yes">View _Variants</property>
                                               </object>
                                             </child>
                                             <child>
@@ -165,6 +167,7 @@
                       <object class="GtkButton">
                         <property name="icon-name">go-previous-symbolic</property>
                         <property name="action-name">win.chord-view</property>
+                        <property name="tooltip-text" translatable="yes">Go Back</property>
                       </object>
                     </child>
                   </object>
@@ -208,13 +211,14 @@
                   <object class="AdwHeaderBar">
                     <property name="title-widget">
                       <object class="AdwWindowTitle">
-                        <property name="title">Bookmarks</property>
+                        <property name="title" translatable="yes">Bookmarks</property>
                       </object>
                     </property>
                     <child type="start">
                       <object class="GtkButton">
                         <property name="icon-name">go-previous-symbolic</property>
                         <property name="action-name">win.chord-view</property>
+                        <property name="tooltip-text" translatable="yes">Go Back</property>
                       </object>
                     </child>
                   </object>

@@ -32,6 +32,7 @@ use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
 use std::fs::File;
 use std::path::PathBuf;
+use gettextrs::gettext;
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
@@ -228,6 +229,18 @@ impl FretboardWindow {
                     Some("starred")
                 } else {
                     Some("non-starred")
+                }
+            })
+            .sync_create()
+            .build();
+
+        star_toggle
+            .bind_property("active", &star_toggle, "tooltip-text")
+            .transform_to(|_, active| {
+                if active {
+                    Some(gettext("Remove Bookmark"))
+                } else {
+                    Some(gettext("Bookmark Chord"))
                 }
             })
             .sync_create()
