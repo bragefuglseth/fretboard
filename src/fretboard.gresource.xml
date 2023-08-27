@@ -7,6 +7,7 @@
     <file preprocess="xml-stripblanks" alias="up-large-symbolic.svg">ui/icons/up-large-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="down-large-symbolic.svg">ui/icons/down-large-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="checkmark-large-symbolic.svg">ui/icons/checkmark-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="library-symbolic.svg">ui/icons/library-symbolic.svg</file>
   </gresource>
 
   <gresource prefix="/dev/bragefuglseth/Fretboard">
@@ -19,6 +20,7 @@
     <file preprocess="xml-stripblanks" alias="chord-preview.ui">ui/chord-preview.ui</file>
 
     <file alias="style.css">ui/style.css</file>
+    <file alias="style-dark.css">ui/style-dark.css</file>
     <file alias="style-hc.css">ui/style-hc.css</file>
     <file alias="style-hc-dark.css">ui/style-hc-dark.css</file>
 

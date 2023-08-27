@@ -99,6 +99,7 @@ impl FretboardApplication {
         self.set_accels_for_action("window.close", &["<Ctrl>W"]);
 
         self.set_accels_for_action("win.empty-chord", &["<Ctrl>E"]);
+        self.set_accels_for_action("win.bookmark-chord", &["<Ctrl>D"]);
     }
 
     fn show_about(&self) {

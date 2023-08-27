@@ -11,7 +11,6 @@
     <child>
       <object class="AdwLeaflet" id="navigation_stack">
         <property name="can-unfold">false</property>
-        <property name="can-navigate-back">true</property>
         <child>
           <object class="AdwLeafletPage">
             <property name="name">chord-view</property>
@@ -20,6 +19,11 @@
                 <property name="orientation">vertical</property>
                 <child>
                   <object class="AdwHeaderBar" id="header_bar">
+                    <child type="start">
+                      <object class="GtkButton" id="bookmarks_button">
+                        <property name="icon-name">library-symbolic</property>
+                      </object>
+                    </child>
                     <child type="end">
                       <object class="GtkMenuButton">
                         <property name="icon-name">open-menu-symbolic</property>
@@ -39,12 +43,10 @@
                     <child>
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
-                        <property name="halign">center</property>
                         <property name="valign">center</property>
                         <child>
                           <object class="AdwClamp">
-                            <property name="maximum-size">458</property>
-                            <property name="valign">center</property>
+                            <property name="maximum-size">412</property>
                             <property name="vexpand">true</property>
                             <child>
                               <object class="FretboardChordDiagram" id="chord_diagram">
@@ -70,6 +72,7 @@
                             <property name="transition-type">crossfade</property>
                             <property name="transition-duration">150</property>
                             <property name="margin-top">8</property>
+                            <property name="margin-bottom">15</property>
                             <child>
                               <object class="GtkStackPage">
                                 <property name="name">empty</property>
@@ -86,6 +89,9 @@
                                     <property name="wrap">true</property>
                                     <property name="justify">center</property>
                                     <property name="label">Chord not found</property>
+                                    <style>
+                                      <class name="dim-label" />
+                                    </style>
                                   </object>
                                 </property>
                               </object>
@@ -98,11 +104,12 @@
                                     <property name="halign">center</property>
                                     <property name="spacing">12px</property>
                                     <child>
-                                      <object class="GtkButton" id="star">
+                                      <object class="GtkToggleButton" id="star_toggle">
                                         <property name="icon-name">non-starred</property>
-                                        <property name="action-name">win.more-variants</property>
+                                        <property name="action-name">win.bookmark-chord</property>
                                         <style>
                                           <class name="flat" />
+                                          <class name="fretboard-star-toggle" />
                                         </style>
                                       </object>
                                     </child>
@@ -173,6 +180,57 @@
                         <child>
                           <object class="GtkFlowBox" id="variants_container">
                             <property name="selection-mode">none</property>
+                            <property name="homogeneous">true</property>
+                            <property name="margin-top">24</property>
+                            <property name="margin-bottom">24</property>
+                            <property name="margin-start">24</property>
+                            <property name="margin-end">24</property>
+                            <property name="row-spacing">12</property>
+                            <property name="column-spacing">12</property>
+                            <property name="valign">start</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwLeafletPage">
+            <property name="name">bookmarks</property>
+            <property name="child">
+              <object class="GtkBox" id="bookmarks_page">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="AdwHeaderBar">
+                    <property name="title-widget">
+                      <object class="AdwWindowTitle">
+                        <property name="title">Bookmarks</property>
+                      </object>
+                    </property>
+                    <child type="start">
+                      <object class="GtkButton">
+                        <property name="icon-name">go-previous-symbolic</property>
+                        <property name="action-name">win.chord-view</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow" id="bookmarks_scrolled_window">
+                    <property name="hscrollbar-policy">never</property>
+                    <property name="vexpand">true</property>
+                    <child>
+                      <object class="AdwClamp">
+                        <property name="maximum-size">1000</property>
+                        <property name="tightening-threshold">700</property>
+                        <child>
+                          <object class="GtkFlowBox" id="bookmarks_container">
+                            <property name="selection-mode">none</property>
+                            <property name="homogeneous">true</property>
                             <property name="margin-top">24</property>
                             <property name="margin-bottom">24</property>
                             <property name="margin-start">24</property>

@@ -31,9 +31,16 @@ use once_cell::sync::OnceCell;
 use std::cell::RefCell;
 use std::fs::File;
 use std::path::PathBuf;
+use serde::{Deserialize, Serialize};
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
+
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
+pub struct Bookmark {
+    pub name: String,
+    pub chord: [Option<usize>; 6],
+}
 
 mod imp {
     use super::*;
@@ -45,19 +52,29 @@ mod imp {
         #[template_child]
         pub navigation_stack: TemplateChild<adw::Leaflet>,
         #[template_child]
+        pub bookmarks_button: TemplateChild<gtk::Button>,
+        #[template_child]
         pub chord_diagram: TemplateChild<FretboardChordDiagram>,
         #[template_child]
         pub entry: TemplateChild<FretboardChordNameEntry>,
         #[template_child]
         pub feedback_stack: TemplateChild<gtk::Stack>,
         #[template_child]
+        pub star_toggle: TemplateChild<gtk::ToggleButton>,
+        #[template_child]
         pub variants_window_title: TemplateChild<adw::WindowTitle>,
         #[template_child]
         pub variants_scrolled_window: TemplateChild<gtk::ScrolledWindow>,
         #[template_child]
         pub variants_container: TemplateChild<gtk::FlowBox>,
+        #[template_child]
+        pub bookmarks_scrolled_window: TemplateChild<gtk::ScrolledWindow>,
+        #[template_child]
+        pub bookmarks_container: TemplateChild<gtk::FlowBox>,
 
         pub database: RefCell<ChordsDatabase>,
+
+        pub bookmarks: RefCell<Vec<Bookmark>>,
 
         pub settings: OnceCell<gio::Settings>,
     }
@@ -77,6 +94,12 @@ mod imp {
             });
             klass.install_action("win.more-variants", None, move |win, _, _| {
                 win.more_variants();
+            });
+            klass.install_action("win.bookmarks", None, move |win, _, _| {
+                win.show_bookmarks();
+            });
+            klass.install_action("win.bookmark-chord", None, move |win, _, _| {
+                win.bookmark_chord();
             });
 
             klass.bind_template();
@@ -146,7 +169,7 @@ impl FretboardWindow {
         self.imp()
             .settings
             .get()
-            .expect("`settings` have been set in `setup_settings`.")
+            .expect("`settings` has been set in `setup_settings`.")
     }
 
     pub fn save_window_size(&self) -> Result<(), glib::BoolError> {
@@ -196,24 +219,94 @@ impl FretboardWindow {
                 win.imp().entry.get().imp().entry_buffer.replace(entry.text().as_str().to_string());
             }));
 
+        let star_toggle = self.imp().star_toggle.get();
+
+        star_toggle
+            .bind_property("active", &star_toggle, "icon-name")
+            .transform_to(|_, active| {
+                if active {
+                    Some("starred")
+                } else {
+                    Some("non-starred")
+                }
+            })
+            .sync_create()
+            .build();
+
+        self.load_bookmarks();
+
+        self.refresh_bookmarks_button();
+
         self.load_stored_chord();
+    }
+
+    fn bookmark_chord(&self) {
+        let star_toggle = self.imp().star_toggle.get();
+        let current_chord = self.imp().chord_diagram.imp().chord.get();
+        let current_name = self.imp().entry.imp().entry_buffer.borrow();
+
+        star_toggle.set_active(!star_toggle.is_active());
+
+        let bookmark = Bookmark {
+            name: current_name.to_string(),
+            chord: current_chord,
+        };
+
+        if star_toggle.is_active() {
+            self.add_bookmark(bookmark);
+        } else {
+            self.remove_bookmark(bookmark);
+        }
+
+        self.save_bookmarks();
+        self.refresh_bookmarks_button();
+    }
+
+    fn refresh_bookmarks_button(&self) {
+        let button = self.imp().bookmarks_button.get();
+        let bookmarks = self.imp().bookmarks.borrow();
+
+        button.set_action_name(if bookmarks.is_empty() {
+            None
+        } else {
+            Some("win.bookmarks")
+        });
+
+        button.set_sensitive(!bookmarks.is_empty());
+    }
+
+    fn add_bookmark(&self, bookmark: Bookmark) {
+        self.imp().bookmarks.borrow_mut().push(bookmark);
+    }
+
+    fn remove_bookmark(&self, query_bookmark: Bookmark) {
+        self.imp().bookmarks.replace(
+            self.imp()
+                .bookmarks
+                .take()
+                .into_iter()
+                .filter(|b| *b != query_bookmark)
+                .collect(),
+        );
     }
 
     fn empty_chord(&self) {
         self.imp().chord_diagram.set_chord(EMPTY_CHORD);
         self.imp().entry.imp().entry.set_text("");
         self.imp().feedback_stack.set_visible_child_name("empty");
+
+        self.refresh_star_toggle();
     }
 
     fn save_current_chord(&self) {
         let chord = &self.imp().chord_diagram.imp().chord.get();
 
-        let file = File::create(data_path()).expect("able to create file");
+        let file = File::create(chord_data_path()).expect("able to create file");
         serde_json::to_writer(file, &chord).expect("able to write file");
     }
 
     fn load_stored_chord(&self) {
-        let chord: [Option<usize>; 6] = if let Ok(file) = File::open(data_path()) {
+        let chord: [Option<usize>; 6] = if let Ok(file) = File::open(chord_data_path()) {
             serde_json::from_reader(file).expect("able to read file")
         } else {
             INITIAL_CHORD
@@ -221,6 +314,23 @@ impl FretboardWindow {
 
         self.imp().chord_diagram.set_chord(chord);
         self.load_name_from_chord();
+    }
+
+    fn save_bookmarks(&self) {
+        let bookmarks = self.imp().bookmarks.borrow();
+
+        let file = File::create(bookmarks_data_path()).expect("able to create file");
+        serde_json::to_writer(file, &*bookmarks).expect("able to write file");
+    }
+
+    fn load_bookmarks(&self) {
+        let bookmarks: Vec<Bookmark> = if let Ok(file) = File::open(bookmarks_data_path()) {
+            serde_json::from_reader(file).expect("able to read file")
+        } else {
+            Vec::new()
+        };
+
+        self.imp().bookmarks.replace(bookmarks);
     }
 
     fn load_chord_from_name(&self) {
@@ -239,6 +349,8 @@ impl FretboardWindow {
             self.imp().chord_diagram.set_chord(EMPTY_CHORD);
             self.imp().feedback_stack.set_visible_child_name("label");
         }
+
+        self.refresh_star_toggle();
     }
 
     fn load_name_from_chord(&self) {
@@ -263,6 +375,23 @@ impl FretboardWindow {
             } else {
                 "label"
             });
+
+        self.refresh_star_toggle();
+    }
+
+    fn refresh_star_toggle(&self) {
+        let imp = self.imp();
+
+        let chord = imp.chord_diagram.get().imp().chord.get();
+        let name = self.imp().entry.get().imp().entry.text().to_string();
+
+        let query = Bookmark { name, chord };
+
+        let star_toggle = imp.star_toggle.get();
+
+        let bookmarks = self.imp().bookmarks.borrow();
+
+        star_toggle.set_active(bookmarks.iter().any(|bm| bm == &query))
     }
 
     fn chord_view(&self) {
@@ -275,7 +404,6 @@ impl FretboardWindow {
         let imp = self.imp();
         let chord_name = imp.entry.imp().entry_buffer.borrow();
 
-
         let db = imp.database.borrow();
 
         let variants = db
@@ -284,23 +412,33 @@ impl FretboardWindow {
             .cloned()
             .unwrap_or_else(|| Vec::new());
 
-        let var_con = imp.variants_container.get();
-        while let Some(child) = var_con.first_child() {
-            var_con.remove(&child);
+        let container = imp.variants_container.get();
+        while let Some(child) = container.first_child() {
+            container.remove(&child);
         }
 
         for variant in variants {
             let preview = FretboardChordPreview::with_chord(variant);
+            let buffer = self.imp().entry.imp().entry_buffer.borrow().clone();
+            preview.imp().chord_name.replace(buffer);
 
-            preview.button().connect_clicked(
-                glib::clone!(@weak self as win, @weak preview => move |_| {
-                    let chord = preview.imp().chord.get();
-                    win.imp().chord_diagram.set_chord(chord);
-                    win.chord_view();
-                }),
-            );
+            let button = gtk::Button::builder()
+                .css_classes(["flat", "fretboard-chord-preview-button"])
+                .halign(gtk::Align::Center)
+                .child(&preview)
+                .build();
 
-            var_con.insert(&preview, -1);
+            button.connect_clicked(glib::clone!(@weak self as win, @weak preview => move |_| {
+                let name = preview.imp().chord_name.borrow();
+                let chord = preview.imp().chord.get();
+
+                win.imp().chord_diagram.set_chord(chord);
+                win.imp().entry.entry().set_text(&name);
+                win.refresh_star_toggle();
+                win.chord_view();
+            }));
+
+            container.insert(&button, -1);
         }
 
         imp.variants_window_title.set_title(&chord_name);
@@ -311,12 +449,75 @@ impl FretboardWindow {
             .navigation_stack
             .set_visible_child_name("more-variants");
     }
+
+    fn show_bookmarks(&self) {
+        let imp = self.imp();
+
+        let container = imp.bookmarks_container.get();
+
+        while let Some(child) = container.first_child() {
+            container.remove(&child);
+        }
+
+        let bookmarks = imp.bookmarks.borrow();
+
+        for bookmark in bookmarks.iter() {
+            let preview = FretboardChordPreview::with_chord(bookmark.chord);
+            preview.imp().chord_name.replace(bookmark.name.clone());
+
+            let label = gtk::Label::builder()
+                .label(&bookmark.name)
+                .justify(gtk::Justification::Center)
+                .css_classes(["title-3"])
+                .build();
+
+            let bookmark_box = gtk::Box::builder()
+                .orientation(gtk::Orientation::Vertical)
+                .spacing(12)
+                .build();
+
+            bookmark_box.append(&preview);
+            bookmark_box.append(&label);
+
+            let button = gtk::Button::builder()
+                .css_classes(["flat", "fretboard-chord-preview-button"])
+                .hexpand(false)
+                .child(&bookmark_box)
+                .build();
+
+            button.connect_clicked(glib::clone!(@weak self as win, @weak preview => move |_| {
+                let name = preview.imp().chord_name.borrow();
+                let chord = preview.imp().chord.get();
+
+                win.imp().chord_diagram.set_chord(chord);
+                win.imp().entry.get().imp().entry_buffer.replace(name.to_string());
+                win.imp().entry.entry().set_text(&name);
+                win.refresh_star_toggle();
+                win.chord_view();
+            }));
+
+            container.insert(&button, -1);
+        }
+
+        imp.bookmarks_scrolled_window
+            .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
+
+        imp.navigation_stack.set_visible_child_name("bookmarks");
+    }
 }
 
-fn data_path() -> PathBuf {
+fn chord_data_path() -> PathBuf {
     let mut path = glib::user_data_dir();
     path.push("dev.bragefuglseth.Fretboard");
-    std::fs::create_dir_all(&path).expect("Could not create directory.");
+    std::fs::create_dir_all(&path).expect("able to create directory");
     path.push("chord.json");
+    path
+}
+
+fn bookmarks_data_path() -> PathBuf {
+    let mut path = glib::user_data_dir();
+    path.push("dev.bragefuglseth.Fretboard");
+    std::fs::create_dir_all(&path).expect("able to create directory");
+    path.push("bookmarks.json");
     path
 }

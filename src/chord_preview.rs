@@ -14,8 +14,6 @@ mod imp {
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-preview.ui")]
     pub struct FretboardChordPreview {
         #[template_child]
-        pub button: TemplateChild<gtk::Button>,
-        #[template_child]
         pub top_row: TemplateChild<gtk::Box>,
         #[template_child]
         pub diagram_backdrop: TemplateChild<gtk::Picture>,
@@ -39,6 +37,7 @@ mod imp {
         pub top_symbols: RefCell<Vec<gtk::Image>>,
         pub dots: RefCell<Vec<Vec<gtk::Box>>>,
 
+        pub chord_name: RefCell<String>,
         pub chord: Cell<[Option<usize>; 6]>,
     }
 
@@ -138,10 +137,6 @@ impl FretboardChordPreview {
         let preview = Self::default();
         preview.set_chord(chord);
         preview
-    }
-
-    pub fn button(&self) -> gtk::Button {
-        self.imp().button.get()
     }
 
     pub fn set_chord(&self, chord: [Option<usize>; 6]) {

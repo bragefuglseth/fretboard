@@ -66,6 +66,14 @@ chord-diagram-toggle button:checked:hover {
   opacity: 0.5;
 }
 
+.fretboard-star-toggle:checked {
+  background: transparent;
+}
+
+.fretboard-star-toggle:checked:hover {
+  background: rgba(125, 125, 125, 0.15);
+}
+
 .fretboard-chord-preview-dot {
   background: transparent;
   border-radius: 50%;
@@ -76,5 +84,14 @@ chord-diagram-toggle button:checked:hover {
 } 
 
 .fretboard-chord-preview-button {
-  padding: 12px 0;
+  padding: 16px 0;
+  border-radius: 12px;
+}
+
+.fretboard-chord-preview-button:hover {
+  background-color: alpha(currentColor, 0.025);
+}
+
+.fretboard-bookmarks-popover > contents {
+  padding: 0;
 }
