@@ -10,7 +10,9 @@ use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
 
 const STRINGS: usize = 6;
+const NOTE_OFFSETS: [usize; STRINGS] = [7, 0, 5, 10, 2, 7];
 const FRETS: usize = 5;
+const SCALE_SIZE: usize = 12;
 
 pub enum SpinMessage {
     Increment,
@@ -286,6 +288,13 @@ impl FretboardChordDiagram {
                 }
                 Some(_) => top_toggle.set_state(TopToggleState::Muted),
             }
+
+            let offset = NOTE_OFFSETS.get(string).unwrap();
+            for (num, toggle) in toggles.get(string).unwrap().iter().enumerate() {
+                toggle.set_tooltip_text(Some(note_name(
+                    offset + num + self.neck_position() as usize,
+                )));
+            }
         }
     }
 
@@ -342,5 +351,23 @@ impl FretboardChordDiagram {
         barre_6.set_resource(Some(&format!(
             "/dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg"
         )));
+    }
+}
+
+fn note_name(input: usize) -> &'static str {
+    match input % SCALE_SIZE {
+        0 => "A",
+        1 => "A♯",
+        2 => "B",
+        3 => "C",
+        4 => "C♯",
+        5 => "D",
+        6 => "D♯",
+        7 => "E",
+        8 => "F",
+        9 => "F♯",
+        10 => "G",
+        11 => "G♯",
+        _ => panic!("root note above 11"),
     }
 }

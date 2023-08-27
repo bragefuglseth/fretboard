@@ -28,10 +28,10 @@ use glib::closure_local;
 use gtk::prelude::*;
 use gtk::{gio, glib};
 use once_cell::sync::OnceCell;
+use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
 use std::fs::File;
 use std::path::PathBuf;
-use serde::{Deserialize, Serialize};
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
