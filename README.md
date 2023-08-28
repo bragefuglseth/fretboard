@@ -2,6 +2,9 @@
 
 # Fretboard
 
+[![Available on Flathub](https://img.shields.io/flathub/downloads/dev.bragefuglseth.Fretboard?logo=flathub&labelColor=77767b&color=4a90d9)](https://flathub.org/apps/dev.bragefuglseth.Fretboard)
+[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) 
+
 <a href='https://flathub.org/apps/dev.bragefuglseth.Fretboard'><img width='240' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.png'/></a>
 
 How was that chord played, again? Fretboard lets you find guitar chords
