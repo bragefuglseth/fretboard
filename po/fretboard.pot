@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-28 16:40+0200\n"
+"POT-Creation-Date: 2023-08-28 17:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,16 +75,21 @@ msgid ""
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.appdata.xml.in:63
+msgid ""
+"Hover over positions in the chord diagram to see their respective note names"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:64
 msgid "Smarter and more precise chord detection"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:65
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:66
 msgid ""
 "If you would like to come with suggestions, report bugs, translate the app, "
 "or contribute otherwise, feel free to reach out!"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:70
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:71
 msgid "Initial release."
 msgstr ""
 
