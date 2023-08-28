@@ -2,11 +2,11 @@
 <schemalist gettext-domain="fretboard">
 	<schema id="dev.bragefuglseth.Fretboard" path="/dev/bragefuglseth/Fretboard/">
 	  <key name="window-width" type="i">
-			<default>500</default>
+			<default>550</default>
 			<summary>Window width</summary>
 		</key>
 		<key name="window-height" type="i">
-			<default>600</default>
+			<default>650</default>
 			<summary>Window height</summary>
 		</key>
 		<key name="is-maximized" type="b">
