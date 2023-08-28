@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg height="128px" viewBox="0 0 128 128" width="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="12" x2="116" y1="100" y2="100">
-        <stop offset="0" stop-color="#553526"/>
-        <stop offset="0.0384615" stop-color="#7e5039"/>
-        <stop offset="0.0769231" stop-color="#6b3e2b"/>
-        <stop offset="0.913462" stop-color="#6b3e2b"/>
-        <stop offset="0.961538" stop-color="#7e5039"/>
-        <stop offset="1" stop-color="#553526"/>
+    <linearGradient id="a" gradientTransform="matrix(1 0 0 1.04 0 -179.520006)" gradientUnits="userSpaceOnUse" x1="12" x2="116" y1="272" y2="272">
+        <stop offset="0" stop-color="#583b26"/>
+        <stop offset="0.0384615" stop-color="#9c6c44"/>
+        <stop offset="0.0769231" stop-color="#63452c"/>
+        <stop offset="0.913462" stop-color="#63452c"/>
+        <stop offset="0.961538" stop-color="#9c6c44"/>
+        <stop offset="1" stop-color="#583b26"/>
     </linearGradient>
     <clipPath id="b">
         <path d="m 12 16 h 104 v 6 h -104 z m 0 0"/>
@@ -120,8 +120,8 @@
     <linearGradient id="N" x1="28.000001" x2="46.000001" xlink:href="#M" y1="89.000004" y2="89.000004"/>
     <linearGradient id="O" x1="46.000002" x2="64.000002" xlink:href="#M" y1="61.000004" y2="61.000004"/>
     <linearGradient id="P" x1="82.000004" x2="100.000004" xlink:href="#M" y1="33.000023" y2="33.000023"/>
-    <path d="m 20 16 h 88 c 4.417969 0 8 3.582031 8 8 v 84 c 0 4.417969 -3.582031 8 -8 8 h -88 c -4.417969 0 -8 -3.582031 -8 -8 v -84 c 0 -4.417969 3.582031 -8 8 -8 z m 0 0" fill="url(#a)"/>
-    <path d="m 20 12 h 88 c 4.417969 0 8 3.582031 8 8 v 84 c 0 4.417969 -3.582031 8 -8 8 h -88 c -4.417969 0 -8 -3.582031 -8 -8 v -84 c 0 -4.417969 3.582031 -8 8 -8 z m 0 0" fill="#ab694c"/>
+    <path d="m 20 16 h 88 c 4.417969 0 8 3.582031 8 8 v 88 c 0 4.417969 -3.582031 8 -8 8 h -88 c -4.417969 0 -8 -3.582031 -8 -8 v -88 c 0 -4.417969 3.582031 -8 8 -8 z m 0 0" fill="url(#a)"/>
+    <path d="m 20 12 h 88 c 4.417969 0 8 3.582031 8 8 v 84 c 0 4.417969 -3.582031 8 -8 8 h -88 c -4.417969 0 -8 -3.582031 -8 -8 v -84 c 0 -4.417969 3.582031 -8 8 -8 z m 0 0" fill="#986a44"/>
     <g clip-path="url(#b)">
         <g clip-path="url(#c)">
             <path d="m 12 16 h 104 v 6 h -104 z m 0 0" fill="url(#e)"/>
