@@ -240,7 +240,7 @@ impl FretboardWindow {
                 if active {
                     Some(gettext("Remove Bookmark"))
                 } else {
-                    Some(gettext("Bookmark Chord"))
+                    Some(gettext("Bookmark"))
                 }
             })
             .sync_create()

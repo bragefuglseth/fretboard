@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-27 22:27+0200\n"
+"POT-Creation-Date: 2023-08-28 16:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,20 +38,53 @@ msgstr ""
 #: data/dev.bragefuglseth.Fretboard.appdata.xml.in:11
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
-"typing their names or plotting them on an interactive guitar neck. No matter "
-"if you are a beginner or an advanced guitarist, you can use Fretboard to "
-"practice, learn, and master your favorite songs!"
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:20
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:22
 msgid "guitar"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:21
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:23
 msgid "chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:56
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:58
+msgid ""
+"This major release of Fretboard brings a bunch of exciting improvements:"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:60
+msgid ""
+"View different ways to play the same chord, to find the one that suits your "
+"situation the best"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:61
+msgid "Bookmark chords to save them for a later practice session or gig"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:62
+msgid ""
+"An additional fret in the chord diagram, to help you practice those really "
+"tricky positionings"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:63
+msgid "Smarter and more precise chord detection"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:65
+msgid ""
+"If you would like to come with suggestions, report bugs, translate the app, "
+"or contribute otherwise, feel free to reach out!"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:70
 msgid "Initial release."
 msgstr ""
 
