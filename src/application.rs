@@ -25,6 +25,7 @@ use crate::{
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
+use gettextrs::gettext;
 
 mod imp {
     use super::*;
@@ -115,6 +116,8 @@ impl FretboardApplication {
             .issue_url("https://github.com/bragefuglseth/fretboard/issues")
             .license_type(gtk::License::Gpl30)
             .copyright("© 2023 Brage Fuglseth")
+            // Translators: Replace "translator-credits" with your names, one name per line
+            .translator_credits(&gettext("translator-credits"))
             .release_notes("
 <p>This major release of Fretboard brings a bunch of exciting improvements:</p>
 <ul>
