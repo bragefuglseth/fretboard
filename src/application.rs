@@ -118,7 +118,7 @@ impl FretboardApplication {
             .copyright("© 2023 Brage Fuglseth")
             // Translators: Replace "translator-credits" with your names, one name per line
             .translator_credits(&gettext("translator-credits"))
-            .release_notes("
+            .release_notes(&gettext("
 <p>This major release of Fretboard brings a bunch of exciting improvements:</p>
 <ul>
   <li>View different ways to play the same chord, to find the one that suits your situation the best</li>
@@ -128,7 +128,7 @@ impl FretboardApplication {
   <li>Smarter and more precise chord detection</li>
 </ul>
 <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
-            ")
+            "))
             .build();
 
         about.present();

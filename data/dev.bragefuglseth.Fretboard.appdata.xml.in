@@ -38,6 +38,9 @@
     <screenshot>
       <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-2.png</image>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-3.png</image>
+    </screenshot>
   </screenshots>
   <launchable type="desktop-id">dev.bragefuglseth.Fretboard.desktop</launchable>
   <url type="homepage">https://github.com/bragefuglseth/fretboard</url>

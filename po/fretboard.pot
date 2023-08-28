@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the fretboard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: src/application.rs:121
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-28 17:58+0200\n"
+"POT-Creation-Date: 2023-08-28 18:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,43 +54,43 @@ msgstr ""
 msgid "chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:58
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:61
 msgid ""
 "This major release of Fretboard brings a bunch of exciting improvements:"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:60
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:63
 msgid ""
 "View different ways to play the same chord, to find the one that suits your "
 "situation the best"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:61
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:64
 msgid "Bookmark chords to save them for a later practice session or gig"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:62
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:65
 msgid ""
 "An additional fret in the chord diagram, to help you practice those really "
 "tricky positionings"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:63
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:66
 msgid ""
 "Hover over positions in the chord diagram to see their respective note names"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:64
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:67
 msgid "Smarter and more precise chord detection"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:66
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:69
 msgid ""
 "If you would like to come with suggestions, report bugs, translate the app, "
 "or contribute otherwise, feel free to reach out!"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:71
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:74
 msgid "Initial release."
 msgstr ""
 
@@ -103,6 +104,27 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:14
 msgid "Window maximized state"
+msgstr ""
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.rs:120
+msgid "translator-credits"
+msgstr ""
+
+#: src/window.rs:241
+msgid "Remove Bookmark"
+msgstr ""
+
+#: src/window.rs:243
+msgid "Bookmark"
+msgstr ""
+
+#: src/window.rs:289
+msgid "No Bookmarks"
+msgstr ""
+
+#: src/window.rs:291 src/ui/window.ui:213
+msgid "Bookmarks"
 msgstr ""
 
 #. translators: "open" is a verb here, not an adjective
@@ -128,10 +150,6 @@ msgstr ""
 
 #: src/ui/window.ui:169 src/ui/window.ui:220
 msgid "Go Back"
-msgstr ""
-
-#: src/ui/window.ui:213
-msgid "Bookmarks"
 msgstr ""
 
 #: src/ui/window.ui:260
