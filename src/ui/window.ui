@@ -22,7 +22,6 @@
                     <child type="start">
                       <object class="GtkButton" id="bookmarks_button">
                         <property name="icon-name">library-symbolic</property>
-                        <property name="tooltip-text" translatable="yes">Bookmarks</property>
                       </object>
                     </child>
                     <child type="end">

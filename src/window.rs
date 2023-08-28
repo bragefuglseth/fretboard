@@ -285,6 +285,14 @@ impl FretboardWindow {
             Some("win.bookmarks")
         });
 
+        let tooltip_text = if bookmarks.is_empty() {
+            gettext("No Bookmarks")
+        } else {
+            gettext("Bookmarks")
+        };
+
+        button.set_tooltip_text(Some(&tooltip_text));
+
         button.set_sensitive(!bookmarks.is_empty());
     }
 
