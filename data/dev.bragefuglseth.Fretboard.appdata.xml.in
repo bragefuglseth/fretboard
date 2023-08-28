@@ -11,8 +11,10 @@
     <p>
 	    How was that chord played, again? Fretboard lets you find guitar chords
 	    by typing their names or plotting them on an interactive guitar neck.
-	    No matter if you are a beginner or an advanced guitarist, you can use
-	    Fretboard to practice, learn, and master your favorite songs!
+      When you have identified a chord, you can experiment with changing it,
+      see more ways to play it, or bookmark it to save it for later. No matter
+      if you are a beginner or an advanced guitarist, you can use Fretboard to
+      practice, learn, and master your favorite songs!
 	  </p>
   </description>
   <translation type="gettext">fretboard</translation>
@@ -51,6 +53,18 @@
     <value key="Purism::form_factor">mobile</value>
   </custom>
   <releases>
+    <release date="2023-08-28" version="2.0">
+      <description>
+        <p>This major release of Fretboard brings a bunch of exciting improvements:</p>
+        <ul>
+          <li>View different ways to play the same chord, to find the one that suits your situation the best</li>
+          <li>Bookmark chords to save them for a later practice session or gig</li>
+          <li>An additional fret in the chord diagram, to help you practice those really tricky positionings</li>
+          <li>Smarter and more precise chord detection</li>
+        </ul>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
     <release date="2023-07-01" version="1.0">
       <description>
         <p>Initial release.</p>
