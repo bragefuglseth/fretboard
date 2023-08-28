@@ -115,6 +115,16 @@ impl FretboardApplication {
             .issue_url("https://github.com/bragefuglseth/fretboard/issues")
             .license_type(gtk::License::Gpl30)
             .copyright("© 2023 Brage Fuglseth")
+            .release_notes("
+<p>This major release of Fretboard brings a bunch of exciting improvements:</p>
+<ul>
+  <li>View different ways to play the same chord, to find the one that suits your situation the best</li>
+  <li>Bookmark chords to save them for a later practice session or gig</li>
+  <li>An additional fret in the chord diagram, to help you practice those really tricky positionings</li>
+  <li>Smarter and more precise chord detection</li>
+</ul>
+<p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+            ")
             .build();
 
         about.present();
