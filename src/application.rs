@@ -121,6 +121,7 @@ impl FretboardApplication {
   <li>View different ways to play the same chord, to find the one that suits your situation the best</li>
   <li>Bookmark chords to save them for a later practice session or gig</li>
   <li>An additional fret in the chord diagram, to help you practice those really tricky positionings</li>
+  <li>Hover over positions in the chord diagram to see their respective note names</li>
   <li>Smarter and more precise chord detection</li>
 </ul>
 <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
