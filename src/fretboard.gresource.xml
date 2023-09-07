@@ -8,6 +8,8 @@
     <file preprocess="xml-stripblanks" alias="down-large-symbolic.svg">ui/icons/down-large-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="checkmark-large-symbolic.svg">ui/icons/checkmark-large-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="library-symbolic.svg">ui/icons/library-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="star-outline-rounded-symbolic.svg">ui/icons/star-outline-rounded-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="star-large-symbolic.svg">ui/icons/star-large-symbolic.svg</file>
   </gresource>
 
   <gresource prefix="/dev/bragefuglseth/Fretboard">

@@ -18,6 +18,11 @@
   opacity: 1;
 }
 
+.fretboard-star-toggle:checked:not(:hover) {
+  border: 0;
+  box-shadow: none;
+}
+
 .fretboard-chord-preview-dot.active {
   border: 1px solid @border-color;
 }

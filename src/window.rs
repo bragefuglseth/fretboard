@@ -226,9 +226,9 @@ impl FretboardWindow {
             .bind_property("active", &star_toggle, "icon-name")
             .transform_to(|_, active| {
                 if active {
-                    Some("starred")
+                    Some("star-large-symbolic")
                 } else {
-                    Some("non-starred")
+                    Some("star-outline-rounded-symbolic")
                 }
             })
             .sync_create()

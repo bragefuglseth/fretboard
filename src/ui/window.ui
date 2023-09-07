@@ -105,7 +105,6 @@
                                     <property name="spacing">12px</property>
                                     <child>
                                       <object class="GtkToggleButton" id="star_toggle">
-                                        <property name="icon-name">non-starred</property>
                                         <property name="action-name">win.bookmark-chord</property>
                                         <style>
                                           <class name="flat" />

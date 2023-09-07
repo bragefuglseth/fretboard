@@ -91,7 +91,3 @@ chord-diagram-toggle button:checked:hover {
 .fretboard-chord-preview-button:hover {
   background-color: alpha(currentColor, 0.025);
 }
-
-.fretboard-bookmarks-popover > contents {
-  padding: 0;
-}
