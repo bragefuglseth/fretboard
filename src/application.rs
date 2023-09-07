@@ -105,13 +105,13 @@ impl FretboardApplication {
 
     fn show_about(&self) {
         let window = self.active_window().unwrap();
-        let about = adw::AboutWindow::builder()
+        adw::AboutWindow::builder()
             .transient_for(&window)
             .application_name("Fretboard")
             .application_icon(APP_ID)
             .developer_name("Brage Fuglseth")
             .version(VERSION)
-            .developers(vec!["Brage Fuglseth https://bragefuglseth.dev"])
+            .developers(["Brage Fuglseth https://bragefuglseth.dev"])
             .website("https://github.com/bragefuglseth/fretboard")
             .issue_url("https://github.com/bragefuglseth/fretboard/issues")
             .license_type(gtk::License::Gpl30)
@@ -129,8 +129,7 @@ impl FretboardApplication {
 </ul>
 <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
             "))
-            .build();
-
-        about.present();
+            .build()
+            .present()
     }
 }
