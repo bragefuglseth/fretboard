@@ -102,7 +102,7 @@
                                 <property name="child">
                                   <object class="GtkBox">
                                     <property name="halign">center</property>
-                                    <property name="spacing">12px</property>
+                                    <property name="spacing">12</property>
                                     <child>
                                       <object class="GtkToggleButton" id="star_toggle">
                                         <property name="action-name">win.bookmark-chord</property>

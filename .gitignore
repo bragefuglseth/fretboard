@@ -13,3 +13,4 @@ src/config.rs
 vendor
 .flatpak-builder
 .cargo
+/subprojects/blueprint-compiler

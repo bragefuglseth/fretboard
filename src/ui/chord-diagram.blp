@@ -1,0 +1,99 @@
+using Gtk 4.0;
+
+template $FretboardChordDiagram : Widget {
+  Box {
+    hexpand: false;
+    halign: start;
+
+    Box {
+      orientation: vertical;
+
+      Box top_row {
+        homogeneous: true;
+        margin-bottom: 6;
+      }
+
+      Overlay {
+        Picture diagram_backdrop {
+          can-shrink: false;
+          margin-start: 25;
+          margin-end: 25;
+        }
+
+        [overlay]
+        Stack barre_overlay_stack {
+          valign: start;
+          halign: center;
+          transition-type: crossfade;
+          transition-duration: 150;
+
+          StackPage {
+            name: "empty";
+            child: 
+            Box {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-2";
+            child: 
+            Picture barre_2_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-3";
+            child: 
+            Picture barre_3_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-4";
+            child: 
+            Picture barre_4_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-5";
+            child: 
+            Picture barre_5_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-6";
+            child: 
+            Picture barre_6_image {
+            }
+
+            ;
+          }
+        }
+
+        [overlay]
+        Grid grid {
+          hexpand: true;
+          vexpand: true;
+        }
+      }
+    }
+
+    $FretboardBarreSpin barre_spin {
+      valign: "start";
+      margin-end: "10";
+      margin-top: "17";
+    }
+  }
+}

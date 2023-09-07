@@ -1,0 +1,38 @@
+using Gtk 4.0;
+
+template $FretboardChordNameEntry : Widget {
+  Overlay {
+    Text entry {
+      css-name: "entry";
+      xalign: 0.5;
+
+      /* translators: keep this short! use only 'chord' or 'name' instead of both if necessary. */
+      placeholder-text: _("Chord Name");
+    }
+
+    [overlay]
+    Revealer revealer {
+      visible: false;
+      transition-type: crossfade;
+      transition-duration: 150;
+      halign: end;
+      margin-end: 6;
+
+      Button button {
+        icon-name: "checkmark-large-symbolic";
+        tooltip-text: _("Confirm");
+        halign: end;
+        valign: center;
+
+        styles [
+          "flat",
+          "circular",
+        ]
+      }
+    }
+  }
+
+  styles [
+    "fretboard-chord-name-entry",
+  ]
+}

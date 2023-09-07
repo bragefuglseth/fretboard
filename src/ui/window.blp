@@ -1,0 +1,251 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $FretboardWindow : Adw.ApplicationWindow {
+  title: "Fretboard";
+  default-width: 550;
+  default-height: 650;
+  width-request: 360;
+  height-request: 294;
+
+  Adw.Leaflet navigation_stack {
+    can-unfold: false;
+
+    Adw.LeafletPage {
+      name: "chord-view";
+      child: 
+      Box {
+        orientation: vertical;
+
+        Adw.HeaderBar header_bar {
+          [start]
+          Button bookmarks_button {
+            icon-name: "library-symbolic";
+          }
+
+          [end]
+          MenuButton {
+            icon-name: "open-menu-symbolic";
+            tooltip-text: _("Main Menu");
+            menu-model: primary_menu;
+            primary: true;
+          }
+
+          styles [
+            "flat",
+          ]
+        }
+
+        ScrolledWindow {
+          hscrollbar-policy: never;
+
+          Box {
+            orientation: vertical;
+            valign: center;
+
+            Adw.Clamp {
+              maximum-size: 412;
+              vexpand: true;
+
+              $FretboardChordDiagram chord_diagram {
+                halign: "end";
+              }
+            }
+
+            Adw.Clamp {
+              maximum-size: 370;
+
+              $FretboardChordNameEntry entry {
+                margin-top: "35";
+                margin-start: "25";
+                margin-end: "25";
+              }
+            }
+
+            Stack feedback_stack {
+              transition-type: crossfade;
+              transition-duration: 150;
+              margin-top: 8;
+              margin-bottom: 15;
+
+              StackPage {
+                name: "empty";
+                child: 
+                Box {
+                }
+
+                ;
+              }
+
+              StackPage {
+                name: "label";
+                child: 
+                Label feedback_label {
+                  wrap: true;
+                  justify: center;
+                  label: _("Chord not found");
+
+                  styles [
+                    "dim-label",
+                  ]
+                }
+
+                ;
+              }
+
+              StackPage {
+                name: "chord-actions";
+                child: 
+                Box {
+                  halign: center;
+                  spacing: 12;
+
+                  ToggleButton star_toggle {
+                    action-name: "win.bookmark-chord";
+
+                    styles [
+                      "flat",
+                      "fretboard-star-toggle",
+                    ]
+                  }
+
+                  Button more_variants {
+                    action-name: "win.more-variants";
+
+                    Box {
+                      spacing: 6;
+
+                      Label {
+                        use-underline: true;
+                        label: _("View _Variants");
+                      }
+
+                      Image {
+                        icon-name: "go-next-symbolic";
+                      }
+                    }
+
+                    styles [
+                      "flat",
+                    ]
+                  }
+                }
+
+                ;
+              }
+            }
+          }
+        }
+      }
+
+      ;
+    }
+
+    Adw.LeafletPage {
+      name: "more-variants";
+      child: 
+      Box variants_page {
+        orientation: vertical;
+
+        Adw.HeaderBar {
+          title-widget:           Adw.WindowTitle variants_window_title {
+          }
+
+          ;
+
+          [start]
+          Button {
+            icon-name: "go-previous-symbolic";
+            action-name: "win.chord-view";
+            tooltip-text: _("Go Back");
+          }
+        }
+
+        ScrolledWindow variants_scrolled_window {
+          hscrollbar-policy: never;
+          vexpand: true;
+
+          Adw.Clamp {
+            maximum-size: 1000;
+            tightening-threshold: 700;
+
+            FlowBox variants_container {
+              selection-mode: none;
+              homogeneous: true;
+              margin-top: 24;
+              margin-bottom: 24;
+              margin-start: 24;
+              margin-end: 24;
+              row-spacing: 12;
+              column-spacing: 12;
+              valign: start;
+            }
+          }
+        }
+      }
+
+      ;
+    }
+
+    Adw.LeafletPage {
+      name: "bookmarks";
+      child: 
+      Box bookmarks_page {
+        orientation: vertical;
+
+        Adw.HeaderBar {
+          title-widget:           Adw.WindowTitle {
+            title: _("Bookmarks");
+          }
+
+          ;
+
+          [start]
+          Button {
+            icon-name: "go-previous-symbolic";
+            action-name: "win.chord-view";
+            tooltip-text: _("Go Back");
+          }
+        }
+
+        ScrolledWindow bookmarks_scrolled_window {
+          hscrollbar-policy: never;
+          vexpand: true;
+
+          Adw.Clamp {
+            maximum-size: 1000;
+            tightening-threshold: 700;
+
+            FlowBox bookmarks_container {
+              selection-mode: none;
+              homogeneous: true;
+              margin-top: 24;
+              margin-bottom: 24;
+              margin-start: 24;
+              margin-end: 24;
+              row-spacing: 12;
+              column-spacing: 12;
+              valign: start;
+            }
+          }
+        }
+      }
+
+      ;
+    }
+  }
+}
+
+menu primary_menu {
+  section {
+    item {
+      label: _("_Empty Chord");
+      action: "win.empty-chord";
+    }
+
+    item {
+      label: _("_About Fretboard");
+      action: "app.about";
+    }
+  }
+}

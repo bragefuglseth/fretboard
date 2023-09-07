@@ -1,0 +1,38 @@
+using Gtk 4.0;
+
+template $FretboardBarreSpin : Widget {
+  Box {
+    orientation: vertical;
+
+    Button decrement_button {
+      icon-name: "up-large-symbolic";
+      tooltip-text: _("Move Up");
+      halign: center;
+      valign: center;
+      width-request: 38;
+      height-request: 38;
+
+      styles [
+        "flat",
+      ]
+    }
+
+    Label label {
+      halign: center;
+      valign: center;
+    }
+
+    Button increment_button {
+      icon-name: "down-large-symbolic";
+      tooltip-text: _("Move Down");
+      halign: center;
+      valign: center;
+      width-request: 38;
+      height-request: 38;
+
+      styles [
+        "flat",
+      ]
+    }
+  }
+}

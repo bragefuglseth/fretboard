@@ -4,6 +4,6 @@ data/dev.bragefuglseth.Fretboard.gschema.xml
 src/application.rs
 src/window.rs
 src/chord_diagram_top_toggle.rs
-src/ui/window.ui
-src/ui/barre-spin.ui
-src/ui/chord-name-entry.ui
+src/ui/window.blp
+src/ui/barre-spin.blp
+src/ui/chord-name-entry.blp

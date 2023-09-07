@@ -1,0 +1,103 @@
+using Gtk 4.0;
+
+template $FretboardChordPreview : Widget {
+  halign: center;
+  valign: center;
+
+  Box {
+    width-request: 180;
+    margin-start: 20;
+
+    Box {
+      orientation: vertical;
+      hexpand: false;
+
+      Box top_row {
+        margin-bottom: 4;
+      }
+
+      Overlay {
+        Picture diagram_backdrop {
+          can-shrink: false;
+          margin-start: 12;
+          margin-end: 12;
+        }
+
+        [overlay]
+        Stack barre_overlay_stack {
+          valign: start;
+          halign: center;
+
+          StackPage {
+            name: "empty";
+            child: 
+            Box {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-2";
+            child: 
+            Picture barre_2_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-3";
+            child: 
+            Picture barre_3_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-4";
+            child: 
+            Picture barre_4_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-5";
+            child: 
+            Picture barre_5_image {
+            }
+
+            ;
+          }
+
+          StackPage {
+            name: "barre-6";
+            child: 
+            Picture barre_6_image {
+            }
+
+            ;
+          }
+        }
+
+        [overlay]
+        Grid dots_grid {
+          hexpand: true;
+          vexpand: true;
+        }
+      }
+    }
+
+    Label neck_position_label {
+      valign: start;
+      margin-top: 22;
+
+      styles [
+        "title-3",
+      ]
+    }
+  }
+}

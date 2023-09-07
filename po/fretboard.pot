@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-28 18:08+0200\n"
+"POT-Creation-Date: 2023-09-07 21:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,43 +54,43 @@ msgstr ""
 msgid "chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:61
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:64
 msgid ""
 "This major release of Fretboard brings a bunch of exciting improvements:"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:63
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:66
 msgid ""
 "View different ways to play the same chord, to find the one that suits your "
 "situation the best"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:64
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:67
 msgid "Bookmark chords to save them for a later practice session or gig"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:65
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:68
 msgid ""
 "An additional fret in the chord diagram, to help you practice those really "
 "tricky positionings"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:66
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:69
 msgid ""
 "Hover over positions in the chord diagram to see their respective note names"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:67
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:70
 msgid "Smarter and more precise chord detection"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:69
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:72
 msgid ""
 "If you would like to come with suggestions, report bugs, translate the app, "
 "or contribute otherwise, feel free to reach out!"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:74
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:77
 msgid "Initial release."
 msgstr ""
 
@@ -123,7 +123,7 @@ msgstr ""
 msgid "No Bookmarks"
 msgstr ""
 
-#: src/window.rs:291 src/ui/window.ui:213
+#: src/window.rs:291 src/ui/window.blp:198
 msgid "Bookmarks"
 msgstr ""
 
@@ -136,43 +136,43 @@ msgstr ""
 msgid "Mute"
 msgstr ""
 
-#: src/ui/window.ui:30
+#: src/ui/window.blp:29
 msgid "Main Menu"
 msgstr ""
 
-#: src/ui/window.ui:91
+#: src/ui/window.blp:86
 msgid "Chord not found"
 msgstr ""
 
-#: src/ui/window.ui:125
+#: src/ui/window.blp:120
 msgid "View _Variants"
 msgstr ""
 
-#: src/ui/window.ui:169 src/ui/window.ui:220
+#: src/ui/window.blp:160 src/ui/window.blp:207
 msgid "Go Back"
 msgstr ""
 
-#: src/ui/window.ui:260
+#: src/ui/window.blp:242
 msgid "_Empty Chord"
 msgstr ""
 
-#: src/ui/window.ui:264
+#: src/ui/window.blp:247
 msgid "_About Fretboard"
 msgstr ""
 
-#: src/ui/barre-spin.ui:10
+#: src/ui/barre-spin.blp:9
 msgid "Move Up"
 msgstr ""
 
-#: src/ui/barre-spin.ui:29
+#: src/ui/barre-spin.blp:27
 msgid "Move Down"
 msgstr ""
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: src/ui/chord-name-entry.ui:10
+#: src/ui/chord-name-entry.blp:10
 msgid "Chord Name"
 msgstr ""
 
-#: src/ui/chord-name-entry.ui:23
+#: src/ui/chord-name-entry.blp:23
 msgid "Confirm"
 msgstr ""

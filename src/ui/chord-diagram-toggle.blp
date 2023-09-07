@@ -1,0 +1,17 @@
+using Gtk 4.0;
+
+template $FretboardChordDiagramToggle : Widget {
+  hexpand: true;
+  vexpand: true;
+
+  ToggleButton button {
+    halign: center;
+    valign: center;
+    width-request: 38;
+    height-request: 38;
+
+    styles [
+      "flat",
+    ]
+  }
+}

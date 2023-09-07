@@ -1,0 +1,57 @@
+using Gtk 4.0;
+
+template $FretboardChordDiagramTopToggle : Widget {
+  halign: center;
+
+  Overlay {
+    ToggleButton button {
+      width-request: 38;
+      height-request: 38;
+
+      styles [
+        "flat",
+      ]
+    }
+
+    [overlay]
+    Stack icon_stack {
+      can-target: false;
+      transition-type: crossfade;
+      transition-duration: 150;
+
+      StackPage {
+        name: "off";
+        child: 
+        Image {
+          icon-name: "dot-symbolic";
+        }
+
+        ;
+      }
+
+      StackPage {
+        name: "open";
+        child: 
+        Image {
+          icon-name: "circle-outline-thick-symbolic";
+
+          styles [
+            "open",
+          ]
+        }
+
+        ;
+      }
+
+      StackPage {
+        name: "muted";
+        child: 
+        Image {
+          icon-name: "cross-large-symbolic";
+        }
+
+        ;
+      }
+    }
+  }
+}
