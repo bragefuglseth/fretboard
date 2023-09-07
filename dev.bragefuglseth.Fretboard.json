@@ -1,7 +1,7 @@
 {
     "app-id" : "dev.bragefuglseth.Fretboard",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -17,8 +17,7 @@
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
         "env" : {
             "RUST_BACKTRACE" : "1",
-            "RUST_LOG" : "fretboard=debug",
-            "LANG" : "it"
+            "RUST_LOG" : "fretboard=debug"
         }
     },
     "cleanup" : [

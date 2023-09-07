@@ -25,7 +25,7 @@ use crate::{
 };
 use adw::subclass::prelude::*;
 use glib::closure_local;
-use gtk::prelude::*;
+use adw::prelude::*;
 use gtk::{gio, glib};
 use once_cell::sync::OnceCell;
 use serde::{Deserialize, Serialize};
@@ -51,7 +51,7 @@ mod imp {
     pub struct FretboardWindow {
         // Template widgets
         #[template_child]
-        pub navigation_stack: TemplateChild<adw::Leaflet>,
+        pub navigation_stack: TemplateChild<adw::NavigationView>,
         #[template_child]
         pub bookmarks_button: TemplateChild<gtk::Button>,
         #[template_child]
@@ -63,7 +63,7 @@ mod imp {
         #[template_child]
         pub star_toggle: TemplateChild<gtk::ToggleButton>,
         #[template_child]
-        pub variants_window_title: TemplateChild<adw::WindowTitle>,
+        pub variants_page: TemplateChild<adw::NavigationPage>,
         #[template_child]
         pub variants_scrolled_window: TemplateChild<gtk::ScrolledWindow>,
         #[template_child]
@@ -418,7 +418,7 @@ impl FretboardWindow {
     fn chord_view(&self) {
         self.imp()
             .navigation_stack
-            .set_visible_child_name("chord-view");
+            .push_by_tag("chord-view");
     }
 
     fn more_variants(&self) {
@@ -456,19 +456,19 @@ impl FretboardWindow {
                 win.imp().chord_diagram.set_chord(chord);
                 win.imp().entry.entry().set_text(&name);
                 win.refresh_star_toggle();
-                win.chord_view();
+                win.imp().navigation_stack.pop();
             }));
 
             container.insert(&button, -1);
         }
 
-        imp.variants_window_title.set_title(&chord_name);
+        imp.variants_page.set_title(&chord_name);
         imp.variants_scrolled_window
             .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 
         self.imp()
             .navigation_stack
-            .set_visible_child_name("more-variants");
+            .push_by_tag("more-variants");
     }
 
     fn show_bookmarks(&self) {
@@ -514,7 +514,7 @@ impl FretboardWindow {
                 win.imp().entry.get().imp().entry_buffer.replace(name.to_string());
                 win.imp().entry.entry().set_text(&name);
                 win.refresh_star_toggle();
-                win.chord_view();
+                win.imp().navigation_stack.pop();
             }));
 
             container.insert(&button, -1);
@@ -523,7 +523,7 @@ impl FretboardWindow {
         imp.bookmarks_scrolled_window
             .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 
-        imp.navigation_stack.set_visible_child_name("bookmarks");
+        imp.navigation_stack.push_by_tag("bookmarks");
     }
 }
 

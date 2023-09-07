@@ -15,4 +15,4 @@ serde_json = "1.0.99"
 [dependencies.adw]
 package = "libadwaita"
 version = "0.5.2"
-features = ["v1_2"]
+features = ["v1_4"]

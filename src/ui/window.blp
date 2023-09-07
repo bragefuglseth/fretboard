@@ -8,15 +8,15 @@ template $FretboardWindow : Adw.ApplicationWindow {
   width-request: 360;
   height-request: 294;
 
-  Adw.Leaflet navigation_stack {
-    can-unfold: false;
+  Adw.NavigationView navigation_stack {
 
-    Adw.LeafletPage {
-      name: "chord-view";
+    Adw.NavigationPage {
+      title: "Fretboard";
+      tag: "chord-view";
       child: 
-      Box {
-        orientation: vertical;
+      Adw.ToolbarView {
 
+        [top]
         Adw.HeaderBar header_bar {
           [start]
           Button bookmarks_button {
@@ -30,13 +30,9 @@ template $FretboardWindow : Adw.ApplicationWindow {
             menu-model: primary_menu;
             primary: true;
           }
-
-          styles [
-            "flat",
-          ]
         }
 
-        ScrolledWindow {
+        content: ScrolledWindow {
           hscrollbar-policy: never;
 
           Box {
@@ -136,32 +132,23 @@ template $FretboardWindow : Adw.ApplicationWindow {
             }
           }
         }
+
+        ;
       }
 
       ;
     }
 
-    Adw.LeafletPage {
-      name: "more-variants";
+    Adw.NavigationPage variants_page {
+      title: "";
+      tag: "more-variants";
       child: 
-      Box variants_page {
-        orientation: vertical;
+      Adw.ToolbarView {
 
-        Adw.HeaderBar {
-          title-widget:           Adw.WindowTitle variants_window_title {
-          }
+        [top]
+        Adw.HeaderBar {}
 
-          ;
-
-          [start]
-          Button {
-            icon-name: "go-previous-symbolic";
-            action-name: "win.chord-view";
-            tooltip-text: _("Go Back");
-          }
-        }
-
-        ScrolledWindow variants_scrolled_window {
+        content: ScrolledWindow variants_scrolled_window {
           hscrollbar-policy: never;
           vexpand: true;
 
@@ -172,7 +159,7 @@ template $FretboardWindow : Adw.ApplicationWindow {
             FlowBox variants_container {
               selection-mode: none;
               homogeneous: true;
-              margin-top: 24;
+              margin-top: 12;
               margin-bottom: 24;
               margin-start: 24;
               margin-end: 24;
@@ -182,33 +169,23 @@ template $FretboardWindow : Adw.ApplicationWindow {
             }
           }
         }
+
+        ;
       }
 
       ;
     }
 
-    Adw.LeafletPage {
-      name: "bookmarks";
+    Adw.NavigationPage {
+      title: _("Bookmarks");
+      tag: "bookmarks";
       child: 
-      Box bookmarks_page {
-        orientation: vertical;
+      Adw.ToolbarView {
 
-        Adw.HeaderBar {
-          title-widget:           Adw.WindowTitle {
-            title: _("Bookmarks");
-          }
+        [top]
+        Adw.HeaderBar {}
 
-          ;
-
-          [start]
-          Button {
-            icon-name: "go-previous-symbolic";
-            action-name: "win.chord-view";
-            tooltip-text: _("Go Back");
-          }
-        }
-
-        ScrolledWindow bookmarks_scrolled_window {
+        content: ScrolledWindow bookmarks_scrolled_window {
           hscrollbar-policy: never;
           vexpand: true;
 
@@ -219,7 +196,7 @@ template $FretboardWindow : Adw.ApplicationWindow {
             FlowBox bookmarks_container {
               selection-mode: none;
               homogeneous: true;
-              margin-top: 24;
+              margin-top: 12;
               margin-bottom: 24;
               margin-start: 24;
               margin-end: 24;
@@ -229,6 +206,8 @@ template $FretboardWindow : Adw.ApplicationWindow {
             }
           }
         }
+
+        ;
       }
 
       ;
