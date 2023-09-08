@@ -1,0 +1,49 @@
+using Gtk 4.0;
+
+ShortcutsWindow help_overlay {
+  modal: true;
+
+  ShortcutsSection {
+    section-name: "shortcuts";
+    max-height: 10;
+
+    ShortcutsGroup {
+      title: _("General");
+
+      ShortcutsShortcut {
+        title: _("Bookmark Chord");
+        action-name: "win.bookmark-chord";
+      }
+
+      ShortcutsShortcut {
+        title: _("View Bookmarks");
+        action-name: "win.bookmarks";
+      }
+
+      ShortcutsShortcut {
+        title: _("View Chord Variants");
+        action-name: "win.more-variants";
+      }
+
+      ShortcutsShortcut {
+        title: _("Empty Chord");
+        action-name: "win.empty-chord";
+      }
+
+      ShortcutsShortcut {
+        title: _("Show Shortcuts");
+        action-name: "win.show-help-overlay";
+      }
+
+      ShortcutsShortcut {
+        title: _("Close Window");
+        action-name: "window.close";
+      }
+
+      ShortcutsShortcut {
+        title: _("Quit");
+        action-name: "app.quit";
+      }
+    }
+  }
+}

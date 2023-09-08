@@ -46,7 +46,6 @@ mod imp {
             let obj = self.obj();
             obj.setup_gactions();
             obj.set_resource_base_path(Some("/dev/bragefuglseth/Fretboard/"));
-            obj.set_accels_for_action("app.quit", &["<primary>q"]);
         }
     }
 
@@ -97,10 +96,13 @@ impl FretboardApplication {
             .build();
         self.add_action_entries([quit_action, about_action]);
 
+        self.set_accels_for_action("app.quit", &["<primary>q"]);
         self.set_accels_for_action("window.close", &["<Ctrl>W"]);
 
         self.set_accels_for_action("win.empty-chord", &["<Ctrl>E"]);
+        self.set_accels_for_action("win.more-variants", &["<Ctrl>V"]);
         self.set_accels_for_action("win.bookmark-chord", &["<Ctrl>D"]);
+        self.set_accels_for_action("win.bookmarks", &["<Ctrl><Alt>D"]);
     }
 
     fn show_about(&self) {

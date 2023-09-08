@@ -20,6 +20,7 @@
     <file preprocess="xml-stripblanks" alias="barre-spin.ui">ui/barre-spin.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-name-entry.ui">ui/chord-name-entry.ui</file>
     <file preprocess="xml-stripblanks" alias="chord-preview.ui">ui/chord-preview.ui</file>
+    <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/help-overlay.ui</file>
 
     <file alias="style.css">ui/style.css</file>
     <file alias="style-dark.css">ui/style-dark.css</file>

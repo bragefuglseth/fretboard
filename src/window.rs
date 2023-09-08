@@ -258,6 +258,8 @@ impl FretboardWindow {
         let current_chord = self.imp().chord_diagram.imp().chord.get();
         let current_name = self.imp().entry.imp().entry_buffer.borrow();
 
+        self.set_focus_widget(Some(&star_toggle));
+
         star_toggle.set_active(!star_toggle.is_active());
 
         let bookmark = Bookmark {
@@ -314,6 +316,7 @@ impl FretboardWindow {
     fn empty_chord(&self) {
         self.imp().chord_diagram.set_chord(EMPTY_CHORD);
         self.imp().entry.imp().entry.set_text("");
+        self.imp().entry.imp().entry_buffer.replace(String::from(""));
         self.imp().feedback_stack.set_visible_child_name("empty");
 
         self.refresh_star_toggle();
@@ -423,7 +426,10 @@ impl FretboardWindow {
 
     fn more_variants(&self) {
         let imp = self.imp();
+
         let chord_name = imp.entry.imp().entry_buffer.borrow();
+
+        if chord_name.is_empty() { return; }
 
         let db = imp.database.borrow();
 
@@ -473,6 +479,8 @@ impl FretboardWindow {
 
     fn show_bookmarks(&self) {
         let imp = self.imp();
+
+        if imp.bookmarks.borrow().is_empty() { return; }
 
         let container = imp.bookmarks_container.get();
 
