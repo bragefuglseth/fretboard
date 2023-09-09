@@ -93,6 +93,9 @@ mod imp {
             klass.install_action("win.chord-view", None, move |win, _, _| {
                 win.chord_view();
             });
+            klass.install_action("win.focus-entry", None, move|win, _, _| {
+                win.focus_entry();
+            });
             klass.install_action("win.more-variants", None, move |win, _, _| {
                 win.more_variants();
             });
@@ -251,6 +254,10 @@ impl FretboardWindow {
         self.refresh_bookmarks_button();
 
         self.load_stored_chord();
+    }
+
+    fn focus_entry(&self) {
+        self.set_focus_widget(Some(&self.imp().entry.imp().entry.get()));
     }
 
     fn bookmark_chord(&self) {
