@@ -15,9 +15,7 @@ jobs:
       options: --privileged
     steps:
     - uses: actions/checkout@v3
-      with:
-        submodules: recursive
-    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v5
+    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v6
       with:
         bundle: fretboard.flatpak
         manifest-path: dev.bragefuglseth.Fretboard.json
