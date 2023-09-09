@@ -696,11 +696,11 @@
      borderopacity="0.25490196"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="50.125"
-     inkscape:cy="81.3125"
-     inkscape:current-layer="g125"
-     showgrid="false"
+     inkscape:zoom="4"
+     inkscape:cx="12.75"
+     inkscape:cy="60.625"
+     inkscape:current-layer="layer1"
+     showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
@@ -743,7 +743,7 @@
        spacingx="2"
        spacingy="2"
        enabled="true"
-       visible="false"
+       visible="true"
        empspacing="4"
        originx="8"
        originy="8"
@@ -811,7 +811,7 @@
        originx="8"
        originy="8"
        units="px"
-       visible="false" />
+       visible="true" />
     <sodipodi:guide
        position="32,72"
        orientation="1,0"
@@ -1802,7 +1802,8 @@
        cy="205"
        r="9.000001" />
     <g
-       id="g125">
+       id="g125"
+       transform="translate(0,-4)">
       <rect
          style="display:inline;vector-effect:none;fill:#58412b;fill-opacity:1;stroke:none;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;enable-background:new"
          id="rect140256"
