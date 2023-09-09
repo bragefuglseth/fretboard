@@ -465,7 +465,14 @@ impl FretboardWindow {
                 win.imp().navigation_stack.pop();
             }));
 
-            container.insert(&button, -1);
+            // We already have a button, so having the FlowBoxChild focusable would create an
+            // unnecessary layer of indirection
+            let flow_box_child = gtk::FlowBoxChild::builder()
+                .focusable(false)
+                .child(&button)
+                .build();
+
+            container.insert(&flow_box_child, -1);
         }
 
         imp.variants_page.set_title(&chord_name);
@@ -525,7 +532,14 @@ impl FretboardWindow {
                 win.imp().navigation_stack.pop();
             }));
 
-            container.insert(&button, -1);
+            // We already have a button, so having the FlowBoxChild focusable would create an
+            // unnecessary layer of indirection
+            let flow_box_child = gtk::FlowBoxChild::builder()
+                .focusable(false)
+                .child(&button)
+                .build();
+
+            container.insert(&flow_box_child, -1);
         }
 
         imp.bookmarks_scrolled_window
