@@ -1,0 +1,195 @@
+# Dutch translation for Fretboard.
+# Copyright (C) 2023 Fretboard'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the fretboard package.
+# Gert-dev, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fretboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-10 15:22+0200\n"
+"PO-Revision-Date: 2023-09-10 15:52+0200\n"
+"Last-Translator: Gert-dev\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.1\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in:3
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:7
+msgid "Fretboard"
+msgstr "Fretboard"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in:4
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:9
+msgid "Look up guitar chords"
+msgstr "Zoek gitaarakkoorden op"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in:10
+msgid "guitar;chords"
+msgstr "gitaar;akkoorden"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:8
+msgid "Brage Fuglseth"
+msgstr "Brage Fuglseth"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:11
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"Hoe werd dat akkoord weer gespeeld? Fretboard laat je gitaarakkoorden "
+"terugvinden via hun naam of ze op een interactieve gitaarnek te plaatsen. "
+"Zodra je een akkoord geïdentificeerd hebt, kan je ermee experimenteren door "
+"het te veranderen, andere manieren zien om het te spelen, of een bladwijzer "
+"maken om het op te slaan voor later. Het maakt niet uit of je een beginnende "
+"of geavanceerde gitarist bent, Freboard helpt je met oefenen, bijleren en "
+"het beheersen van je favoriete nummers!"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:22
+msgid "guitar"
+msgstr "gitaar"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:23
+msgid "chords"
+msgstr "akkoorden"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:64
+msgid ""
+"This major release of Fretboard brings a bunch of exciting improvements:"
+msgstr ""
+"Deze grote vrijgave van Fretboard brengt veel opwindende verbeteringen:"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:66
+msgid ""
+"View different ways to play the same chord, to find the one that suits your "
+"situation the best"
+msgstr ""
+"Bekijk verschillende manieren om hetzelfde akkoord te spelen en diegene te "
+"vinden die het beste past in jouw situatie"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:67
+msgid "Bookmark chords to save them for a later practice session or gig"
+msgstr ""
+"Voeg bladwijzers toe aan akkoorden om ze op te slaan voor een oefensessie of "
+"optreden op een later moment"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:68
+msgid ""
+"An additional fret in the chord diagram, to help you practice those really "
+"tricky positionings"
+msgstr ""
+"Een bijkomende fret in het akkoordendiagram om je te helpen oefenen op die "
+"moeilijke vingerplaatsingen"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:69
+msgid ""
+"Hover over positions in the chord diagram to see their respective note names"
+msgstr ""
+"Beweeg met je muis over plaatsen in het akkoordendiagram om de namen van de "
+"respectievelijke noten te zien"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:70
+msgid "Smarter and more precise chord detection"
+msgstr "Slimmere en meer precieze akkoordendetectie"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:72
+msgid ""
+"If you would like to come with suggestions, report bugs, translate the app, "
+"or contribute otherwise, feel free to reach out!"
+msgstr ""
+"Als je suggesties hebt, bugs wil rapporteren, de applicatie wil vertalen, of "
+"op een andere manier wil bijdragen, laat dan iets van je horen!"
+
+#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:77
+msgid "Initial release."
+msgstr "Eerste vrijgave."
+
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:6
+msgid "Window width"
+msgstr "Vensterbreedte"
+
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:10
+msgid "Window height"
+msgstr "Vensterhoogte"
+
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:14
+msgid "Window maximized state"
+msgstr "Maximalisatiestatus venster"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.rs:120
+msgid "translator-credits"
+msgstr "credits vertalers"
+
+#: src/window.rs:241
+msgid "Remove Bookmark"
+msgstr "Bladwijzer verwijderen"
+
+#: src/window.rs:243
+msgid "Bookmark"
+msgstr "Bladwijzer"
+
+#: src/window.rs:289
+msgid "No Bookmarks"
+msgstr "Geen bladwijzers"
+
+#: src/window.rs:291 src/ui/window.blp:198
+msgid "Bookmarks"
+msgstr "Bladwijzers"
+
+#. translators: "open" is a verb here, not an adjective
+#: src/chord_diagram_top_toggle.rs:155
+msgid "Open"
+msgstr "Openen"
+
+#: src/chord_diagram_top_toggle.rs:156
+msgid "Mute"
+msgstr "Dempen"
+
+#: src/ui/window.blp:29
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: src/ui/window.blp:86
+msgid "Chord not found"
+msgstr "Akkoord niet teruggevonden"
+
+#: src/ui/window.blp:120
+msgid "View _Variants"
+msgstr "_Varianten bekijken"
+
+#: src/ui/window.blp:160 src/ui/window.blp:207
+msgid "Go Back"
+msgstr "Terug"
+
+#: src/ui/window.blp:242
+msgid "_Empty Chord"
+msgstr "_Leeg akkoord"
+
+#: src/ui/window.blp:247
+msgid "_About Fretboard"
+msgstr "_Over Fretboard"
+
+#: src/ui/barre-spin.blp:9
+msgid "Move Up"
+msgstr "Omhoog gaan"
+
+#: src/ui/barre-spin.blp:27
+msgid "Move Down"
+msgstr "Omlaag gaan"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/ui/chord-name-entry.blp:10
+msgid "Chord Name"
+msgstr "Naam akkoord"
+
+#: src/ui/chord-name-entry.blp:23
+msgid "Confirm"
+msgstr "Bevestigen"
