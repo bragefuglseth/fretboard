@@ -19,7 +19,7 @@
  */
 
 use crate::{
-    config::{APP_ID, VERSION},
+    config::VERSION,
     FretboardWindow,
 };
 use adw::subclass::prelude::*;
@@ -108,31 +108,17 @@ impl FretboardApplication {
 
     fn show_about(&self) {
         let window = self.active_window().unwrap();
-        adw::AboutWindow::builder()
-            .transient_for(&window)
-            .application_name("Fretboard")
-            .application_icon(APP_ID)
-            .developer_name("Brage Fuglseth")
-            .version(VERSION)
-            .developers(["Brage Fuglseth https://bragefuglseth.dev"])
-            .website("https://github.com/bragefuglseth/fretboard")
-            .issue_url("https://github.com/bragefuglseth/fretboard/issues")
-            .license_type(gtk::License::Gpl30)
-            .copyright("© 2023 Brage Fuglseth")
-            // Translators: Replace "translator-credits" with your names, one name per line
-            .translator_credits(&gettext("translator-credits"))
-            .release_notes(&gettext("
-<p>This major release of Fretboard brings a bunch of exciting improvements:</p>
-<ul>
-  <li>View different ways to play the same chord, to find the one that suits your situation the best</li>
-  <li>Bookmark chords to save them for a later practice session or gig</li>
-  <li>An additional fret in the chord diagram, to help you practice those really tricky positionings</li>
-  <li>Hover over positions in the chord diagram to see their respective note names</li>
-  <li>Smarter and more precise chord detection</li>
-</ul>
-<p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
-            "))
-            .build()
-            .present()
+        let about = adw::AboutWindow::from_appdata(
+            "/dev/bragefuglseth/Fretboard/metainfo.xml",
+            Some(VERSION)
+        );
+
+        about.set_developers(&["Brage Fuglseth"]);
+        about.set_copyright("© 2023 Brage Fuglseth");
+        // Translators: Replace "translator-credits" with your names, one name per line
+        about.set_translator_credits(&gettext("translator-credits"));
+
+        about.set_transient_for(Some(&window));
+        about.present();
     }
 }

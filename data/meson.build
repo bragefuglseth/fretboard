@@ -1,3 +1,20 @@
+gnome = import('gnome')
+
+blueprints = custom_target('blueprints',
+  input: files(
+    'gtk/chord-diagram-toggle.blp',
+    'gtk/chord-diagram-top-toggle.blp',
+    'gtk/barre-spin.blp',
+    'gtk/chord-diagram.blp',
+    'gtk/chord-name-entry.blp',
+    'gtk/chord-preview.blp',
+    'gtk/window.blp',
+    'gtk/help-overlay.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
 desktop_conf = configuration_data()
 desktop_conf.set('icon', application_id)
 desktop_file = i18n.merge_file(
@@ -35,7 +52,21 @@ appstream_file = i18n.merge_file(
 
 appstreamcli = find_program('appstreamcli', required: false, disabler: true)
 test('Validate appstream file', appstreamcli,
-	args: ['validate', '--no-net', '--explain',  appstream_file])
+  args: ['validate', '--no-net', '--explain',  appstream_file])
+
+resources_conf = configuration_data()
+resources_conf.set('app-id', application_id)
+gnome.compile_resources('fretboard',
+  configure_file(
+    input: '@0@.gresource.xml.in'.format(meson.project_name()),
+    output: '@BASENAME@',
+    configuration: resources_conf
+  ),
+  gresource_bundle: true,
+  install: true,
+  install_dir: pkgdatadir,
+  dependencies: blueprints,
+)
 
 install_data('dev.bragefuglseth.Fretboard.gschema.xml',
   install_dir: datadir / 'glib-2.0/schemas'

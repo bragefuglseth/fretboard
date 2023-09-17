@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/dev/bragefuglseth/Fretboard/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks" alias="dot-symbolic.svg">icons/dot-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="circle-outline-thick-symbolic.svg">icons/circle-outline-thick-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="cross-large-symbolic.svg">icons/cross-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="up-large-symbolic.svg">icons/up-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="down-large-symbolic.svg">icons/down-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="checkmark-large-symbolic.svg">icons/checkmark-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="library-symbolic.svg">icons/library-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="star-outline-rounded-symbolic.svg">icons/star-outline-rounded-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="star-large-symbolic.svg">icons/star-large-symbolic.svg</file>
+  </gresource>
+
+  <gresource prefix="/dev/bragefuglseth/Fretboard">
+    <file alias="metainfo.xml" preprocess="xml-stripblanks">@app-id@.metainfo.xml</file>
+    <file compressed="true">chords.txt</file>
+
+    <file preprocess="xml-stripblanks" alias="window.ui">gtk/window.ui</file>
+    <file preprocess="xml-stripblanks" alias="chord-diagram.ui">gtk/chord-diagram.ui</file>
+    <file preprocess="xml-stripblanks" alias="chord-diagram-toggle.ui">gtk/chord-diagram-toggle.ui</file>
+    <file preprocess="xml-stripblanks" alias="chord-diagram-top-toggle.ui">gtk/chord-diagram-top-toggle.ui</file>
+    <file preprocess="xml-stripblanks" alias="barre-spin.ui">gtk/barre-spin.ui</file>
+    <file preprocess="xml-stripblanks" alias="chord-name-entry.ui">gtk/chord-name-entry.ui</file>
+    <file preprocess="xml-stripblanks" alias="chord-preview.ui">gtk/chord-preview.ui</file>
+    <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">gtk/help-overlay.ui</file>
+
+    <file alias="style.css">gtk/style.css</file>
+    <file alias="style-dark.css">gtk/style-dark.css</file>
+    <file alias="style-hc.css">gtk/style-hc.css</file>
+    <file alias="style-hc-dark.css">gtk/style-hc-dark.css</file>
+
+    <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop-light.svg">assets/chord-diagram-backdrop-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="chord-diagram-backdrop-dark.svg">assets/chord-diagram-backdrop-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-2-light.svg">assets/barre-2-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-3-light.svg">assets/barre-3-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-4-light.svg">assets/barre-4-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-5-light.svg">assets/barre-5-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-6-light.svg">assets/barre-6-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-2-dark.svg">assets/barre-2-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-3-dark.svg">assets/barre-3-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-4-dark.svg">assets/barre-4-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-5-dark.svg">assets/barre-5-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="barre-6-dark.svg">assets/barre-6-dark.svg</file>
+
+    <file preprocess="xml-stripblanks" alias="chord-preview-backdrop-light.svg">assets/chord-preview-backdrop-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="chord-preview-backdrop-dark.svg">assets/chord-preview-backdrop-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-2-light.svg">assets/prv-barre-2-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-3-light.svg">assets/prv-barre-3-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-4-light.svg">assets/prv-barre-4-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-5-light.svg">assets/prv-barre-5-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-6-light.svg">assets/prv-barre-6-light.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-2-dark.svg">assets/prv-barre-2-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-3-dark.svg">assets/prv-barre-3-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-4-dark.svg">assets/prv-barre-4-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-5-dark.svg">assets/prv-barre-5-dark.svg</file>
+    <file preprocess="xml-stripblanks" alias="prv-barre-6-dark.svg">assets/prv-barre-6-dark.svg</file>
+  </gresource>
+</gresources>
