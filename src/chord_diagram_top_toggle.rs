@@ -153,6 +153,7 @@ impl FretboardChordDiagramTopToggle {
         let tooltip_text = match imp.state.get() {
             TopToggleState::Off => gettext("Not Open"),
             TopToggleState::Muted => gettext("Muted"),
+            // translators: this is an adjective, not a verb
             TopToggleState::Open => gettext("Open"),
         };
 

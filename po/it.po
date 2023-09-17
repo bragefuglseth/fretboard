@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the fretboard package.
 # Davide <davide.ferracin@protonmail.com>, 2023.
 #
-#: src/application.rs:121
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 21:12+0200\n"
+"POT-Creation-Date: 2023-09-17 15:15+0200\n"
 "PO-Revision-Date: 2023-08-28 20:53+0200\n"
 "Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -18,25 +17,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in:3
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:7
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in:4
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:9
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:9
 msgid "Look up guitar chords"
 msgstr "Per consultare accordi di chitarra"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
 msgstr "chitarra;accordi"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:8
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Brage Fuglseth"
 msgstr "Brage Fuglseth"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:11
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:11
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their names or plotting them on an interactive guitar neck. When you "
@@ -52,52 +51,36 @@ msgstr ""
 "esperti chitarristi, Fretboard è per tutti, per far pratica, imparare e "
 "padroneggiare i propri brani preferiti!"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:22
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:22
 msgid "guitar"
 msgstr "chitarra"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:23
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
 msgid "chords"
 msgstr "accordi"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:64
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:60
 msgid ""
-"This major release of Fretboard brings a bunch of exciting improvements:"
+"GNOME 45 is finally here! To celebrate, Fretboard has gained the following "
+"improvements:"
 msgstr ""
-"Questa versione di Fretboard apporta alcuni interessanti miglioramenti:"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:66
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:62
+msgid "Refined visuals taking advantage of the latest platform features"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:63
+msgid "Keyboard shortcuts for common actions"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
 msgid ""
-"View different ways to play the same chord, to find the one that suits your "
-"situation the best"
+"Italian, Russian, and Dutch translations, making Impression available in a "
+"total of 4 different languages"
 msgstr ""
-"Visualizzare diversi modi di suonare lo stesso accordo, per trovare quello "
-"più adatto alla propria situazione"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:67
-msgid "Bookmark chords to save them for a later practice session or gig"
-msgstr "Salvare gli accordi nei preferiti, per una sessione successiva"
-
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:68
-msgid ""
-"An additional fret in the chord diagram, to help you practice those really "
-"tricky positionings"
-msgstr ""
-"Un tasto aggiuntivo nei diagrammi degli accordi, per aiutare nella pratica "
-"dei posizionamenti più complicati"
-
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:69
-msgid ""
-"Hover over positions in the chord diagram to see their respective note names"
-msgstr ""
-"Portare il cursore sopra alle posizioni nel diagramma degli accordi per "
-"vedere i nomi delle note"
-
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:70
-msgid "Smarter and more precise chord detection"
-msgstr "Rilevamento degli accordi più intelligente e preciso"
-
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:72
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:66
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:79
 msgid ""
 "If you would like to come with suggestions, report bugs, translate the app, "
 "or contribute otherwise, feel free to reach out!"
@@ -105,7 +88,44 @@ msgstr ""
 "Per proporre suggerimenti, segnalare errori, tradurre l'applicazione o "
 "contribuire in altro modo, contattateci!"
 
-#: data/dev.bragefuglseth.Fretboard.appdata.xml.in:77
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:71
+msgid ""
+"This major release of Fretboard brings a bunch of exciting improvements:"
+msgstr ""
+"Questa versione di Fretboard apporta alcuni interessanti miglioramenti:"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:73
+msgid ""
+"View different ways to play the same chord, to find the one that suits your "
+"situation the best"
+msgstr ""
+"Visualizzare diversi modi di suonare lo stesso accordo, per trovare quello "
+"più adatto alla propria situazione"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:74
+msgid "Bookmark chords to save them for a later practice session or gig"
+msgstr "Salvare gli accordi nei preferiti, per una sessione successiva"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:75
+msgid ""
+"An additional fret in the chord diagram, to help you practice those really "
+"tricky positionings"
+msgstr ""
+"Un tasto aggiuntivo nei diagrammi degli accordi, per aiutare nella pratica "
+"dei posizionamenti più complicati"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:76
+msgid ""
+"Hover over positions in the chord diagram to see their respective note names"
+msgstr ""
+"Portare il cursore sopra alle posizioni nel diagramma degli accordi per "
+"vedere i nomi delle note"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:77
+msgid "Smarter and more precise chord detection"
+msgstr "Rilevamento degli accordi più intelligente e preciso"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:84
 msgid "Initial release."
 msgstr "Lancio iniziale."
 
@@ -122,72 +142,81 @@ msgid "Window maximized state"
 msgstr "Stato di massimizzazione della finestra"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:120
+#: src/application.rs:119
 msgid "translator-credits"
 msgstr "Davide Ferracin <davide.ferracin@protonmail.com>"
 
-#: src/window.rs:241
+#: src/window.rs:244
 msgid "Remove Bookmark"
 msgstr "Rimuovi dai preferiti"
 
-#: src/window.rs:243
+#: src/window.rs:246
 msgid "Bookmark"
 msgstr "Aggiungi ai preferiti"
 
-#: src/window.rs:289
+#: src/window.rs:298
 msgid "No Bookmarks"
 msgstr "Nessun preferito"
 
-#: src/window.rs:291 src/ui/window.blp:198
+#: src/window.rs:300 data/gtk/window.blp:180
 msgid "Bookmarks"
 msgstr "Preferiti"
 
-#. translators: "open" is a verb here, not an adjective
+#: src/chord_diagram_top_toggle.rs:154
+#, fuzzy
+msgid "Not Open"
+msgstr "Suona a vuoto"
+
 #: src/chord_diagram_top_toggle.rs:155
+#, fuzzy
+msgid "Muted"
+msgstr "Non suonare"
+
+#. translators: this is an adjective, not a verb
+#: src/chord_diagram_top_toggle.rs:157
 msgid "Open"
 msgstr "Suona a vuoto"
 
-#: src/chord_diagram_top_toggle.rs:156
-msgid "Mute"
-msgstr "Non suonare"
-
-#: src/ui/window.blp:29
+#: data/gtk/window.blp:29
 msgid "Main Menu"
 msgstr "Menù principale"
 
-#: src/ui/window.blp:86
+#: data/gtk/window.blp:82
 msgid "Chord not found"
 msgstr "Accordo non trovato"
 
-#: src/ui/window.blp:120
+#: data/gtk/window.blp:116
 msgid "View _Variants"
 msgstr "Mostra _varianti"
 
-#: src/ui/window.blp:160 src/ui/window.blp:207
-msgid "Go Back"
-msgstr "Indietro"
-
-#: src/ui/window.blp:242
+#: data/gtk/window.blp:221
 msgid "_Empty Chord"
 msgstr "_Accordo vuoto"
 
-#: src/ui/window.blp:247
+#: data/gtk/window.blp:228
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: data/gtk/window.blp:233
 msgid "_About Fretboard"
 msgstr "_Informazioni su Fretboard"
 
-#: src/ui/barre-spin.blp:9
+#: data/gtk/barre-spin.blp:9
 msgid "Move Up"
 msgstr "Sposta in alto"
 
-#: src/ui/barre-spin.blp:27
+#: data/gtk/barre-spin.blp:27
 msgid "Move Down"
 msgstr "Sposta in basso"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: src/ui/chord-name-entry.blp:10
+#: data/gtk/chord-name-entry.blp:10
 msgid "Chord Name"
 msgstr "Accordo"
 
-#: src/ui/chord-name-entry.blp:23
+#: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
 msgstr "Conferma"
+
+#~ msgid "Go Back"
+#~ msgstr "Indietro"
