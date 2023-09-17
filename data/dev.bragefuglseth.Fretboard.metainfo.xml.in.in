@@ -32,7 +32,7 @@
     <control>touch</control>
   </recommends>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-1.png</image>
     </screenshot>
     <screenshot>
@@ -54,10 +54,6 @@
   <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>
   <update_contact>brage.fuglseth_AT_gmail.com</update_contact>
   <content_rating type="oars-1.1"/>
-  <custom>
-    <value key="Purism::form_factor">workstation</value>
-    <value key="Purism::form_factor">mobile</value>
-  </custom>
   <releases>
     <release date="2023-08-28" version="2.0">
       <description>
