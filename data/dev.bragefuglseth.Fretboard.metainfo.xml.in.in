@@ -49,12 +49,23 @@
   <url type="homepage">https://github.com/bragefuglseth/fretboard</url>
   <url type="bugtracker">https://github.com/bragefuglseth/fretboard/issues</url>
   <url type="contribute">https://github.com/bragefuglseth/fretboard#contributing</url>
-  <url type="translate">https://github.com/bragefuglseth/fretboard</url>
+  <url type="translate">https://hosted.weblate.org/projects/fretboard</url>
   <url type="vcs-browser">https://github.com/bragefuglseth/fretboard</url>
   <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>
   <update_contact>brage.fuglseth_AT_gmail.com</update_contact>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release date="2023-09-20" version="3.0">
+      <description>
+        <p>GNOME 45 is finally here! To celebrate, Fretboard has gained the following improvements:</p>
+        <ul>
+          <li>Refined visuals taking advantage of the latest platform features</li>
+          <li>Keyboard shortcuts for common actions</li>
+          <li>Italian, Russian, and Dutch translations, making Impression available in a total of 4 different languages</li>
+        </ul>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
     <release date="2023-08-28" version="2.0">
       <description>
         <p>This major release of Fretboard brings a bunch of exciting improvements:</p>
