@@ -37,7 +37,7 @@ The recommended way to build Fretboard from source is to use [GNOME Builder](htt
 Fretboard is translated on [Weblate](https://hosted.weblate.org/engage/fretboard).
 
 <a href="https://hosted.weblate.org/engage/fretboard/">
-<img src="https://hosted.weblate.org/widget/fretboard/open-graph.png" alt="Translation status" />
+<img src="https://hosted.weblate.org/widget/fretboard/multi-auto.svg" alt="Translation status" />
 </a>
 
 ## Credits
