@@ -1,4 +1,4 @@
-![icon](/data/icons/hicolor/scalable/apps/dev.bragefuglseth.Fretboard.svg)
+![icon](/data/icons/dev.bragefuglseth.Fretboard.svg)
 
 # Fretboard
 
