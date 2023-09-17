@@ -558,7 +558,7 @@ impl FretboardWindow {
 
 fn chord_data_path() -> PathBuf {
     let mut path = glib::user_data_dir();
-    path.push("dev.bragefuglseth.Fretboard");
+    path.push(APP_ID);
     std::fs::create_dir_all(&path).expect("able to create directory");
     path.push("chord.json");
     path
@@ -566,7 +566,7 @@ fn chord_data_path() -> PathBuf {
 
 fn bookmarks_data_path() -> PathBuf {
     let mut path = glib::user_data_dir();
-    path.push("dev.bragefuglseth.Fretboard");
+    path.push(APP_ID);
     std::fs::create_dir_all(&path).expect("able to create directory");
     path.push("bookmarks.json");
     path

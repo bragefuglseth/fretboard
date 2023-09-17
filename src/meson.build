@@ -1,4 +1,3 @@
-pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 gnome = import('gnome')
 
 blueprints = custom_target('blueprints',
@@ -27,21 +26,21 @@ gnome.compile_resources('fretboard',
 conf = configuration_data()
 conf.set_quoted('APP_ID', application_id)
 conf.set_quoted('VERSION', version + version_suffix)
-conf.set_quoted('GETTEXT_PACKAGE', 'fretboard')
-conf.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+conf.set_quoted('GETTEXT_PACKAGE', gettext_package)
+conf.set_quoted('LOCALEDIR', localedir)
 conf.set_quoted('PKGDATADIR', pkgdatadir)
 
 configure_file(
-    input: 'config.rs.in',
-    output: 'config.rs',
-    configuration: conf
+  input: 'config.rs.in',
+  output: 'config.rs',
+  configuration: conf
 )
 
 # Copy the config.rs output to the source directory.
 run_command(
   'cp',
-  join_paths(meson.project_build_root(), 'src', 'config.rs'),
-  join_paths(meson.project_source_root(), 'src', 'config.rs'),
+  meson.project_build_root() / 'src' / 'config.rs',
+  meson.project_source_root() / 'src' / 'config.rs',
   check: true
 )
 
@@ -50,8 +49,8 @@ cargo_opt  = [ '--manifest-path', meson.project_source_root() / 'Cargo.toml' ]
 cargo_opt += [ '--target-dir', meson.project_build_root()  / 'src' ]
 cargo_env  = [ 'CARGO_HOME=' + meson.project_build_root()  / 'cargo-home' ]
 
-if get_option('buildtype') == 'release'
-  cargo_options += [ '--release' ]
+if get_option('profile') == 'default'
+  cargo_opt += [ '--release' ]
   rust_target = 'release'
 else
   rust_target = 'debug'

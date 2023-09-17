@@ -16,15 +16,6 @@
     ],
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
-        "prepend-path": "/usr/lib/sdk/llvm16/bin",
-        "prepend-ld-library-path": "/usr/lib/sdk/llvm16/lib",
-        "build-args": [
-            "--share=network"
-        ],
-        "env" : {
-            "RUST_BACKTRACE" : "1",
-            "RUST_LOG" : "fretboard=debug"
-        }
     },
     "cleanup" : [
         "/include",

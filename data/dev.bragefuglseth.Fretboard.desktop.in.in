@@ -2,7 +2,7 @@
 Name=Fretboard
 Comment=Look up guitar chords
 Exec=fretboard
-Icon=dev.bragefuglseth.Fretboard
+Icon=@icon@
 Terminal=false
 Type=Application
 Categories=GTK;Education;

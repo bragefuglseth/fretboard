@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2023 Brage Fuglseth -->
 <component type="desktop-application">
-  <id>dev.bragefuglseth.Fretboard.desktop</id>
+  <id>@app-id@</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>Fretboard</name>
@@ -17,7 +17,7 @@
       practice, learn, and master your favorite songs!
 	  </p>
   </description>
-  <translation type="gettext">fretboard</translation>
+  <translation type="gettext">@gettext-package@</translation>
   <keywords>
     <keyword>guitar</keyword>
     <keyword>chords</keyword>
@@ -45,7 +45,7 @@
       <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-4.png</image>
     </screenshot>
   </screenshots>
-  <launchable type="desktop-id">dev.bragefuglseth.Fretboard.desktop</launchable>
+  <launchable type="desktop-id">@app-id@.desktop</launchable>
   <url type="homepage">https://github.com/bragefuglseth/fretboard</url>
   <url type="bugtracker">https://github.com/bragefuglseth/fretboard/issues</url>
   <url type="contribute">https://github.com/bragefuglseth/fretboard#contributing</url>
