@@ -44,6 +44,12 @@
     <screenshot>
       <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-4.png</image>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-5.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-6.png</image>
+    </screenshot>
   </screenshots>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <url type="homepage">https://github.com/bragefuglseth/fretboard</url>
