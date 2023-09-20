@@ -2,20 +2,21 @@
 # Copyright (C) 2023 Fretboard'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # Davide <davide.ferracin@protonmail.com>, 2023.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-19 07:50+0200\n"
-"PO-Revision-Date: 2023-08-28 20:53+0200\n"
+"PO-Revision-Date: 2023-09-21 02:01+0000\n"
 "Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
-"Language-Team: Italian <tp@lists.linux.it>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/fretboard/"
+"fretboard/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -64,20 +65,26 @@ msgid ""
 "GNOME 45 is finally here! To celebrate, Fretboard has gained the following "
 "improvements:"
 msgstr ""
+"GNOME 45 è arrivato! Per festeggiare, Fretboard ha acquisito i seguenti "
+"miglioramenti:"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:62
 msgid "Refined visuals taking advantage of the latest platform features"
 msgstr ""
+"Una veste grafica rifinita, che sfrutta le funzionalità più recenti della "
+"piattaforma"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:63
 msgid "Keyboard shortcuts for common actions"
-msgstr ""
+msgstr "Scorciatoie da tastiera per le azioni comuni"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
 msgid ""
 "Italian, Russian, and Dutch translations, making Fretboard available in a "
 "total of 4 different languages"
 msgstr ""
+"Traduzioni in italiano, russo e olandese, che rendono Fretboard disponibile "
+"in un totale di quattro lingue diverse"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:66
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:79
@@ -163,19 +170,17 @@ msgid "Bookmarks"
 msgstr "Preferiti"
 
 #: src/chord_diagram_top_toggle.rs:154
-#, fuzzy
 msgid "Not Open"
-msgstr "Suona a vuoto"
+msgstr "Non a vuoto"
 
 #: src/chord_diagram_top_toggle.rs:155
-#, fuzzy
 msgid "Muted"
-msgstr "Non suonare"
+msgstr "Muta"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Open"
-msgstr "Suona a vuoto"
+msgstr "A vuoto"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
@@ -195,7 +200,7 @@ msgstr "_Accordo vuoto"
 
 #: data/gtk/window.blp:228
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Scorciatoie da tastiera"
 
 #: data/gtk/window.blp:233
 msgid "_About Fretboard"
