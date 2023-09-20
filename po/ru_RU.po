@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-17 15:15+0200\n"
+"POT-Creation-Date: 2023-09-19 07:50+0200\n"
 "PO-Revision-Date: 2023-08-29 19:28+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -25,7 +25,7 @@ msgstr "Fretboard"
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:9
 msgid "Look up guitar chords"
-msgstr "Ищите гитарные аккорды"
+msgstr "Найдите гитарные аккорды"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
@@ -33,7 +33,7 @@ msgstr "гитара;аккорды"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Brage Fuglseth"
-msgstr "Браге Фуглсет"
+msgstr "Brage Fuglseth"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:11
 msgid ""
@@ -65,18 +65,22 @@ msgid ""
 "GNOME 45 is finally here! To celebrate, Fretboard has gained the following "
 "improvements:"
 msgstr ""
+"GNOME 45 наконец-то здесь! В честь этого, Fretboard получил следующие "
+"улучшения:"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:62
 msgid "Refined visuals taking advantage of the latest platform features"
 msgstr ""
+"Усовершенствованный внешний вид с использованием новейших возможностей "
+"платформы"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:63
 msgid "Keyboard shortcuts for common actions"
-msgstr ""
+msgstr "Комбинации клавиш для частых действий"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
 msgid ""
-"Italian, Russian, and Dutch translations, making Impression available in a "
+"Italian, Russian, and Dutch translations, making Fretboard available in a "
 "total of 4 different languages"
 msgstr ""
 
@@ -100,8 +104,8 @@ msgid ""
 "View different ways to play the same chord, to find the one that suits your "
 "situation the best"
 msgstr ""
-"Смотрите различные способы исполнения одного и того же аккорда, чтобы найти "
-"наиболее подходящий для вашей ситуации"
+"Просматривайте различные способы исполнения одного и того же аккорда, чтобы "
+"найти наиболее подходящий для вашей ситуации"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:74
 msgid "Bookmark chords to save them for a later practice session or gig"
@@ -147,11 +151,13 @@ msgstr "Развёрнутое состояние окна"
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:119
 msgid "translator-credits"
-msgstr "beb"
+msgstr ""
+"beb\n"
+"Давид Лапшин"
 
 #: src/window.rs:244
 msgid "Remove Bookmark"
-msgstr "Убрать из закладок"
+msgstr "Удалить закладку"
 
 #: src/window.rs:246
 msgid "Bookmark"
@@ -166,14 +172,12 @@ msgid "Bookmarks"
 msgstr "Закладки"
 
 #: src/chord_diagram_top_toggle.rs:154
-#, fuzzy
 msgid "Not Open"
-msgstr "Открыть"
+msgstr "Не открыто"
 
 #: src/chord_diagram_top_toggle.rs:155
-#, fuzzy
 msgid "Muted"
-msgstr "Заглушить"
+msgstr "Заглушен"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:157
@@ -198,7 +202,7 @@ msgstr "_Очистить аккорд"
 
 #: data/gtk/window.blp:228
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Комбинации клавиш"
 
 #: data/gtk/window.blp:233
 msgid "_About Fretboard"
@@ -206,11 +210,11 @@ msgstr "_О Fretboard"
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
-msgstr "_Вверх"
+msgstr "Перейти вверх"
 
 #: data/gtk/barre-spin.blp:27
 msgid "Move Down"
-msgstr "_Вниз"
+msgstr "Перейти вниз"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10
@@ -220,6 +224,14 @@ msgstr "Название аккорда"
 #: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
 msgstr "Подтвердить"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
+msgid ""
+"Italian, Russian, and Dutch translations, making Impression available in a "
+"total of 4 different languages"
+msgstr ""
+"Итальянский, русский и голландский переводы, благодаря чему Fretboard "
+"доступен в общей сложности на 4 языках"
 
 #~ msgid "Go Back"
 #~ msgstr "Назад"
