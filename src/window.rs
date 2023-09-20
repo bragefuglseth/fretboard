@@ -63,6 +63,8 @@ mod imp {
         #[template_child]
         pub star_toggle: TemplateChild<gtk::ToggleButton>,
         #[template_child]
+        pub more_variants_button_image: TemplateChild<gtk::Image>,
+        #[template_child]
         pub variants_page: TemplateChild<adw::NavigationPage>,
         #[template_child]
         pub variants_scrolled_window: TemplateChild<gtk::ScrolledWindow>,
@@ -202,7 +204,9 @@ impl FretboardWindow {
     }
 
     fn init(&self) {
-        let chord_diagram = self.imp().chord_diagram.get();
+        let imp = self.imp();
+
+        let chord_diagram = imp.chord_diagram.get();
 
         let win: FretboardWindow = self.clone();
 
@@ -248,6 +252,8 @@ impl FretboardWindow {
             })
             .sync_create()
             .build();
+
+        imp.more_variants_button_image.set_accessible_role(gtk::AccessibleRole::Presentation);
 
         self.load_bookmarks();
 

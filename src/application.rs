@@ -18,10 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-use crate::{
-    config::VERSION,
-    FretboardWindow,
-};
+use crate::FretboardWindow;
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gio, glib};
@@ -110,7 +107,7 @@ impl FretboardApplication {
         let window = self.active_window().unwrap();
         let about = adw::AboutWindow::from_appdata(
             "/dev/bragefuglseth/Fretboard/metainfo.xml",
-            Some(VERSION)
+            Some("3.0")
         );
 
         about.set_developers(&["Brage Fuglseth"]);

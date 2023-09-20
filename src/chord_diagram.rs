@@ -110,6 +110,8 @@ mod imp {
 
             obj.update_style();
 
+            self.diagram_backdrop.set_accessible_role(gtk::AccessibleRole::Presentation);
+
             // Setup top toggles
             for _ in 0..STRINGS {
                 let top_toggle = FretboardChordDiagramTopToggle::new();
