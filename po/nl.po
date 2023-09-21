@@ -4,13 +4,14 @@
 # Gert-dev, 2023.
 #
 # Gert-dev <qnyasgjhapqyuhoibr@kiabws.com>, 2023.
+# Philip Goto <philip.goto@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-19 07:50+0200\n"
-"PO-Revision-Date: 2023-09-21 02:01+0000\n"
-"Last-Translator: Gert-dev <qnyasgjhapqyuhoibr@kiabws.com>\n"
+"PO-Revision-Date: 2023-09-22 06:00+0000\n"
+"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/nl/>\n"
 "Language: nl\n"
@@ -47,7 +48,7 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
-"Hoe werd dat akkoord weer gespeeld? Fretboard laat je gitaarakkoorden "
+"Hoe werd dat akkoord ook alweer gespeeld? Fretboard laat je gitaarakkoorden "
 "terugvinden via hun naam of ze op een interactieve gitaarnek te plaatsen. "
 "Zodra je een akkoord geïdentificeerd hebt, kan je ermee experimenteren door "
 "het te veranderen, andere manieren zien om het te spelen, of een bladwijzer "
