@@ -62,6 +62,10 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
+            // The direction of the diagram is strictly visual
+            self.top_row.set_direction(gtk::TextDirection::Ltr);
+            self.dots_grid.set_direction(gtk::TextDirection::Ltr);
+
             for string_num in 0..STRINGS {
                 let mut dot_column = Vec::new();
 

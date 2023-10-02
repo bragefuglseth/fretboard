@@ -96,6 +96,10 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
+            // The direction of the diagram is strictly visual
+            self.top_row.set_direction(gtk::TextDirection::Ltr);
+            self.grid.set_direction(gtk::TextDirection::Ltr);
+
             let obj = self.obj();
 
             let style_manager = adw::StyleManager::default();
