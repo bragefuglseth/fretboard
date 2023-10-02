@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-19 07:50+0200\n"
+"POT-Creation-Date: 2023-10-01 21:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,67 +53,6 @@ msgstr ""
 msgid "chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:60
-msgid ""
-"GNOME 45 is finally here! To celebrate, Fretboard has gained the following "
-"improvements:"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:62
-msgid "Refined visuals taking advantage of the latest platform features"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:63
-msgid "Keyboard shortcuts for common actions"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
-msgid ""
-"Italian, Russian, and Dutch translations, making Fretboard available in a "
-"total of 4 different languages"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:66
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:79
-msgid ""
-"If you would like to come with suggestions, report bugs, translate the app, "
-"or contribute otherwise, feel free to reach out!"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:71
-msgid ""
-"This major release of Fretboard brings a bunch of exciting improvements:"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:73
-msgid ""
-"View different ways to play the same chord, to find the one that suits your "
-"situation the best"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:74
-msgid "Bookmark chords to save them for a later practice session or gig"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:75
-msgid ""
-"An additional fret in the chord diagram, to help you practice those really "
-"tricky positionings"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:76
-msgid ""
-"Hover over positions in the chord diagram to see their respective note names"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:77
-msgid "Smarter and more precise chord detection"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:84
-msgid "Initial release."
-msgstr ""
-
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:6
 msgid "Window width"
 msgstr ""
@@ -127,23 +66,23 @@ msgid "Window maximized state"
 msgstr ""
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:119
+#: src/application.rs:116
 msgid "translator-credits"
 msgstr ""
 
-#: src/window.rs:244
+#: src/window.rs:248
 msgid "Remove Bookmark"
 msgstr ""
 
-#: src/window.rs:246
+#: src/window.rs:250
 msgid "Bookmark"
 msgstr ""
 
-#: src/window.rs:298
+#: src/window.rs:304
 msgid "No Bookmarks"
 msgstr ""
 
-#: src/window.rs:300 data/gtk/window.blp:180
+#: src/window.rs:306 data/gtk/window.blp:179
 msgid "Bookmarks"
 msgstr ""
 
@@ -172,15 +111,15 @@ msgstr ""
 msgid "View _Variants"
 msgstr ""
 
-#: data/gtk/window.blp:221
+#: data/gtk/window.blp:219
 msgid "_Empty Chord"
 msgstr ""
 
-#: data/gtk/window.blp:228
+#: data/gtk/window.blp:226
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: data/gtk/window.blp:233
+#: data/gtk/window.blp:231
 msgid "_About Fretboard"
 msgstr ""
 

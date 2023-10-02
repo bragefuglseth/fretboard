@@ -62,7 +62,7 @@
   <content_rating type="oars-1.1"/>
   <releases>
     <release date="2023-09-20" version="3.0">
-      <description>
+      <description translatable="no">
         <p>GNOME 45 is finally here! To celebrate, Fretboard has gained the following improvements:</p>
         <ul>
           <li>Refined visuals taking advantage of the latest platform features</li>
@@ -73,7 +73,7 @@
       </description>
     </release>
     <release date="2023-08-28" version="2.0">
-      <description>
+      <description translatable="no">
         <p>This major release of Fretboard brings a bunch of exciting improvements:</p>
         <ul>
           <li>View different ways to play the same chord, to find the one that suits your situation the best</li>
@@ -86,7 +86,7 @@
       </description>
     </release>
     <release date="2023-07-01" version="1.0">
-      <description>
+      <description translatable="no">
         <p>Initial release.</p>
       </description>
     </release>
