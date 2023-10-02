@@ -20,9 +20,9 @@
 
 use crate::FretboardWindow;
 use adw::subclass::prelude::*;
+use gettextrs::gettext;
 use gtk::prelude::*;
 use gtk::{gio, glib};
-use gettextrs::gettext;
 
 mod imp {
     use super::*;
@@ -107,7 +107,7 @@ impl FretboardApplication {
         let window = self.active_window().unwrap();
         let about = adw::AboutWindow::from_appdata(
             "/dev/bragefuglseth/Fretboard/metainfo.xml",
-            Some("3.0")
+            Some("3.0"),
         );
 
         about.set_developers(&["Brage Fuglseth"]);

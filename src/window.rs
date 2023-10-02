@@ -23,16 +23,16 @@ use crate::{
     chord_name_entry::FretboardChordNameEntry, chord_preview::FretboardChordPreview,
     config::APP_ID, database::ChordsDatabase,
 };
-use adw::subclass::prelude::*;
-use glib::closure_local;
 use adw::prelude::*;
+use adw::subclass::prelude::*;
+use gettextrs::gettext;
+use glib::closure_local;
 use gtk::{gio, glib};
 use once_cell::sync::OnceCell;
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
 use std::fs::File;
 use std::path::PathBuf;
-use gettextrs::gettext;
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
@@ -95,7 +95,7 @@ mod imp {
             klass.install_action("win.chord-view", None, move |win, _, _| {
                 win.chord_view();
             });
-            klass.install_action("win.focus-entry", None, move|win, _, _| {
+            klass.install_action("win.focus-entry", None, move |win, _, _| {
                 win.focus_entry();
             });
             klass.install_action("win.more-variants", None, move |win, _, _| {
@@ -253,7 +253,8 @@ impl FretboardWindow {
             .sync_create()
             .build();
 
-        imp.more_variants_button_image.set_accessible_role(gtk::AccessibleRole::Presentation);
+        imp.more_variants_button_image
+            .set_accessible_role(gtk::AccessibleRole::Presentation);
 
         self.load_bookmarks();
 
@@ -329,7 +330,11 @@ impl FretboardWindow {
     fn empty_chord(&self) {
         self.imp().chord_diagram.set_chord(EMPTY_CHORD);
         self.imp().entry.imp().entry.set_text("");
-        self.imp().entry.imp().entry_buffer.replace(String::from(""));
+        self.imp()
+            .entry
+            .imp()
+            .entry_buffer
+            .replace(String::from(""));
         self.imp().feedback_stack.set_visible_child_name("empty");
 
         self.refresh_star_toggle();
@@ -432,9 +437,7 @@ impl FretboardWindow {
     }
 
     fn chord_view(&self) {
-        self.imp()
-            .navigation_stack
-            .push_by_tag("chord-view");
+        self.imp().navigation_stack.push_by_tag("chord-view");
     }
 
     fn more_variants(&self) {
@@ -442,7 +445,19 @@ impl FretboardWindow {
 
         let chord_name = imp.entry.imp().entry_buffer.borrow();
 
-        if chord_name.is_empty() { return; }
+        if chord_name.is_empty() {
+            return;
+        }
+        if imp
+            .navigation_stack
+            .visible_page()
+            .expect("stack has a visible page at all times")
+            .tag()
+            .expect("all pages have tags")
+            != "chord-view"
+        {
+            return;
+        }
 
         let db = imp.database.borrow();
 
@@ -492,15 +507,25 @@ impl FretboardWindow {
         imp.variants_scrolled_window
             .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 
-        self.imp()
-            .navigation_stack
-            .push_by_tag("more-variants");
+        self.imp().navigation_stack.push_by_tag("more-variants");
     }
 
     fn show_bookmarks(&self) {
         let imp = self.imp();
 
-        if imp.bookmarks.borrow().is_empty() { return; }
+        if imp
+            .navigation_stack
+            .visible_page()
+            .expect("stack has a visible page at all times")
+            .tag()
+            .expect("all pages have tags")
+            != "chord-view"
+        {
+            return;
+        }
+        if imp.bookmarks.borrow().is_empty() {
+            return;
+        }
 
         let container = imp.bookmarks_container.get();
 

@@ -21,7 +21,9 @@ pub fn calculate_chord_name(chord: [Option<usize>; 6]) -> Option<String> {
         .unique()
         .collect();
 
-    let Some(root) = notes.get(0) else { return None };
+    let Some(root) = notes.get(0) else {
+        return None;
+    };
 
     let intervals: Vec<usize> = notes
         .iter()
