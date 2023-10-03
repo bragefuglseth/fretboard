@@ -696,11 +696,11 @@
      borderopacity="0.25490196"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.7477956"
-     inkscape:cx="98.324465"
-     inkscape:cy="176.77058"
+     inkscape:zoom="16.004799"
+     inkscape:cx="189.84931"
+     inkscape:cy="20.275169"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
@@ -743,7 +743,7 @@
        spacingx="2"
        spacingy="2"
        enabled="true"
-       visible="false"
+       visible="true"
        empspacing="4"
        originx="8"
        originy="8"
@@ -811,7 +811,7 @@
        originx="8"
        originy="8"
        units="px"
-       visible="false" />
+       visible="true" />
     <sodipodi:guide
        position="32,72"
        orientation="1,0"
@@ -897,8 +897,6 @@
           </cc:Agent>
         </dc:creator>
         <dc:source />
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
         <dc:title>Adwaita Icon Template</dc:title>
         <dc:subject>
           <rdf:Bag />
@@ -924,6 +922,8 @@
             <dc:title />
           </cc:Agent>
         </dc:contributor>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -2106,7 +2106,7 @@
          r="6" />
     </g>
     <rect
-       style="fill:#241f31;stroke-width:2.87228;stroke-opacity:0.588235"
+       style="fill:#3584e4;stroke-width:2.87228;stroke-opacity:0.588235;fill-opacity:1"
        id="rect26"
        width="20"
        height="22"
@@ -2114,13 +2114,13 @@
        y="194"
        ry="10" />
     <circle
-       style="fill:#3d3846;stroke-width:2.5;stroke-opacity:0.588235"
+       style="fill:#99c1f1;stroke-width:2.5;stroke-opacity:0.588235;fill-opacity:1"
        id="path2"
        cx="76"
        cy="204"
        r="10" />
     <rect
-       style="fill:#241f31;stroke-width:2.87228;stroke-opacity:0.588235"
+       style="fill:#3584e4;stroke-width:2.87228;stroke-opacity:0.588235"
        id="rect27"
        width="20"
        height="22"
@@ -2128,7 +2128,7 @@
        y="234"
        ry="10" />
     <circle
-       style="fill:#3d3846;stroke-width:2.5;stroke-opacity:0.588235;fill-opacity:1"
+       style="fill:#99c1f1;stroke-width:2.5;stroke-opacity:0.588235;fill-opacity:1"
        id="circle27"
        cx="52"
        cy="244"
