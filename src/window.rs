@@ -498,7 +498,7 @@ impl FretboardWindow {
         }
 
         for variant in variants {
-            let preview = FretboardChordPreview::with_chord(variant);
+            let preview = FretboardChordPreview::with_chord(variant, imp.chord_diagram.imp().guitar_type.get());
             let buffer = self.imp().entry.imp().entry_buffer.borrow().clone();
             preview.imp().chord_name.replace(buffer);
 
@@ -561,7 +561,7 @@ impl FretboardWindow {
         let bookmarks = imp.bookmarks.borrow();
 
         for bookmark in bookmarks.iter() {
-            let preview = FretboardChordPreview::with_chord(bookmark.chord);
+            let preview = FretboardChordPreview::with_chord(bookmark.chord, imp.chord_diagram.imp().guitar_type.get());
             preview.imp().chord_name.replace(bookmark.name.clone());
 
             let label = gtk::Label::builder()

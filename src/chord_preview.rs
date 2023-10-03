@@ -1,3 +1,4 @@
+use crate::window::GuitarType;
 use crate::chord_ops::*;
 use adw::subclass::prelude::*;
 use gtk::glib;
@@ -66,7 +67,7 @@ mod imp {
             self.top_row.set_direction(gtk::TextDirection::Ltr);
             self.dots_grid.set_direction(gtk::TextDirection::Ltr);
 
-            for string_num in 0..STRINGS {
+            for i in 0..STRINGS {
                 let mut dot_column = Vec::new();
 
                 let top_symbol = gtk::Image::builder()
@@ -92,7 +93,7 @@ mod imp {
                         .build();
 
                     self.dots_grid
-                        .attach(&dot, string_num as i32, fret_num as i32, 1, 1);
+                        .attach(&dot, i as i32, fret_num as i32, 1, 1);
 
                     dot_column.push(dot);
                 }
@@ -137,13 +138,13 @@ impl Default for FretboardChordPreview {
 }
 
 impl FretboardChordPreview {
-    pub fn with_chord(chord: [Option<usize>; 6]) -> Self {
+    pub fn with_chord(chord: [Option<usize>; 6], guitar_type: GuitarType) -> Self {
         let preview = Self::default();
-        preview.set_chord(chord);
+        preview.set_chord(chord, guitar_type);
         preview
     }
 
-    pub fn set_chord(&self, chord: [Option<usize>; 6]) {
+    pub fn set_chord(&self, chord: [Option<usize>; 6], guitar_type: GuitarType) {
         let imp = self.imp();
         imp.chord.set(chord);
 
@@ -153,7 +154,12 @@ impl FretboardChordPreview {
 
         let adjusted_chord = adjust_chord(chord, neck_position);
 
-        for (n, value) in adjusted_chord.iter().enumerate() {
+        let string_range = match guitar_type {
+            GuitarType::RightHanded => (0..STRINGS).collect::<Vec<_>>().into_iter(),
+            GuitarType::LeftHanded => (0..STRINGS).rev().collect::<Vec<_>>().into_iter(),
+        };
+
+        for (value, n) in adjusted_chord.iter().zip(string_range) {
             match value {
                 None => imp
                     .top_symbols
@@ -179,6 +185,15 @@ impl FretboardChordPreview {
 
             imp.neck_position_label
                 .set_label(&neck_position.to_string());
+        }
+
+        let barre_alignment = match guitar_type {
+            GuitarType::RightHanded => gtk::Align::End,
+            GuitarType::LeftHanded => gtk::Align::Start,
+        };
+
+        for barre_picture in [imp.barre_2_image.get(), imp.barre_3_image.get(), imp.barre_4_image.get(), imp.barre_5_image.get(), imp.barre_6_image.get()] {
+            barre_picture.set_halign(barre_alignment);
         }
 
         let barre_length = find_barre_length(adjusted_chord);
