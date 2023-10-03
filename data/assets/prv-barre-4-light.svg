@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="130"
+   width="78"
    height="32"
-   viewBox="0 0 130 32"
+   viewBox="0 0 78 32"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="prv-barre-4-light.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,9 +25,9 @@
      inkscape:document-units="px"
      showgrid="true"
      showguides="false"
-     inkscape:zoom="11.674447"
-     inkscape:cx="88.269709"
-     inkscape:cy="18.073662"
+     inkscape:zoom="8.0530893"
+     inkscape:cx="11.858803"
+     inkscape:cy="25.393981"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -37,8 +37,12 @@
     <inkscape:grid
        type="xygrid"
        id="grid366"
-       originx="-1"
-       originy="-1" />
+       originx="-53"
+       originy="-1"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -46,7 +50,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-1,-1)">
+     transform="translate(-53.000001,-1)">
     <rect
        style="fill:#d9d9d9;fill-opacity:1;stroke-width:2;stroke-linejoin:round"
        id="rect295"

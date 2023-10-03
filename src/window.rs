@@ -43,10 +43,18 @@ pub struct Bookmark {
     pub chord: [Option<usize>; 6],
 }
 
+#[derive(Debug, Clone, Copy, Default)]
+pub enum GuitarType {
+    #[default]
+    RightHanded,
+    LeftHanded,
+}
+
 mod imp {
     use super::*;
 
-    #[derive(Default, gtk::CompositeTemplate)]
+    #[derive(Default, gtk::CompositeTemplate, glib::Properties)]
+    #[properties(wrapper_type=super::FretboardWindow)]
     #[template(resource = "/dev/bragefuglseth/Fretboard/window.ui")]
     pub struct FretboardWindow {
         // Template widgets
@@ -76,8 +84,10 @@ mod imp {
         pub bookmarks_container: TemplateChild<gtk::FlowBox>,
 
         pub database: RefCell<ChordsDatabase>,
-
         pub bookmarks: RefCell<Vec<Bookmark>>,
+
+        #[property(get, set)]
+        pub instrument: RefCell<String>,
 
         pub settings: OnceCell<gio::Settings>,
     }
@@ -89,6 +99,8 @@ mod imp {
         type ParentType = adw::ApplicationWindow;
 
         fn class_init(klass: &mut Self::Class) {
+            klass.install_property_action("win.set-instrument", "instrument");
+
             klass.install_action("win.empty-chord", None, move |win, _, _| {
                 win.empty_chord();
             });
@@ -116,6 +128,7 @@ mod imp {
         }
     }
 
+    #[glib::derived_properties]
     impl ObjectImpl for FretboardWindow {
         fn constructed(&self) {
             self.parent_constructed();
@@ -205,6 +218,18 @@ impl FretboardWindow {
 
     fn init(&self) {
         let imp = self.imp();
+
+        self.connect_notify_local(Some("instrument"), move |win,_| {
+            let imp = win.imp();
+
+            imp.chord_diagram.set_guitar_type(match imp.instrument.borrow().as_str() {
+                "guitar-right-handed" => GuitarType::RightHanded,
+                "guitar-left-handed" => GuitarType::LeftHanded,
+                other => panic!("unexpected instrument type: {other}"),
+            });
+        });
+
+        self.settings().bind("instrument", self, "instrument").build();
 
         let chord_diagram = imp.chord_diagram.get();
 

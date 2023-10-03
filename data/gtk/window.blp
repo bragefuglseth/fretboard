@@ -215,6 +215,22 @@ template $FretboardWindow : Adw.ApplicationWindow {
 
 menu primary_menu {
   section {
+    label: _("Guitar Type");
+
+    item {
+      label: _("Right-handed");
+      action: "win.set-instrument";
+      target: "guitar-right-handed";
+    }
+
+    item {
+      label: _("Left-handed");
+      action: "win.set-instrument";
+      target: "guitar-left-handed";
+    }
+  }
+
+  section {
     item {
       label: _("_Empty Chord");
       action: "win.empty-chord";

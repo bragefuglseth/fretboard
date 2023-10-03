@@ -1,4 +1,5 @@
 using Gtk 4.0;
+using Adw 1;
 
 template $FretboardChordDiagram : Widget {
   Box {
@@ -22,14 +23,14 @@ template $FretboardChordDiagram : Widget {
 
         [overlay]
         Stack barre_overlay_stack {
-          valign: start;
-          halign: center;
           transition-type: crossfade;
           transition-duration: 150;
+          margin-start: 25;
+          margin-end: 25;
 
           StackPage {
             name: "empty";
-            child: 
+            child:
             Box {
             }
 
@@ -38,8 +39,10 @@ template $FretboardChordDiagram : Widget {
 
           StackPage {
             name: "barre-2";
-            child: 
+            child:
             Picture barre_2_image {
+              halign: end;
+              valign: start;
             }
 
             ;
@@ -47,8 +50,10 @@ template $FretboardChordDiagram : Widget {
 
           StackPage {
             name: "barre-3";
-            child: 
+            child:
             Picture barre_3_image {
+              halign: end;
+              valign: start;
             }
 
             ;
@@ -56,8 +61,10 @@ template $FretboardChordDiagram : Widget {
 
           StackPage {
             name: "barre-4";
-            child: 
+            child:
             Picture barre_4_image {
+              halign: end;
+              valign: start;
             }
 
             ;
@@ -65,8 +72,10 @@ template $FretboardChordDiagram : Widget {
 
           StackPage {
             name: "barre-5";
-            child: 
+            child:
             Picture barre_5_image {
+              halign: end;
+              valign: start;
             }
 
             ;
@@ -74,8 +83,10 @@ template $FretboardChordDiagram : Widget {
 
           StackPage {
             name: "barre-6";
-            child: 
+            child:
             Picture barre_6_image {
+              halign: end;
+              valign: start;
             }
 
             ;

@@ -8,6 +8,7 @@ use gtk::glib;
 use gtk::prelude::*;
 use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
+use crate::window::GuitarType;
 
 const STRINGS: usize = 6;
 const NOTE_OFFSETS: [usize; STRINGS] = [7, 0, 5, 10, 2, 7];
@@ -48,6 +49,7 @@ mod imp {
         pub barre_spin: TemplateChild<FretboardBarreSpin>,
 
         pub chord: Cell<[Option<usize>; 6]>,
+        pub guitar_type: Cell<GuitarType>,
 
         #[property(get, set)]
         pub neck_position: Cell<u8>,
@@ -96,11 +98,11 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
 
+            let obj = self.obj();
+
             // The direction of the diagram is strictly visual
             self.top_row.set_direction(gtk::TextDirection::Ltr);
             self.grid.set_direction(gtk::TextDirection::Ltr);
-
-            let obj = self.obj();
 
             let style_manager = adw::StyleManager::default();
 
@@ -210,13 +212,23 @@ impl FretboardChordDiagram {
     }
 
     fn update_chord(&self) {
-        let top_toggles = self.imp().top_toggles.borrow();
-        let toggles = self.imp().toggles.borrow();
+        let imp = self.imp();
+
+        let top_toggles = imp.top_toggles.borrow();
+        let toggles = imp.toggles.borrow();
 
         let mut chord: [Option<usize>; 6] = [None; 6];
 
+        // accomodate left/right-handedness
+        let string_range: Vec<usize> = match imp.guitar_type.get() {
+            GuitarType::RightHanded => (0..STRINGS).collect(),
+            GuitarType::LeftHanded => (0..STRINGS).rev().collect(),
+        };
+
         for i in 0..STRINGS {
-            let top_toggle = top_toggles.get(i).unwrap();
+            let string = string_range.get(i).unwrap().clone();
+
+            let top_toggle = top_toggles.get(string).unwrap();
 
             if matches!(top_toggle.state(), TopToggleState::Muted) {
                 *chord.get_mut(i).unwrap() = None;
@@ -224,7 +236,7 @@ impl FretboardChordDiagram {
                 *chord.get_mut(i).unwrap() = Some(0);
             } else {
                 let pos = toggles
-                    .get(i)
+                    .get(string)
                     .unwrap()
                     .iter()
                     .position(|toggle| toggle.is_active())
@@ -272,17 +284,26 @@ impl FretboardChordDiagram {
     }
 
     fn update_visuals(&self) {
-        let chord = self.imp().chord.get();
+        let imp = self.imp();
+
+        let chord = imp.chord.get();
         // Adjust chord so it's positioned relatively to the neck position
         let adjusted_chord = adjust_chord(chord, self.neck_position());
 
-        let top_toggles = self.imp().top_toggles.borrow();
-        let toggles = self.imp().toggles.borrow();
+        let top_toggles = imp.top_toggles.borrow();
+        let toggles = imp.toggles.borrow();
 
-        for string in 0..STRINGS {
+        let string_range: Vec<usize> = match imp.guitar_type.get() {
+            GuitarType::RightHanded => (0..STRINGS).collect(),
+            GuitarType::LeftHanded => (0..STRINGS).rev().collect(),
+        };
+
+        for i in 0..STRINGS {
+            let string = string_range.get(i).unwrap().clone();
+
             let top_toggle = top_toggles.get(string).unwrap();
 
-            match adjusted_chord.get(string).expect("chord has len of 6") {
+            match adjusted_chord.get(i).expect("chord has len of 6") {
                 None => top_toggle.set_state(TopToggleState::Muted),
                 Some(0) => top_toggle.set_state(TopToggleState::Open),
                 Some(n) if *n <= FRETS => {
@@ -296,7 +317,7 @@ impl FretboardChordDiagram {
                 Some(_) => top_toggle.set_state(TopToggleState::Muted),
             }
 
-            let offset = NOTE_OFFSETS.get(string).unwrap();
+            let offset = NOTE_OFFSETS.get(i).unwrap();
             for (num, toggle) in toggles.get(string).unwrap().iter().enumerate() {
                 toggle.set_tooltip_text(Some(note_name(
                     offset + num + self.neck_position() as usize,
@@ -358,6 +379,21 @@ impl FretboardChordDiagram {
         barre_6.set_resource(Some(&format!(
             "/dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg"
         )));
+    }
+
+    pub fn set_guitar_type(&self, guitar_type: GuitarType) {
+        let imp = self.imp();
+        imp.guitar_type.replace(guitar_type);
+        self.update_visuals();
+
+        let barre_alignment = match guitar_type {
+            GuitarType::RightHanded => gtk::Align::End,
+            GuitarType::LeftHanded => gtk::Align::Start,
+        };
+
+        for barre_picture in [imp.barre_2_image.get(), imp.barre_3_image.get(), imp.barre_4_image.get(), imp.barre_5_image.get(), imp.barre_6_image.get()] {
+            barre_picture.set_halign(barre_alignment);
+        }
     }
 }
 
