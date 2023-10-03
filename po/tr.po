@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-19 07:50+0200\n"
-"PO-Revision-Date: 2023-10-01 11:59+0000\n"
+"PO-Revision-Date: 2023-10-03 15:08+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/tr/>\n"
@@ -26,15 +26,15 @@ msgstr "Fretboard"
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:9
 msgid "Look up guitar chords"
-msgstr ""
+msgstr "Gitar akorlarına bakın"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr ""
+msgstr "gitar;akor;chords;guitar"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Brage Fuglseth"
-msgstr ""
+msgstr "Brage Fuglseth"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:11
 msgid ""
@@ -45,14 +45,21 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
+"Bu akor nasıl çalınıyordu? Fretboard, gitar akorlarını isimlerini yazarak "
+"veya interaktif bir gitar sapı üzerinde çizerek bulmanızı sağlar. Bir akor "
+"belirlediğinizde, onu değiştirmeyi deneyebilir, çalmanın daha fazla yolunu "
+"görebilir veya daha sonra kaydetmek için yer imlerine ekleyebilirsiniz. "
+"İster yeni başlayan ister ileri düzey bir gitarist olun, Fretboard'u en "
+"sevdiğiniz şarkıları pratik yapmak, öğrenmek ve ustalaşmak için "
+"kullanabilirsiniz!"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:22
 msgid "guitar"
-msgstr ""
+msgstr "gitar"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
 msgid "chords"
-msgstr ""
+msgstr "akorlar"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:60
 msgid ""
@@ -117,87 +124,87 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:6
 msgid "Window width"
-msgstr ""
+msgstr "Pencere genişliği"
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:10
 msgid "Window height"
-msgstr ""
+msgstr "Pencere yüksekliği"
 
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:14
 msgid "Window maximized state"
-msgstr ""
+msgstr "Pencerenin ekranı kaplama durumu"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:119
 msgid "translator-credits"
-msgstr ""
+msgstr "Sabri Ünal <libreajans@gmail.com>"
 
 #: src/window.rs:244
 msgid "Remove Bookmark"
-msgstr ""
+msgstr "Yer İmini Kaldır"
 
 #: src/window.rs:246
 msgid "Bookmark"
-msgstr ""
+msgstr "Yer İmi"
 
 #: src/window.rs:298
 msgid "No Bookmarks"
-msgstr ""
+msgstr "Yer İmi Yok"
 
 #: src/window.rs:300 data/gtk/window.blp:180
 msgid "Bookmarks"
-msgstr ""
+msgstr "Yer İmleri"
 
 #: src/chord_diagram_top_toggle.rs:154
 msgid "Not Open"
-msgstr ""
+msgstr "Açık Değil"
 
 #: src/chord_diagram_top_toggle.rs:155
 msgid "Muted"
-msgstr ""
+msgstr "Sessiz"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Open"
-msgstr ""
+msgstr "Açık"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
-msgstr ""
+msgstr "Ana Menü"
 
 #: data/gtk/window.blp:82
 msgid "Chord not found"
-msgstr ""
+msgstr "Akor bulunamadı"
 
 #: data/gtk/window.blp:116
 msgid "View _Variants"
-msgstr ""
+msgstr "_Değişkeleri Göster"
 
 #: data/gtk/window.blp:221
 msgid "_Empty Chord"
-msgstr ""
+msgstr "_Boş Akor"
 
 #: data/gtk/window.blp:228
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klavye Kısayolları"
 
 #: data/gtk/window.blp:233
 msgid "_About Fretboard"
-msgstr ""
+msgstr "Fretboard _Hakkında"
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
-msgstr ""
+msgstr "Yukarı Taşı"
 
 #: data/gtk/barre-spin.blp:27
 msgid "Move Down"
-msgstr ""
+msgstr "Aşağı Taşı"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10
 msgid "Chord Name"
-msgstr ""
+msgstr "Akor Adı"
 
 #: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
-msgstr ""
+msgstr "Doğrula"
