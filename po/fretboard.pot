@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 21:55+0300\n"
+"POT-Creation-Date: 2023-10-03 18:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,64 +65,6 @@ msgstr ""
 msgid "Window maximized state"
 msgstr ""
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr ""
-
-#: src/window.rs:248
-msgid "Remove Bookmark"
-msgstr ""
-
-#: src/window.rs:250
-msgid "Bookmark"
-msgstr ""
-
-#: src/window.rs:304
-msgid "No Bookmarks"
-msgstr ""
-
-#: src/window.rs:306 data/gtk/window.blp:179
-msgid "Bookmarks"
-msgstr ""
-
-#: src/chord_diagram_top_toggle.rs:154
-msgid "Not Open"
-msgstr ""
-
-#: src/chord_diagram_top_toggle.rs:155
-msgid "Muted"
-msgstr ""
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Open"
-msgstr ""
-
-#: data/gtk/window.blp:29
-msgid "Main Menu"
-msgstr ""
-
-#: data/gtk/window.blp:82
-msgid "Chord not found"
-msgstr ""
-
-#: data/gtk/window.blp:116
-msgid "View _Variants"
-msgstr ""
-
-#: data/gtk/window.blp:219
-msgid "_Empty Chord"
-msgstr ""
-
-#: data/gtk/window.blp:226
-msgid "_Keyboard Shortcuts"
-msgstr ""
-
-#: data/gtk/window.blp:231
-msgid "_About Fretboard"
-msgstr ""
-
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
 msgstr ""
@@ -138,4 +80,98 @@ msgstr ""
 
 #: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:11
+msgid "General"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:14
+msgid "Empty Chord"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:19
+msgid "Bookmark Chord"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:24
+msgid "View Bookmarks"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:29
+msgid "View Chord Variants"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:34
+msgid "Focus Entry"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:39
+msgid "Show Shortcuts"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:44
+msgid "Close Window"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:49
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/window.blp:29
+msgid "Main Menu"
+msgstr ""
+
+#: data/gtk/window.blp:82
+msgid "Chord not found"
+msgstr ""
+
+#: data/gtk/window.blp:116
+msgid "View _Variants"
+msgstr ""
+
+#: data/gtk/window.blp:179 src/window.rs:306
+msgid "Bookmarks"
+msgstr ""
+
+#: data/gtk/window.blp:219
+msgid "_Empty Chord"
+msgstr ""
+
+#: data/gtk/window.blp:226
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: data/gtk/window.blp:231
+msgid "_About Fretboard"
+msgstr ""
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.rs:116
+msgid "translator-credits"
+msgstr ""
+
+#: src/chord_diagram_top_toggle.rs:154
+msgid "Not Open"
+msgstr ""
+
+#: src/chord_diagram_top_toggle.rs:155
+msgid "Muted"
+msgstr ""
+
+#. translators: this is an adjective, not a verb
+#: src/chord_diagram_top_toggle.rs:157
+msgid "Open"
+msgstr ""
+
+#: src/window.rs:248
+msgid "Remove Bookmark"
+msgstr ""
+
+#: src/window.rs:250
+msgid "Bookmark"
+msgstr ""
+
+#: src/window.rs:304
+msgid "No Bookmarks"
 msgstr ""
