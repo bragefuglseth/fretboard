@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 18:34+0300\n"
+"POT-Creation-Date: 2023-10-03 23:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,16 +53,9 @@ msgstr ""
 msgid "chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:6
-msgid "Window width"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:10
-msgid "Window height"
-msgstr ""
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:14
-msgid "Window maximized state"
+#. translators: guitar-right-handed and guitar-left-handed are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either guitar-right-handed or guitar-left-handed."
 msgstr ""
 
 #: data/gtk/barre-spin.blp:9
@@ -130,19 +123,31 @@ msgstr ""
 msgid "View _Variants"
 msgstr ""
 
-#: data/gtk/window.blp:179 src/window.rs:306
+#: data/gtk/window.blp:179 src/window.rs:332
 msgid "Bookmarks"
 msgstr ""
 
-#: data/gtk/window.blp:219
+#: data/gtk/window.blp:218
+msgid "Guitar Type"
+msgstr ""
+
+#: data/gtk/window.blp:221
+msgid "Right-handed"
+msgstr ""
+
+#: data/gtk/window.blp:227
+msgid "Left-handed"
+msgstr ""
+
+#: data/gtk/window.blp:235
 msgid "_Empty Chord"
 msgstr ""
 
-#: data/gtk/window.blp:226
+#: data/gtk/window.blp:242
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: data/gtk/window.blp:231
+#: data/gtk/window.blp:247
 msgid "_About Fretboard"
 msgstr ""
 
@@ -164,14 +169,14 @@ msgstr ""
 msgid "Open"
 msgstr ""
 
-#: src/window.rs:248
+#: src/window.rs:273
 msgid "Remove Bookmark"
 msgstr ""
 
-#: src/window.rs:250
+#: src/window.rs:275
 msgid "Bookmark"
 msgstr ""
 
-#: src/window.rs:304
+#: src/window.rs:330
 msgid "No Bookmarks"
 msgstr ""

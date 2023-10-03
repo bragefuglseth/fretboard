@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-19 07:50+0200\n"
+"POT-Creation-Date: 2023-10-03 23:37+0200\n"
 "PO-Revision-Date: 2023-09-24 15:01+0000\n"
 "Last-Translator: беб <ikibastusloh1337@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/fretboard/"
@@ -62,155 +62,10 @@ msgstr "гитара"
 msgid "chords"
 msgstr "аккорды"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:60
-msgid ""
-"GNOME 45 is finally here! To celebrate, Fretboard has gained the following "
-"improvements:"
+#. translators: guitar-right-handed and guitar-left-handed are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either guitar-right-handed or guitar-left-handed."
 msgstr ""
-"GNOME 45 наконец-то здесь! В честь этого, Fretboard получил следующие "
-"улучшения:"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:62
-msgid "Refined visuals taking advantage of the latest platform features"
-msgstr ""
-"Усовершенствованный внешний вид с использованием новейших возможностей "
-"платформы"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:63
-msgid "Keyboard shortcuts for common actions"
-msgstr "Комбинации клавиш для частых действий"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
-msgid ""
-"Italian, Russian, and Dutch translations, making Fretboard available in a "
-"total of 4 different languages"
-msgstr ""
-"Итальянский, Русский и Голландский переводы, благодаря чему Fretboard "
-"доступен в общей сложности на 4 различных языках"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:66
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:79
-msgid ""
-"If you would like to come with suggestions, report bugs, translate the app, "
-"or contribute otherwise, feel free to reach out!"
-msgstr ""
-"Если вы хотите внести свои предложения, сообщить об ошибках, перевести "
-"приложение или внести другой вклад, обращайтесь!"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:71
-msgid ""
-"This major release of Fretboard brings a bunch of exciting improvements:"
-msgstr ""
-"В этом крупном выпуске Fretboard появилось множество интересных улучшений:"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:73
-msgid ""
-"View different ways to play the same chord, to find the one that suits your "
-"situation the best"
-msgstr ""
-"Просматривайте различные способы исполнения одного и того же аккорда, чтобы "
-"найти наиболее подходящий для вашей ситуации"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:74
-msgid "Bookmark chords to save them for a later practice session or gig"
-msgstr ""
-"Добавляйте аккорды в закладки, чтобы сохранить их для последующей тренировки "
-"или исполнения"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:75
-msgid ""
-"An additional fret in the chord diagram, to help you practice those really "
-"tricky positionings"
-msgstr ""
-"Дополнительный лад на диаграмме аккордов, помогающий отрабатывать "
-"действительно сложные позиции"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:76
-msgid ""
-"Hover over positions in the chord diagram to see their respective note names"
-msgstr ""
-"Наведите курсор на позиции в аккордовой диаграмме, чтобы увидеть "
-"соответствующие им названия нот"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:77
-msgid "Smarter and more precise chord detection"
-msgstr "Более интеллектуальное и точное определение аккордов"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:84
-msgid "Initial release."
-msgstr "Первоначальный выпуск."
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:6
-msgid "Window width"
-msgstr "Ширина окна"
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:10
-msgid "Window height"
-msgstr "Высота окна"
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:14
-msgid "Window maximized state"
-msgstr "Развёрнутое состояние окна"
-
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:119
-msgid "translator-credits"
-msgstr ""
-"beb\n"
-"Давид Лапшин"
-
-#: src/window.rs:244
-msgid "Remove Bookmark"
-msgstr "Удалить закладку"
-
-#: src/window.rs:246
-msgid "Bookmark"
-msgstr "Добавить в закладки"
-
-#: src/window.rs:298
-msgid "No Bookmarks"
-msgstr "Нет закладок"
-
-#: src/window.rs:300 data/gtk/window.blp:180
-msgid "Bookmarks"
-msgstr "Закладки"
-
-#: src/chord_diagram_top_toggle.rs:154
-msgid "Not Open"
-msgstr "Не открыто"
-
-#: src/chord_diagram_top_toggle.rs:155
-msgid "Muted"
-msgstr "Заглушен"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Open"
-msgstr "Открыть"
-
-#: data/gtk/window.blp:29
-msgid "Main Menu"
-msgstr "Главное меню"
-
-#: data/gtk/window.blp:82
-msgid "Chord not found"
-msgstr "Аккорд не найден"
-
-#: data/gtk/window.blp:116
-msgid "View _Variants"
-msgstr "Просмотреть _варианты"
-
-#: data/gtk/window.blp:221
-msgid "_Empty Chord"
-msgstr "_Очистить аккорд"
-
-#: data/gtk/window.blp:228
-msgid "_Keyboard Shortcuts"
-msgstr "_Комбинации клавиш"
-
-#: data/gtk/window.blp:233
-msgid "_About Fretboard"
-msgstr "_О Fretboard"
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
@@ -229,13 +84,200 @@ msgstr "Название аккорда"
 msgid "Confirm"
 msgstr "Подтвердить"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
-msgid ""
-"Italian, Russian, and Dutch translations, making Impression available in a "
-"total of 4 different languages"
+#: data/gtk/help-overlay.blp:11
+msgid "General"
 msgstr ""
-"Итальянский, русский и голландский переводы, благодаря чему Fretboard "
-"доступен в общей сложности на 4 языках"
+
+#: data/gtk/help-overlay.blp:14
+#, fuzzy
+msgid "Empty Chord"
+msgstr "_Очистить аккорд"
+
+#: data/gtk/help-overlay.blp:19
+#, fuzzy
+msgid "Bookmark Chord"
+msgstr "Добавить в закладки"
+
+#: data/gtk/help-overlay.blp:24
+#, fuzzy
+msgid "View Bookmarks"
+msgstr "Закладки"
+
+#: data/gtk/help-overlay.blp:29
+#, fuzzy
+msgid "View Chord Variants"
+msgstr "Просмотреть _варианты"
+
+#: data/gtk/help-overlay.blp:34
+msgid "Focus Entry"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:39
+#, fuzzy
+msgid "Show Shortcuts"
+msgstr "_Комбинации клавиш"
+
+#: data/gtk/help-overlay.blp:44
+msgid "Close Window"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:49
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/window.blp:29
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: data/gtk/window.blp:82
+msgid "Chord not found"
+msgstr "Аккорд не найден"
+
+#: data/gtk/window.blp:116
+msgid "View _Variants"
+msgstr "Просмотреть _варианты"
+
+#: data/gtk/window.blp:179 src/window.rs:332
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: data/gtk/window.blp:218
+msgid "Guitar Type"
+msgstr ""
+
+#: data/gtk/window.blp:221
+msgid "Right-handed"
+msgstr ""
+
+#: data/gtk/window.blp:227
+msgid "Left-handed"
+msgstr ""
+
+#: data/gtk/window.blp:235
+msgid "_Empty Chord"
+msgstr "_Очистить аккорд"
+
+#: data/gtk/window.blp:242
+msgid "_Keyboard Shortcuts"
+msgstr "_Комбинации клавиш"
+
+#: data/gtk/window.blp:247
+msgid "_About Fretboard"
+msgstr "_О Fretboard"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.rs:116
+msgid "translator-credits"
+msgstr ""
+"beb\n"
+"Давид Лапшин"
+
+#: src/chord_diagram_top_toggle.rs:154
+msgid "Not Open"
+msgstr "Не открыто"
+
+#: src/chord_diagram_top_toggle.rs:155
+msgid "Muted"
+msgstr "Заглушен"
+
+#. translators: this is an adjective, not a verb
+#: src/chord_diagram_top_toggle.rs:157
+msgid "Open"
+msgstr "Открыть"
+
+#: src/window.rs:273
+msgid "Remove Bookmark"
+msgstr "Удалить закладку"
+
+#: src/window.rs:275
+msgid "Bookmark"
+msgstr "Добавить в закладки"
+
+#: src/window.rs:330
+msgid "No Bookmarks"
+msgstr "Нет закладок"
+
+#~ msgid ""
+#~ "GNOME 45 is finally here! To celebrate, Fretboard has gained the "
+#~ "following improvements:"
+#~ msgstr ""
+#~ "GNOME 45 наконец-то здесь! В честь этого, Fretboard получил следующие "
+#~ "улучшения:"
+
+#~ msgid "Refined visuals taking advantage of the latest platform features"
+#~ msgstr ""
+#~ "Усовершенствованный внешний вид с использованием новейших возможностей "
+#~ "платформы"
+
+#~ msgid "Keyboard shortcuts for common actions"
+#~ msgstr "Комбинации клавиш для частых действий"
+
+#~ msgid ""
+#~ "Italian, Russian, and Dutch translations, making Fretboard available in a "
+#~ "total of 4 different languages"
+#~ msgstr ""
+#~ "Итальянский, Русский и Голландский переводы, благодаря чему Fretboard "
+#~ "доступен в общей сложности на 4 различных языках"
+
+#~ msgid ""
+#~ "If you would like to come with suggestions, report bugs, translate the "
+#~ "app, or contribute otherwise, feel free to reach out!"
+#~ msgstr ""
+#~ "Если вы хотите внести свои предложения, сообщить об ошибках, перевести "
+#~ "приложение или внести другой вклад, обращайтесь!"
+
+#~ msgid ""
+#~ "This major release of Fretboard brings a bunch of exciting improvements:"
+#~ msgstr ""
+#~ "В этом крупном выпуске Fretboard появилось множество интересных улучшений:"
+
+#~ msgid ""
+#~ "View different ways to play the same chord, to find the one that suits "
+#~ "your situation the best"
+#~ msgstr ""
+#~ "Просматривайте различные способы исполнения одного и того же аккорда, "
+#~ "чтобы найти наиболее подходящий для вашей ситуации"
+
+#~ msgid "Bookmark chords to save them for a later practice session or gig"
+#~ msgstr ""
+#~ "Добавляйте аккорды в закладки, чтобы сохранить их для последующей "
+#~ "тренировки или исполнения"
+
+#~ msgid ""
+#~ "An additional fret in the chord diagram, to help you practice those "
+#~ "really tricky positionings"
+#~ msgstr ""
+#~ "Дополнительный лад на диаграмме аккордов, помогающий отрабатывать "
+#~ "действительно сложные позиции"
+
+#~ msgid ""
+#~ "Hover over positions in the chord diagram to see their respective note "
+#~ "names"
+#~ msgstr ""
+#~ "Наведите курсор на позиции в аккордовой диаграмме, чтобы увидеть "
+#~ "соответствующие им названия нот"
+
+#~ msgid "Smarter and more precise chord detection"
+#~ msgstr "Более интеллектуальное и точное определение аккордов"
+
+#~ msgid "Initial release."
+#~ msgstr "Первоначальный выпуск."
+
+#~ msgid "Window width"
+#~ msgstr "Ширина окна"
+
+#~ msgid "Window height"
+#~ msgstr "Высота окна"
+
+#~ msgid "Window maximized state"
+#~ msgstr "Развёрнутое состояние окна"
+
+#~ msgid ""
+#~ "Italian, Russian, and Dutch translations, making Impression available in "
+#~ "a total of 4 different languages"
+#~ msgstr ""
+#~ "Итальянский, русский и голландский переводы, благодаря чему Fretboard "
+#~ "доступен в общей сложности на 4 языках"
 
 #~ msgid "Go Back"
 #~ msgstr "Назад"

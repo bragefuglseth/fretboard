@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-19 07:50+0200\n"
+"POT-Creation-Date: 2023-10-03 23:37+0200\n"
 "PO-Revision-Date: 2023-09-21 02:01+0000\n"
 "Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/fretboard/"
@@ -60,151 +60,10 @@ msgstr "chitarra"
 msgid "chords"
 msgstr "accordi"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:60
-msgid ""
-"GNOME 45 is finally here! To celebrate, Fretboard has gained the following "
-"improvements:"
+#. translators: guitar-right-handed and guitar-left-handed are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either guitar-right-handed or guitar-left-handed."
 msgstr ""
-"GNOME 45 è arrivato! Per festeggiare, Fretboard ha acquisito i seguenti "
-"miglioramenti:"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:62
-msgid "Refined visuals taking advantage of the latest platform features"
-msgstr ""
-"Una veste grafica rifinita, che sfrutta le funzionalità più recenti della "
-"piattaforma"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:63
-msgid "Keyboard shortcuts for common actions"
-msgstr "Scorciatoie da tastiera per le azioni comuni"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:64
-msgid ""
-"Italian, Russian, and Dutch translations, making Fretboard available in a "
-"total of 4 different languages"
-msgstr ""
-"Traduzioni in italiano, russo e olandese, che rendono Fretboard disponibile "
-"in un totale di quattro lingue diverse"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:66
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:79
-msgid ""
-"If you would like to come with suggestions, report bugs, translate the app, "
-"or contribute otherwise, feel free to reach out!"
-msgstr ""
-"Per proporre suggerimenti, segnalare errori, tradurre l'applicazione o "
-"contribuire in altro modo, contattateci!"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:71
-msgid ""
-"This major release of Fretboard brings a bunch of exciting improvements:"
-msgstr ""
-"Questa versione di Fretboard apporta alcuni interessanti miglioramenti:"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:73
-msgid ""
-"View different ways to play the same chord, to find the one that suits your "
-"situation the best"
-msgstr ""
-"Visualizzare diversi modi di suonare lo stesso accordo, per trovare quello "
-"più adatto alla propria situazione"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:74
-msgid "Bookmark chords to save them for a later practice session or gig"
-msgstr "Salvare gli accordi nei preferiti, per una sessione successiva"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:75
-msgid ""
-"An additional fret in the chord diagram, to help you practice those really "
-"tricky positionings"
-msgstr ""
-"Un tasto aggiuntivo nei diagrammi degli accordi, per aiutare nella pratica "
-"dei posizionamenti più complicati"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:76
-msgid ""
-"Hover over positions in the chord diagram to see their respective note names"
-msgstr ""
-"Portare il cursore sopra alle posizioni nel diagramma degli accordi per "
-"vedere i nomi delle note"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:77
-msgid "Smarter and more precise chord detection"
-msgstr "Rilevamento degli accordi più intelligente e preciso"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:84
-msgid "Initial release."
-msgstr "Lancio iniziale."
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:6
-msgid "Window width"
-msgstr "Larghezza della finestra"
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:10
-msgid "Window height"
-msgstr "Altezza della finestra"
-
-#: data/dev.bragefuglseth.Fretboard.gschema.xml:14
-msgid "Window maximized state"
-msgstr "Stato di massimizzazione della finestra"
-
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:119
-msgid "translator-credits"
-msgstr "Davide Ferracin <davide.ferracin@protonmail.com>"
-
-#: src/window.rs:244
-msgid "Remove Bookmark"
-msgstr "Rimuovi dai preferiti"
-
-#: src/window.rs:246
-msgid "Bookmark"
-msgstr "Aggiungi ai preferiti"
-
-#: src/window.rs:298
-msgid "No Bookmarks"
-msgstr "Nessun preferito"
-
-#: src/window.rs:300 data/gtk/window.blp:180
-msgid "Bookmarks"
-msgstr "Preferiti"
-
-#: src/chord_diagram_top_toggle.rs:154
-msgid "Not Open"
-msgstr "Non a vuoto"
-
-#: src/chord_diagram_top_toggle.rs:155
-msgid "Muted"
-msgstr "Muta"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Open"
-msgstr "A vuoto"
-
-#: data/gtk/window.blp:29
-msgid "Main Menu"
-msgstr "Menù principale"
-
-#: data/gtk/window.blp:82
-msgid "Chord not found"
-msgstr "Accordo non trovato"
-
-#: data/gtk/window.blp:116
-msgid "View _Variants"
-msgstr "Mostra _varianti"
-
-#: data/gtk/window.blp:221
-msgid "_Empty Chord"
-msgstr "_Accordo vuoto"
-
-#: data/gtk/window.blp:228
-msgid "_Keyboard Shortcuts"
-msgstr "_Scorciatoie da tastiera"
-
-#: data/gtk/window.blp:233
-msgid "_About Fretboard"
-msgstr "_Informazioni su Fretboard"
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
@@ -222,6 +81,190 @@ msgstr "Accordo"
 #: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
 msgstr "Conferma"
+
+#: data/gtk/help-overlay.blp:11
+msgid "General"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:14
+#, fuzzy
+msgid "Empty Chord"
+msgstr "_Accordo vuoto"
+
+#: data/gtk/help-overlay.blp:19
+#, fuzzy
+msgid "Bookmark Chord"
+msgstr "Aggiungi ai preferiti"
+
+#: data/gtk/help-overlay.blp:24
+#, fuzzy
+msgid "View Bookmarks"
+msgstr "Preferiti"
+
+#: data/gtk/help-overlay.blp:29
+#, fuzzy
+msgid "View Chord Variants"
+msgstr "Mostra _varianti"
+
+#: data/gtk/help-overlay.blp:34
+msgid "Focus Entry"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:39
+#, fuzzy
+msgid "Show Shortcuts"
+msgstr "_Scorciatoie da tastiera"
+
+#: data/gtk/help-overlay.blp:44
+msgid "Close Window"
+msgstr ""
+
+#: data/gtk/help-overlay.blp:49
+msgid "Quit"
+msgstr ""
+
+#: data/gtk/window.blp:29
+msgid "Main Menu"
+msgstr "Menù principale"
+
+#: data/gtk/window.blp:82
+msgid "Chord not found"
+msgstr "Accordo non trovato"
+
+#: data/gtk/window.blp:116
+msgid "View _Variants"
+msgstr "Mostra _varianti"
+
+#: data/gtk/window.blp:179 src/window.rs:332
+msgid "Bookmarks"
+msgstr "Preferiti"
+
+#: data/gtk/window.blp:218
+msgid "Guitar Type"
+msgstr ""
+
+#: data/gtk/window.blp:221
+msgid "Right-handed"
+msgstr ""
+
+#: data/gtk/window.blp:227
+msgid "Left-handed"
+msgstr ""
+
+#: data/gtk/window.blp:235
+msgid "_Empty Chord"
+msgstr "_Accordo vuoto"
+
+#: data/gtk/window.blp:242
+msgid "_Keyboard Shortcuts"
+msgstr "_Scorciatoie da tastiera"
+
+#: data/gtk/window.blp:247
+msgid "_About Fretboard"
+msgstr "_Informazioni su Fretboard"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.rs:116
+msgid "translator-credits"
+msgstr "Davide Ferracin <davide.ferracin@protonmail.com>"
+
+#: src/chord_diagram_top_toggle.rs:154
+msgid "Not Open"
+msgstr "Non a vuoto"
+
+#: src/chord_diagram_top_toggle.rs:155
+msgid "Muted"
+msgstr "Muta"
+
+#. translators: this is an adjective, not a verb
+#: src/chord_diagram_top_toggle.rs:157
+msgid "Open"
+msgstr "A vuoto"
+
+#: src/window.rs:273
+msgid "Remove Bookmark"
+msgstr "Rimuovi dai preferiti"
+
+#: src/window.rs:275
+msgid "Bookmark"
+msgstr "Aggiungi ai preferiti"
+
+#: src/window.rs:330
+msgid "No Bookmarks"
+msgstr "Nessun preferito"
+
+#~ msgid ""
+#~ "GNOME 45 is finally here! To celebrate, Fretboard has gained the "
+#~ "following improvements:"
+#~ msgstr ""
+#~ "GNOME 45 è arrivato! Per festeggiare, Fretboard ha acquisito i seguenti "
+#~ "miglioramenti:"
+
+#~ msgid "Refined visuals taking advantage of the latest platform features"
+#~ msgstr ""
+#~ "Una veste grafica rifinita, che sfrutta le funzionalità più recenti della "
+#~ "piattaforma"
+
+#~ msgid "Keyboard shortcuts for common actions"
+#~ msgstr "Scorciatoie da tastiera per le azioni comuni"
+
+#~ msgid ""
+#~ "Italian, Russian, and Dutch translations, making Fretboard available in a "
+#~ "total of 4 different languages"
+#~ msgstr ""
+#~ "Traduzioni in italiano, russo e olandese, che rendono Fretboard "
+#~ "disponibile in un totale di quattro lingue diverse"
+
+#~ msgid ""
+#~ "If you would like to come with suggestions, report bugs, translate the "
+#~ "app, or contribute otherwise, feel free to reach out!"
+#~ msgstr ""
+#~ "Per proporre suggerimenti, segnalare errori, tradurre l'applicazione o "
+#~ "contribuire in altro modo, contattateci!"
+
+#~ msgid ""
+#~ "This major release of Fretboard brings a bunch of exciting improvements:"
+#~ msgstr ""
+#~ "Questa versione di Fretboard apporta alcuni interessanti miglioramenti:"
+
+#~ msgid ""
+#~ "View different ways to play the same chord, to find the one that suits "
+#~ "your situation the best"
+#~ msgstr ""
+#~ "Visualizzare diversi modi di suonare lo stesso accordo, per trovare "
+#~ "quello più adatto alla propria situazione"
+
+#~ msgid "Bookmark chords to save them for a later practice session or gig"
+#~ msgstr "Salvare gli accordi nei preferiti, per una sessione successiva"
+
+#~ msgid ""
+#~ "An additional fret in the chord diagram, to help you practice those "
+#~ "really tricky positionings"
+#~ msgstr ""
+#~ "Un tasto aggiuntivo nei diagrammi degli accordi, per aiutare nella "
+#~ "pratica dei posizionamenti più complicati"
+
+#~ msgid ""
+#~ "Hover over positions in the chord diagram to see their respective note "
+#~ "names"
+#~ msgstr ""
+#~ "Portare il cursore sopra alle posizioni nel diagramma degli accordi per "
+#~ "vedere i nomi delle note"
+
+#~ msgid "Smarter and more precise chord detection"
+#~ msgstr "Rilevamento degli accordi più intelligente e preciso"
+
+#~ msgid "Initial release."
+#~ msgstr "Lancio iniziale."
+
+#~ msgid "Window width"
+#~ msgstr "Larghezza della finestra"
+
+#~ msgid "Window height"
+#~ msgstr "Altezza della finestra"
+
+#~ msgid "Window maximized state"
+#~ msgstr "Stato di massimizzazione della finestra"
 
 #~ msgid "Go Back"
 #~ msgstr "Indietro"
