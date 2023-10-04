@@ -219,17 +219,20 @@ impl FretboardWindow {
     fn init(&self) {
         let imp = self.imp();
 
-        self.connect_notify_local(Some("instrument"), move |win,_| {
+        self.connect_notify_local(Some("instrument"), move |win, _| {
             let imp = win.imp();
 
-            imp.chord_diagram.set_guitar_type(match imp.instrument.borrow().as_str() {
-                "guitar-right-handed" => GuitarType::RightHanded,
-                "guitar-left-handed" => GuitarType::LeftHanded,
-                other => panic!("unexpected instrument type: {other}"),
-            });
+            imp.chord_diagram
+                .set_guitar_type(match imp.instrument.borrow().as_str() {
+                    "guitar-right-handed" => GuitarType::RightHanded,
+                    "guitar-left-handed" => GuitarType::LeftHanded,
+                    other => panic!("unexpected instrument type: {other}"),
+                });
         });
 
-        self.settings().bind("instrument", self, "instrument").build();
+        self.settings()
+            .bind("instrument", self, "instrument")
+            .build();
 
         let chord_diagram = imp.chord_diagram.get();
 
@@ -498,7 +501,10 @@ impl FretboardWindow {
         }
 
         for variant in variants {
-            let preview = FretboardChordPreview::with_chord(variant, imp.chord_diagram.imp().guitar_type.get());
+            let preview = FretboardChordPreview::with_chord(
+                variant,
+                imp.chord_diagram.imp().guitar_type.get(),
+            );
             let buffer = self.imp().entry.imp().entry_buffer.borrow().clone();
             preview.imp().chord_name.replace(buffer);
 
@@ -561,7 +567,10 @@ impl FretboardWindow {
         let bookmarks = imp.bookmarks.borrow();
 
         for bookmark in bookmarks.iter() {
-            let preview = FretboardChordPreview::with_chord(bookmark.chord, imp.chord_diagram.imp().guitar_type.get());
+            let preview = FretboardChordPreview::with_chord(
+                bookmark.chord,
+                imp.chord_diagram.imp().guitar_type.get(),
+            );
             preview.imp().chord_name.replace(bookmark.name.clone());
 
             let label = gtk::Label::builder()

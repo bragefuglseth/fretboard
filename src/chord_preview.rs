@@ -1,5 +1,5 @@
-use crate::window::GuitarType;
 use crate::chord_ops::*;
+use crate::window::GuitarType;
 use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
@@ -92,8 +92,7 @@ mod imp {
                         .css_classes(["fretboard-chord-preview-dot"])
                         .build();
 
-                    self.dots_grid
-                        .attach(&dot, i as i32, fret_num as i32, 1, 1);
+                    self.dots_grid.attach(&dot, i as i32, fret_num as i32, 1, 1);
 
                     dot_column.push(dot);
                 }
@@ -192,7 +191,13 @@ impl FretboardChordPreview {
             GuitarType::LeftHanded => gtk::Align::Start,
         };
 
-        for barre_picture in [imp.barre_2_image.get(), imp.barre_3_image.get(), imp.barre_4_image.get(), imp.barre_5_image.get(), imp.barre_6_image.get()] {
+        for barre_picture in [
+            imp.barre_2_image.get(),
+            imp.barre_3_image.get(),
+            imp.barre_4_image.get(),
+            imp.barre_5_image.get(),
+            imp.barre_6_image.get(),
+        ] {
             barre_picture.set_halign(barre_alignment);
         }
 

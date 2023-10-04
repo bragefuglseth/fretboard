@@ -2,13 +2,13 @@ use crate::barre_spin::FretboardBarreSpin;
 use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
 use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use crate::chord_ops::*;
+use crate::window::GuitarType;
 use adw::subclass::prelude::*;
 use glib::{closure_local, subclass::Signal};
 use gtk::glib;
 use gtk::prelude::*;
 use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
-use crate::window::GuitarType;
 
 const STRINGS: usize = 6;
 const NOTE_OFFSETS: [usize; STRINGS] = [7, 0, 5, 10, 2, 7];
@@ -391,7 +391,13 @@ impl FretboardChordDiagram {
             GuitarType::LeftHanded => gtk::Align::Start,
         };
 
-        for barre_picture in [imp.barre_2_image.get(), imp.barre_3_image.get(), imp.barre_4_image.get(), imp.barre_5_image.get(), imp.barre_6_image.get()] {
+        for barre_picture in [
+            imp.barre_2_image.get(),
+            imp.barre_3_image.get(),
+            imp.barre_4_image.get(),
+            imp.barre_5_image.get(),
+            imp.barre_6_image.get(),
+        ] {
             barre_picture.set_halign(barre_alignment);
         }
     }
