@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 23:37+0200\n"
+"POT-Creation-Date: 2023-10-04 03:55+0200\n"
 "PO-Revision-Date: 2023-09-24 15:01+0000\n"
 "Last-Translator: беб <ikibastusloh1337@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/fretboard/"
@@ -62,9 +62,9 @@ msgstr "гитара"
 msgid "chords"
 msgstr "аккорды"
 
-#. translators: guitar-right-handed and guitar-left-handed are enum values, and should not be translated
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either guitar-right-handed or guitar-left-handed."
+msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr ""
 
 #: data/gtk/barre-spin.blp:9
@@ -137,7 +137,7 @@ msgstr "Аккорд не найден"
 msgid "View _Variants"
 msgstr "Просмотреть _варианты"
 
-#: data/gtk/window.blp:179 src/window.rs:332
+#: data/gtk/window.blp:179 src/window.rs:335
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -185,15 +185,15 @@ msgstr "Заглушен"
 msgid "Open"
 msgstr "Открыть"
 
-#: src/window.rs:273
+#: src/window.rs:276
 msgid "Remove Bookmark"
 msgstr "Удалить закладку"
 
-#: src/window.rs:275
+#: src/window.rs:278
 msgid "Bookmark"
 msgstr "Добавить в закладки"
 
-#: src/window.rs:330
+#: src/window.rs:333
 msgid "No Bookmarks"
 msgstr "Нет закладок"
 

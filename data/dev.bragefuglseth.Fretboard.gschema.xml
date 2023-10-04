@@ -10,10 +10,10 @@
 		<key name="is-maximized" type="b">
 			<default>false</default>
 		</key>
-	  <key name="instrument" type="s">
-			<default>'guitar-right-handed'</default>
-	    <!-- translators: guitar-right-handed and guitar-left-handed are enum values, and should not be translated -->
-	    <description>Can be either guitar-right-handed or guitar-left-handed.</description>
+	  <key name="handedness" type="s">
+			<default>'right-handed'</default>
+	    <!-- translators: "right-handed" and "left-handed" are enum values, and should not be translated -->
+	    <description>Can be either "right-handed"" or "left-handed".</description>
 		</key>
 	</schema>
 </schemalist>

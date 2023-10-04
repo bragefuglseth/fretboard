@@ -87,7 +87,7 @@ mod imp {
         pub bookmarks: RefCell<Vec<Bookmark>>,
 
         #[property(get, set)]
-        pub instrument: RefCell<String>,
+        pub handedness: RefCell<String>,
 
         pub settings: OnceCell<gio::Settings>,
     }
@@ -99,7 +99,7 @@ mod imp {
         type ParentType = adw::ApplicationWindow;
 
         fn class_init(klass: &mut Self::Class) {
-            klass.install_property_action("win.set-instrument", "instrument");
+            klass.install_property_action("win.set-handedness", "handedness");
 
             klass.install_action("win.empty-chord", None, move |win, _, _| {
                 win.empty_chord();
@@ -219,19 +219,19 @@ impl FretboardWindow {
     fn init(&self) {
         let imp = self.imp();
 
-        self.connect_notify_local(Some("instrument"), move |win, _| {
+        self.connect_notify_local(Some("handedness"), move |win, _| {
             let imp = win.imp();
 
             imp.chord_diagram
-                .set_guitar_type(match imp.instrument.borrow().as_str() {
-                    "guitar-right-handed" => GuitarType::RightHanded,
-                    "guitar-left-handed" => GuitarType::LeftHanded,
-                    other => panic!("unexpected instrument type: {other}"),
+                .set_guitar_type(match imp.handedness.borrow().as_str() {
+                    "right-handed" => GuitarType::RightHanded,
+                    "left-handed" => GuitarType::LeftHanded,
+                    other => panic!("unexpected handedness string: {other}"),
                 });
         });
 
         self.settings()
-            .bind("instrument", self, "instrument")
+            .bind("handedness", self, "handedness")
             .build();
 
         let chord_diagram = imp.chord_diagram.get();

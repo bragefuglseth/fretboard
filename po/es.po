@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 23:37+0200\n"
+"POT-Creation-Date: 2023-10-04 03:55+0200\n"
 "PO-Revision-Date: 2023-09-22 06:01+0000\n"
 "Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted."
 "weblate.org>\n"
@@ -61,9 +61,9 @@ msgstr "guitarra"
 msgid "chords"
 msgstr "acordes"
 
-#. translators: guitar-right-handed and guitar-left-handed are enum values, and should not be translated
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either guitar-right-handed or guitar-left-handed."
+msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr ""
 
 #: data/gtk/barre-spin.blp:9
@@ -136,7 +136,7 @@ msgstr "Acorde no encontrado"
 msgid "View _Variants"
 msgstr "Ver _variantes"
 
-#: data/gtk/window.blp:179 src/window.rs:332
+#: data/gtk/window.blp:179 src/window.rs:335
 msgid "Bookmarks"
 msgstr "Destacados"
 
@@ -182,15 +182,15 @@ msgstr "Silenciado"
 msgid "Open"
 msgstr "Abierto"
 
-#: src/window.rs:273
+#: src/window.rs:276
 msgid "Remove Bookmark"
 msgstr "Quitar destacado"
 
-#: src/window.rs:275
+#: src/window.rs:278
 msgid "Bookmark"
 msgstr "Destacado"
 
-#: src/window.rs:330
+#: src/window.rs:333
 msgid "No Bookmarks"
 msgstr "Sin destacados"
 
