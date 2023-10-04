@@ -107,7 +107,7 @@ impl FretboardApplication {
         let window = self.active_window().unwrap();
         let about = adw::AboutWindow::from_appdata(
             "/dev/bragefuglseth/Fretboard/metainfo.xml",
-            Some("3.0"),
+            Some("4.0"),
         );
 
         about.set_developers(&["Brage Fuglseth"]);

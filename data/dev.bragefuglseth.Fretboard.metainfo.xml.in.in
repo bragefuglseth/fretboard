@@ -60,7 +60,21 @@
   <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>
   <update_contact>brage.fuglseth_AT_gmail.com</update_contact>
   <content_rating type="oars-1.1"/>
+  <custom>
+    <value key="GnomeSoftware::key-colors">[(153, 193, 241)]</value>
+  </custom>
   <releases>
+    <release date="2023-10-5" version="4.0">
+      <description translatable="no">
+        <p>This release of Fretboard improves its accessibility:</p>
+        <ul>
+          <li>Support for both left-handed and right-handed guitar types</li>
+          <li>Independence from text direction for the chord diagram, fixing the mirroring issue it had for right-to-left language users</li>
+          <li>Turkish and Spanish translations, making Fretboard available in a total of 6 languages</li>
+        </ul>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
     <release date="2023-09-20" version="3.0">
       <description translatable="no">
         <p>GNOME 45 is finally here! To celebrate, Fretboard has gained the following improvements:</p>
