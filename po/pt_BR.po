@@ -7,31 +7,34 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-10-08 22:01+0000\n"
+"Last-Translator: Cassio Gomes Pereira <cassiogomes00@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"fretboard/fretboard/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
 msgid "Fretboard"
-msgstr ""
+msgstr "Fretboard"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:9
 msgid "Look up guitar chords"
-msgstr ""
+msgstr "Procure acordes de guitarra"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr ""
+msgstr "guitarra;acordes"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Brage Fuglseth"
-msgstr ""
+msgstr "Brage Fuglseth"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:11
 msgid ""
@@ -42,139 +45,145 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
+"Como esse acorde foi tocado? O Fretboard permite encontrar acordes de "
+"guitarra digitando seus nomes ou marcando-os em um braço de guitarra "
+"interativo. Depois de identificar um acorde, você pode experimentar alterar, "
+"ver mais maneiras de tocar ou favoritar, salvando-o para mais tarde. Não "
+"importa se você é iniciante ou avançado, você pode usar o Fretboard para "
+"praticar, aprender e dominar suas músicas favoritas!"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:22
 msgid "guitar"
-msgstr ""
+msgstr "guitarra"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
 msgid "chords"
-msgstr ""
+msgstr "acordes"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "Pode ser tanto \"right-handed\"\" quanto \"left-handed\"."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
-msgstr ""
+msgstr "Mover Para Cima"
 
 #: data/gtk/barre-spin.blp:27
 msgid "Move Down"
-msgstr ""
+msgstr "Mover Para Baixo"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10
 msgid "Chord Name"
-msgstr ""
+msgstr "Acorde"
 
 #: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Geral"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Empty Chord"
-msgstr ""
+msgstr "Acorde Vazio"
 
 #: data/gtk/help-overlay.blp:19
 msgid "Bookmark Chord"
-msgstr ""
+msgstr "Favoritar Acorde"
 
 #: data/gtk/help-overlay.blp:24
 msgid "View Bookmarks"
-msgstr ""
+msgstr "Ver Favoritos"
 
 #: data/gtk/help-overlay.blp:29
 msgid "View Chord Variants"
-msgstr ""
+msgstr "Ver Variantes do Acorde"
 
 #: data/gtk/help-overlay.blp:34
 msgid "Focus Entry"
-msgstr ""
+msgstr "Focar na Entrada"
 
 #: data/gtk/help-overlay.blp:39
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Mostrar Atalhos"
 
 #: data/gtk/help-overlay.blp:44
 msgid "Close Window"
-msgstr ""
+msgstr "Fechar Janela"
 
 #: data/gtk/help-overlay.blp:49
 msgid "Quit"
-msgstr ""
+msgstr "Sair"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu Principal"
 
 #: data/gtk/window.blp:82
 msgid "Chord not found"
-msgstr ""
+msgstr "Acorde não encontrado"
 
 #: data/gtk/window.blp:116
 msgid "View _Variants"
-msgstr ""
+msgstr "Ver _Variantes"
 
 #: data/gtk/window.blp:179 src/window.rs:335
 msgid "Bookmarks"
-msgstr ""
+msgstr "Favoritos"
 
 #: data/gtk/window.blp:218
 msgid "Guitar Type"
-msgstr ""
+msgstr "Tipo de Guitarra"
 
 #: data/gtk/window.blp:221
 msgid "Right-handed"
-msgstr ""
+msgstr "Destro"
 
 #: data/gtk/window.blp:227
 msgid "Left-handed"
-msgstr ""
+msgstr "Canhoto"
 
 #: data/gtk/window.blp:235
 msgid "_Empty Chord"
-msgstr ""
+msgstr "_Acorde Vazio"
 
 #: data/gtk/window.blp:242
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Atalhos de teclado"
 
 #: data/gtk/window.blp:247
 msgid "_About Fretboard"
-msgstr ""
+msgstr "_Sobre o Fretboard"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr ""
+msgstr "Cassio Pereira <cassiogomes00@gmail.com>"
 
 #: src/chord_diagram_top_toggle.rs:154
 msgid "Not Open"
-msgstr ""
+msgstr "Não Aberto"
 
 #: src/chord_diagram_top_toggle.rs:155
 msgid "Muted"
-msgstr ""
+msgstr "Abafado"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Open"
-msgstr ""
+msgstr "Aberto"
 
 #: src/window.rs:276
 msgid "Remove Bookmark"
-msgstr ""
+msgstr "Remover Favorito"
 
 #: src/window.rs:278
 msgid "Bookmark"
-msgstr ""
+msgstr "Favorito"
 
 #: src/window.rs:333
 msgid "No Bookmarks"
-msgstr ""
+msgstr "Não Há Favoritos"
