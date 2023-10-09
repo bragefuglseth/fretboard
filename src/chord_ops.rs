@@ -1,5 +1,5 @@
 // These are always shown in fret position 1
-const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 19] = [
+const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 20] = [
     [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
     [None, Some(0), Some(2), Some(2), None, Some(0)],    // A5
     [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
@@ -18,6 +18,7 @@ const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 19] = [
     [Some(0), Some(2), Some(2), None, Some(0), Some(2)], // Esus2
     [Some(0), Some(2), Some(2), Some(2), Some(0), Some(0)], // Esus4
     [Some(3), Some(2), Some(0), Some(0), Some(0), Some(3)], // G
+    [Some(3), Some(2), Some(0), Some(0), Some(3), Some(3)], // G alternative
     [Some(3), Some(2), Some(0), Some(0), Some(0), Some(0)], // G6
 ];
 
