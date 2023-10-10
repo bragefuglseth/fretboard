@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: 2023-10-03 15:08+0000\n"
+"PO-Revision-Date: 2023-10-13 11:09+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/tr/>\n"
@@ -64,7 +64,7 @@ msgstr "akorlar"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "\"right-handed\" (sağ el) ya da \"left-handed\" (sol el) olabilir."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
@@ -85,44 +85,39 @@ msgstr "Doğrula"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: data/gtk/help-overlay.blp:14
-#, fuzzy
 msgid "Empty Chord"
-msgstr "_Boş Akor"
+msgstr "Boş Akor"
 
 #: data/gtk/help-overlay.blp:19
-#, fuzzy
 msgid "Bookmark Chord"
-msgstr "Yer İmi"
+msgstr "Akoru Yer İmlerine Ekle"
 
 #: data/gtk/help-overlay.blp:24
-#, fuzzy
 msgid "View Bookmarks"
-msgstr "Yer İmleri"
+msgstr "Yer İmlerini Göster"
 
 #: data/gtk/help-overlay.blp:29
-#, fuzzy
 msgid "View Chord Variants"
-msgstr "_Değişkeleri Göster"
+msgstr "Akor Türevlerini Göster"
 
 #: data/gtk/help-overlay.blp:34
 msgid "Focus Entry"
-msgstr ""
+msgstr "Girdiye Odaklan"
 
 #: data/gtk/help-overlay.blp:39
-#, fuzzy
 msgid "Show Shortcuts"
-msgstr "_Klavye Kısayolları"
+msgstr "Kısayolları Göster"
 
 #: data/gtk/help-overlay.blp:44
 msgid "Close Window"
-msgstr ""
+msgstr "Pencereyi Kapat"
 
 #: data/gtk/help-overlay.blp:49
 msgid "Quit"
-msgstr ""
+msgstr "Çık"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
@@ -142,15 +137,15 @@ msgstr "Yer İmleri"
 
 #: data/gtk/window.blp:218
 msgid "Guitar Type"
-msgstr ""
+msgstr "Gitar Tipi"
 
 #: data/gtk/window.blp:221
 msgid "Right-handed"
-msgstr ""
+msgstr "Sağ el"
 
 #: data/gtk/window.blp:227
 msgid "Left-handed"
-msgstr ""
+msgstr "Sol el"
 
 #: data/gtk/window.blp:235
 msgid "_Empty Chord"
