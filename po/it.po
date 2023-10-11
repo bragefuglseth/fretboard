@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: 2023-09-21 02:01+0000\n"
+"PO-Revision-Date: 2023-10-13 11:09+0000\n"
 "Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/it/>\n"
@@ -63,7 +63,7 @@ msgstr "accordi"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "Può essere o \"right-handed\"\" o \"left-handed\"."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
@@ -84,44 +84,39 @@ msgstr "Conferma"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Generali"
 
 #: data/gtk/help-overlay.blp:14
-#, fuzzy
 msgid "Empty Chord"
-msgstr "_Accordo vuoto"
+msgstr "Accordo vuoto"
 
 #: data/gtk/help-overlay.blp:19
-#, fuzzy
 msgid "Bookmark Chord"
-msgstr "Aggiungi ai preferiti"
+msgstr "Aggiungi accordo ai preferiti"
 
 #: data/gtk/help-overlay.blp:24
-#, fuzzy
 msgid "View Bookmarks"
-msgstr "Preferiti"
+msgstr "Mostra preferiti"
 
 #: data/gtk/help-overlay.blp:29
-#, fuzzy
 msgid "View Chord Variants"
-msgstr "Mostra _varianti"
+msgstr "Mostra varianti"
 
 #: data/gtk/help-overlay.blp:34
 msgid "Focus Entry"
 msgstr ""
 
 #: data/gtk/help-overlay.blp:39
-#, fuzzy
 msgid "Show Shortcuts"
-msgstr "_Scorciatoie da tastiera"
+msgstr "Mostra scorciatoie"
 
 #: data/gtk/help-overlay.blp:44
 msgid "Close Window"
-msgstr ""
+msgstr "Chiudi finestra"
 
 #: data/gtk/help-overlay.blp:49
 msgid "Quit"
-msgstr ""
+msgstr "Esci"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
@@ -141,15 +136,15 @@ msgstr "Preferiti"
 
 #: data/gtk/window.blp:218
 msgid "Guitar Type"
-msgstr ""
+msgstr "Tipo di chitarra"
 
 #: data/gtk/window.blp:221
 msgid "Right-handed"
-msgstr ""
+msgstr "Per destrorsi"
 
 #: data/gtk/window.blp:227
 msgid "Left-handed"
-msgstr ""
+msgstr "Per mancini"
 
 #: data/gtk/window.blp:235
 msgid "_Empty Chord"
