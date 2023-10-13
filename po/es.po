@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the fretboard package.
 # Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate.org>, 2023.
 # gallegonovato <fran-carro@hotmail.es>, 2023.
+# Sergio Varela <sergitroll9@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: 2023-10-13 11:09+0000\n"
-"Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate"
-".org>\n"
+"PO-Revision-Date: 2023-10-14 12:01+0000\n"
+"Last-Translator: Sergio Varela <sergitroll9@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/es/>\n"
 "Language: es\n"
@@ -65,7 +65,7 @@ msgstr "acordes"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "Puede ser \"diestro\" o \"zurdo\"."
+msgstr "Puede ser «right-handed» o «left-handed»."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
