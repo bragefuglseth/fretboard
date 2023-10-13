@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: 2023-10-08 22:01+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2023-10-13 11:09+0000\n"
+"Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate"
+".org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/es/>\n"
 "Language: es\n"
@@ -64,7 +65,7 @@ msgstr "acordes"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "Puedes ser \"diestro\" o \"zurdo\"."
+msgstr "Puede ser \"diestro\" o \"zurdo\"."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
@@ -93,7 +94,7 @@ msgstr "Acorde vacío"
 
 #: data/gtk/help-overlay.blp:19
 msgid "Bookmark Chord"
-msgstr "Acorde favorito"
+msgstr "Marcar acorde como favorito"
 
 #: data/gtk/help-overlay.blp:24
 msgid "View Bookmarks"
@@ -105,11 +106,11 @@ msgstr "Ver las variantes de los acordes"
 
 #: data/gtk/help-overlay.blp:34
 msgid "Focus Entry"
-msgstr "Enfoque de entrada"
+msgstr "Enfocar entrada"
 
 #: data/gtk/help-overlay.blp:39
 msgid "Show Shortcuts"
-msgstr "Mostrar los accesos directos"
+msgstr "Mostrar atajos"
 
 #: data/gtk/help-overlay.blp:44
 msgid "Close Window"
@@ -117,7 +118,7 @@ msgstr "Cerrar la ventana"
 
 #: data/gtk/help-overlay.blp:49
 msgid "Quit"
-msgstr "Dejar"
+msgstr "Salir"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
@@ -133,7 +134,7 @@ msgstr "Ver _variantes"
 
 #: data/gtk/window.blp:179 src/window.rs:335
 msgid "Bookmarks"
-msgstr "Destacados"
+msgstr "Favoritos"
 
 #: data/gtk/window.blp:218
 msgid "Guitar Type"
@@ -179,15 +180,15 @@ msgstr "Abierto"
 
 #: src/window.rs:276
 msgid "Remove Bookmark"
-msgstr "Quitar destacado"
+msgstr "Quitar favorito"
 
 #: src/window.rs:278
 msgid "Bookmark"
-msgstr "Destacado"
+msgstr "Favorito"
 
 #: src/window.rs:333
 msgid "No Bookmarks"
-msgstr "Sin destacados"
+msgstr "Sin favoritos"
 
 #~ msgid ""
 #~ "GNOME 45 is finally here! To celebrate, Fretboard has gained the "
