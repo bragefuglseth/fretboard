@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: 2023-10-13 11:09+0000\n"
+"PO-Revision-Date: 2023-10-14 12:01+0000\n"
 "Last-Translator: Sergio Varela <sergitroll9@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/eu/>\n"
@@ -63,127 +63,127 @@ msgstr "akordeak"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "\"right-handed\" edo \"left-handed\" izan daiteke."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
-msgstr ""
+msgstr "Mugitu gora"
 
 #: data/gtk/barre-spin.blp:27
 msgid "Move Down"
-msgstr ""
+msgstr "Mugitu behera"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10
 msgid "Chord Name"
-msgstr ""
+msgstr "Akorde"
 
 #: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
-msgstr ""
+msgstr "Baieztatu"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Orokorra"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Empty Chord"
-msgstr ""
+msgstr "Akorde hutsa"
 
 #: data/gtk/help-overlay.blp:19
 msgid "Bookmark Chord"
-msgstr ""
+msgstr "Markatu akordea gogokoen gisa"
 
 #: data/gtk/help-overlay.blp:24
 msgid "View Bookmarks"
-msgstr ""
+msgstr "Ikusi gogokoak"
 
 #: data/gtk/help-overlay.blp:29
 msgid "View Chord Variants"
-msgstr ""
+msgstr "Ikusi akordeen aldaerak"
 
 #: data/gtk/help-overlay.blp:34
 msgid "Focus Entry"
-msgstr ""
+msgstr "Sarrera fokuratu"
 
 #: data/gtk/help-overlay.blp:39
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Erakutsi lasterbideak"
 
 #: data/gtk/help-overlay.blp:44
 msgid "Close Window"
-msgstr ""
+msgstr "Leihoa itxi"
 
 #: data/gtk/help-overlay.blp:49
 msgid "Quit"
-msgstr ""
+msgstr "Irten"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu nagusia"
 
 #: data/gtk/window.blp:82
 msgid "Chord not found"
-msgstr ""
+msgstr "Akordea ez da aurkitu"
 
 #: data/gtk/window.blp:116
 msgid "View _Variants"
-msgstr ""
+msgstr "Ikusi _aldaerak"
 
 #: data/gtk/window.blp:179 src/window.rs:335
 msgid "Bookmarks"
-msgstr ""
+msgstr "Gogokoenak"
 
 #: data/gtk/window.blp:218
 msgid "Guitar Type"
-msgstr ""
+msgstr "Gitarra mota"
 
 #: data/gtk/window.blp:221
 msgid "Right-handed"
-msgstr ""
+msgstr "Eskuina"
 
 #: data/gtk/window.blp:227
 msgid "Left-handed"
-msgstr ""
+msgstr "Ezkerra"
 
 #: data/gtk/window.blp:235
 msgid "_Empty Chord"
-msgstr ""
+msgstr "_Akorde hutsa"
 
 #: data/gtk/window.blp:242
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Teklatuaren lasterbideak"
 
 #: data/gtk/window.blp:247
 msgid "_About Fretboard"
-msgstr ""
+msgstr "_Fretboard-i buruz"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr ""
+msgstr "Sergio Varela https://ingrownmink4.tumblr.com"
 
 #: src/chord_diagram_top_toggle.rs:154
 msgid "Not Open"
-msgstr ""
+msgstr "Ireki gabe"
 
 #: src/chord_diagram_top_toggle.rs:155
 msgid "Muted"
-msgstr ""
+msgstr "Isildua"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Open"
-msgstr ""
+msgstr "Irekita"
 
 #: src/window.rs:276
 msgid "Remove Bookmark"
-msgstr ""
+msgstr "Kendu gogokoa"
 
 #: src/window.rs:278
 msgid "Bookmark"
-msgstr ""
+msgstr "Gogokoa"
 
 #: src/window.rs:333
 msgid "No Bookmarks"
-msgstr ""
+msgstr "Gogokorik gabe"
