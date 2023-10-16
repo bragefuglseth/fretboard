@@ -58,12 +58,22 @@
   <url type="translate">https://hosted.weblate.org/engage/fretboard/</url>
   <url type="vcs-browser">https://github.com/bragefuglseth/fretboard</url>
   <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>
-  <update_contact>brage.fuglseth_AT_gmail.com</update_contact>
+  <update_contact>bragefuglseth_AT_gnome.org</update_contact>
   <content_rating type="oars-1.1"/>
   <custom>
     <value key="GnomeSoftware::key-colors">[(153, 193, 241)]</value>
   </custom>
   <releases>
+    <release date="2023-10-16" version="4.1">
+      <description translatable="no">
+        <p>This is a minor release with a few improvements:</p>
+        <ul>
+          <li>Correct margins when using the large text accessibility option</li>
+          <li>Finnish and Basque translations, making Fretboard available in a total of 11 languages</li>
+        </ul>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
     <release date="2023-10-13" version="4.0">
       <description translatable="no">
         <p>This release of Fretboard makes it more accessible:</p>
