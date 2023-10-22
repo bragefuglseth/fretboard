@@ -101,6 +101,7 @@ pub fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] 
 
 pub fn prettify_chord_name(input: &str) -> String {
     input
+        .replace(" ", "")
         .to_ascii_lowercase()
         .split('/')
         .map(|part| {
