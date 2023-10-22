@@ -595,8 +595,7 @@ impl FretboardWindow {
                 let chord = preview.imp().chord.get();
 
                 win.imp().chord_diagram.set_chord(chord);
-                win.imp().entry.get().imp().entry_buffer.replace(name.to_string());
-                win.imp().entry.entry().set_text(&name);
+                win.imp().entry.overwrite_text(&prettify_chord_name(&name));
                 win.refresh_star_toggle();
                 win.imp().navigation_stack.pop();
             }));
