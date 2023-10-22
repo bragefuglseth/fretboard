@@ -297,7 +297,7 @@ impl FretboardWindow {
     fn bookmark_chord(&self) {
         let star_toggle = self.imp().star_toggle.get();
         let current_chord = self.imp().chord_diagram.imp().chord.get();
-        let current_name = self.imp().entry.imp().entry_buffer.borrow();
+        let current_name = self.imp().entry.serialized_buffer_text();
 
         self.set_focus_widget(Some(&star_toggle));
 
@@ -450,7 +450,7 @@ impl FretboardWindow {
         let imp = self.imp();
 
         let chord = imp.chord_diagram.get().imp().chord.get();
-        let name = imp.entry.get().entry().text().to_string();
+        let name = imp.entry.serialized_buffer_text();
 
         let query = Bookmark { name, chord };
 
