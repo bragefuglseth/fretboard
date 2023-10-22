@@ -21,7 +21,7 @@
 use crate::{
     chord_diagram::FretboardChordDiagram, chord_name_algorithm::calculate_chord_name,
     chord_name_entry::FretboardChordNameEntry, chord_preview::FretboardChordPreview,
-    config::APP_ID, database::ChordsDatabase,
+    config::APP_ID, database::ChordsDatabase, chord_ops::prettify_chord_name,
 };
 use adw::prelude::*;
 use adw::subclass::prelude::*;
@@ -250,9 +250,8 @@ impl FretboardWindow {
 
         entry
             .entry()
-            .connect_activate(glib::clone!(@weak self as win => move |entry| {
+            .connect_activate(glib::clone!(@weak self as win => move |_| {
                 win.load_chord_from_name();
-                win.imp().entry.get().imp().entry_buffer.replace(entry.text().as_str().to_string());
             }));
 
         let star_toggle = self.imp().star_toggle.get();
@@ -357,12 +356,7 @@ impl FretboardWindow {
 
     fn empty_chord(&self) {
         self.imp().chord_diagram.set_chord(EMPTY_CHORD);
-        self.imp().entry.imp().entry.set_text("");
-        self.imp()
-            .entry
-            .imp()
-            .entry_buffer
-            .replace(String::from(""));
+        self.imp().entry.overwrite_text("");
         self.imp().feedback_stack.set_visible_child_name("empty");
 
         self.refresh_star_toggle();
@@ -404,29 +398,33 @@ impl FretboardWindow {
     }
 
     fn load_chord_from_name(&self) {
-        let name = self.imp().entry.get().imp().entry.text().to_string();
-        let db = self.imp().database.borrow();
+        let imp = self.imp();
+
+        let name = imp.entry.serialized_buffer_text();
+        let db = imp.database.borrow();
         let chord_opt = db
             .chord_from_name(&name)
             .map(|c| c.positions.get(0).unwrap());
 
         if let Some(chord) = chord_opt {
-            self.imp().chord_diagram.set_chord(*chord);
-            self.imp()
+            imp.chord_diagram.set_chord(*chord);
+            imp
                 .feedback_stack
                 .set_visible_child_name("chord-actions");
         } else {
-            self.imp().chord_diagram.set_chord(EMPTY_CHORD);
-            self.imp().feedback_stack.set_visible_child_name("label");
+            imp.chord_diagram.set_chord(EMPTY_CHORD);
+            imp.feedback_stack.set_visible_child_name("label");
         }
 
         self.refresh_star_toggle();
     }
 
     fn load_name_from_chord(&self) {
-        let query_chord = self.imp().chord_diagram.imp().chord.get();
+        let imp = self.imp();
 
-        let name_opt = self.imp().database.borrow().name_from_chord(query_chord);
+        let query_chord = imp.chord_diagram.imp().chord.get();
+
+        let name_opt = imp.database.borrow().name_from_chord(query_chord);
 
         let name = if let Some(name) = name_opt {
             name
@@ -436,9 +434,8 @@ impl FretboardWindow {
             Default::default()
         };
 
-        self.imp().entry.imp().entry_buffer.replace(name.clone());
-        self.imp().entry.entry().set_text(&name);
-        self.imp()
+        imp.entry.overwrite_text(&name);
+        imp
             .feedback_stack
             .set_visible_child_name(if !name.is_empty() {
                 "chord-actions"
@@ -453,13 +450,13 @@ impl FretboardWindow {
         let imp = self.imp();
 
         let chord = imp.chord_diagram.get().imp().chord.get();
-        let name = self.imp().entry.get().imp().entry.text().to_string();
+        let name = imp.entry.get().entry().text().to_string();
 
         let query = Bookmark { name, chord };
 
         let star_toggle = imp.star_toggle.get();
 
-        let bookmarks = self.imp().bookmarks.borrow();
+        let bookmarks = imp.bookmarks.borrow();
 
         star_toggle.set_active(bookmarks.iter().any(|bm| bm == &query))
     }
@@ -471,7 +468,7 @@ impl FretboardWindow {
     fn more_variants(&self) {
         let imp = self.imp();
 
-        let chord_name = imp.entry.imp().entry_buffer.borrow();
+        let chord_name = imp.entry.serialized_buffer_text();
 
         if chord_name.is_empty() {
             return;
@@ -505,7 +502,7 @@ impl FretboardWindow {
                 variant,
                 imp.chord_diagram.imp().guitar_type.get(),
             );
-            let buffer = self.imp().entry.imp().entry_buffer.borrow().clone();
+            let buffer = imp.entry.serialized_buffer_text();
             preview.imp().chord_name.replace(buffer);
 
             let button = gtk::Button::builder()
@@ -519,7 +516,7 @@ impl FretboardWindow {
                 let chord = preview.imp().chord.get();
 
                 win.imp().chord_diagram.set_chord(chord);
-                win.imp().entry.entry().set_text(&name);
+                win.imp().entry.overwrite_text(&name);
                 win.refresh_star_toggle();
                 win.imp().navigation_stack.pop();
             }));
@@ -534,7 +531,7 @@ impl FretboardWindow {
             container.insert(&flow_box_child, -1);
         }
 
-        imp.variants_page.set_title(&chord_name);
+        imp.variants_page.set_title(&prettify_chord_name(&chord_name));
         imp.variants_scrolled_window
             .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 
@@ -574,7 +571,7 @@ impl FretboardWindow {
             preview.imp().chord_name.replace(bookmark.name.clone());
 
             let label = gtk::Label::builder()
-                .label(&bookmark.name)
+                .label(&prettify_chord_name(&bookmark.name))
                 .justify(gtk::Justification::Center)
                 .css_classes(["title-3"])
                 .build();

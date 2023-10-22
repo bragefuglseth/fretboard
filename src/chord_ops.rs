@@ -1,3 +1,5 @@
+use itertools::Itertools;
+
 // These are always shown in fret position 1
 const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 20] = [
     [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
@@ -95,4 +97,27 @@ pub fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] 
         .collect::<Vec<Option<usize>>>()
         .try_into()
         .unwrap()
+}
+
+pub fn prettify_chord_name(input: &str) -> String {
+    input
+        .to_ascii_lowercase()
+        .split('/')
+        .map(|part| {
+            part.chars()
+                .enumerate()
+                .map(|tuple| match tuple {
+                    (0, c) => c.to_ascii_uppercase(),
+                    (1, '#') => '♯',
+                    (1, 'b') => '♭',
+                    (_, c) => c,
+                })
+                .collect::<String>()
+        })
+        .intersperse("/".into())
+        .collect()
+}
+
+pub fn serialize_chord_name(input: &str) -> String {
+    input.replace("♯", "#").replace("♭", "b").to_ascii_lowercase()
 }

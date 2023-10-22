@@ -2,6 +2,7 @@ use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
 use std::cell::RefCell;
+use crate::chord_ops::{prettify_chord_name, serialize_chord_name};
 
 mod imp {
     use super::*;
@@ -50,9 +51,13 @@ mod imp {
             }));
 
             self.entry
-                .connect_activate(glib::clone!(@weak revealer => move |_| {
+                .connect_activate(glib::clone!(@weak revealer, @weak self as entry => move |_| {
                     revealer.set_visible(false);
                     revealer.set_reveal_child(false);
+
+                    let prettified_name = prettify_chord_name(&entry.entry.text());
+                    entry.obj().overwrite_text(&prettified_name);
+                    entry.entry.set_position(-1);
                 }));
 
             let entry = self.entry.get();
@@ -87,5 +92,16 @@ impl Default for FretboardChordNameEntry {
 impl FretboardChordNameEntry {
     pub fn entry(&self) -> gtk::Text {
         self.imp().entry.get()
+    }
+
+    pub fn serialized_buffer_text(&self) -> String {
+        serialize_chord_name(&self.imp().entry_buffer.borrow())
+    }
+
+    pub fn overwrite_text(&self, text: &str) {
+        let imp = self.imp();
+        let text = prettify_chord_name(&text);
+        imp.entry_buffer.replace(text.clone());
+        imp.entry.set_text(&text);
     }
 }

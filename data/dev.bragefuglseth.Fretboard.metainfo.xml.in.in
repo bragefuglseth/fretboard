@@ -26,11 +26,11 @@
     <internet>offline-only</internet>
     <display_length compare="ge">360</display_length>
   </requires>
-  <recommends>
+  <supports>
     <control>pointing</control>
     <control>keyboard</control>
     <control>touch</control>
-  </recommends>
+  </supports>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-1.png</image>
