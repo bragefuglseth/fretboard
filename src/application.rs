@@ -98,7 +98,7 @@ impl FretboardApplication {
 
         self.set_accels_for_action("win.empty-chord", &["<Ctrl>E"]);
         self.set_accels_for_action("win.focus-entry", &["<Ctrl>L"]);
-        self.set_accels_for_action("win.more-variants", &["<Ctrl>V"]);
+        self.set_accels_for_action("win.more-variants", &["<Alt>Return"]);
         self.set_accels_for_action("win.bookmark-chord", &["<Ctrl>D"]);
         self.set_accels_for_action("win.bookmarks", &["<Ctrl><Alt>D"]);
     }
