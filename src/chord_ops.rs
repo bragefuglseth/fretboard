@@ -109,8 +109,8 @@ pub fn prettify_chord_name(input: &str) -> String {
                 .enumerate()
                 .map(|tuple| match tuple {
                     (0, c) => c.to_ascii_uppercase(),
-                    (1, '#') => '♯',
-                    (1, 'b') => '♭',
+                    (1|2, '#') => '♯',
+                    (1|2, 'b') => '♭',
                     (_, c) => c,
                 })
                 .collect::<String>()
