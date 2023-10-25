@@ -1,8 +1,8 @@
+use crate::chord_ops::{prettify_chord_name, serialize_chord_name};
 use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
 use std::cell::RefCell;
-use crate::chord_ops::{prettify_chord_name, serialize_chord_name};
 
 mod imp {
     use super::*;
@@ -50,15 +50,16 @@ mod imp {
                 entry_wrapper.revealer.set_reveal_child(changed);
             }));
 
-            self.entry
-                .connect_activate(glib::clone!(@weak revealer, @weak self as entry => move |_| {
+            self.entry.connect_activate(
+                glib::clone!(@weak revealer, @weak self as entry => move |_| {
                     revealer.set_visible(false);
                     revealer.set_reveal_child(false);
 
                     let prettified_name = prettify_chord_name(&entry.entry.text());
                     entry.obj().overwrite_text(&prettified_name);
                     entry.entry.set_position(-1);
-                }));
+                }),
+            );
 
             let entry = self.entry.get();
 

@@ -100,25 +100,22 @@ pub fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] 
 }
 
 pub fn prettify_chord_name(input: &str) -> String {
-    input
-        .replace(" ", "")
-        .to_ascii_lowercase()
-        .split('/')
-        .map(|part| {
-            part.chars()
-                .enumerate()
-                .map(|tuple| match tuple {
-                    (0, c) => c.to_ascii_uppercase(),
-                    (1|2, '#') => '♯',
-                    (1|2, 'b') => '♭',
-                    (_, c) => c,
-                })
-                .collect::<String>()
+    std::iter::once(' ')
+        .chain(input.chars().filter(|c| !c.is_ascii_whitespace()))
+        .map(|c| c.to_ascii_lowercase())
+        .tuple_windows::<(_, _)>()
+        .map(|tuple| match tuple {
+            ('a' | 'c' | 'd' | 'f' | 'g' | 'j' | 'm' | '2' | '4' | '7', '#') => '♯',
+            ('a' | 'b' | 'd' | 'e' | 'g' | 'j' | 'm' | '2' | '4' | '7', 'b') => '♭',
+            (' ' | '/', c) => c.to_ascii_uppercase(),
+            (_, c) => c,
         })
-        .intersperse("/".into())
         .collect()
 }
 
 pub fn serialize_chord_name(input: &str) -> String {
-    input.replace("♯", "#").replace("♭", "b").to_ascii_lowercase()
+    input
+        .replace("♯", "#")
+        .replace("♭", "b")
+        .to_ascii_lowercase()
 }

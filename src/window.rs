@@ -20,8 +20,8 @@
 
 use crate::{
     chord_diagram::FretboardChordDiagram, chord_name_algorithm::calculate_chord_name,
-    chord_name_entry::FretboardChordNameEntry, chord_preview::FretboardChordPreview,
-    config::APP_ID, database::ChordsDatabase, chord_ops::prettify_chord_name,
+    chord_name_entry::FretboardChordNameEntry, chord_ops::prettify_chord_name,
+    chord_preview::FretboardChordPreview, config::APP_ID, database::ChordsDatabase,
 };
 use adw::prelude::*;
 use adw::subclass::prelude::*;
@@ -408,9 +408,7 @@ impl FretboardWindow {
 
         if let Some(chord) = chord_opt {
             imp.chord_diagram.set_chord(*chord);
-            imp
-                .feedback_stack
-                .set_visible_child_name("chord-actions");
+            imp.feedback_stack.set_visible_child_name("chord-actions");
         } else {
             imp.chord_diagram.set_chord(EMPTY_CHORD);
             imp.feedback_stack.set_visible_child_name("label");
@@ -435,8 +433,7 @@ impl FretboardWindow {
         };
 
         imp.entry.overwrite_text(&name);
-        imp
-            .feedback_stack
+        imp.feedback_stack
             .set_visible_child_name(if !name.is_empty() {
                 "chord-actions"
             } else {
@@ -531,7 +528,8 @@ impl FretboardWindow {
             container.insert(&flow_box_child, -1);
         }
 
-        imp.variants_page.set_title(&prettify_chord_name(&chord_name));
+        imp.variants_page
+            .set_title(&prettify_chord_name(&chord_name));
         imp.variants_scrolled_window
             .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 
