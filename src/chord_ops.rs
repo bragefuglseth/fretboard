@@ -1,29 +1,5 @@
 use itertools::Itertools;
 
-// These are always shown in fret position 1
-const SPECIAL_CASE_CHORDS: [[Option<usize>; 6]; 20] = [
-    [None, Some(0), Some(2), Some(2), Some(2), Some(0)], // A
-    [None, Some(0), Some(2), Some(2), None, Some(0)],    // A5
-    [None, Some(0), Some(2), Some(0), Some(2), Some(0)], // A7
-    [None, Some(0), Some(2), Some(4), Some(2), Some(0)], // Aadd9
-    [None, Some(0), Some(2), Some(2), Some(3), Some(0)], // Asus4
-    [None, Some(2), Some(0), Some(2), Some(0), Some(2)], // Bm7
-    [None, Some(3), Some(2), Some(0), Some(0), Some(0)], // Cmaj7
-    [None, None, Some(0), Some(2), Some(3), Some(2)],    // D
-    [None, None, Some(0), Some(2), Some(3), None],       // D5
-    [None, None, Some(0), Some(2), Some(0), Some(2)],    // D6
-    [None, None, Some(0), Some(2), Some(2), Some(2)],    // Dmaj7
-    [None, None, Some(0), Some(2), Some(3), Some(3)],    // Dsus4
-    [Some(0), Some(2), Some(2), Some(0), Some(0), Some(0)], // Em
-    [Some(0), Some(2), Some(2), Some(0), Some(2), Some(0)], // Em6
-    [Some(0), Some(2), Some(0), Some(0), Some(0), Some(0)], // Em7
-    [Some(0), Some(2), Some(2), None, Some(0), Some(2)], // Esus2
-    [Some(0), Some(2), Some(2), Some(2), Some(0), Some(0)], // Esus4
-    [Some(3), Some(2), Some(0), Some(0), Some(0), Some(3)], // G
-    [Some(3), Some(2), Some(0), Some(0), Some(3), Some(3)], // G alternative
-    [Some(3), Some(2), Some(0), Some(0), Some(0), Some(0)], // G6
-];
-
 // find barre length of *adjusted* chords (lowest fingered fret is positioned @ 1)
 pub fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
     if chord
@@ -66,20 +42,24 @@ pub fn find_barre_length(chord: [Option<usize>; 6]) -> usize {
     }
 }
 
-pub fn find_lowest_non_zero_fret(chord: [Option<usize>; 6]) -> Option<u8> {
-    if SPECIAL_CASE_CHORDS
-        .iter()
-        .any(|&special_chord| special_chord == chord)
-    {
-        return Some(1);
-    }
-
+pub fn lowest_fingered_fret(chord: [Option<usize>; 6]) -> Option<u8> {
     chord
         .iter()
         .filter_map(|&option| option)
         .filter(|&val| val > 0)
         .min()
-        .map(|val| val as u8)
+        .map(|val| val.try_into().unwrap())
+}
+
+pub fn lowest_fingered_fret_special_casing(chord: [Option<usize>; 6]) -> Option<u8> {
+    let lowest_fingered_fret = lowest_fingered_fret(chord);
+
+    let adjusted_chord = adjust_chord(chord, lowest_fingered_fret.unwrap_or(0));
+
+    match lowest_fingered_fret {
+        Some(2) if find_barre_length(adjusted_chord) == 0 => Some(1),
+        other => other,
+    }
 }
 
 pub fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] {
