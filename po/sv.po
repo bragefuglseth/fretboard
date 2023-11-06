@@ -7,31 +7,34 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-11-07 00:36+0000\n"
+"Last-Translator: sköldpadda <weblate@turtle.garden>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/fretboard/"
+"fretboard/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
 msgid "Fretboard"
-msgstr ""
+msgstr "Fretboard"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:9
 msgid "Look up guitar chords"
-msgstr ""
+msgstr "Hitta gitarrackord"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr ""
+msgstr "gitarr;ackord"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Brage Fuglseth"
-msgstr ""
+msgstr "Brage Fuglseth"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:11
 msgid ""
@@ -42,139 +45,145 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
+"Hur spelades det ackordet, igen? Fretboard tillåter dig finna gitarrackord "
+"med att skriva in deras namn eller med att rita dem på en interaktiv "
+"gitarrhals. När du har funnit ett ackord kan du experimenta med att ändra "
+"det, se fler sätt att spela det på, eller bokmärka det. Oavsett om du är "
+"nybörjare eller avancerad gitarrist kan du använda Fretboard för att öva, "
+"lära dig, och behärska dina favoritlåtar!"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:22
 msgid "guitar"
-msgstr ""
+msgstr "gitarr"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
 msgid "chords"
-msgstr ""
+msgstr "ackord"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "Kan vara antigen “right-handed” eller “left-handed”."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
-msgstr ""
+msgstr "Flytta upp"
 
 #: data/gtk/barre-spin.blp:27
 msgid "Move Down"
-msgstr ""
+msgstr "Flytta ner"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10
 msgid "Chord Name"
-msgstr ""
+msgstr "Ackord"
 
 #: data/gtk/chord-name-entry.blp:23
 msgid "Confirm"
-msgstr ""
+msgstr "Bekräfta"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Allmänt"
 
 #: data/gtk/help-overlay.blp:14
 msgid "Empty Chord"
-msgstr ""
+msgstr "Tomt ackord"
 
 #: data/gtk/help-overlay.blp:19
 msgid "Bookmark Chord"
-msgstr ""
+msgstr "Lägg till bokmärke för ackord"
 
 #: data/gtk/help-overlay.blp:24
 msgid "View Bookmarks"
-msgstr ""
+msgstr "Visa bokmärken"
 
 #: data/gtk/help-overlay.blp:29
 msgid "View Chord Variants"
-msgstr ""
+msgstr "Visa ackordvarianter"
 
 #: data/gtk/help-overlay.blp:34
 msgid "Focus Entry"
-msgstr ""
+msgstr "Markera namnfält"
 
 #: data/gtk/help-overlay.blp:39
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Visa tangentbordsgenvägar"
 
 #: data/gtk/help-overlay.blp:44
 msgid "Close Window"
-msgstr ""
+msgstr "Stänga fönstret"
 
 #: data/gtk/help-overlay.blp:49
 msgid "Quit"
-msgstr ""
+msgstr "Avsluta"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
-msgstr ""
+msgstr "Huvudmeny"
 
 #: data/gtk/window.blp:82
 msgid "Chord not found"
-msgstr ""
+msgstr "Ackordet hittades inte"
 
 #: data/gtk/window.blp:116
 msgid "View _Variants"
-msgstr ""
+msgstr "Visa _varianter"
 
 #: data/gtk/window.blp:179 src/window.rs:335
 msgid "Bookmarks"
-msgstr ""
+msgstr "Bokmärken"
 
 #: data/gtk/window.blp:218
 msgid "Guitar Type"
-msgstr ""
+msgstr "Gitarrtyp"
 
 #: data/gtk/window.blp:221
 msgid "Right-handed"
-msgstr ""
+msgstr "Högerhänt"
 
 #: data/gtk/window.blp:227
 msgid "Left-handed"
-msgstr ""
+msgstr "Vänsterhänt"
 
 #: data/gtk/window.blp:235
 msgid "_Empty Chord"
-msgstr ""
+msgstr "Tomt _ackord"
 
 #: data/gtk/window.blp:242
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Tangentbordagenvägar"
 
 #: data/gtk/window.blp:247
 msgid "_About Fretboard"
-msgstr ""
+msgstr "_Om Fretboard"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr ""
+msgstr "skøldis <fretboard@turtle.garden>"
 
 #: src/chord_diagram_top_toggle.rs:154
 msgid "Not Open"
-msgstr ""
+msgstr "Ej öppen"
 
 #: src/chord_diagram_top_toggle.rs:155
 msgid "Muted"
-msgstr ""
+msgstr "Dämpad"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Open"
-msgstr ""
+msgstr "Åpen"
 
 #: src/window.rs:276
 msgid "Remove Bookmark"
-msgstr ""
+msgstr "Radera bokmärke"
 
 #: src/window.rs:278
 msgid "Bookmark"
-msgstr ""
+msgstr "Lägg till bokmärke"
 
 #: src/window.rs:333
 msgid "No Bookmarks"
-msgstr ""
+msgstr "Inga bokmärken"
