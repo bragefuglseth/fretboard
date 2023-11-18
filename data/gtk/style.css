@@ -54,16 +54,12 @@ chord-diagram-toggle button:checked:hover {
 .fretboard-chord-name-entry entry {
   font-size: 1.8rem;
   padding: 8px 6px;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 12px;
 }
 
 .fretboard-chord-name-entry entry placeholder {
   color: rgba(125, 125, 125, 0.6);
-}
-
-.fretboard-chord-name-entry button image {
-  opacity: 0.5;
 }
 
 .fretboard-star-toggle:checked {

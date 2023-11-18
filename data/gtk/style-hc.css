@@ -14,10 +14,6 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-.fretboard-chord-name-entry button image {
-  opacity: 1;
-}
-
 .fretboard-star-toggle:checked:not(:hover) {
   border: 0;
   box-shadow: none;

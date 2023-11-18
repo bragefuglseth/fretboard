@@ -1,4 +1,5 @@
 using Gtk 4.0;
+using Adw 1;
 
 template $FretboardChordNameEntry : Widget {
   Overlay {
@@ -12,22 +13,45 @@ template $FretboardChordNameEntry : Widget {
 
     [overlay]
     Revealer revealer {
-      visible: false;
       transition-type: crossfade;
-      transition-duration: 150;
+      transition-duration: 200;
       halign: end;
+      margin-top: 6;
+      margin-bottom: 6;
       margin-end: 6;
 
-      Button button {
-        icon-name: "checkmark-large-symbolic";
-        tooltip-text: _("Confirm");
-        halign: end;
-        valign: center;
+      Stack stack {
+        transition-type: crossfade;
+        transition-duration: 200;
 
-        styles [
-          "flat",
-          "circular",
-        ]
+        StackPage {
+          name: "confirm-button";
+
+          child: Button button {
+            icon-name: "checkmark-large-symbolic";
+            tooltip-text: _("Confirm");
+            halign: end;
+
+            styles [
+              "flat",
+              "dim-label",
+            ]
+          };
+        }
+
+        StackPage {
+          name: "enharmonic-equivalent";
+
+          child: Button enharmonic_button {
+            halign: end;
+            tooltip-text: _("Enharmonic Equivalent");
+
+            styles [
+              "flat",
+              "dim-label",
+            ]
+          };
+        }
       }
     }
   }

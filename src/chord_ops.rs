@@ -99,3 +99,18 @@ pub fn serialize_chord_name(input: &str) -> String {
         .replace("♭", "b")
         .to_ascii_lowercase()
 }
+
+pub fn enharmonic_equivalent(chord_name: &str) -> Option<&str> {
+    match chord_name.get(0..2) {
+        Some("c#") => Some("db"),
+        Some("d#") => Some("eb"),
+        Some("g#") => Some("ab"),
+        Some("a#") => Some("bb"),
+
+        Some("db") => Some("c#"),
+        Some("eb") => Some("d#"),
+        Some("ab") => Some("g#"),
+        Some("bb") => Some("a#"),
+        _ => None,
+    }
+}

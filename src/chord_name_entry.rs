@@ -1,8 +1,8 @@
-use crate::chord_ops::{prettify_chord_name, serialize_chord_name};
+use crate::chord_ops::{prettify_chord_name, serialize_chord_name, enharmonic_equivalent};
 use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;
-use std::cell::RefCell;
+use std::cell::{Cell, RefCell};
 
 mod imp {
     use super::*;
@@ -15,9 +15,14 @@ mod imp {
         #[template_child]
         pub revealer: TemplateChild<gtk::Revealer>,
         #[template_child]
+        pub stack: TemplateChild<gtk::Stack>,
+        #[template_child]
         pub button: TemplateChild<gtk::Button>,
+        #[template_child]
+        pub enharmonic_button: TemplateChild<gtk::Button>,
 
         pub entry_buffer: RefCell<String>,
+        pub has_enharmonic_equivalent: Cell<bool>,
     }
 
     #[glib::object_subclass]
@@ -39,15 +44,34 @@ mod imp {
 
     impl ObjectImpl for FretboardChordNameEntry {
         fn constructed(&self) {
+            let obj = self.obj();
+
             self.parent_constructed();
 
             let revealer = self.revealer.get();
 
             self.entry.connect_changed(glib::clone!(@weak self as entry_wrapper => move |entry| {
                 let entry_text = entry.text().as_str().to_owned();
-                let changed = entry_text != *entry_wrapper.entry_buffer.borrow() && !entry_text.is_empty();
-                entry_wrapper.revealer.set_visible(changed);
-                entry_wrapper.revealer.set_reveal_child(changed);
+                let changed = entry_text != *entry_wrapper.entry_buffer.borrow();
+                let empty = entry_text.is_empty();
+
+                entry_wrapper.obj().calculate_enharmonic_equivalent(&entry_text);
+
+                println!("text: {entry_text}");
+                println!("buffer: {}", *entry_wrapper.entry_buffer.borrow());
+
+                if changed && !empty {
+                    entry_wrapper.stack.set_visible_child_name("confirm-button");
+                    entry_wrapper.revealer.set_visible(true);
+                    entry_wrapper.revealer.set_reveal_child(true);
+                } else if entry_wrapper.has_enharmonic_equivalent.get() && !empty {
+                    entry_wrapper.stack.set_visible_child_name("enharmonic-equivalent");
+                    entry_wrapper.revealer.set_visible(true);
+                    entry_wrapper.revealer.set_reveal_child(true);
+                } else {
+                    entry_wrapper.revealer.set_visible(false);
+                    entry_wrapper.revealer.set_reveal_child(false);
+                }
             }));
 
             self.entry.connect_activate(
@@ -67,6 +91,12 @@ mod imp {
                 .connect_clicked(glib::clone!(@weak entry => move |_|{
                     entry.emit_activate();
                 }));
+
+            self.enharmonic_button.connect_clicked(glib::clone!(@weak obj, @weak entry => move |btn| {
+                let enharmonic = btn.label().map(|gs| gs.to_string()).unwrap_or(String::from(""));
+                let modified_name = format!("{}{}", enharmonic, entry.text().chars().skip(2).collect::<String>());
+                obj.overwrite_text(&modified_name);
+            }));
         }
 
         fn dispose(&self) {
@@ -100,9 +130,26 @@ impl FretboardChordNameEntry {
     }
 
     pub fn overwrite_text(&self, text: &str) {
+        println!("overwriting…");
         let imp = self.imp();
         let text = prettify_chord_name(&text);
         imp.entry_buffer.replace(text.clone());
         imp.entry.set_text(&text);
+        self.calculate_enharmonic_equivalent(&text);
+    }
+
+    pub fn calculate_enharmonic_equivalent(&self, chord_name: &str) {
+        let imp = self.imp();
+
+        if let Some(equivalent) = enharmonic_equivalent(&serialize_chord_name(chord_name)) {
+            imp.enharmonic_button.set_label(&prettify_chord_name(equivalent));
+            imp.revealer.set_visible(true);
+            imp.revealer.set_reveal_child(true);
+            imp.stack.set_visible_child_name("enharmonic-equivalent");
+
+            imp.has_enharmonic_equivalent.set(true);
+        } else {
+            imp.has_enharmonic_equivalent.set(false);
+        }
     }
 }
