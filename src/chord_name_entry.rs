@@ -70,8 +70,6 @@ mod imp {
                     let changed = entry_text != *entry_wrapper.entry_buffer.borrow();
                     let empty = entry_text.is_empty();
 
-                    entry_wrapper.obj().calculate_enharmonic_equivalent(&entry_text);
-
                     if changed && !empty {
                         entry_wrapper.stack.set_visible_child_name("confirm-button");
                         entry_wrapper.revealer.set_visible(true);
@@ -147,6 +145,7 @@ impl FretboardChordNameEntry {
         let text = prettify_chord_name(&text);
         imp.entry_buffer.replace(text.clone());
         imp.entry.set_text(&text);
+        self.calculate_enharmonic_equivalent(&text);
     }
 
     pub fn calculate_enharmonic_equivalent(&self, chord_name: &str) {
