@@ -254,6 +254,16 @@ impl FretboardWindow {
                 win.load_chord_from_name();
             }));
 
+        let win = self.clone();
+
+        entry.connect_closure(
+            "enharmonic-clicked",
+            false,
+            closure_local!(move |_: FretboardChordNameEntry| {
+                win.refresh_star_toggle();
+            }),
+        );
+
         let star_toggle = self.imp().star_toggle.get();
 
         star_toggle
