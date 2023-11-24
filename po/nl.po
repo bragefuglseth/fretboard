@@ -5,13 +5,14 @@
 #
 # Gert-dev <qnyasgjhapqyuhoibr@kiabws.com>, 2023.
 # Philip Goto <philip.goto@gmail.com>, 2023.
+# Gert-dev <Gert-dev@users.noreply.hosted.weblate.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-04 03:55+0200\n"
-"PO-Revision-Date: 2023-09-22 06:00+0000\n"
-"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
+"PO-Revision-Date: 2023-11-25 20:03+0000\n"
+"Last-Translator: Gert-dev <Gert-dev@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/nl/>\n"
 "Language: nl\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.2.1-rc\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -67,7 +68,7 @@ msgstr "akkoorden"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "Kan oftewel \"rechtshandig\" of \"linkshandig\" zijn."
 
 #: data/gtk/barre-spin.blp:9
 msgid "Move Up"
@@ -88,44 +89,39 @@ msgstr "Bevestigen"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Algemeen"
 
 #: data/gtk/help-overlay.blp:14
-#, fuzzy
 msgid "Empty Chord"
-msgstr "_Leeg akkoord"
+msgstr "Leeg akkoord"
 
 #: data/gtk/help-overlay.blp:19
-#, fuzzy
 msgid "Bookmark Chord"
-msgstr "Bladwijzer"
+msgstr "Bladwijzer toevoegen voor akkoord"
 
 #: data/gtk/help-overlay.blp:24
-#, fuzzy
 msgid "View Bookmarks"
-msgstr "Bladwijzers"
+msgstr "Bladwijzers tonen"
 
 #: data/gtk/help-overlay.blp:29
-#, fuzzy
 msgid "View Chord Variants"
-msgstr "_Varianten bekijken"
+msgstr "Akkoordvarianten tonen"
 
 #: data/gtk/help-overlay.blp:34
 msgid "Focus Entry"
-msgstr ""
+msgstr "Ingave focussen"
 
 #: data/gtk/help-overlay.blp:39
-#, fuzzy
 msgid "Show Shortcuts"
-msgstr "_Sneltoetsen"
+msgstr "Sneltoetsen tonen"
 
 #: data/gtk/help-overlay.blp:44
 msgid "Close Window"
-msgstr ""
+msgstr "Venster sluiten"
 
 #: data/gtk/help-overlay.blp:49
 msgid "Quit"
-msgstr ""
+msgstr "Afsluiten"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
@@ -145,15 +141,15 @@ msgstr "Bladwijzers"
 
 #: data/gtk/window.blp:218
 msgid "Guitar Type"
-msgstr ""
+msgstr "Gitaartype"
 
 #: data/gtk/window.blp:221
 msgid "Right-handed"
-msgstr ""
+msgstr "Rechtshandig"
 
 #: data/gtk/window.blp:227
 msgid "Left-handed"
-msgstr ""
+msgstr "Linkshandig"
 
 #: data/gtk/window.blp:235
 msgid "_Empty Chord"
