@@ -35,6 +35,7 @@ use std::fs::File;
 use std::path::PathBuf;
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
+const INITIAL_CHORD_NAME: &'static str = "C";
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
@@ -373,21 +374,30 @@ impl FretboardWindow {
     }
 
     fn save_current_chord(&self) {
-        let chord = &self.imp().chord_diagram.imp().chord.get();
+        let chord = self.imp().chord_diagram.imp().chord.get();
+        let name = self.imp().entry.serialized_buffer_text();
+
+        let bookmark = Bookmark { name, chord };
 
         let file = File::create(chord_data_path()).expect("able to create file");
-        serde_json::to_writer(file, &chord).expect("able to write file");
+        serde_json::to_writer(file, &bookmark).expect("able to write file");
     }
 
     fn load_stored_chord(&self) {
-        let chord: [Option<usize>; 6] = if let Ok(file) = File::open(chord_data_path()) {
+        let imp = self.imp();
+
+        let bookmark: Bookmark = if let Ok(file) = File::open(chord_data_path()) {
             serde_json::from_reader(file).expect("able to read file")
         } else {
-            INITIAL_CHORD
+            Bookmark {
+                name: String::from(INITIAL_CHORD_NAME),
+                chord: INITIAL_CHORD,
+            }
         };
 
-        self.imp().chord_diagram.set_chord(chord);
-        self.load_name_from_chord();
+        imp.chord_diagram.set_chord(bookmark.chord);
+        imp.entry.overwrite_text(&bookmark.name);
+        imp.feedback_stack.set_visible_child_name("chord-actions");
     }
 
     fn save_bookmarks(&self) {
@@ -629,7 +639,7 @@ fn chord_data_path() -> PathBuf {
     let mut path = glib::user_data_dir();
     path.push(APP_ID);
     std::fs::create_dir_all(&path).expect("able to create directory");
-    path.push("chord.json");
+    path.push("current_chord.json");
     path
 }
 

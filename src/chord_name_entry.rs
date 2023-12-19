@@ -160,6 +160,9 @@ impl FretboardChordNameEntry {
 
             imp.has_enharmonic_equivalent.set(true);
         } else {
+            imp.revealer.set_visible(false);
+            imp.revealer.set_reveal_child(false);
+
             imp.has_enharmonic_equivalent.set(false);
         }
     }
