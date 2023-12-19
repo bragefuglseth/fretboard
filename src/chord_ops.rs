@@ -124,11 +124,13 @@ pub fn enharmonic_equivalent(chord_name: &str) -> Option<&str> {
     match chord_name.get(0..2) {
         Some("c#") => Some("db"),
         Some("d#") => Some("eb"),
+        Some("f#") => Some("gb"),
         Some("g#") => Some("ab"),
         Some("a#") => Some("bb"),
 
         Some("db") => Some("c#"),
         Some("eb") => Some("d#"),
+        Some("gb") => Some("f#"),
         Some("ab") => Some("g#"),
         Some("bb") => Some("a#"),
         _ => None,
