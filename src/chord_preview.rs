@@ -149,7 +149,7 @@ impl FretboardChordPreview {
 
         self.reset_visuals();
 
-        let neck_position = lowest_fingered_fret_special_casing(chord).unwrap_or(1);
+        let neck_position = lowest_fingered_fret(chord).unwrap_or(1);
 
         let adjusted_chord = adjust_chord(chord, neck_position);
 

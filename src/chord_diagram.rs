@@ -203,7 +203,7 @@ impl FretboardChordDiagram {
     pub fn set_chord(&self, chord: [Option<usize>; 6]) {
         self.imp().chord.set(chord);
 
-        self.set_neck_position(lowest_fingered_fret_special_casing(chord).unwrap_or(1));
+        self.set_neck_position(lowest_fingered_fret(chord).unwrap_or(1));
 
         self.imp().barre_spin.set_value(self.neck_position());
 
