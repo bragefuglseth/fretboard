@@ -397,7 +397,10 @@ impl FretboardWindow {
 
         imp.chord_diagram.set_chord(bookmark.chord);
         imp.entry.overwrite_text(&bookmark.name);
-        imp.feedback_stack.set_visible_child_name("chord-actions");
+
+        if bookmark.chord != EMPTY_CHORD {
+            imp.feedback_stack.set_visible_child_name("chord-actions");
+        }
     }
 
     fn save_bookmarks(&self) {
