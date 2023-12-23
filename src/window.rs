@@ -414,6 +414,8 @@ impl FretboardWindow {
         if bookmark.chord != EMPTY_CHORD {
             imp.feedback_stack.set_visible_child_name("chord-actions");
         }
+
+        self.refresh_star_toggle();
     }
 
     fn save_bookmarks(&self) {
