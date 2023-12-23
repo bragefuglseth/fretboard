@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 03:55+0200\n"
+"POT-Creation-Date: 2023-12-23 12:34+0100\n"
 "PO-Revision-Date: 2023-10-08 22:01+0000\n"
 "Last-Translator: Cassio Gomes Pereira <cassiogomes00@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -65,22 +65,26 @@ msgstr "acordes"
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr "Pode ser tanto \"right-handed\"\" quanto \"left-handed\"."
 
-#: data/gtk/barre-spin.blp:9
+#: data/gtk/barre-spin.blp:10
 msgid "Move Up"
 msgstr "Mover Para Cima"
 
-#: data/gtk/barre-spin.blp:27
+#: data/gtk/barre-spin.blp:40
 msgid "Move Down"
 msgstr "Mover Para Baixo"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10
+#: data/gtk/chord-name-entry.blp:11
 msgid "Chord Name"
 msgstr "Acorde"
 
-#: data/gtk/chord-name-entry.blp:23
+#: data/gtk/chord-name-entry.blp:32
 msgid "Confirm"
 msgstr "Confirmar"
+
+#: data/gtk/chord-name-entry.blp:47
+msgid "Enharmonic Equivalent"
+msgstr ""
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
@@ -122,39 +126,39 @@ msgstr "Sair"
 msgid "Main Menu"
 msgstr "Menu Principal"
 
-#: data/gtk/window.blp:82
+#: data/gtk/window.blp:83
 msgid "Chord not found"
 msgstr "Acorde não encontrado"
 
-#: data/gtk/window.blp:116
+#: data/gtk/window.blp:117
 msgid "View _Variants"
 msgstr "Ver _Variantes"
 
-#: data/gtk/window.blp:179 src/window.rs:335
+#: data/gtk/window.blp:181 src/window.rs:345
 msgid "Bookmarks"
 msgstr "Favoritos"
 
-#: data/gtk/window.blp:218
+#: data/gtk/window.blp:221
 msgid "Guitar Type"
 msgstr "Tipo de Guitarra"
 
-#: data/gtk/window.blp:221
+#: data/gtk/window.blp:224
 msgid "Right-handed"
 msgstr "Destro"
 
-#: data/gtk/window.blp:227
+#: data/gtk/window.blp:230
 msgid "Left-handed"
 msgstr "Canhoto"
 
-#: data/gtk/window.blp:235
+#: data/gtk/window.blp:238
 msgid "_Empty Chord"
 msgstr "_Acorde Vazio"
 
-#: data/gtk/window.blp:242
+#: data/gtk/window.blp:245
 msgid "_Keyboard Shortcuts"
 msgstr "_Atalhos de teclado"
 
-#: data/gtk/window.blp:247
+#: data/gtk/window.blp:250
 msgid "_About Fretboard"
 msgstr "_Sobre o Fretboard"
 
@@ -176,14 +180,14 @@ msgstr "Abafado"
 msgid "Open"
 msgstr "Aberto"
 
-#: src/window.rs:276
+#: src/window.rs:286
 msgid "Remove Bookmark"
 msgstr "Remover Favorito"
 
-#: src/window.rs:278
+#: src/window.rs:288
 msgid "Bookmark"
 msgstr "Favorito"
 
-#: src/window.rs:333
+#: src/window.rs:343
 msgid "No Bookmarks"
 msgstr "Não Há Favoritos"

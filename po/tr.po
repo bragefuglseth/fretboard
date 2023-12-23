@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 03:55+0200\n"
+"POT-Creation-Date: 2023-12-23 12:34+0100\n"
 "PO-Revision-Date: 2023-10-13 11:09+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/fretboard/"
@@ -66,22 +66,26 @@ msgstr "akorlar"
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr "\"right-handed\" (sağ el) ya da \"left-handed\" (sol el) olabilir."
 
-#: data/gtk/barre-spin.blp:9
+#: data/gtk/barre-spin.blp:10
 msgid "Move Up"
 msgstr "Yukarı Taşı"
 
-#: data/gtk/barre-spin.blp:27
+#: data/gtk/barre-spin.blp:40
 msgid "Move Down"
 msgstr "Aşağı Taşı"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10
+#: data/gtk/chord-name-entry.blp:11
 msgid "Chord Name"
 msgstr "Akor Adı"
 
-#: data/gtk/chord-name-entry.blp:23
+#: data/gtk/chord-name-entry.blp:32
 msgid "Confirm"
 msgstr "Doğrula"
+
+#: data/gtk/chord-name-entry.blp:47
+msgid "Enharmonic Equivalent"
+msgstr ""
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
@@ -123,39 +127,39 @@ msgstr "Çık"
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: data/gtk/window.blp:82
+#: data/gtk/window.blp:83
 msgid "Chord not found"
 msgstr "Akor bulunamadı"
 
-#: data/gtk/window.blp:116
+#: data/gtk/window.blp:117
 msgid "View _Variants"
 msgstr "_Değişkeleri Göster"
 
-#: data/gtk/window.blp:179 src/window.rs:335
+#: data/gtk/window.blp:181 src/window.rs:345
 msgid "Bookmarks"
 msgstr "Yer İmleri"
 
-#: data/gtk/window.blp:218
+#: data/gtk/window.blp:221
 msgid "Guitar Type"
 msgstr "Gitar Tipi"
 
-#: data/gtk/window.blp:221
+#: data/gtk/window.blp:224
 msgid "Right-handed"
 msgstr "Sağ el"
 
-#: data/gtk/window.blp:227
+#: data/gtk/window.blp:230
 msgid "Left-handed"
 msgstr "Sol el"
 
-#: data/gtk/window.blp:235
+#: data/gtk/window.blp:238
 msgid "_Empty Chord"
 msgstr "_Boş Akor"
 
-#: data/gtk/window.blp:242
+#: data/gtk/window.blp:245
 msgid "_Keyboard Shortcuts"
 msgstr "_Klavye Kısayolları"
 
-#: data/gtk/window.blp:247
+#: data/gtk/window.blp:250
 msgid "_About Fretboard"
 msgstr "Fretboard _Hakkında"
 
@@ -177,15 +181,15 @@ msgstr "Sessiz"
 msgid "Open"
 msgstr "Açık"
 
-#: src/window.rs:276
+#: src/window.rs:286
 msgid "Remove Bookmark"
 msgstr "Yer İmini Kaldır"
 
-#: src/window.rs:278
+#: src/window.rs:288
 msgid "Bookmark"
 msgstr "Yer İmi"
 
-#: src/window.rs:333
+#: src/window.rs:343
 msgid "No Bookmarks"
 msgstr "Yer İmi Yok"
 
