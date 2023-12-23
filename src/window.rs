@@ -306,9 +306,22 @@ impl FretboardWindow {
     }
 
     fn bookmark_chord(&self) {
-        let star_toggle = self.imp().star_toggle.get();
-        let current_chord = self.imp().chord_diagram.imp().chord.get();
-        let current_name = self.imp().entry.serialized_buffer_text();
+        let imp = self.imp();
+
+        if imp
+            .navigation_stack
+            .visible_page()
+            .expect("stack has a visible page at all times")
+            .tag()
+            .expect("all pages have tags")
+            != "chord-view"
+        {
+            return;
+        }
+
+        let star_toggle = imp.star_toggle.get();
+        let current_chord = imp.chord_diagram.imp().chord.get();
+        let current_name = imp.entry.serialized_buffer_text();
 
         self.set_focus_widget(Some(&star_toggle));
 
@@ -584,7 +597,7 @@ impl FretboardWindow {
 
         let bookmarks = imp.bookmarks.borrow();
 
-        for bookmark in bookmarks.iter() {
+        for bookmark in bookmarks.iter().rev() {
             let preview = FretboardChordPreview::with_chord(
                 bookmark.chord,
                 imp.chord_diagram.imp().guitar_type.get(),
