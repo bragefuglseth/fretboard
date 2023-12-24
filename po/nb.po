@@ -69,22 +69,23 @@ msgstr "Kan være enten “right-handed” eller “left-handed”."
 msgid "Move Up"
 msgstr "Flytt opp"
 
-#: data/gtk/barre-spin.blp:30
+#: data/gtk/barre-spin.blp:30 data/gtk/barre-spin.blp:40
 msgid "Move Down"
 msgstr "Flytt ned"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
+#: data/gtk/chord-name-entry.blp:11
 msgid "Chord Name"
 msgstr "Akkord"
 
-#: data/gtk/chord-name-entry.blp:35
+#: data/gtk/chord-name-entry.blp:35 data/gtk/chord-name-entry.blp:32
 msgid "Confirm"
 msgstr "Bekreft"
 
-#: data/gtk/chord-name-entry.blp:50
+#: data/gtk/chord-name-entry.blp:47
 msgid "Enharmonic Equivalent"
-msgstr ""
+msgstr "Tilsvarende akkord"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
@@ -134,7 +135,7 @@ msgstr "Fant ikke akkord"
 msgid "View _Variants"
 msgstr "Se _varianter"
 
-#: data/gtk/window.blp:181 src/window.rs:358
+#: data/gtk/window.blp:181 src/window.rs:358 src/window.rs:345
 msgid "Bookmarks"
 msgstr "Bokmerker"
 
@@ -167,16 +168,16 @@ msgstr "_Om Fretboard"
 msgid "translator-credits"
 msgstr "Brage Fuglseth"
 
-#: src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:157 src/chord_diagram_top_toggle.rs:154
 msgid "Not Open"
 msgstr "Ikke åpen"
 
-#: src/chord_diagram_top_toggle.rs:158
+#: src/chord_diagram_top_toggle.rs:158 src/chord_diagram_top_toggle.rs:155
 msgid "Muted"
 msgstr "Dempet"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
+#: src/chord_diagram_top_toggle.rs:160 src/chord_diagram_top_toggle.rs:157
 msgid "Open"
 msgstr "Åpen"
 
@@ -188,6 +189,6 @@ msgstr "Fjern bokmerke"
 msgid "Bookmark"
 msgstr "Legg til bokmerke"
 
-#: src/window.rs:356
+#: src/window.rs:356 src/window.rs:343
 msgid "No Bookmarks"
 msgstr "Ingen bokmerker"
