@@ -18,21 +18,11 @@ template $FretboardBarreSpin : Widget {
       ]
     }
 
-    Adw.Bin {
-      focusable: true;
+    Label label {
+      selectable: true;
 
-      Label label {
-        halign: center;
-        valign: center;
-      }
-
-      styles [
-        "fretboard-spin-label",
-      ]
-
-      accessibility {
-        labelled-by: label;
-      }
+      halign: center;
+      valign: center;
     }
 
     Button increment_button {

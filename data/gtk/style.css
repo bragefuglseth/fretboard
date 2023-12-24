@@ -87,17 +87,3 @@ chord-diagram-toggle button:checked:hover {
 .fretboard-chord-preview-button:hover {
   background-color: alpha(currentColor, 0.025);
 }
-
-/* in-house focus outline for the spin label */
-
-.fretboard-spin-label {
-  border-radius: 6px;
-  outline-color: alpha(@accent_color, 0);
-  outline-offset: 2px;
-  transition: outline-color 200ms, outline-offset 200ms;
-}
-
-.fretboard-spin-label:focus {
-  outline: 2px solid alpha(@accent_color, 0.5);
-  outline-offset: 0px;
-}
