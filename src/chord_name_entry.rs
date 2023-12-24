@@ -85,10 +85,8 @@ mod imp {
 
             self.entry.connect_activate(
                 glib::clone!(@weak revealer, @weak self as entry_wrapper => move |_| {
-                    revealer.set_visible(false);
-                    revealer.set_reveal_child(false);
-
                     let prettified_name = prettify_chord_name(&entry_wrapper.entry.text());
+                    entry_wrapper.programatically_changed.set(true);
                     entry_wrapper.obj().overwrite_text(&prettified_name);
                     entry_wrapper.entry.set_position(-1);
                 }),
@@ -144,8 +142,8 @@ impl FretboardChordNameEntry {
         let imp = self.imp();
         let text = prettify_chord_name(&text);
         imp.entry_buffer.replace(text.clone());
-        imp.entry.set_text(&text);
         self.calculate_enharmonic_equivalent(&text);
+        imp.entry.set_text(&text);
     }
 
     pub fn calculate_enharmonic_equivalent(&self, chord_name: &str) {
