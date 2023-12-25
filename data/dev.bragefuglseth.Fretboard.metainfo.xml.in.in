@@ -64,6 +64,19 @@
     <value key="GnomeSoftware::key-colors">[(153, 193, 241)]</value>
   </custom>
   <releases>
+    <release date="2023-12-25" version="5.0">
+      <description translatable="no">
+        <p>It may not arrive in wrapping paper, but this timely release of Fretboard still includes some nice gifts:</p>
+        <ul>
+          <li>An enharmonic indicator that lets you see when chords have more than one possible name</li>
+          <li>Automatic chord name formatting, turning your sloppily typed “bb maj7” into a beautiful “B♭maj7”</li>
+          <li>More consistent keyboard shortcuts</li>
+          <li>Enhanced accessibility for screen readers</li>
+          <li>German and Swedish translations, making Fretboard available in a total of 13 languages</li>
+        </ul>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
     <release date="2023-10-16" version="4.1">
       <description translatable="no">
         <p>This is a minor release with a few improvements:</p>
@@ -116,3 +129,4 @@
     </release>
   </releases>
 </component>
+
