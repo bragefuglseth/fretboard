@@ -121,7 +121,7 @@ mod imp {
 
             // Setup top toggles
             for i in 0..STRINGS {
-                let top_toggle = FretboardChordDiagramTopToggle::new(i + 1);
+                let top_toggle = FretboardChordDiagramTopToggle::new(STRINGS - i);
                 top_toggle
                     .button()
                     .connect_clicked(glib::clone!(@weak obj => move |_| {
