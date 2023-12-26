@@ -101,7 +101,7 @@ pub fn adjust_chord(chord: [Option<usize>; 6], barre: u8) -> [Option<usize>; 6] 
 
 pub fn prettify_chord_name(input: &str) -> String {
     std::iter::once(' ')
-        .chain(input.chars().filter(|c| !c.is_ascii_whitespace()))
+        .chain(input.chars().filter(|c| !c.is_whitespace()))
         .map(|c| c.to_ascii_lowercase())
         .tuple_windows::<(_, _)>()
         .map(|tuple| match tuple {
@@ -110,11 +110,17 @@ pub fn prettify_chord_name(input: &str) -> String {
             (' ' | '/', c) => c.to_ascii_uppercase(),
             (_, c) => c,
         })
-        .collect()
+        .collect::<String>()
+        .replace("dim", " dim")
+        .replace("aug", " aug")
+        .replace("maj", " maj")
 }
 
 pub fn serialize_chord_name(input: &str) -> String {
     input
+        .chars()
+        .filter(|c| !c.is_whitespace())
+        .collect::<String>()
         .replace("♯", "#")
         .replace("♭", "b")
         .to_ascii_lowercase()

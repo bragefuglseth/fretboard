@@ -13,7 +13,7 @@ mod imp {
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-name-entry.ui")]
     pub struct FretboardChordNameEntry {
         #[template_child]
-        pub entry: TemplateChild<gtk::Text>,
+        pub entry: TemplateChild<gtk::Entry>,
         #[template_child]
         pub revealer: TemplateChild<gtk::Revealer>,
         #[template_child]
@@ -130,7 +130,7 @@ impl Default for FretboardChordNameEntry {
 }
 
 impl FretboardChordNameEntry {
-    pub fn entry(&self) -> gtk::Text {
+    pub fn entry(&self) -> gtk::Entry {
         self.imp().entry.get()
     }
 
