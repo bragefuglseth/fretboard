@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-23 12:34+0100\n"
+"POT-Creation-Date: 2023-12-26 19:12+0100\n"
 "PO-Revision-Date: 2023-10-19 04:07+0000\n"
 "Last-Translator: Niklas Amann <niklas.amann95@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/fretboard/"
@@ -70,20 +70,20 @@ msgstr "Kann entweder \"Rechtshänder\" oder \"Linkshänder\" sein."
 msgid "Move Up"
 msgstr "Nach oben bewegen"
 
-#: data/gtk/barre-spin.blp:40
+#: data/gtk/barre-spin.blp:30
 msgid "Move Down"
 msgstr "Nach unten bewegen"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:11
+#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
 msgid "Chord Name"
 msgstr "Akkord"
 
-#: data/gtk/chord-name-entry.blp:32
+#: data/gtk/chord-name-entry.blp:35
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: data/gtk/chord-name-entry.blp:47
+#: data/gtk/chord-name-entry.blp:50
 msgid "Enharmonic Equivalent"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr "Akkord nicht gefunden"
 msgid "View _Variants"
 msgstr "_Varianten anzeigen"
 
-#: data/gtk/window.blp:181 src/window.rs:345
+#: data/gtk/window.blp:181 src/window.rs:358
 msgid "Bookmarks"
 msgstr "Lesezeichen"
 
@@ -168,16 +168,16 @@ msgstr "_Über Griffbrett"
 msgid "translator-credits"
 msgstr "Niklas Amann <niklas.amann95@gmail.com>"
 
-#: src/chord_diagram_top_toggle.rs:154
+#: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
 msgstr "Nicht geöffnet"
 
-#: src/chord_diagram_top_toggle.rs:155
+#: src/chord_diagram_top_toggle.rs:158
 msgid "Muted"
 msgstr "Stumm"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:160
 msgid "Open"
 msgstr "Offen"
 
@@ -189,6 +189,6 @@ msgstr "Lesezeichen entfernen"
 msgid "Bookmark"
 msgstr "Lesezeichen"
 
-#: src/window.rs:343
+#: src/window.rs:356
 msgid "No Bookmarks"
 msgstr "Keine Lesezeichen"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-23 12:34+0100\n"
+"POT-Creation-Date: 2023-12-26 19:12+0100\n"
 "PO-Revision-Date: 2023-10-13 11:09+0000\n"
 "Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/fretboard/"
@@ -69,20 +69,20 @@ msgstr "Può essere o \"right-handed\"\" o \"left-handed\"."
 msgid "Move Up"
 msgstr "Sposta in alto"
 
-#: data/gtk/barre-spin.blp:40
+#: data/gtk/barre-spin.blp:30
 msgid "Move Down"
 msgstr "Sposta in basso"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:11
+#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
 msgid "Chord Name"
 msgstr "Accordo"
 
-#: data/gtk/chord-name-entry.blp:32
+#: data/gtk/chord-name-entry.blp:35
 msgid "Confirm"
 msgstr "Conferma"
 
-#: data/gtk/chord-name-entry.blp:47
+#: data/gtk/chord-name-entry.blp:50
 msgid "Enharmonic Equivalent"
 msgstr ""
 
@@ -134,7 +134,7 @@ msgstr "Accordo non trovato"
 msgid "View _Variants"
 msgstr "Mostra _varianti"
 
-#: data/gtk/window.blp:181 src/window.rs:345
+#: data/gtk/window.blp:181 src/window.rs:358
 msgid "Bookmarks"
 msgstr "Preferiti"
 
@@ -167,16 +167,16 @@ msgstr "_Informazioni su Fretboard"
 msgid "translator-credits"
 msgstr "Davide Ferracin <davide.ferracin@protonmail.com>"
 
-#: src/chord_diagram_top_toggle.rs:154
+#: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
 msgstr "Non a vuoto"
 
-#: src/chord_diagram_top_toggle.rs:155
+#: src/chord_diagram_top_toggle.rs:158
 msgid "Muted"
 msgstr "Muta"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:160
 msgid "Open"
 msgstr "A vuoto"
 
@@ -188,7 +188,7 @@ msgstr "Rimuovi dai preferiti"
 msgid "Bookmark"
 msgstr "Aggiungi ai preferiti"
 
-#: src/window.rs:343
+#: src/window.rs:356
 msgid "No Bookmarks"
 msgstr "Nessun preferito"
 

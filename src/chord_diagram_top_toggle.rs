@@ -170,7 +170,8 @@ impl FretboardChordDiagramTopToggle {
             TopToggleState::Open => gettext!("String {}, Open", n),
         };
 
-        imp.button.update_property(&[gtk::accessible::Property::Label(&a11y_label)]);
+        imp.button
+            .update_property(&[gtk::accessible::Property::Label(&a11y_label)]);
 
         imp.button.set_tooltip_text(Some(&tooltip_text));
     }

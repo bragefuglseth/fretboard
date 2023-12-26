@@ -1,5 +1,6 @@
 use crate::chord_ops::{enharmonic_equivalent, prettify_chord_name, serialize_chord_name};
 use adw::subclass::prelude::*;
+use gettextrs::gettext;
 use glib::subclass::Signal;
 use gtk::glib;
 use gtk::prelude::*;
@@ -150,8 +151,17 @@ impl FretboardChordNameEntry {
         let imp = self.imp();
 
         if let Some(equivalent) = enharmonic_equivalent(&serialize_chord_name(chord_name)) {
+            let equivalent = prettify_chord_name(equivalent);
+
+            imp.enharmonic_button.set_label(&equivalent);
+
             imp.enharmonic_button
-                .set_label(&prettify_chord_name(equivalent));
+                .update_property(&[gtk::accessible::Property::Label(&gettext(
+                    "Enharmonic Equivalent",
+                ))]);
+            imp.enharmonic_button
+                .reset_relation(gtk::AccessibleRelation::LabelledBy);
+
             imp.revealer.set_visible(true);
             imp.revealer.set_reveal_child(true);
             imp.stack.set_visible_child_name("enharmonic-equivalent");

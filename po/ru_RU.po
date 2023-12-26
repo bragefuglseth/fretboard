@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-23 12:34+0100\n"
+"POT-Creation-Date: 2023-12-26 19:12+0100\n"
 "PO-Revision-Date: 2023-10-08 22:01+0000\n"
 "Last-Translator: беб <ikibastusloh1337@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/fretboard/"
@@ -71,20 +71,20 @@ msgstr ""
 msgid "Move Up"
 msgstr "Перейти вверх"
 
-#: data/gtk/barre-spin.blp:40
+#: data/gtk/barre-spin.blp:30
 msgid "Move Down"
 msgstr "Перейти вниз"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:11
+#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
 msgid "Chord Name"
 msgstr "Название аккорда"
 
-#: data/gtk/chord-name-entry.blp:32
+#: data/gtk/chord-name-entry.blp:35
 msgid "Confirm"
 msgstr "Подтвердить"
 
-#: data/gtk/chord-name-entry.blp:47
+#: data/gtk/chord-name-entry.blp:50
 msgid "Enharmonic Equivalent"
 msgstr ""
 
@@ -139,7 +139,7 @@ msgstr "Аккорд не найден"
 msgid "View _Variants"
 msgstr "Просмотреть _варианты"
 
-#: data/gtk/window.blp:181 src/window.rs:345
+#: data/gtk/window.blp:181 src/window.rs:358
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -174,16 +174,16 @@ msgstr ""
 "beb\n"
 "Давид Лапшин"
 
-#: src/chord_diagram_top_toggle.rs:154
+#: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
 msgstr "Не открыто"
 
-#: src/chord_diagram_top_toggle.rs:155
+#: src/chord_diagram_top_toggle.rs:158
 msgid "Muted"
 msgstr "Заглушен"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:160
 msgid "Open"
 msgstr "Открыть"
 
@@ -195,7 +195,7 @@ msgstr "Удалить закладку"
 msgid "Bookmark"
 msgstr "Добавить в закладки"
 
-#: src/window.rs:343
+#: src/window.rs:356
 msgid "No Bookmarks"
 msgstr "Нет закладок"
 
