@@ -120,8 +120,8 @@ mod imp {
                 .set_accessible_role(gtk::AccessibleRole::Presentation);
 
             // Setup top toggles
-            for _ in 0..STRINGS {
-                let top_toggle = FretboardChordDiagramTopToggle::new();
+            for i in 0..STRINGS {
+                let top_toggle = FretboardChordDiagramTopToggle::new(i + 1);
                 top_toggle
                     .button()
                     .connect_clicked(glib::clone!(@weak obj => move |_| {

@@ -30,6 +30,7 @@ mod imp {
         pub recently_toggled: Cell<bool>,
 
         pub state: Cell<TopToggleState>,
+        pub number: Cell<usize>,
     }
 
     #[glib::object_subclass]
@@ -80,8 +81,10 @@ impl Default for FretboardChordDiagramTopToggle {
 }
 
 impl FretboardChordDiagramTopToggle {
-    pub fn new() -> Self {
-        Self::default()
+    pub fn new(number: usize) -> Self {
+        let toggle = Self::default();
+        toggle.imp().number.set(number);
+        toggle
     }
 
     pub fn button(&self) -> gtk::ToggleButton {
@@ -157,6 +160,18 @@ impl FretboardChordDiagramTopToggle {
             TopToggleState::Open => gettext("Open"),
         };
 
-        self.imp().button.set_tooltip_text(Some(&tooltip_text));
+        let n = imp.number.get();
+
+        let a11y_label = match imp.state.get() {
+            // translators: {} in the following strings will be replaced by a number ("String 1, Not Open")
+            TopToggleState::Off => gettext!("String {}, Not Open", n),
+            TopToggleState::Muted => gettext!("String {}, Muted", n),
+            // translators: "open" is an adjective, not a verb.
+            TopToggleState::Open => gettext!("String {}, Open", n),
+        };
+
+        imp.button.update_property(&[gtk::accessible::Property::Label(&a11y_label)]);
+
+        imp.button.set_tooltip_text(Some(&tooltip_text));
     }
 }
