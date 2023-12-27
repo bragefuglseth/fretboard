@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-26 19:12+0100\n"
+"POT-Creation-Date: 2023-12-27 02:03+0100\n"
 "PO-Revision-Date: 2023-12-18 21:09+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/fretboard/"
@@ -83,7 +83,7 @@ msgstr "Acorde"
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: data/gtk/chord-name-entry.blp:50
+#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
 msgid "Enharmonic Equivalent"
 msgstr ""
 

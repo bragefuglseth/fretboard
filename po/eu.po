@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-26 19:12+0100\n"
+"POT-Creation-Date: 2023-12-27 02:03+0100\n"
 "PO-Revision-Date: 2023-10-14 12:01+0000\n"
 "Last-Translator: Sergio Varela <sergitroll9@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/fretboard/"
@@ -69,21 +69,20 @@ msgstr "\"right-handed\" edo \"left-handed\" izan daiteke."
 msgid "Move Up"
 msgstr "Mugitu gora"
 
-#: data/gtk/barre-spin.blp:30 data/gtk/barre-spin.blp:40
+#: data/gtk/barre-spin.blp:30
 msgid "Move Down"
 msgstr "Mugitu behera"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-#: data/gtk/chord-name-entry.blp:11
 msgid "Chord Name"
 msgstr "Akorde"
 
-#: data/gtk/chord-name-entry.blp:35 data/gtk/chord-name-entry.blp:32
+#: data/gtk/chord-name-entry.blp:35
 msgid "Confirm"
 msgstr "Baieztatu"
 
-#: data/gtk/chord-name-entry.blp:47
+#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
 msgid "Enharmonic Equivalent"
 msgstr "Enharmoniaren baliokidea"
 
@@ -135,7 +134,7 @@ msgstr "Akordea ez da aurkitu"
 msgid "View _Variants"
 msgstr "Ikusi _aldaerak"
 
-#: data/gtk/window.blp:181 src/window.rs:358 src/window.rs:345
+#: data/gtk/window.blp:181 src/window.rs:358
 msgid "Bookmarks"
 msgstr "Gogokoenak"
 
@@ -168,16 +167,16 @@ msgstr "_Fretboard-i buruz"
 msgid "translator-credits"
 msgstr "Sergio Varela https://ingrownmink4.tumblr.com"
 
-#: src/chord_diagram_top_toggle.rs:157 src/chord_diagram_top_toggle.rs:154
+#: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
 msgstr "Ireki gabe"
 
-#: src/chord_diagram_top_toggle.rs:158 src/chord_diagram_top_toggle.rs:155
+#: src/chord_diagram_top_toggle.rs:158
 msgid "Muted"
 msgstr "Isildua"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160 src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:160
 msgid "Open"
 msgstr "Irekita"
 
@@ -189,6 +188,6 @@ msgstr "Kendu gogokoa"
 msgid "Bookmark"
 msgstr "Gogokoa"
 
-#: src/window.rs:356 src/window.rs:343
+#: src/window.rs:356
 msgid "No Bookmarks"
 msgstr "Gogokorik gabe"

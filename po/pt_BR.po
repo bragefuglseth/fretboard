@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-26 19:12+0100\n"
+"POT-Creation-Date: 2023-12-27 02:03+0100\n"
 "PO-Revision-Date: 2023-10-08 22:01+0000\n"
 "Last-Translator: Cassio Gomes Pereira <cassiogomes00@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -69,21 +69,20 @@ msgstr "Pode ser tanto \"right-handed\"\" quanto \"left-handed\"."
 msgid "Move Up"
 msgstr "Mover Para Cima"
 
-#: data/gtk/barre-spin.blp:30 data/gtk/barre-spin.blp:40
+#: data/gtk/barre-spin.blp:30
 msgid "Move Down"
 msgstr "Mover Para Baixo"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-#: data/gtk/chord-name-entry.blp:11
 msgid "Chord Name"
 msgstr "Acorde"
 
-#: data/gtk/chord-name-entry.blp:35 data/gtk/chord-name-entry.blp:32
+#: data/gtk/chord-name-entry.blp:35
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: data/gtk/chord-name-entry.blp:47
+#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
 msgid "Enharmonic Equivalent"
 msgstr "Equivalente Enarmônico"
 
@@ -135,7 +134,7 @@ msgstr "Acorde não encontrado"
 msgid "View _Variants"
 msgstr "Ver _Variantes"
 
-#: data/gtk/window.blp:181 src/window.rs:358 src/window.rs:345
+#: data/gtk/window.blp:181 src/window.rs:358
 msgid "Bookmarks"
 msgstr "Favoritos"
 
@@ -168,16 +167,16 @@ msgstr "_Sobre o Fretboard"
 msgid "translator-credits"
 msgstr "Cassio Pereira <cassiogomes00@gmail.com>"
 
-#: src/chord_diagram_top_toggle.rs:157 src/chord_diagram_top_toggle.rs:154
+#: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
 msgstr "Não Aberto"
 
-#: src/chord_diagram_top_toggle.rs:158 src/chord_diagram_top_toggle.rs:155
+#: src/chord_diagram_top_toggle.rs:158
 msgid "Muted"
 msgstr "Abafado"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160 src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:160
 msgid "Open"
 msgstr "Aberto"
 
@@ -189,6 +188,6 @@ msgstr "Remover Favorito"
 msgid "Bookmark"
 msgstr "Favorito"
 
-#: src/window.rs:356 src/window.rs:343
+#: src/window.rs:356
 msgid "No Bookmarks"
 msgstr "Não Há Favoritos"
