@@ -74,22 +74,23 @@ msgstr "Kan oftewel \"rechtshandig\" of \"linkshandig\" zijn."
 msgid "Move Up"
 msgstr "Omhoog gaan"
 
-#: data/gtk/barre-spin.blp:30
+#: data/gtk/barre-spin.blp:30 data/gtk/barre-spin.blp:40
 msgid "Move Down"
 msgstr "Omlaag gaan"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
+#: data/gtk/chord-name-entry.blp:11
 msgid "Chord Name"
 msgstr "Naam akkoord"
 
-#: data/gtk/chord-name-entry.blp:35
+#: data/gtk/chord-name-entry.blp:35 data/gtk/chord-name-entry.blp:32
 msgid "Confirm"
 msgstr "Bevestigen"
 
-#: data/gtk/chord-name-entry.blp:50
+#: data/gtk/chord-name-entry.blp:47
 msgid "Enharmonic Equivalent"
-msgstr ""
+msgstr "Enharmonische equivalent"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
@@ -139,7 +140,7 @@ msgstr "Akkoord niet teruggevonden"
 msgid "View _Variants"
 msgstr "_Varianten bekijken"
 
-#: data/gtk/window.blp:181 src/window.rs:358
+#: data/gtk/window.blp:181 src/window.rs:358 src/window.rs:345
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
@@ -172,16 +173,16 @@ msgstr "_Over Fretboard"
 msgid "translator-credits"
 msgstr "credits vertalers"
 
-#: src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:157 src/chord_diagram_top_toggle.rs:154
 msgid "Not Open"
 msgstr "Niet geopend"
 
-#: src/chord_diagram_top_toggle.rs:158
+#: src/chord_diagram_top_toggle.rs:158 src/chord_diagram_top_toggle.rs:155
 msgid "Muted"
 msgstr "Gedempt"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
+#: src/chord_diagram_top_toggle.rs:160 src/chord_diagram_top_toggle.rs:157
 msgid "Open"
 msgstr "Openen"
 
@@ -193,7 +194,7 @@ msgstr "Bladwijzer verwijderen"
 msgid "Bookmark"
 msgstr "Bladwijzer"
 
-#: src/window.rs:356
+#: src/window.rs:356 src/window.rs:343
 msgid "No Bookmarks"
 msgstr "Geen bladwijzers"
 

@@ -69,22 +69,23 @@ msgstr "Pode ser tanto \"right-handed\"\" quanto \"left-handed\"."
 msgid "Move Up"
 msgstr "Mover Para Cima"
 
-#: data/gtk/barre-spin.blp:30
+#: data/gtk/barre-spin.blp:30 data/gtk/barre-spin.blp:40
 msgid "Move Down"
 msgstr "Mover Para Baixo"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
+#: data/gtk/chord-name-entry.blp:11
 msgid "Chord Name"
 msgstr "Acorde"
 
-#: data/gtk/chord-name-entry.blp:35
+#: data/gtk/chord-name-entry.blp:35 data/gtk/chord-name-entry.blp:32
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: data/gtk/chord-name-entry.blp:50
+#: data/gtk/chord-name-entry.blp:47
 msgid "Enharmonic Equivalent"
-msgstr ""
+msgstr "Equivalente Enarmônico"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
@@ -134,7 +135,7 @@ msgstr "Acorde não encontrado"
 msgid "View _Variants"
 msgstr "Ver _Variantes"
 
-#: data/gtk/window.blp:181 src/window.rs:358
+#: data/gtk/window.blp:181 src/window.rs:358 src/window.rs:345
 msgid "Bookmarks"
 msgstr "Favoritos"
 
@@ -167,16 +168,16 @@ msgstr "_Sobre o Fretboard"
 msgid "translator-credits"
 msgstr "Cassio Pereira <cassiogomes00@gmail.com>"
 
-#: src/chord_diagram_top_toggle.rs:157
+#: src/chord_diagram_top_toggle.rs:157 src/chord_diagram_top_toggle.rs:154
 msgid "Not Open"
 msgstr "Não Aberto"
 
-#: src/chord_diagram_top_toggle.rs:158
+#: src/chord_diagram_top_toggle.rs:158 src/chord_diagram_top_toggle.rs:155
 msgid "Muted"
 msgstr "Abafado"
 
 #. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
+#: src/chord_diagram_top_toggle.rs:160 src/chord_diagram_top_toggle.rs:157
 msgid "Open"
 msgstr "Aberto"
 
@@ -188,6 +189,6 @@ msgstr "Remover Favorito"
 msgid "Bookmark"
 msgstr "Favorito"
 
-#: src/window.rs:356
+#: src/window.rs:356 src/window.rs:343
 msgid "No Bookmarks"
 msgstr "Não Há Favoritos"
