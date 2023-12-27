@@ -3,6 +3,7 @@ data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in
 data/dev.bragefuglseth.Fretboard.gschema.xml
 data/gtk/barre-spin.blp
 data/gtk/chord-name-entry.blp
+src/chord_name_entry.rs
 data/gtk/help-overlay.blp
 data/gtk/window.blp
 src/application.rs
