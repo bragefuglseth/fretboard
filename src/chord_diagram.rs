@@ -159,12 +159,10 @@ mod imp {
 
             let barre_spin = self.barre_spin.get();
 
-            let obj = obj.clone();
-
             barre_spin.connect_closure(
                 "user-changed-value",
                 false,
-                closure_local!(move |_spin: FretboardBarreSpin, string: &str| {
+                closure_local!(@strong obj => move |_spin: FretboardBarreSpin, string: &str| {
                     let message = match string {
                         "increment" => SpinMessage::Increment,
                         "decrement" => SpinMessage::Decrement,
@@ -226,7 +224,7 @@ impl FretboardChordDiagram {
         };
 
         for i in 0..STRINGS {
-            let string = string_range.get(i).unwrap().clone();
+            let string = *string_range.get(i).unwrap();
 
             let top_toggle = top_toggles.get(string).unwrap();
 
@@ -299,7 +297,7 @@ impl FretboardChordDiagram {
         };
 
         for i in 0..STRINGS {
-            let string = string_range.get(i).unwrap().clone();
+            let string = *string_range.get(i).unwrap();
 
             let top_toggle = top_toggles.get(string).unwrap();
 
@@ -417,6 +415,6 @@ fn note_name(input: usize) -> &'static str {
         9 => "F♯",
         10 => "G",
         11 => "G♯",
-        _ => panic!("root note above 11"),
+        _ => unreachable!("root note above 11"),
     }
 }
