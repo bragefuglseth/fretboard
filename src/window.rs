@@ -460,13 +460,7 @@ impl FretboardWindow {
 
         let name_opt = imp.database.borrow().name_from_chord(query_chord);
 
-        let name = if let Some(name) = name_opt {
-            name
-        } else if let Some(name) = calculate_chord_name(query_chord) {
-            name
-        } else {
-            Default::default()
-        };
+        let name = name_opt.unwrap_or(calculate_chord_name(query_chord).unwrap_or_default());
 
         imp.entry.overwrite_text(&name);
         imp.feedback_stack
