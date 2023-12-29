@@ -226,7 +226,7 @@ impl FretboardChordDiagram {
         };
 
         for i in 0..STRINGS {
-            let string = string_range.get(i).unwrap().clone();
+            let string = *string_range.get(i).unwrap();
 
             let top_toggle = top_toggles.get(string).unwrap();
 
@@ -299,7 +299,7 @@ impl FretboardChordDiagram {
         };
 
         for i in 0..STRINGS {
-            let string = string_range.get(i).unwrap().clone();
+            let string = *string_range.get(i).unwrap();
 
             let top_toggle = top_toggles.get(string).unwrap();
 

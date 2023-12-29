@@ -35,7 +35,7 @@ use std::fs::File;
 use std::path::PathBuf;
 
 const EMPTY_CHORD: [Option<usize>; 6] = [None; 6];
-const INITIAL_CHORD_NAME: &'static str = "C";
+const INITIAL_CHORD_NAME: &str = "C";
 const INITIAL_CHORD: [Option<usize>; 6] = [None, Some(3), Some(2), Some(0), Some(1), Some(0)]; // C
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
@@ -440,9 +440,7 @@ impl FretboardWindow {
 
         let name = imp.entry.serialized_buffer_text();
         let db = imp.database.borrow();
-        let chord_opt = db
-            .chord_from_name(&name)
-            .map(|c| c.positions.get(0).unwrap());
+        let chord_opt = db.chord_from_name(&name).and_then(|c| c.positions.first());
 
         if let Some(chord) = chord_opt {
             imp.chord_diagram.set_chord(*chord);
@@ -525,7 +523,7 @@ impl FretboardWindow {
             .chord_from_name(&chord_name)
             .map(|chord| &chord.positions)
             .cloned()
-            .unwrap_or_else(|| Vec::new());
+            .unwrap_or_default();
 
         let container = imp.variants_container.get();
         while let Some(child) = container.first_child() {

@@ -141,7 +141,7 @@ impl FretboardChordNameEntry {
 
     pub fn overwrite_text(&self, text: &str) {
         let imp = self.imp();
-        let text = prettify_chord_name(&text);
+        let text = prettify_chord_name(text);
         imp.entry_buffer.replace(text.clone());
         self.calculate_enharmonic_equivalent(&text);
         imp.entry.set_text(&text);

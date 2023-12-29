@@ -121,8 +121,8 @@ pub fn serialize_chord_name(input: &str) -> String {
         .chars()
         .filter(|c| !c.is_whitespace())
         .collect::<String>()
-        .replace("♯", "#")
-        .replace("♭", "b")
+        .replace('♯', "#")
+        .replace('♭', "b")
         .to_ascii_lowercase()
 }
 
