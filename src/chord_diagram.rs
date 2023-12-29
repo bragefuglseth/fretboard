@@ -415,6 +415,6 @@ fn note_name(input: usize) -> &'static str {
         9 => "F♯",
         10 => "G",
         11 => "G♯",
-        _ => panic!("root note above 11"),
+        _ => unreachable!("root note above 11"),
     }
 }
