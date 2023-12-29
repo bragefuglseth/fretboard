@@ -159,12 +159,10 @@ mod imp {
 
             let barre_spin = self.barre_spin.get();
 
-            let obj = obj.clone();
-
             barre_spin.connect_closure(
                 "user-changed-value",
                 false,
-                closure_local!(move |_spin: FretboardBarreSpin, string: &str| {
+                closure_local!(@strong obj => move |_spin: FretboardBarreSpin, string: &str| {
                     let message = match string {
                         "increment" => SpinMessage::Increment,
                         "decrement" => SpinMessage::Decrement,
