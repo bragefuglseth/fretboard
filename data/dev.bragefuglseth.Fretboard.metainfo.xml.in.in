@@ -58,6 +58,20 @@
     <value key="GnomeSoftware::key-colors">[(153, 193, 241)]</value>
   </custom>
   <releases>
+    <release date="2024-01-01" version="5.1">
+      <description translatable="no">
+        <p>This update contains small additions and improvements to follow up the recent major release:</p>
+        <ul>
+          <li>Further accessibility enhancements</li>
+          <li>Some thin spaces added into chord names where appropriate, to increase readability</li>
+          <li>Protection against a common misconfiguration that tends to break apps, the <code>GTK_THEME</code> development variable</li>
+          <li>Hebrew translations, making Fretboard available in a total of 14 languages</li>
+        </ul>
+        <p>Fretboard was recently accepted into GNOME Circle, an initiative that champions the great software that is available for the GNOME platform. For more information, visit the GNOME Circle website.</p>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
+
     <release date="2023-12-25" version="5.0">
       <description translatable="no">
         <p>It may not arrive in wrapping paper, but this timely release of Fretboard still includes some nice gifts:</p>
@@ -71,6 +85,7 @@
         <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
       </description>
     </release>
+
     <release date="2023-10-16" version="4.1">
       <description translatable="no">
         <p>This is a minor release with a few improvements:</p>
@@ -81,6 +96,7 @@
         <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
       </description>
     </release>
+
     <release date="2023-10-13" version="4.0">
       <description translatable="no">
         <p>This release of Fretboard makes it more accessible:</p>
@@ -92,6 +108,7 @@
         <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
       </description>
     </release>
+
     <release date="2023-09-20" version="3.0">
       <description translatable="no">
         <p>GNOME 45 is finally here! To celebrate, Fretboard has gained the following improvements:</p>
@@ -103,6 +120,7 @@
         <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
       </description>
     </release>
+
     <release date="2023-08-28" version="2.0">
       <description translatable="no">
         <p>This major release of Fretboard brings a bunch of exciting improvements:</p>
@@ -116,6 +134,7 @@
         <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
       </description>
     </release>
+
     <release date="2023-07-01" version="1.0">
       <description translatable="no">
         <p>Initial release.</p>
