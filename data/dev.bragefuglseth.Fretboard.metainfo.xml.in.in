@@ -16,8 +16,16 @@
       if you are a beginner or an advanced guitarist, you can use Fretboard to
       practice, learn, and master your favorite songs!
 	  </p>
+    <p>
+      Fretboard is proudly part of GNOME Circle, an initiative that champions the great software that is available for the GNOME platform. For more information, visit the GNOME Circle website.
+    </p>
   </description>
   <translation type="gettext">@gettext-package@</translation>
+  <categories>
+    <category>Education</category>
+    <category>GTK</category>
+    <category>GNOME</category>
+  </categories>
   <keywords>
     <keyword>guitar</keyword>
     <keyword>chords</keyword>
@@ -46,9 +54,9 @@
     </screenshot>
   </screenshots>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
-  <url type="homepage">https://github.com/bragefuglseth/fretboard</url>
+  <url type="homepage">https://apps.gnome.org/Fretboard</url>
   <url type="bugtracker">https://github.com/bragefuglseth/fretboard/issues</url>
-  <url type="contribute">https://github.com/bragefuglseth/fretboard#contributing</url>
+  <url type="contribute">https://welcome.gnome.org/app/Fretboard</url>
   <url type="translate">https://hosted.weblate.org/engage/fretboard/</url>
   <url type="vcs-browser">https://github.com/bragefuglseth/fretboard</url>
   <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>

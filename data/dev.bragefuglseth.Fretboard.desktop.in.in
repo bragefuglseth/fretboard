@@ -5,7 +5,7 @@ Exec=fretboard
 Icon=@icon@
 Terminal=false
 Type=Application
-Categories=GTK;Education;
+Categories=Education;GTK;GNOME
 Keywords=guitar;chords
 StartupNotify=true
 # Translators: Do NOT translate or transliterate this text (these are enum types)!
