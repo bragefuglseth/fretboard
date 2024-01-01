@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-27 02:03+0100\n"
+"POT-Creation-Date: 2024-01-01 23:20+0100\n"
 "PO-Revision-Date: 2023-10-19 04:07+0000\n"
 "Last-Translator: Niklas Amann <niklas.amann95@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/fretboard/"
@@ -53,11 +53,18 @@ msgstr ""
 "oder Fortgeschrittener, nutze Griffbrett um zu üben, zu lernen und deine "
 "Lieblingssongs zu meistern!"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:22
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:19
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
 msgid "guitar"
 msgstr "Gitarre"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "chords"
 msgstr "Akkorde"
 
