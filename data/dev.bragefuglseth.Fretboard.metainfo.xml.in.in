@@ -21,15 +21,6 @@
     </p>
   </description>
   <translation type="gettext">@gettext-package@</translation>
-  <categories>
-    <category>Education</category>
-    <category>GTK</category>
-    <category>GNOME</category>
-  </categories>
-  <keywords>
-    <keyword>guitar</keyword>
-    <keyword>chords</keyword>
-  </keywords>
   <requires>
     <internet>offline-only</internet>
     <display_length compare="ge">360</display_length>
