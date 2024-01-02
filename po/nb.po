@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
-# Brage Fuglseth <brage.fuglseth@gmail.com>, 2023.
+# Brage Fuglseth <brage.fuglseth@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 23:20+0100\n"
-"PO-Revision-Date: 2023-10-13 11:09+0000\n"
+"PO-Revision-Date: 2024-01-04 08:06+0000\n"
 "Last-Translator: Brage Fuglseth <brage.fuglseth@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "fretboard/fretboard/nb_NO/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -58,6 +58,9 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard er en stolt del av GNOME Circle, et initiativ som fremmer den "
+"eksemplariske programvaren som er tilgjengelig for GNOME-plattformen. For "
+"mer informasjon, besøk nettstedet til GNOME Circle."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
 msgid "guitar"
