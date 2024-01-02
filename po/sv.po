@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # sköldpadda <weblate@turtle.garden>, 2023.
+# bittin1ddc447d824349b2 <bittin@reimu.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 23:20+0100\n"
-"PO-Revision-Date: 2023-11-07 00:36+0000\n"
-"Last-Translator: sköldpadda <weblate@turtle.garden>\n"
+"PO-Revision-Date: 2024-01-04 08:06+0000\n"
+"Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/sv/>\n"
 "Language: sv\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -58,6 +59,9 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard är en stolt del av GNOME Circle, ett initiativ som kämpar för den "
+"fantastiska programvaran som är tillgänglig för GNOME-plattformen. För mer "
+"information, besök GNOME Circle-webbplatsen."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
 msgid "guitar"
