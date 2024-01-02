@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
-# Sabri Ünal <libreajans@gmail.com>, 2023.
+# Sabri Ünal <libreajans@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 23:20+0100\n"
-"PO-Revision-Date: 2023-10-13 11:09+0000\n"
+"PO-Revision-Date: 2024-01-04 08:06+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -59,6 +59,9 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard, GNOME platformu için var olan harika yazılımları destekleyen bir "
+"girişim olan GNOME Circleʼın bir parçasıdır. Daha fazla bilgi için GNOME "
+"Circle web sitesini ziyaret edin."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
 msgid "guitar"
