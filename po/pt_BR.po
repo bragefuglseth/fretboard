@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # Cassio Gomes Pereira <cassiogomes00@gmail.com>, 2023.
+# Filipe Motta <luiz_filipe_motta@hotmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 23:20+0100\n"
-"PO-Revision-Date: 2023-10-08 22:01+0000\n"
-"Last-Translator: Cassio Gomes Pereira <cassiogomes00@gmail.com>\n"
+"PO-Revision-Date: 2024-01-04 08:06+0000\n"
+"Last-Translator: Filipe Motta <luiz_filipe_motta@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "fretboard/fretboard/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -58,6 +59,9 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"O Fretboard tem orgulho de fazer parte do GNOME Circle, uma iniciativa que "
+"promove os ótimos programas disponíveis para a plataforma do GNOME. Para "
+"mais informações, visite o site do GNOME Circle."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
 msgid "guitar"
@@ -172,7 +176,9 @@ msgstr "_Sobre o Fretboard"
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr "Cassio Pereira <cassiogomes00@gmail.com>"
+msgstr ""
+"Cassio Pereira <cassiogomes00@gmail.com>\n"
+"Filipe Motta <luizfilipemotta@gmail.com>"
 
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
