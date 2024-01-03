@@ -4,15 +4,15 @@
 # Gert-dev, 2023.
 #
 # Gert-dev <qnyasgjhapqyuhoibr@kiabws.com>, 2023.
-# Philip Goto <philip.goto@gmail.com>, 2023.
+# Philip Goto <philip.goto@gmail.com>, 2023, 2024.
 # Gert-dev <Gert-dev@users.noreply.hosted.weblate.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 23:20+0100\n"
-"PO-Revision-Date: 2023-11-25 20:03+0000\n"
-"Last-Translator: Gert-dev <Gert-dev@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2024-01-04 08:06+0000\n"
+"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/nl/>\n"
 "Language: nl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2.1-rc\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -63,6 +63,9 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard maakt met trots deel uit van GNOME Circle, een initiatief dat "
+"pleit voor de geweldige software die beschikbaar is voor het GNOME-platform. "
+"Bezoek de GNOME Circle-website voor meer informatie."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
 msgid "guitar"
