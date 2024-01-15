@@ -61,6 +61,12 @@
     <value key="GnomeSoftware::key-colors">[(153, 193, 241)]</value>
   </custom>
   <releases>
+    <release date="2024-01-15" version="5.3">
+      <description translatable="no">
+        <p>This update improves the translations of Fretboard into other languages.</p>
+      </description>
+    </release>
+
     <release date="2024-01-06" version="5.2">
       <description translatable="no">
         <p>This update improves the translations of Fretboard into other languages.</p>
