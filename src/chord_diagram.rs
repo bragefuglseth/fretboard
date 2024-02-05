@@ -24,7 +24,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, glib::Properties, gtk::CompositeTemplate)]
-    #[properties( wrapper = super::FretboardChordDiagram )]
+    #[properties( wrapper_type = super::FretboardChordDiagram )]
     #[template(resource = "/dev/bragefuglseth/Fretboard/chord-diagram.ui")]
     pub struct FretboardChordDiagram {
         #[template_child]
