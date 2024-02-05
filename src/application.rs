@@ -105,7 +105,7 @@ impl FretboardApplication {
 
     fn show_about(&self) {
         let window = self.active_window().unwrap();
-        let about = adw::AboutWindow::from_appdata(
+        let about = adw::AboutDialog::from_appdata(
             "/dev/bragefuglseth/Fretboard/metainfo.xml",
             Some("5.0"),
         );
