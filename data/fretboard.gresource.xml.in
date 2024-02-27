@@ -10,6 +10,7 @@
     <file preprocess="xml-stripblanks" alias="library-symbolic.svg">icons/library-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="star-outline-rounded-symbolic.svg">icons/star-outline-rounded-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="star-large-symbolic.svg">icons/star-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="fretboard-symbolic.svg">icons/dev.bragefuglseth.Fretboard-symbolic.svg</file>
   </gresource>
 
   <gresource prefix="/dev/bragefuglseth/Fretboard">

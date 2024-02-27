@@ -76,6 +76,10 @@ mod imp {
         #[template_child]
         pub variants_page: TemplateChild<adw::NavigationPage>,
         #[template_child]
+        pub variants_stack: TemplateChild<gtk::Stack>,
+        #[template_child]
+        pub no_variants_page: TemplateChild<adw::StatusPage>,
+        #[template_child]
         pub variants_scrolled_window: TemplateChild<gtk::ScrolledWindow>,
         #[template_child]
         pub variants_container: TemplateChild<gtk::FlowBox>,
@@ -294,6 +298,9 @@ impl FretboardWindow {
         imp.more_variants_button_image
             .set_accessible_role(gtk::AccessibleRole::Presentation);
 
+        // translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+        imp.no_variants_page.set_description(Some(&gettext!("There are no chords with this name in Fretboard’s built-in chord set. If you think there should be, {}reach out{}.", "<a href=\"https://github.com/bragefuglseth/fretboard/issues\">", "</a>")));
+
         self.load_bookmarks();
 
         self.refresh_bookmarks_button();
@@ -460,7 +467,10 @@ impl FretboardWindow {
 
         let name_opt = imp.database.borrow().name_from_chord(query_chord);
 
-        let name = name_opt.unwrap_or(calculate_chord_name(query_chord).unwrap_or_default());
+        dbg!(&name_opt);
+
+        let name =
+            name_opt.unwrap_or_else(|| calculate_chord_name(query_chord).unwrap_or_default());
 
         imp.entry.overwrite_text(&name);
         imp.feedback_stack
@@ -518,6 +528,13 @@ impl FretboardWindow {
             .map(|chord| &chord.positions)
             .cloned()
             .unwrap_or_default();
+
+        imp.variants_stack
+            .set_visible_child_name(if variants.is_empty() {
+                "no-variants"
+            } else {
+                "variants"
+            });
 
         let container = imp.variants_container.get();
         while let Some(child) = container.first_child() {

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 23:20+0100\n"
+"POT-Creation-Date: 2024-02-27 22:22+0100\n"
 "PO-Revision-Date: 2024-01-04 08:06+0000\n"
 "Last-Translator: Brage Fuglseth <brage.fuglseth@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -24,7 +24,7 @@ msgid "Fretboard"
 msgstr "Fretboard"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:9
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid "Look up guitar chords"
 msgstr "Finn gitarakkorder"
 
@@ -32,11 +32,7 @@ msgstr "Finn gitarakkorder"
 msgid "guitar;chords"
 msgstr "gitar;akkorder"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
-msgid "Brage Fuglseth"
-msgstr "Brage Fuglseth"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:11
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:15
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their names or plotting them on an interactive guitar neck. When you "
@@ -52,7 +48,7 @@ msgstr ""
 "nybegynner eller en erfaren gitarist, vil du kunne bruke Fretboard til å "
 "øve, lære og mestre favorittlåtene dine!"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:19
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
 msgid ""
 "Fretboard is proudly part of GNOME Circle, an initiative that champions the "
 "great software that is available for the GNOME platform. For more "
@@ -61,14 +57,6 @@ msgstr ""
 "Fretboard er en stolt del av GNOME Circle, et initiativ som fremmer den "
 "eksemplariske programvaren som er tilgjengelig for GNOME-plattformen. For "
 "mer informasjon, besøk nettstedet til GNOME Circle."
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
-msgid "guitar"
-msgstr "gitar"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
-msgid "chords"
-msgstr "akkorder"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
@@ -100,35 +88,39 @@ msgstr "Tilsvarende akkord"
 msgid "General"
 msgstr "Generelt"
 
-#: data/gtk/help-overlay.blp:14
+#. translators: "Empty" is a verb
+#: data/gtk/help-overlay.blp:15
 msgid "Empty Chord"
 msgstr "Tom akkord"
 
-#: data/gtk/help-overlay.blp:19
+#. translators: "Bookmark" is a verb
+#: data/gtk/help-overlay.blp:21
 msgid "Bookmark Chord"
 msgstr "Legg til bokmerke for akkord"
 
-#: data/gtk/help-overlay.blp:24
+#: data/gtk/help-overlay.blp:26
 msgid "View Bookmarks"
 msgstr "Se bokmerker"
 
-#: data/gtk/help-overlay.blp:29
+#: data/gtk/help-overlay.blp:31
 msgid "View Chord Variants"
 msgstr "Se akkordvarianter"
 
-#: data/gtk/help-overlay.blp:34
+#. translators: "Focus" is a verb
+#: data/gtk/help-overlay.blp:37
 msgid "Focus Entry"
 msgstr "Marker navnefelt"
 
-#: data/gtk/help-overlay.blp:39
-msgid "Show Shortcuts"
+#: data/gtk/help-overlay.blp:42
+#, fuzzy
+msgid "View Shortcuts"
 msgstr "Vis tastatursnarveier"
 
-#: data/gtk/help-overlay.blp:44
+#: data/gtk/help-overlay.blp:47
 msgid "Close Window"
 msgstr "Lukk vindu"
 
-#: data/gtk/help-overlay.blp:49
+#: data/gtk/help-overlay.blp:52
 msgid "Quit"
 msgstr "Avslutt"
 
@@ -144,31 +136,37 @@ msgstr "Fant ikke akkord"
 msgid "View _Variants"
 msgstr "Se _varianter"
 
-#: data/gtk/window.blp:181 src/window.rs:358
+#: data/gtk/window.blp:158
+#, fuzzy
+msgid "No Variants"
+msgstr "Se _varianter"
+
+#: data/gtk/window.blp:200 src/window.rs:365
 msgid "Bookmarks"
 msgstr "Bokmerker"
 
-#: data/gtk/window.blp:221
+#: data/gtk/window.blp:240
 msgid "Guitar Type"
 msgstr "Gitartype"
 
-#: data/gtk/window.blp:224
+#: data/gtk/window.blp:243
 msgid "Right-handed"
 msgstr "Høyrehendt"
 
-#: data/gtk/window.blp:230
+#: data/gtk/window.blp:249
 msgid "Left-handed"
 msgstr "Venstrehendt"
 
-#: data/gtk/window.blp:238
+#. translators: "Empty" is a verb
+#: data/gtk/window.blp:258
 msgid "_Empty Chord"
 msgstr "Tøm _akkord"
 
-#: data/gtk/window.blp:245
+#: data/gtk/window.blp:265
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastatursnarveier"
 
-#: data/gtk/window.blp:250
+#: data/gtk/window.blp:270
 msgid "_About Fretboard"
 msgstr "_Om Fretboard"
 
@@ -190,14 +188,23 @@ msgstr "Dempet"
 msgid "Open"
 msgstr "Åpen"
 
-#: src/window.rs:286
+#: src/window.rs:290
 msgid "Remove Bookmark"
 msgstr "Fjern bokmerke"
 
-#: src/window.rs:288
+#: src/window.rs:292
 msgid "Bookmark"
 msgstr "Legg til bokmerke"
 
-#: src/window.rs:356
+#: src/window.rs:363
 msgid "No Bookmarks"
 msgstr "Ingen bokmerker"
+
+#~ msgid "Brage Fuglseth"
+#~ msgstr "Brage Fuglseth"
+
+#~ msgid "guitar"
+#~ msgstr "gitar"
+
+#~ msgid "chords"
+#~ msgstr "akkorder"

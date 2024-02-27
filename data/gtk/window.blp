@@ -143,31 +143,50 @@ template $FretboardWindow : Adw.ApplicationWindow {
     Adw.NavigationPage variants_page {
       title: "";
       tag: "more-variants";
-      child: 
+      child:
       Adw.ToolbarView {
 
         [top]
         Adw.HeaderBar {}
 
-        content: ScrolledWindow variants_scrolled_window {
-          hscrollbar-policy: never;
+        content: Stack variants_stack {
+          StackPage {
+            name: "no-variants";
 
-          Adw.Clamp {
-            maximum-size: 1000;
-            tightening-threshold: 700;
-            unit: px;
-
-            FlowBox variants_container {
-              selection-mode: none;
-              homogeneous: true;
-              margin-top: 12;
-              margin-bottom: 24;
-              margin-start: 24;
-              margin-end: 24;
-              row-spacing: 12;
-              column-spacing: 12;
-              valign: start;
+            child: Adw.StatusPage no_variants_page {
+              icon-name: "fretboard-symbolic";
+              title: _("No Variants");
             }
+
+            ;
+          }
+
+          StackPage {
+            name: "variants";
+
+            child: ScrolledWindow variants_scrolled_window {
+              hscrollbar-policy: never;
+
+              Adw.Clamp {
+                maximum-size: 1000;
+                tightening-threshold: 700;
+                unit: px;
+
+                FlowBox variants_container {
+                  selection-mode: none;
+                  homogeneous: true;
+                  margin-top: 12;
+                  margin-bottom: 24;
+                  margin-start: 24;
+                  margin-end: 24;
+                  row-spacing: 12;
+                  column-spacing: 12;
+                  valign: start;
+                }
+              }
+            }
+
+            ;
           }
         }
 
@@ -235,6 +254,7 @@ menu primary_menu {
 
   section {
     item {
+      // translators: "Empty" is a verb
       label: _("_Empty Chord");
       action: "win.empty-chord";
     }

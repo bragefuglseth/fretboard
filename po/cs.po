@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 23:20+0100\n"
+"POT-Creation-Date: 2024-02-27 22:22+0100\n"
 "PO-Revision-Date: 2024-02-02 14:01+0000\n"
 "Last-Translator: Ten dlabaja <dlabaja.jan@seznam.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/fretboard/"
@@ -24,7 +24,7 @@ msgid "Fretboard"
 msgstr "Fretboard"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:9
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid "Look up guitar chords"
 msgstr "Najděte kytarové akordy"
 
@@ -32,11 +32,7 @@ msgstr "Najděte kytarové akordy"
 msgid "guitar;chords"
 msgstr "kytara;akordy"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
-msgid "Brage Fuglseth"
-msgstr "Brage Fuglseth"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:11
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:15
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their names or plotting them on an interactive guitar neck. When you "
@@ -52,7 +48,7 @@ msgstr ""
 "nebo pokročilý - Fretboard můžete používat ke cvičení, učení a zdokonalování "
 "vašich oblíbených písniček!"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:19
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
 msgid ""
 "Fretboard is proudly part of GNOME Circle, an initiative that champions the "
 "great software that is available for the GNOME platform. For more "
@@ -61,14 +57,6 @@ msgstr ""
 "Fretboard je hrdou součástí iniciativy GNOME Circle, která podporuje skvělý "
 "software dostupný pro platformu GNOME. Další informace najdete na webu GNOME "
 "Circle."
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:30
-msgid "guitar"
-msgstr "kytara"
-
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
-msgid "chords"
-msgstr "akordy"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
@@ -100,35 +88,39 @@ msgstr "Enharmonický Ekvivalent"
 msgid "General"
 msgstr "Obecné"
 
-#: data/gtk/help-overlay.blp:14
+#. translators: "Empty" is a verb
+#: data/gtk/help-overlay.blp:15
 msgid "Empty Chord"
 msgstr "Smazat Akord"
 
-#: data/gtk/help-overlay.blp:19
+#. translators: "Bookmark" is a verb
+#: data/gtk/help-overlay.blp:21
 msgid "Bookmark Chord"
 msgstr "Uložit Akord"
 
-#: data/gtk/help-overlay.blp:24
+#: data/gtk/help-overlay.blp:26
 msgid "View Bookmarks"
 msgstr "Zobrazit Záložky"
 
-#: data/gtk/help-overlay.blp:29
+#: data/gtk/help-overlay.blp:31
 msgid "View Chord Variants"
 msgstr "Zobrazit Varianty Akordů"
 
-#: data/gtk/help-overlay.blp:34
+#. translators: "Focus" is a verb
+#: data/gtk/help-overlay.blp:37
 msgid "Focus Entry"
 msgstr "Zaměřit Vstup"
 
-#: data/gtk/help-overlay.blp:39
-msgid "Show Shortcuts"
+#: data/gtk/help-overlay.blp:42
+#, fuzzy
+msgid "View Shortcuts"
 msgstr "Zobrazit Klávesové Zkratky"
 
-#: data/gtk/help-overlay.blp:44
+#: data/gtk/help-overlay.blp:47
 msgid "Close Window"
 msgstr "Zavřít Okno"
 
-#: data/gtk/help-overlay.blp:49
+#: data/gtk/help-overlay.blp:52
 msgid "Quit"
 msgstr "Ukončit"
 
@@ -144,31 +136,37 @@ msgstr "Akord nenalezen"
 msgid "View _Variants"
 msgstr "Zobrazit _Varianty"
 
-#: data/gtk/window.blp:181 src/window.rs:358
+#: data/gtk/window.blp:158
+#, fuzzy
+msgid "No Variants"
+msgstr "Zobrazit _Varianty"
+
+#: data/gtk/window.blp:200 src/window.rs:365
 msgid "Bookmarks"
 msgstr "Záložky"
 
-#: data/gtk/window.blp:221
+#: data/gtk/window.blp:240
 msgid "Guitar Type"
 msgstr "Typ Kytary"
 
-#: data/gtk/window.blp:224
+#: data/gtk/window.blp:243
 msgid "Right-handed"
 msgstr "Pravák"
 
-#: data/gtk/window.blp:230
+#: data/gtk/window.blp:249
 msgid "Left-handed"
 msgstr "Levák"
 
-#: data/gtk/window.blp:238
+#. translators: "Empty" is a verb
+#: data/gtk/window.blp:258
 msgid "_Empty Chord"
 msgstr "_Smazat Akord"
 
-#: data/gtk/window.blp:245
+#: data/gtk/window.blp:265
 msgid "_Keyboard Shortcuts"
 msgstr "_Klávesové Zkratky"
 
-#: data/gtk/window.blp:250
+#: data/gtk/window.blp:270
 msgid "_About Fretboard"
 msgstr "_O Aplikaci Fretboard"
 
@@ -190,14 +188,23 @@ msgstr "Ztlumený"
 msgid "Open"
 msgstr "Otevřený"
 
-#: src/window.rs:286
+#: src/window.rs:290
 msgid "Remove Bookmark"
 msgstr "Odstranit Záložku"
 
-#: src/window.rs:288
+#: src/window.rs:292
 msgid "Bookmark"
 msgstr "Záložka"
 
-#: src/window.rs:356
+#: src/window.rs:363
 msgid "No Bookmarks"
 msgstr "Žádné Záložky"
+
+#~ msgid "Brage Fuglseth"
+#~ msgstr "Brage Fuglseth"
+
+#~ msgid "guitar"
+#~ msgstr "kytara"
+
+#~ msgid "chords"
+#~ msgstr "akordy"

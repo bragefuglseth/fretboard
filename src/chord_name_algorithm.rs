@@ -18,18 +18,29 @@ pub fn calculate_chord_name(chord: [Option<usize>; 6]) -> Option<String> {
             _ => None,
         })
         .map(|val| val % SCALE_SIZE)
-        .unique()
         .collect();
 
-    let root = notes.first()?;
+    // Try to generate a simple chord name in the style of "Fmaj7"
+    if let Some(name) = find_isolated_chord_name(&notes) {
+        return Some(name);
+    }
 
-    let intervals: Vec<usize> = notes
-        .iter()
-        .map(|n| sub_wrapping(*n, *root, SCALE_SIZE))
-        .sorted()
-        .collect();
+    let notes_without_first = notes.clone().into_iter().skip(1).collect::<Vec<usize>>();
 
-    let note_name = match root {
+    // Try to generate a chord name with an alternate bass note, in the style of "Fmaj7/C"
+    if let Some(name) = find_isolated_chord_name(&notes_without_first) {
+        let bass_note = find_note_name(*notes.first()?);
+
+        println!("algorithm {name}/{bass_note}");
+
+        return Some(format!("{name}/{bass_note}"));
+    }
+
+    None
+}
+
+fn find_note_name(value: usize) -> &'static str {
+    match value {
         0 => "A",
         1 => "A#",
         2 => "B",
@@ -43,7 +54,24 @@ pub fn calculate_chord_name(chord: [Option<usize>; 6]) -> Option<String> {
         10 => "G",
         11 => "G#",
         _ => panic!("root note above 11"),
-    };
+    }
+}
+
+// Generates a chord name from a set of notes, e.g. "Am" or "Fmaj7", without taking alternative
+// bass notes into account
+fn find_isolated_chord_name(notes: &Vec<usize>) -> Option<String> {
+    let first = notes.first()?;
+
+    let intervals: Vec<usize> = notes
+        .iter()
+        .unique()
+        .map(|n| sub_wrapping(*n, *first, SCALE_SIZE))
+        .sorted()
+        .collect();
+
+    dbg!(&intervals);
+
+    let note_name = find_note_name(*first);
 
     // this list can be extended with more possible intervals
     let suffix = match intervals.as_slice() {
