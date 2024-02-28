@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-27 22:22+0100\n"
-"PO-Revision-Date: 2024-01-04 08:06+0000\n"
+"PO-Revision-Date: 2024-02-28 20:19+0000\n"
 "Last-Translator: Brage Fuglseth <brage.fuglseth@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "fretboard/fretboard/nb_NO/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -91,20 +91,20 @@ msgstr "Generelt"
 #. translators: "Empty" is a verb
 #: data/gtk/help-overlay.blp:15
 msgid "Empty Chord"
-msgstr "Tom akkord"
+msgstr "Tøm akkord"
 
 #. translators: "Bookmark" is a verb
 #: data/gtk/help-overlay.blp:21
 msgid "Bookmark Chord"
-msgstr "Legg til bokmerke for akkord"
+msgstr "Legg til bokmerke"
 
 #: data/gtk/help-overlay.blp:26
 msgid "View Bookmarks"
-msgstr "Se bokmerker"
+msgstr "Vis bokmerker"
 
 #: data/gtk/help-overlay.blp:31
 msgid "View Chord Variants"
-msgstr "Se akkordvarianter"
+msgstr "Vis akkordvarianter"
 
 #. translators: "Focus" is a verb
 #: data/gtk/help-overlay.blp:37
@@ -134,12 +134,11 @@ msgstr "Fant ikke akkord"
 
 #: data/gtk/window.blp:117
 msgid "View _Variants"
-msgstr "Se _varianter"
+msgstr "Vis _varianter"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "Se _varianter"
+msgstr "Ingen varianter"
 
 #: data/gtk/window.blp:200 src/window.rs:365
 msgid "Bookmarks"
