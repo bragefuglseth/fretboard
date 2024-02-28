@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 22:22+0100\n"
+"POT-Creation-Date: 2024-02-28 21:44+0100\n"
 "PO-Revision-Date: 2024-01-04 08:06+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/fretboard/"
@@ -146,7 +146,7 @@ msgstr "_Varianten bekijken"
 msgid "No Variants"
 msgstr "_Varianten bekijken"
 
-#: data/gtk/window.blp:200 src/window.rs:365
+#: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
@@ -193,15 +193,21 @@ msgstr "Gedempt"
 msgid "Open"
 msgstr "Openen"
 
-#: src/window.rs:290
+#: src/window.rs:291
 msgid "Remove Bookmark"
 msgstr "Bladwijzer verwijderen"
 
-#: src/window.rs:292
+#: src/window.rs:293
 msgid "Bookmark"
 msgstr "Bladwijzer"
 
-#: src/window.rs:363
+#: src/window.rs:304
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+
+#: src/window.rs:366
 msgid "No Bookmarks"
 msgstr "Geen bladwijzers"
 

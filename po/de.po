@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 22:22+0100\n"
+"POT-Creation-Date: 2024-02-28 21:44+0100\n"
 "PO-Revision-Date: 2023-10-19 04:07+0000\n"
 "Last-Translator: Niklas Amann <niklas.amann95@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/fretboard/"
@@ -139,7 +139,7 @@ msgstr "_Varianten anzeigen"
 msgid "No Variants"
 msgstr "_Varianten anzeigen"
 
-#: data/gtk/window.blp:200 src/window.rs:365
+#: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
 msgstr "Lesezeichen"
 
@@ -186,15 +186,21 @@ msgstr "Stumm"
 msgid "Open"
 msgstr "Offen"
 
-#: src/window.rs:290
+#: src/window.rs:291
 msgid "Remove Bookmark"
 msgstr "Lesezeichen entfernen"
 
-#: src/window.rs:292
+#: src/window.rs:293
 msgid "Bookmark"
 msgstr "Lesezeichen"
 
-#: src/window.rs:363
+#: src/window.rs:304
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+
+#: src/window.rs:366
 msgid "No Bookmarks"
 msgstr "Keine Lesezeichen"
 

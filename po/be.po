@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 22:22+0100\n"
+"POT-Creation-Date: 2024-02-28 21:44+0100\n"
 "PO-Revision-Date: 2024-01-08 22:06+0000\n"
 "Last-Translator: Yahor <k1llo2810@protonmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/fretboard/"
@@ -144,7 +144,7 @@ msgstr "Праглядзець _варыянты"
 msgid "No Variants"
 msgstr "Праглядзець _варыянты"
 
-#: data/gtk/window.blp:200 src/window.rs:365
+#: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
 msgstr "Закладкі"
 
@@ -191,15 +191,21 @@ msgstr "Прыглушаны"
 msgid "Open"
 msgstr "Адкрыты"
 
-#: src/window.rs:290
+#: src/window.rs:291
 msgid "Remove Bookmark"
 msgstr "Выдаліць закладку"
 
-#: src/window.rs:292
+#: src/window.rs:293
 msgid "Bookmark"
 msgstr "Дадаць у закладкі"
 
-#: src/window.rs:363
+#: src/window.rs:304
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+
+#: src/window.rs:366
 msgid "No Bookmarks"
 msgstr "Няма закладак"
 

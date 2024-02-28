@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 22:22+0100\n"
+"POT-Creation-Date: 2024-02-28 21:44+0100\n"
 "PO-Revision-Date: 2023-12-31 20:06+0000\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/fretboard/"
@@ -139,7 +139,7 @@ msgstr "הצגת _גרסאות"
 msgid "No Variants"
 msgstr "הצגת _גרסאות"
 
-#: data/gtk/window.blp:200 src/window.rs:365
+#: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
 msgstr "סימניות"
 
@@ -188,15 +188,21 @@ msgstr "מושתק"
 msgid "Open"
 msgstr "פתיחה"
 
-#: src/window.rs:290
+#: src/window.rs:291
 msgid "Remove Bookmark"
 msgstr "הסרת סימנייה"
 
-#: src/window.rs:292
+#: src/window.rs:293
 msgid "Bookmark"
 msgstr "סימנייה"
 
-#: src/window.rs:363
+#: src/window.rs:304
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+
+#: src/window.rs:366
 msgid "No Bookmarks"
 msgstr "אין סימניות"
 

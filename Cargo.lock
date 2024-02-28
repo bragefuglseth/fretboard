@@ -156,6 +156,7 @@ version = "0.1.0"
 dependencies = [
  "gettext-rs",
  "gtk4",
+ "i18n-format",
  "itertools",
  "libadwaita",
  "once_cell",
@@ -520,6 +521,16 @@ name = "hermit-abi"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "443144c8cdadd93ebf52ddb4056d257f5b52c04d3c804e657d19eb73fc33668b"
+
+[[package]]
+name = "i18n-format"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f249c6dcfe2e8403f0e309da6f6b552dcfb607b094b5038db0709f8010fa4ea0"
+dependencies = [
+ "gettext-rs",
+ "quote",
+]
 
 [[package]]
 name = "indexmap"

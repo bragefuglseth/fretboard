@@ -26,6 +26,7 @@ use crate::{
 use adw::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
+use i18n_format::i18n_fmt;
 use glib::closure_local;
 use gtk::{gio, glib};
 use once_cell::sync::OnceCell;
@@ -299,7 +300,9 @@ impl FretboardWindow {
             .set_accessible_role(gtk::AccessibleRole::Presentation);
 
         // translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-        imp.no_variants_page.set_description(Some(&gettext!("There are no chords with this name in Fretboard’s built-in chord set. If you think there should be, {}reach out{}.", "<a href=\"https://github.com/bragefuglseth/fretboard/issues\">", "</a>")));
+        imp.no_variants_page.set_description(Some(&i18n_fmt!(
+            i18n_fmt("There are no chords with this name in Fretboard’s built-in chord set. If you think there should be, {}reach out{}.", "<a href=\"https://github.com/bragefuglseth/fretboard/issues\">", "</a>")))
+        );
 
         self.load_bookmarks();
 
