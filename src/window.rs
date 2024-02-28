@@ -299,8 +299,8 @@ impl FretboardWindow {
         imp.more_variants_button_image
             .set_accessible_role(gtk::AccessibleRole::Presentation);
 
-        // translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
         imp.no_variants_page.set_description(Some(&i18n_fmt!(
+            // translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
             i18n_fmt("There are no chords with this name in Fretboard’s built-in chord set. If you think there should be, {}reach out{}.", "<a href=\"https://github.com/bragefuglseth/fretboard/issues\">", "</a>")))
         );
 
