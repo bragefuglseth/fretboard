@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-27 22:22+0100\n"
-"PO-Revision-Date: 2024-01-04 08:06+0000\n"
+"PO-Revision-Date: 2024-02-28 20:19+0000\n"
 "Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/sv/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -113,9 +113,8 @@ msgid "Focus Entry"
 msgstr "Markera namnfält"
 
 #: data/gtk/help-overlay.blp:42
-#, fuzzy
 msgid "View Shortcuts"
-msgstr "Visa tangentbordsgenvägar"
+msgstr "Visa genvägar"
 
 #: data/gtk/help-overlay.blp:47
 msgid "Close Window"
@@ -138,9 +137,8 @@ msgid "View _Variants"
 msgstr "Visa _varianter"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "Visa _varianter"
+msgstr "Inga varianter"
 
 #: data/gtk/window.blp:200 src/window.rs:365
 msgid "Bookmarks"
