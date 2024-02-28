@@ -31,8 +31,6 @@ pub fn calculate_chord_name(chord: [Option<usize>; 6]) -> Option<String> {
     if let Some(name) = find_isolated_chord_name(&notes_without_first) {
         let bass_note = find_note_name(*notes.first()?);
 
-        println!("algorithm {name}/{bass_note}");
-
         return Some(format!("{name}/{bass_note}"));
     }
 
@@ -68,8 +66,6 @@ fn find_isolated_chord_name(notes: &Vec<usize>) -> Option<String> {
         .map(|n| sub_wrapping(*n, *first, SCALE_SIZE))
         .sorted()
         .collect();
-
-    dbg!(&intervals);
 
     let note_name = find_note_name(*first);
 

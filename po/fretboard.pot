@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 21:44+0100\n"
+"POT-Creation-Date: 2024-02-28 22:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "Fretboard"
 msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr ""
 
@@ -31,7 +31,7 @@ msgstr ""
 msgid "guitar;chords"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:15
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their names or plotting them on an interactive guitar neck. When you "
@@ -41,11 +41,27 @@ msgid ""
 "and master your favorite songs!"
 msgstr ""
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
 msgid ""
 "Fretboard is proudly part of GNOME Circle, an initiative that champions the "
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
 msgstr ""
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
@@ -184,6 +200,7 @@ msgstr ""
 msgid "Bookmark"
 msgstr ""
 
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/window.rs:304
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "

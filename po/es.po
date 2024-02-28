@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 21:44+0100\n"
+"POT-Creation-Date: 2024-02-28 22:53+0100\n"
 "PO-Revision-Date: 2024-02-28 20:19+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/fretboard/"
@@ -26,7 +26,7 @@ msgid "Fretboard"
 msgstr "Fretboard"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "Consultar acordes de guitarra"
 
@@ -34,7 +34,7 @@ msgstr "Consultar acordes de guitarra"
 msgid "guitar;chords"
 msgstr "guitar;chords;guitarra;acordes"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:15
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their names or plotting them on an interactive guitar neck. When you "
@@ -50,7 +50,7 @@ msgstr ""
 "No importa si es un guitarrista principiante o avanzado, ¡puede usar "
 "Fretboard para practicar, aprender y dominar sus canciones favoritas!"
 
-#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:23
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
 msgid ""
 "Fretboard is proudly part of GNOME Circle, an initiative that champions the "
 "great software that is available for the GNOME platform. For more "
@@ -59,6 +59,23 @@ msgstr ""
 "Fretboard es orgullosamente parte de GNOME Circle, una iniciativa que "
 "defiende el gran software disponible para la plataforma GNOME. Para más "
 "información, visite la página web de GNOME Circle."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+#, fuzzy
+msgid "The bookmarks page"
+msgstr "Ver favoritos"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
@@ -196,6 +213,7 @@ msgstr "Quitar favorito"
 msgid "Bookmark"
 msgstr "Favorito"
 
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/window.rs:304
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "

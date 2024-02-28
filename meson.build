@@ -1,6 +1,6 @@
 project('fretboard',
   'rust',
-  version: '5.3',
+  version: '5.4',
   license: 'GPL-3.0-or-later',
   meson_version: '>= 0.62.0',
 )

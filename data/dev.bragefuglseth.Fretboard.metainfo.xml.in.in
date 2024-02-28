@@ -5,12 +5,10 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>Fretboard</name>
-  <!-- developer_name tag deprecated with Appstream 1.0 -->
-  <developer_name translatable="no">Brage Fuglseth</developer_name>
+  <summary>Look up guitar chords</summary>
   <developer id="bragefuglseth.dev">
     <name translatable="no">Brage Fuglseth</name>
   </developer>
-  <summary>Look up guitar chords</summary>
   <description>
     <p>
 	    How was that chord played, again? Fretboard lets you find guitar chords
@@ -24,6 +22,36 @@
       Fretboard is proudly part of GNOME Circle, an initiative that champions the great software that is available for the GNOME platform. For more information, visit the GNOME Circle website.
     </p>
   </description>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Displaying a chord</caption>
+      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Displaying a barre chord</caption>
+      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Showing variants of a chord</caption>
+      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The bookmarks page</caption>
+      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-4.png</image>
+    </screenshot>
+  </screenshots>
+  <branding>
+    <color type="primary" scheme_preference="light">#e1d0c3</color>
+    <color type="primary" scheme_preference="dark">#191521</color>
+  </branding>
+  <url type="homepage">https://apps.gnome.org/Fretboard</url>
+  <url type="bugtracker">https://github.com/bragefuglseth/fretboard/issues</url>
+  <url type="contribute">https://welcome.gnome.org/app/Fretboard</url>
+  <url type="translate">https://hosted.weblate.org/engage/fretboard/</url>
+  <url type="vcs-browser">https://github.com/bragefuglseth/fretboard</url>
+  <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>
+  <update_contact>bragefuglseth_AT_gnome.org</update_contact>
+  <content_rating type="oars-1.1"/>
   <translation type="gettext">@gettext-package@</translation>
   <requires>
     <internet>offline-only</internet>
@@ -34,33 +62,18 @@
     <control>keyboard</control>
     <control>touch</control>
   </supports>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-1.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-2.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-3.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/bragefuglseth/fretboard/main/data/screenshots/screenshot-4.png</image>
-    </screenshot>
-  </screenshots>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
-  <url type="homepage">https://apps.gnome.org/Fretboard</url>
-  <url type="bugtracker">https://github.com/bragefuglseth/fretboard/issues</url>
-  <url type="contribute">https://welcome.gnome.org/app/Fretboard</url>
-  <url type="translate">https://hosted.weblate.org/engage/fretboard/</url>
-  <url type="vcs-browser">https://github.com/bragefuglseth/fretboard</url>
-  <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>
-  <update_contact>bragefuglseth_AT_gnome.org</update_contact>
-  <content_rating type="oars-1.1"/>
-  <custom>
-    <value key="GnomeSoftware::key-colors">[(153, 193, 241)]</value>
-  </custom>
   <releases>
+    <release date="2024-02-28" version="5.4">
+      <description translatable="no">
+        <p>This is a minor release with a few tweaks and improvements, notably:</p>
+        <ul>
+          <li>More intelligent chord recognition, so the app can identify a broader set of patterns</li>
+          <li>Updated translations</li>
+        </ul>
+        <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
     <release date="2024-01-15" version="5.3">
       <description translatable="no">
         <p>This update improves the translations of Fretboard into other languages.</p>
