@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-01-04 08:06+0000\n"
+"PO-Revision-Date: 2024-03-01 06:00+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/nl/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -30,11 +30,11 @@ msgstr "Fretboard"
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
-msgstr "Zoek gitaarakkoorden op"
+msgstr "Zoek gitaar­akkoorden op"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr "gitaar;akkoorden"
+msgstr "guitar;chords;gitaar;akkoorden;"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -45,10 +45,10 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
-"Hoe werd dat akkoord ook alweer gespeeld? Fretboard laat je gitaarakkoorden "
-"terugvinden via hun naam of ze op een interactieve gitaarnek te plaatsen. "
+"Hoe werd dat akkoord ook alweer gespeeld? Fretboard laat je gitaar­akkoorden "
+"terug­vinden via hun naam of ze op een inter­actieve gitaar­nek te plaatsen. "
 "Zodra je een akkoord geïdentificeerd hebt, kan je ermee experimenteren door "
-"het te veranderen, andere manieren zien om het te spelen, of een bladwijzer "
+"het te veranderen, andere manieren zien om het te spelen, of een blad­wijzer "
 "maken om het op te slaan voor later. Het maakt niet uit of je een beginnende "
 "of geavanceerde gitarist bent, Freboard helpt je met oefenen, bijleren en "
 "het beheersen van je favoriete nummers!"
@@ -60,30 +60,29 @@ msgid ""
 "information, visit the GNOME Circle website."
 msgstr ""
 "Fretboard maakt met trots deel uit van GNOME Circle, een initiatief dat "
-"pleit voor de geweldige software die beschikbaar is voor het GNOME-platform. "
-"Bezoek de GNOME Circle-website voor meer informatie."
+"pleit voor de geweldige software die beschik­baar is voor het GNOME-"
+"platform. Bezoek de GNOME Circle-website voor meer informatie."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "Weer­gave van een akkoord"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "Weer­gave van een barré-akkoord"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "Weer­gave van akkoord­varianten"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
-#, fuzzy
 msgid "The bookmarks page"
-msgstr "Bladwijzers tonen"
+msgstr "De bladwijzer­pagina"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "Kan oftewel \"rechtshandig\" of \"linkshandig\" zijn."
+msgstr "Kan ofwel ‘rechts­handig’ of ‘links­handig’ zijn."
 
 #: data/gtk/barre-spin.blp:10
 msgid "Move Up"
@@ -118,25 +117,24 @@ msgstr "Leeg akkoord"
 #. translators: "Bookmark" is a verb
 #: data/gtk/help-overlay.blp:21
 msgid "Bookmark Chord"
-msgstr "Bladwijzer toevoegen voor akkoord"
+msgstr "Blad­wijzer toe­voegen voor akkoord"
 
 #: data/gtk/help-overlay.blp:26
 msgid "View Bookmarks"
-msgstr "Bladwijzers tonen"
+msgstr "Blad­wijzers tonen"
 
 #: data/gtk/help-overlay.blp:31
 msgid "View Chord Variants"
-msgstr "Akkoordvarianten tonen"
+msgstr "Akkoord­varianten tonen"
 
 #. translators: "Focus" is a verb
 #: data/gtk/help-overlay.blp:37
 msgid "Focus Entry"
-msgstr "Ingave focussen"
+msgstr "Invoer focussen"
 
 #: data/gtk/help-overlay.blp:42
-#, fuzzy
 msgid "View Shortcuts"
-msgstr "Sneltoetsen tonen"
+msgstr "Snel­toetsen tonen"
 
 #: data/gtk/help-overlay.blp:47
 msgid "Close Window"
@@ -148,36 +146,35 @@ msgstr "Afsluiten"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
-msgstr "Hoofdmenu"
+msgstr "Hoofd­menu"
 
 #: data/gtk/window.blp:83
 msgid "Chord not found"
-msgstr "Akkoord niet teruggevonden"
+msgstr "Akkoord niet terug­gevonden"
 
 #: data/gtk/window.blp:117
 msgid "View _Variants"
 msgstr "_Varianten bekijken"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "_Varianten bekijken"
+msgstr "Geen varianten"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
-msgstr "Bladwijzers"
+msgstr "Blad­wijzers"
 
 #: data/gtk/window.blp:240
 msgid "Guitar Type"
-msgstr "Gitaartype"
+msgstr "Gitaar­type"
 
 #: data/gtk/window.blp:243
 msgid "Right-handed"
-msgstr "Rechtshandig"
+msgstr "Rechts­handig"
 
 #: data/gtk/window.blp:249
 msgid "Left-handed"
-msgstr "Linkshandig"
+msgstr "Links­handig"
 
 #. translators: "Empty" is a verb
 #: data/gtk/window.blp:258
@@ -186,7 +183,7 @@ msgstr "_Leeg akkoord"
 
 #: data/gtk/window.blp:265
 msgid "_Keyboard Shortcuts"
-msgstr "_Sneltoetsen"
+msgstr "_Snel­toetsen"
 
 #: data/gtk/window.blp:270
 msgid "_About Fretboard"
@@ -195,7 +192,7 @@ msgstr "_Over Fretboard"
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr "credits vertalers"
+msgstr "Philip Goto https://philipgoto.nl/"
 
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
@@ -212,11 +209,11 @@ msgstr "Openen"
 
 #: src/window.rs:291
 msgid "Remove Bookmark"
-msgstr "Bladwijzer verwijderen"
+msgstr "Blad­wijzer verwijderen"
 
 #: src/window.rs:293
 msgid "Bookmark"
-msgstr "Bladwijzer"
+msgstr "Blad­wijzer"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/window.rs:304
@@ -224,10 +221,13 @@ msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
+"Er zijn geen akkoorden met deze naam in de ingebouwde akkoorden­set van "
+"Fretboard. Als u denkt dat dit wel het geval zou moeten zijn, {}neem dan "
+"contact op{}."
 
 #: src/window.rs:366
 msgid "No Bookmarks"
-msgstr "Geen bladwijzers"
+msgstr "Geen blad­wijzers"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
