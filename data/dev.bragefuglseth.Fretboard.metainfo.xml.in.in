@@ -64,7 +64,7 @@
   </supports>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <releases>
-    <release date="2024-02-28" version="5.4">
+    <release date="2024-02-29" version="5.4">
       <description translatable="no">
         <p>This is a minor release with a few tweaks and improvements, notably:</p>
         <ul>
