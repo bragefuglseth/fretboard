@@ -74,6 +74,7 @@
         <p>If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
       </description>
     </release>
+
     <release date="2024-01-15" version="5.3">
       <description translatable="no">
         <p>This update improves the translations of Fretboard into other languages.</p>
