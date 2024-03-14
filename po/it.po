@@ -2,13 +2,14 @@
 # Copyright (C) 2023 Fretboard'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # Davide <davide.ferracin@protonmail.com>, 2023.
+# Mia Balsamo <mia.balsamo2002@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2023-10-13 11:09+0000\n"
-"Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
+"PO-Revision-Date: 2024-03-15 22:01+0000\n"
+"Last-Translator: Mia Balsamo <mia.balsamo2002@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/it/>\n"
 "Language: it\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -54,23 +55,25 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard fa orgogliosamente parte di GNOME Circle, un iniziativa che "
+"promuove gli ottimi software disponibili per la piattaforma GNOME. Per "
+"maggiori informazioni, visita il sito web di GNOME Circle."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "Visualizzando un accordo"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "Visualizzando un accordo con barré"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "Mostrando le varianti di un accordo"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
-#, fuzzy
 msgid "The bookmarks page"
-msgstr "Mostra preferiti"
+msgstr "Pagina dei segnalibri"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
@@ -96,7 +99,7 @@ msgstr "Conferma"
 
 #: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
 msgid "Enharmonic Equivalent"
-msgstr ""
+msgstr "Enarmonica Equivalente"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
@@ -123,10 +126,9 @@ msgstr "Mostra varianti"
 #. translators: "Focus" is a verb
 #: data/gtk/help-overlay.blp:37
 msgid "Focus Entry"
-msgstr ""
+msgstr "Evidenzia la selezione"
 
 #: data/gtk/help-overlay.blp:42
-#, fuzzy
 msgid "View Shortcuts"
 msgstr "Mostra scorciatoie"
 
@@ -151,9 +153,8 @@ msgid "View _Variants"
 msgstr "Mostra _varianti"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "Mostra _varianti"
+msgstr "Nessuna Variante"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
@@ -216,6 +217,8 @@ msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
+"Non ci sono accordi con questo nome nel set interno di Fretboard. Se pensi "
+"che debba esserci, {}reach out{}."
 
 #: src/window.rs:366
 msgid "No Bookmarks"
