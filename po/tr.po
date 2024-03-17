@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # Sabri Ünal <libreajans@gmail.com>, 2023, 2024.
+# Sabri Ünal <yakushabb@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-01-04 08:06+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"PO-Revision-Date: 2024-03-18 10:01+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/tr/>\n"
 "Language: tr\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -61,20 +62,19 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "Bir akor gösteriliyor"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "Barre akoru görüntüleniyor"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "Akorun bir türevi gösteriliyor"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
-#, fuzzy
 msgid "The bookmarks page"
-msgstr "Yer İmlerini Göster"
+msgstr "Yer imleri sayfası"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
@@ -130,7 +130,6 @@ msgid "Focus Entry"
 msgstr "Girdiye Odaklan"
 
 #: data/gtk/help-overlay.blp:42
-#, fuzzy
 msgid "View Shortcuts"
 msgstr "Kısayolları Göster"
 
@@ -152,12 +151,11 @@ msgstr "Akor bulunamadı"
 
 #: data/gtk/window.blp:117
 msgid "View _Variants"
-msgstr "_Değişkeleri Göster"
+msgstr "_Türevleri Göster"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "_Değişkeleri Göster"
+msgstr "Türev Yok"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
@@ -191,7 +189,7 @@ msgstr "Fretboard _Hakkında"
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr "Sabri Ünal <libreajans@gmail.com>"
+msgstr "Sabri Ünal <yakushabb@gmail.com>"
 
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
@@ -220,6 +218,8 @@ msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
+"Fretboard yerleşik akor setinde bu isimde bir akor yok. Eğer olması "
+"gerektiğini düşünüyorsanız, {}bize ulaşın{}."
 
 #: src/window.rs:366
 msgid "No Bookmarks"
