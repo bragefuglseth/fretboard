@@ -21,7 +21,7 @@
 use crate::FretboardWindow;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
-use gtk::prelude::*;
+use adw::prelude::*;
 use gtk::{gio, glib};
 
 mod imp {
@@ -104,8 +104,7 @@ impl FretboardApplication {
     }
 
     fn show_about(&self) {
-        let window = self.active_window().unwrap();
-        let about = adw::AboutWindow::from_appdata(
+        let about = adw::AboutDialog::from_appdata(
             "/dev/bragefuglseth/Fretboard/metainfo.xml",
             Some("5.0"),
         );
@@ -115,7 +114,6 @@ impl FretboardApplication {
         // Translators: Replace "translator-credits" with your names, one name per line
         about.set_translator_credits(&gettext("translator-credits"));
 
-        about.set_transient_for(Some(&window));
-        about.present();
+        about.present(&self.active_window().unwrap());
     }
 }

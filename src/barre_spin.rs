@@ -12,7 +12,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, glib::Properties, gtk::CompositeTemplate)]
-    #[properties(wrapper = super::FretboardBarreSpin)]
+    #[properties(wrapper_type = super::FretboardBarreSpin)]
     #[template(resource = "/dev/bragefuglseth/Fretboard/barre-spin.ui")]
     pub struct FretboardBarreSpin {
         #[template_child]

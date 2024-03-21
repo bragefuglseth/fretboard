@@ -12,6 +12,11 @@ base_id = 'dev.bragefuglseth.Fretboard'
 
 version = meson.project_version()
 
+dependency('gio-2.0', version: '>= 2.76')
+dependency('glib-2.0', version: '>= 2.76')
+dependency('gtk4', version: '>= 4.10.1')
+dependency('libadwaita-1', version: '>= 1.5.alpha')
+
 prefix = get_option('prefix')
 localedir = prefix / get_option('localedir')
 datadir = prefix / get_option('datadir')
