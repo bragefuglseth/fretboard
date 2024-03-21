@@ -41,8 +41,8 @@
     </screenshot>
   </screenshots>
   <branding>
-    <color type="primary" scheme_preference="light">#e1d0c3</color>
-    <color type="primary" scheme_preference="dark">#191521</color>
+    <color type="primary" scheme_preference="light">#99c1f1</color>
+    <color type="primary" scheme_preference="dark">#7091bc</color>
   </branding>
   <url type="homepage">https://apps.gnome.org/Fretboard</url>
   <url type="bugtracker">https://github.com/bragefuglseth/fretboard/issues</url>
