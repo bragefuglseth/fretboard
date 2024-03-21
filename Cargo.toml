@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 adw = { package = "libadwaita", version = "0.6", features = ["v1_5"] }
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
-gtk = { package = "gtk4", version = "0.8", features = ["gnome_45"] }
+gtk = { package = "gtk4", version = "0.8", features = ["v4_14"] }
 itertools = "0.11.0"
 once_cell = "1.18.0"
 rayon = "1.7.0"
