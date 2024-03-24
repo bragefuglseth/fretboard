@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
-# Jiri Grönroos <jiri.gronroos@iki.fi>, 2023.
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2023-10-16 10:01+0000\n"
+"PO-Revision-Date: 2024-03-25 14:52+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/fi/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -126,7 +126,6 @@ msgid "Focus Entry"
 msgstr "Kohdista kenttään"
 
 #: data/gtk/help-overlay.blp:42
-#, fuzzy
 msgid "View Shortcuts"
 msgstr "Näytä pikanäppäimet"
 
@@ -151,9 +150,8 @@ msgid "View _Variants"
 msgstr "Näytä _muunnelmat"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "Näytä _muunnelmat"
+msgstr "Ei muunnelmia"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
