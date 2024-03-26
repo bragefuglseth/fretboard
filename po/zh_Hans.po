@@ -7,29 +7,34 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-03-27 10:01+0000\n"
+"Last-Translator: \"BenderBlog \\\"SuperBart\\\" Rodriguez\" <Songze@live.cn>"
+"\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"fretboard/fretboard/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
 msgid "Fretboard"
-msgstr ""
+msgstr "Fretboard"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
-msgstr ""
+msgstr "查找吉他和弦"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr ""
+msgstr "吉他;和弦"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+#, fuzzy
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their names or plotting them on an interactive guitar neck. When you "
@@ -38,173 +43,186 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
+"又一次想知道这个和弦是咋弹出来的？Fretboard "
+"可以帮助你！输入和弦的名字，或者在互动琴颈上表示出来，Fretboard 就可以告诉你"
+"。找到和弦后，你可以边修改边弹奏，探索更多弹奏方式，或者将其放入书签，回来再"
+"看。无论你是吉他新手，还是吉他大师，你都可以使用 Fretboard "
+"来学习，并练习你喜欢的歌，并最终掌握它！"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+#, fuzzy
 msgid ""
 "Fretboard is proudly part of GNOME Circle, an initiative that champions the "
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard 荣幸地加入了 GNOME Circle，该计划旨在推广 GNOME "
+"平台上的优秀软件。更多信息，请访问 GNOME Circle 网站。"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "显示一个和弦"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "显示大横按"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+#, fuzzy
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "显示和弦的变奏"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
 msgid "The bookmarks page"
-msgstr ""
+msgstr "书签页"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "可以是右手吉他(\"right-handed\")，也可以是左手吉他(\"left-handed\")."
 
 #: data/gtk/barre-spin.blp:10
 msgid "Move Up"
-msgstr ""
+msgstr "向上移动"
 
 #: data/gtk/barre-spin.blp:30
 msgid "Move Down"
-msgstr ""
+msgstr "向下移动"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
 msgid "Chord Name"
-msgstr ""
+msgstr "名称"
 
 #: data/gtk/chord-name-entry.blp:35
 msgid "Confirm"
-msgstr ""
+msgstr "确认"
 
 #: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
 msgid "Enharmonic Equivalent"
-msgstr ""
+msgstr "异名同音"
 
 #: data/gtk/help-overlay.blp:11
+#, fuzzy
 msgid "General"
-msgstr ""
+msgstr "总菜单"
 
 #. translators: "Empty" is a verb
 #: data/gtk/help-overlay.blp:15
 msgid "Empty Chord"
-msgstr ""
+msgstr "清空和弦"
 
 #. translators: "Bookmark" is a verb
 #: data/gtk/help-overlay.blp:21
 msgid "Bookmark Chord"
-msgstr ""
+msgstr "放入书签"
 
 #: data/gtk/help-overlay.blp:26
 msgid "View Bookmarks"
-msgstr ""
+msgstr "查看书签"
 
 #: data/gtk/help-overlay.blp:31
 msgid "View Chord Variants"
-msgstr ""
+msgstr "查看和弦变体"
 
 #. translators: "Focus" is a verb
 #: data/gtk/help-overlay.blp:37
 msgid "Focus Entry"
-msgstr ""
+msgstr "高亮输入框"
 
 #: data/gtk/help-overlay.blp:42
 msgid "View Shortcuts"
-msgstr ""
+msgstr "显示快捷键"
 
 #: data/gtk/help-overlay.blp:47
 msgid "Close Window"
-msgstr ""
+msgstr "关闭窗口"
 
 #: data/gtk/help-overlay.blp:52
 msgid "Quit"
-msgstr ""
+msgstr "退出"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
-msgstr ""
+msgstr "主菜单"
 
 #: data/gtk/window.blp:83
 msgid "Chord not found"
-msgstr ""
+msgstr "未找到和弦"
 
 #: data/gtk/window.blp:117
 msgid "View _Variants"
-msgstr ""
+msgstr "查看 _变体"
 
 #: data/gtk/window.blp:158
 msgid "No Variants"
-msgstr ""
+msgstr "未找到变体"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
-msgstr ""
+msgstr "书签"
 
 #: data/gtk/window.blp:240
 msgid "Guitar Type"
-msgstr ""
+msgstr "吉他类型"
 
 #: data/gtk/window.blp:243
 msgid "Right-handed"
-msgstr ""
+msgstr "右手吉他"
 
 #: data/gtk/window.blp:249
 msgid "Left-handed"
-msgstr ""
+msgstr "左手吉他"
 
 #. translators: "Empty" is a verb
 #: data/gtk/window.blp:258
 msgid "_Empty Chord"
-msgstr ""
+msgstr "_重置和弦"
 
 #: data/gtk/window.blp:265
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_键盘快捷键"
 
 #: data/gtk/window.blp:270
 msgid "_About Fretboard"
-msgstr ""
+msgstr "_关于 Fretboard"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr ""
+msgstr "Benderblog Rodriguez <superbart_chen@qq.com>"
 
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
-msgstr ""
+msgstr "未打开"
 
 #: src/chord_diagram_top_toggle.rs:158
+#, fuzzy
 msgid "Muted"
-msgstr ""
+msgstr "柔和的"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:160
+#, fuzzy
 msgid "Open"
-msgstr ""
+msgstr "弹出声音"
 
 #: src/window.rs:291
 msgid "Remove Bookmark"
-msgstr ""
+msgstr "移除书签"
 
 #: src/window.rs:293
 msgid "Bookmark"
-msgstr ""
+msgstr "书签"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/window.rs:304
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
-msgstr ""
+msgstr "在 Fretboard "
+"内置的和弦数据中，没有和弦叫这个名字。如果你觉得这个应该有，{}和我们联系{}。"
 
 #: src/window.rs:366
 msgid "No Bookmarks"
-msgstr ""
+msgstr "没有书签"
