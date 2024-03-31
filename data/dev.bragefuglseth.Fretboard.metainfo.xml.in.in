@@ -7,7 +7,7 @@
   <name>Fretboard</name>
   <summary>Look up guitar chords</summary>
   <developer id="dev.bragefuglseth">
-    <name translatable="no">Brage Fuglseth</name>
+    <name translate="no">Brage Fuglseth</name>
   </developer>
   <description>
     <p>
@@ -65,7 +65,7 @@
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <releases>
     <release date="2024-03-21" version="6.0">
-      <description translatable="no">
+      <description translate="no">
         <p>GNOME 46 is here! Let’s celebrate:</p>
         <ul>
           <li>An upgraded base taking advantage of the latest platform improvements</li>
@@ -76,7 +76,7 @@
     </release>
 
     <release date="2024-02-29" version="5.4">
-      <description translatable="no">
+      <description translate="no">
         <p>This is a minor release with a few tweaks and improvements, notably:</p>
         <ul>
           <li>More intelligent chord recognition, so the app can identify a broader set of patterns</li>
@@ -87,19 +87,19 @@
     </release>
 
     <release date="2024-01-15" version="5.3">
-      <description translatable="no">
+      <description translate="no">
         <p>This update improves the translations of Fretboard into other languages.</p>
       </description>
     </release>
 
     <release date="2024-01-06" version="5.2">
-      <description translatable="no">
+      <description translate="no">
         <p>This update improves the translations of Fretboard into other languages.</p>
       </description>
     </release>
 
     <release date="2024-01-01" version="5.1">
-      <description translatable="no">
+      <description translate="no">
         <p>This update contains small additions and improvements to follow up the recent major release:</p>
         <ul>
           <li>Further accessibility enhancements</li>
@@ -113,7 +113,7 @@
     </release>
 
     <release date="2023-12-25" version="5.0">
-      <description translatable="no">
+      <description translate="no">
         <p>It may not arrive in wrapping paper, but this timely release of Fretboard still includes some nice gifts:</p>
         <ul>
           <li>An enharmonic indicator that lets you see when chords have more than one possible name</li>
@@ -127,7 +127,7 @@
     </release>
 
     <release date="2023-10-16" version="4.1">
-      <description translatable="no">
+      <description translate="no">
         <p>This is a minor release with a few improvements:</p>
         <ul>
           <li>Correct margins when using the large text accessibility option</li>
@@ -138,7 +138,7 @@
     </release>
 
     <release date="2023-10-13" version="4.0">
-      <description translatable="no">
+      <description translate="no">
         <p>This release of Fretboard makes it more accessible:</p>
         <ul>
           <li>Support for both left-handed and right-handed guitar types</li>
@@ -150,7 +150,7 @@
     </release>
 
     <release date="2023-09-20" version="3.0">
-      <description translatable="no">
+      <description translate="no">
         <p>GNOME 45 is finally here! To celebrate, Fretboard has gained the following improvements:</p>
         <ul>
           <li>Refined visuals taking advantage of the latest platform features</li>
@@ -162,7 +162,7 @@
     </release>
 
     <release date="2023-08-28" version="2.0">
-      <description translatable="no">
+      <description translate="no">
         <p>This major release of Fretboard brings a bunch of exciting improvements:</p>
         <ul>
           <li>View different ways to play the same chord, to find the one that suits your situation the best</li>
@@ -176,7 +176,7 @@
     </release>
 
     <release date="2023-07-01" version="1.0">
-      <description translatable="no">
+      <description translate="no">
         <p>Initial release.</p>
       </description>
     </release>
