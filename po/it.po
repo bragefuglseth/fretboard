@@ -1,15 +1,15 @@
 # Italian translation for Fretboard.
 # Copyright (C) 2023 Fretboard'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
-# Davide <davide.ferracin@protonmail.com>, 2023.
+# Davide <davide.ferracin@protonmail.com>, 2023, 2024.
 # Mia Balsamo <mia.balsamo2002@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-03-15 22:01+0000\n"
-"Last-Translator: Mia Balsamo <mia.balsamo2002@gmail.com>\n"
+"PO-Revision-Date: 2024-04-03 08:01+0000\n"
+"Last-Translator: Davide <davide.ferracin@protonmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/it/>\n"
 "Language: it\n"
@@ -61,15 +61,15 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr "Visualizzando un accordo"
+msgstr "Visualizzazione di un accordo"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr "Visualizzando un accordo con barré"
+msgstr "Visualizzazione di un accordo barré"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr "Mostrando le varianti di un accordo"
+msgstr "Visualizzazione delle varianti di un accordo"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
 msgid "The bookmarks page"
@@ -78,7 +78,7 @@ msgstr "Pagina dei segnalibri"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "Può essere o \"right-handed\"\" o \"left-handed\"."
+msgstr "Può essere o «right-handed» o «left-handed»."
 
 #: data/gtk/barre-spin.blp:10
 msgid "Move Up"
@@ -113,11 +113,11 @@ msgstr "Accordo vuoto"
 #. translators: "Bookmark" is a verb
 #: data/gtk/help-overlay.blp:21
 msgid "Bookmark Chord"
-msgstr "Aggiungi accordo ai preferiti"
+msgstr "Aggiungi accordo ai segnalibri"
 
 #: data/gtk/help-overlay.blp:26
 msgid "View Bookmarks"
-msgstr "Mostra preferiti"
+msgstr "Mostra segnalibri"
 
 #: data/gtk/help-overlay.blp:31
 msgid "View Chord Variants"
