@@ -7,27 +7,30 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-04-05 09:02+0000\n"
+"Last-Translator: Himmel <anonymous.colt330@aleeas.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/fretboard/"
+"fretboard/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
 msgid "Fretboard"
-msgstr ""
+msgstr "Fretboard"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
-msgstr ""
+msgstr "ギターコードを調べる"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr ""
+msgstr "guitar;chords"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -38,6 +41,12 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
+"「あのコードはどうやって弾いたんだっけ？」Fretboard では、コードネームをご入"
+"力いただくか、インタラクティブなギターネック上にプロットすることで、ギターコ"
+"ードを見つけることができます。コードを特定したら、そのコードを変更してみたり"
+"、より多くの演奏方法を見たり、ブックマークして後で保存したりすることができま"
+"す。初心者から上級者まで、Fretboard "
+"を使ってお気に入りの曲を練習し、学び、マスターすることができます！"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
 msgid ""
@@ -45,166 +54,171 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard は、GNOME プラットフォームで利用可能な素晴らしいソフトウェアを推奨"
+"するイニシアチブである GNOME Circle "
+"の一員であることを誇りに思っております。詳細につきましては、GNOME Circle "
+"のウェブサイトをご覧下さい。"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "コードの表示"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "バレーコードの表示"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "コードのバリエーションを表示"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
 msgid "The bookmarks page"
-msgstr ""
+msgstr "ブックマークページ"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "「right-handed」または「left-handed」のいずれかをお選びいただけます。"
 
 #: data/gtk/barre-spin.blp:10
 msgid "Move Up"
-msgstr ""
+msgstr "上に移動"
 
 #: data/gtk/barre-spin.blp:30
 msgid "Move Down"
-msgstr ""
+msgstr "下に移動"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
 #: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
 msgid "Chord Name"
-msgstr ""
+msgstr "コードネーム"
 
 #: data/gtk/chord-name-entry.blp:35
 msgid "Confirm"
-msgstr ""
+msgstr "確認"
 
 #: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
 msgid "Enharmonic Equivalent"
-msgstr ""
+msgstr "異名同音"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #. translators: "Empty" is a verb
 #: data/gtk/help-overlay.blp:15
 msgid "Empty Chord"
-msgstr ""
+msgstr "コードを空にする"
 
 #. translators: "Bookmark" is a verb
 #: data/gtk/help-overlay.blp:21
 msgid "Bookmark Chord"
-msgstr ""
+msgstr "コードをブックマークする"
 
 #: data/gtk/help-overlay.blp:26
 msgid "View Bookmarks"
-msgstr ""
+msgstr "ブックマークを表示"
 
 #: data/gtk/help-overlay.blp:31
 msgid "View Chord Variants"
-msgstr ""
+msgstr "コードのバリエーションを表示"
 
 #. translators: "Focus" is a verb
 #: data/gtk/help-overlay.blp:37
 msgid "Focus Entry"
-msgstr ""
+msgstr "エントリーに集中"
 
 #: data/gtk/help-overlay.blp:42
 msgid "View Shortcuts"
-msgstr ""
+msgstr "ショートカットを表示"
 
 #: data/gtk/help-overlay.blp:47
 msgid "Close Window"
-msgstr ""
+msgstr "ウィンドウを閉じる"
 
 #: data/gtk/help-overlay.blp:52
 msgid "Quit"
-msgstr ""
+msgstr "終了"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
-msgstr ""
+msgstr "メインメニュー"
 
 #: data/gtk/window.blp:83
 msgid "Chord not found"
-msgstr ""
+msgstr "コードが見つかりません"
 
 #: data/gtk/window.blp:117
 msgid "View _Variants"
-msgstr ""
+msgstr "_バリエーションを表示"
 
 #: data/gtk/window.blp:158
 msgid "No Variants"
-msgstr ""
+msgstr "バリエーションがありません"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
-msgstr ""
+msgstr "ブックマーク"
 
 #: data/gtk/window.blp:240
 msgid "Guitar Type"
-msgstr ""
+msgstr "ギターの種類"
 
 #: data/gtk/window.blp:243
 msgid "Right-handed"
-msgstr ""
+msgstr "Right-handed"
 
 #: data/gtk/window.blp:249
 msgid "Left-handed"
-msgstr ""
+msgstr "Left-handed"
 
 #. translators: "Empty" is a verb
 #: data/gtk/window.blp:258
 msgid "_Empty Chord"
-msgstr ""
+msgstr "_コードを空にする"
 
 #: data/gtk/window.blp:265
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_キーボードショートカット"
 
 #: data/gtk/window.blp:270
 msgid "_About Fretboard"
-msgstr ""
+msgstr "_Fretboard について"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr ""
+msgstr "Himmel https://hosted.weblate.org/user/Himmel/"
 
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
-msgstr ""
+msgstr "非公開"
 
 #: src/chord_diagram_top_toggle.rs:158
 msgid "Muted"
-msgstr ""
+msgstr "ミュート"
 
 #. translators: this is an adjective, not a verb
 #: src/chord_diagram_top_toggle.rs:160
 msgid "Open"
-msgstr ""
+msgstr "公開"
 
 #: src/window.rs:291
 msgid "Remove Bookmark"
-msgstr ""
+msgstr "ブックマークを削除"
 
 #: src/window.rs:293
 msgid "Bookmark"
-msgstr ""
+msgstr "ブックマーク"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/window.rs:304
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
-msgstr ""
+msgstr "Fretboard の内蔵コードセットには、この名前のコードはありません。あると思われ"
+"る場合、{}確認しましょう{}。"
 
 #: src/window.rs:366
 msgid "No Bookmarks"
-msgstr ""
+msgstr "ブックマークはありません"
