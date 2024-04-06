@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-02-28 22:02+0000\n"
+"PO-Revision-Date: 2024-04-06 02:17+0000\n"
 "Last-Translator: Brage Fuglseth <brage.fuglseth@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "fretboard/fretboard/nb_NO/>\n"
@@ -187,7 +187,7 @@ msgstr "_Om Fretboard"
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/application.rs:116
 msgid "translator-credits"
-msgstr "Brage Fuglseth"
+msgstr "Brage Fuglseth https://bragefuglseth.dev"
 
 #: src/chord_diagram_top_toggle.rs:157
 msgid "Not Open"
