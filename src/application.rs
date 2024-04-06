@@ -109,7 +109,7 @@ impl FretboardApplication {
             Some("6.0"),
         );
 
-        about.set_developers(&["Brage Fuglseth"]);
+        about.set_developers(&["Brage Fuglseth https://bragefuglseth.dev"]);
         about.set_copyright("© 2024 Brage Fuglseth");
         // Translators: Replace "translator-credits" with your names, one name per line
         about.set_translator_credits(&gettext("translator-credits"));
