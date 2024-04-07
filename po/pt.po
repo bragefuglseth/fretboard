@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the fretboard package.
 # Cassio Gomes Pereira <cassiogomes00@gmail.com>, 2023.
 # ssantos <ssantos@web.de>, 2023, 2024.
+# Fúlvio Leo <fulviokaldas@outlook.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-01-07 11:06+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2024-04-08 20:01+0000\n"
+"Last-Translator: Fúlvio Leo <fulviokaldas@outlook.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/pt/>\n"
 "Language: pt\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -61,20 +62,19 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "Exibindo um acorde"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "Exibindo um acorde com pestana"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "Mostrando variantes de um acorde"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
-#, fuzzy
 msgid "The bookmarks page"
-msgstr "Ver Favoritos"
+msgstr "A página de favoritos"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
@@ -130,9 +130,8 @@ msgid "Focus Entry"
 msgstr "Focar na Entrada"
 
 #: data/gtk/help-overlay.blp:42
-#, fuzzy
 msgid "View Shortcuts"
-msgstr "Mostrar Atalhos"
+msgstr "Ver Atalhos"
 
 #: data/gtk/help-overlay.blp:47
 msgid "Close Window"
@@ -155,9 +154,8 @@ msgid "View _Variants"
 msgstr "Ver _Variantes"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "Ver _Variantes"
+msgstr "Sem Variantes"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
@@ -220,6 +218,8 @@ msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
+"Não há acordes com esse nome no conjunto de acordes integrado do Fretboard. "
+"Se você que deveria haver, {}entre em contato{}."
 
 #: src/window.rs:366
 msgid "No Bookmarks"
