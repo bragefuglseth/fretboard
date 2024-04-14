@@ -39,6 +39,10 @@ Please take this into consideration as well:
 - Only Flatpak is officially supported.
 - If you want to contribute major changes, please discuss them beforehand to verify that they are suitable for the project.
 
+## Roadmap
+
+- [ ] Richer chord information (notes used, etc.)
+
 ## Credits
 
 The original chord data is borrowed from T-vK's [Chord Collection](https://github.com/t-vK/chord-collection). I've modified it to fit the needs of this app better.
