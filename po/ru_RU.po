@@ -2,22 +2,23 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # беб <ikibastusloh1337@gmail.com>, 2023.
+# Николай Затоковенко <zatokovenko.n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2023-10-08 22:01+0000\n"
-"Last-Translator: беб <ikibastusloh1337@gmail.com>\n"
+"PO-Revision-Date: 2024-05-06 00:07+0000\n"
+"Last-Translator: Николай Затоковенко <zatokovenko.n@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/ru/>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -56,28 +57,30 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"Fretboard гордится быть частью GNOME Circle, инициативы, продвигающей лучшее "
+"программное обеспечение, доступное для платформы GNOME. Для получения "
+"дополнительной информации посетите веб-сайт GNOME Circle."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "Изображение аккорда"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "Изображение аккорда с баррэ"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "Показаны варианты аккорда"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
-#, fuzzy
 msgid "The bookmarks page"
 msgstr "Закладки"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr ""
+msgstr "Может быть для правши и левши"
 
 #: data/gtk/barre-spin.blp:10
 msgid "Move Up"
@@ -98,11 +101,11 @@ msgstr "Подтвердить"
 
 #: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
 msgid "Enharmonic Equivalent"
-msgstr ""
+msgstr "Энгармонический равный"
 
 #: data/gtk/help-overlay.blp:11
 msgid "General"
-msgstr ""
+msgstr "Общие"
 
 #. translators: "Empty" is a verb
 #: data/gtk/help-overlay.blp:15
@@ -116,19 +119,17 @@ msgid "Bookmark Chord"
 msgstr "Добавить в закладки"
 
 #: data/gtk/help-overlay.blp:26
-#, fuzzy
 msgid "View Bookmarks"
 msgstr "Закладки"
 
 #: data/gtk/help-overlay.blp:31
-#, fuzzy
 msgid "View Chord Variants"
-msgstr "Просмотреть _варианты"
+msgstr "Посмотреть варианты"
 
 #. translators: "Focus" is a verb
 #: data/gtk/help-overlay.blp:37
 msgid "Focus Entry"
-msgstr ""
+msgstr "Переход к строке ввода"
 
 #: data/gtk/help-overlay.blp:42
 #, fuzzy
@@ -137,11 +138,11 @@ msgstr "Комбинации клавиш"
 
 #: data/gtk/help-overlay.blp:47
 msgid "Close Window"
-msgstr ""
+msgstr "Закрыть окно"
 
 #: data/gtk/help-overlay.blp:52
 msgid "Quit"
-msgstr ""
+msgstr "Выйти"
 
 #: data/gtk/window.blp:29
 msgid "Main Menu"
@@ -156,9 +157,8 @@ msgid "View _Variants"
 msgstr "Просмотреть _варианты"
 
 #: data/gtk/window.blp:158
-#, fuzzy
 msgid "No Variants"
-msgstr "Просмотреть _варианты"
+msgstr "Аккорды не найдены"
 
 #: data/gtk/window.blp:200 src/window.rs:368
 msgid "Bookmarks"
@@ -166,15 +166,15 @@ msgstr "Закладки"
 
 #: data/gtk/window.blp:240
 msgid "Guitar Type"
-msgstr ""
+msgstr "Хват гитары"
 
 #: data/gtk/window.blp:243
 msgid "Right-handed"
-msgstr ""
+msgstr "Для правшей"
 
 #: data/gtk/window.blp:249
 msgid "Left-handed"
-msgstr ""
+msgstr "Для левшей"
 
 #. translators: "Empty" is a verb
 #: data/gtk/window.blp:258
