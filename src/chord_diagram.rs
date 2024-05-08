@@ -260,6 +260,7 @@ impl FretboardChordDiagram {
         if chord.iter().all(|&value| matches!(value, None | Some(0))) {
             let new_pos = (self.neck_position() as i32 + change) as u8;
             self.set_neck_position(new_pos);
+            self.update_visuals();
             return;
         }
 
