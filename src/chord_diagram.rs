@@ -121,7 +121,8 @@ mod imp {
 
             // Setup top toggles
             for i in 0..STRINGS {
-                let top_toggle = FretboardChordDiagramTopToggle::new(STRINGS - i);
+                let top_toggle =
+                    FretboardChordDiagramTopToggle::new(STRINGS - i, note_name(NOTE_OFFSETS[i]));
                 top_toggle
                     .button()
                     .connect_clicked(glib::clone!(@weak obj => move |_| {
@@ -316,6 +317,8 @@ impl FretboardChordDiagram {
             }
 
             let offset = NOTE_OFFSETS.get(i).unwrap();
+            top_toggle.set_note_name(note_name(*offset));
+
             for (num, toggle) in toggles.get(string).unwrap().iter().enumerate() {
                 toggle.set_tooltip_text(Some(note_name(
                     offset + num + self.neck_position() as usize,
