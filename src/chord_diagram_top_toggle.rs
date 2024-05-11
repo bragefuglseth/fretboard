@@ -4,6 +4,8 @@ use gtk::glib;
 use gtk::prelude::*;
 use std::cell::Cell;
 
+use crate::chord_diagram::open_string_note_name;
+
 #[derive(Default, Clone, Copy, Debug)]
 pub enum TopToggleState {
     #[default]
@@ -156,8 +158,12 @@ impl FretboardChordDiagramTopToggle {
         let tooltip_text = match imp.state.get() {
             TopToggleState::Off => gettext("Not Open"),
             TopToggleState::Muted => gettext("Muted"),
-            // translators: this is an adjective, not a verb
-            TopToggleState::Open => gettext("Open"),
+            TopToggleState::Open => format!(
+                "{} ({})",
+                // translators: this is an adjective, not a verb
+                gettext("Open"),
+                open_string_note_name(self.imp().number.get()),
+            ),
         };
 
         let n = imp.number.get();

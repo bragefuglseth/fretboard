@@ -418,3 +418,10 @@ fn note_name(input: usize) -> &'static str {
         _ => unreachable!("root note above 11"),
     }
 }
+
+/// Returns the name of the note at `string_number`, where
+/// `string_number` follows the typical numbering of strings in
+/// a guitar, i.e. 1 being high E, up to 6 being the low E string.
+pub fn open_string_note_name(string_number: usize) -> &'static str {
+    note_name(NOTE_OFFSETS[6 - string_number])
+}
