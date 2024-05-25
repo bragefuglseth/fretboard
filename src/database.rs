@@ -1,6 +1,5 @@
-use gtk::gio;
-use gtk::prelude::*;
 use rayon::prelude::*;
+use std::include_str;
 
 #[derive(Debug)]
 pub struct Chord {
@@ -18,11 +17,7 @@ impl Default for ChordsDatabase {
 
 impl ChordsDatabase {
     pub fn load() -> Self {
-        let raw_data = gio::File::for_uri("resource:///dev/bragefuglseth/Fretboard/chords.txt")
-            .load_contents(None::<&gio::Cancellable>)
-            .unwrap()
-            .0;
-        let data_string = std::str::from_utf8(&raw_data).unwrap();
+        let data_string = include_str!("../data/chords.txt");
         let lines: Vec<&str> = data_string.lines().collect();
         let chunks = lines.split(|line| line.is_empty());
 

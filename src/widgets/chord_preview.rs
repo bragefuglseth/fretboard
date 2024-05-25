@@ -240,7 +240,7 @@ impl FretboardChordPreview {
 
         let backdrop = self.imp().diagram_backdrop.get();
         backdrop.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/chord-preview-backdrop-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/chord-preview-backdrop-{suffix}.svg"
         )));
 
         let barre_2 = self.imp().barre_2_image.get();
