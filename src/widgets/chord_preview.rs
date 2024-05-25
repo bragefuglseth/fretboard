@@ -1,5 +1,5 @@
 use crate::chord_ops::*;
-use crate::window::GuitarType;
+use crate::widgets::window::GuitarType;
 use adw::subclass::prelude::*;
 use gtk::glib;
 use gtk::prelude::*;

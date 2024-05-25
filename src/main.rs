@@ -19,20 +19,14 @@
  */
 
 mod application;
-mod barre_spin;
-mod chord_diagram;
-mod chord_diagram_toggle;
-mod chord_diagram_top_toggle;
 mod chord_name_algorithm;
-mod chord_name_entry;
 mod chord_ops;
-mod chord_preview;
 mod config;
 mod database;
-mod window;
+mod widgets;
 
 use self::application::FretboardApplication;
-use self::window::FretboardWindow;
+use self::widgets::FretboardWindow;
 
 use config::{APP_ID, GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};

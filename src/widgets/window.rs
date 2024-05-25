@@ -18,17 +18,17 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-use crate::{
-    chord_diagram::FretboardChordDiagram, chord_name_algorithm::calculate_chord_name,
-    chord_name_entry::FretboardChordNameEntry, chord_ops::prettify_chord_name,
-    chord_preview::FretboardChordPreview, config::APP_ID, database::ChordsDatabase,
-};
+use crate::chord_name_algorithm::calculate_chord_name;
+use crate::chord_ops::prettify_chord_name;
+use crate::config::APP_ID;
+use crate::database::ChordsDatabase;
+use crate::widgets::{FretboardChordDiagram, FretboardChordNameEntry, FretboardChordPreview};
 use adw::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
-use i18n_format::i18n_fmt;
 use glib::closure_local;
 use gtk::{gio, glib};
+use i18n_format::i18n_fmt;
 use once_cell::sync::OnceCell;
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;

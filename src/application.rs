@@ -19,9 +19,9 @@
  */
 
 use crate::FretboardWindow;
+use adw::prelude::*;
 use adw::subclass::prelude::*;
 use gettextrs::gettext;
-use adw::prelude::*;
 use gtk::{gio, glib};
 
 mod imp {

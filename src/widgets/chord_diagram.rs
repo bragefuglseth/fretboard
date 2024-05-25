@@ -1,8 +1,9 @@
-use crate::barre_spin::FretboardBarreSpin;
-use crate::chord_diagram_toggle::FretboardChordDiagramToggle;
-use crate::chord_diagram_top_toggle::{FretboardChordDiagramTopToggle, TopToggleState};
 use crate::chord_ops::*;
-use crate::window::GuitarType;
+use crate::widgets::chord_diagram_top_toggle::TopToggleState;
+use crate::widgets::window::GuitarType;
+use crate::widgets::{
+    FretboardBarreSpin, FretboardChordDiagramToggle, FretboardChordDiagramTopToggle,
+};
 use adw::subclass::prelude::*;
 use glib::{closure_local, subclass::Signal};
 use gtk::glib;

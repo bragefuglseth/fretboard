@@ -155,9 +155,7 @@ impl FretboardChordDiagramTopToggle {
         let imp = self.imp();
 
         let tooltip_text = match imp.state.get() {
-            TopToggleState::Off => i18n_fmt!(
-                i18n_fmt("Not Open ({})", self.imp().note_name.get())
-            ),
+            TopToggleState::Off => i18n_fmt!(i18n_fmt("Not Open ({})", self.imp().note_name.get())),
             TopToggleState::Muted => i18n_fmt!(
                 // translators: The text between the `{}` markers is the note of the muted string.
                 i18n_fmt("Muted ({})", self.imp().note_name.get())
