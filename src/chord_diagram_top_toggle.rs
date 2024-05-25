@@ -2,6 +2,7 @@ use adw::subclass::prelude::*;
 use gettextrs::gettext;
 use gtk::glib;
 use gtk::prelude::*;
+use i18n_format::i18n_fmt;
 use std::cell::Cell;
 
 #[derive(Default, Clone, Copy, Debug)]
@@ -31,6 +32,7 @@ mod imp {
 
         pub state: Cell<TopToggleState>,
         pub number: Cell<usize>,
+        pub note_name: Cell<&'static str>,
     }
 
     #[glib::object_subclass]
@@ -81,9 +83,10 @@ impl Default for FretboardChordDiagramTopToggle {
 }
 
 impl FretboardChordDiagramTopToggle {
-    pub fn new(number: usize) -> Self {
+    pub fn new(number: usize, note_name: &'static str) -> Self {
         let toggle = Self::default();
         toggle.imp().number.set(number);
+        toggle.imp().note_name.set(note_name);
         toggle
     }
 
@@ -109,6 +112,11 @@ impl FretboardChordDiagramTopToggle {
 
     pub fn state(&self) -> TopToggleState {
         self.imp().state.get()
+    }
+
+    pub fn set_note_name(&self, note_name: &'static str) {
+        self.imp().note_name.set(note_name);
+        self.update_tooltip();
     }
 
     fn setup_callbacks(&self) {
@@ -143,6 +151,24 @@ impl FretboardChordDiagramTopToggle {
             }));
     }
 
+    fn update_tooltip(&self) {
+        let imp = self.imp();
+
+        let tooltip_text = match imp.state.get() {
+            TopToggleState::Off => gettext("Not Open"),
+            TopToggleState::Muted => i18n_fmt!(
+                // translators: The text between the `{}` markers is the note of the muted string.
+                i18n_fmt("Muted ({})", self.imp().note_name.get())
+            ),
+            TopToggleState::Open => i18n_fmt!(
+                // translators: The text between the `{}` markers is the note of the open string. Open is an adjective not a verb.
+                i18n_fmt("Open ({})", self.imp().note_name.get())
+            ),
+        };
+
+        imp.button.set_tooltip_text(Some(&tooltip_text));
+    }
+
     pub fn update_icon(&self) {
         let imp = self.imp();
 
@@ -152,13 +178,6 @@ impl FretboardChordDiagramTopToggle {
                 TopToggleState::Open => "open",
                 TopToggleState::Muted => "muted",
             });
-
-        let tooltip_text = match imp.state.get() {
-            TopToggleState::Off => gettext("Not Open"),
-            TopToggleState::Muted => gettext("Muted"),
-            // translators: this is an adjective, not a verb
-            TopToggleState::Open => gettext("Open"),
-        };
 
         let n = imp.number.get();
 
@@ -173,6 +192,6 @@ impl FretboardChordDiagramTopToggle {
         imp.button
             .update_property(&[gtk::accessible::Property::Label(&a11y_label)]);
 
-        imp.button.set_tooltip_text(Some(&tooltip_text));
+        self.update_tooltip();
     }
 }
