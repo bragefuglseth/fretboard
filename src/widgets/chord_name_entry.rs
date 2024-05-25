@@ -11,7 +11,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, gtk::CompositeTemplate)]
-    #[template(resource = "/dev/bragefuglseth/Fretboard/chord-name-entry.ui")]
+    #[template(file = "src/widgets/chord_name_entry.blp")]
     pub struct FretboardChordNameEntry {
         #[template_child]
         pub entry: TemplateChild<gtk::Entry>,

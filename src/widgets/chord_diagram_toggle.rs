@@ -6,7 +6,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, gtk::CompositeTemplate)]
-    #[template(resource = "/dev/bragefuglseth/Fretboard/chord-diagram-toggle.ui")]
+    #[template(file = "src/widgets/chord_diagram_toggle.blp")]
     pub struct FretboardChordDiagramToggle {
         #[template_child]
         pub button: TemplateChild<gtk::ToggleButton>,

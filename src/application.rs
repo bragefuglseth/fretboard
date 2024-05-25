@@ -105,7 +105,7 @@ impl FretboardApplication {
 
     fn show_about(&self) {
         let about = adw::AboutDialog::from_appdata(
-            "/dev/bragefuglseth/Fretboard/metainfo.xml",
+            "/dev/bragefuglseth/Fretboard/dev.bragefuglseth.Fretboard.metainfo.xml",
             Some("6.0"),
         );
 

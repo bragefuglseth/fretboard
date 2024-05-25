@@ -1,5 +1,5 @@
 conf = configuration_data()
-conf.set_quoted('APP_ID', application_id)
+conf.set_quoted('APP_ID', app_id)
 conf.set_quoted('GETTEXT_PACKAGE', gettext_package)
 conf.set_quoted('LOCALEDIR', localedir)
 conf.set_quoted('PKGDATADIR', pkgdatadir)

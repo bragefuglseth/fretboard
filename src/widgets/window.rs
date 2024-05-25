@@ -57,7 +57,7 @@ mod imp {
 
     #[derive(Default, gtk::CompositeTemplate, glib::Properties)]
     #[properties(wrapper_type=super::FretboardWindow)]
-    #[template(resource = "/dev/bragefuglseth/Fretboard/window.ui")]
+    #[template(file = "src/widgets/window.blp")]
     pub struct FretboardWindow {
         // Template widgets
         #[template_child]

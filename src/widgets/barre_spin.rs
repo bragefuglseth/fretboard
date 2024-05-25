@@ -13,7 +13,7 @@ mod imp {
 
     #[derive(Default, glib::Properties, gtk::CompositeTemplate)]
     #[properties(wrapper_type = super::FretboardBarreSpin)]
-    #[template(resource = "/dev/bragefuglseth/Fretboard/barre-spin.ui")]
+    #[template(file = "src/widgets/barre_spin.blp")]
     pub struct FretboardBarreSpin {
         #[template_child]
         pub increment_button: TemplateChild<gtk::Button>,

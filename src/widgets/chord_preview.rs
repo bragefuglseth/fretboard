@@ -12,7 +12,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, gtk::CompositeTemplate)]
-    #[template(resource = "/dev/bragefuglseth/Fretboard/chord-preview.ui")]
+    #[template(file = "src/widgets/chord_preview.blp")]
     pub struct FretboardChordPreview {
         #[template_child]
         pub top_row: TemplateChild<gtk::Box>,
@@ -250,19 +250,19 @@ impl FretboardChordPreview {
         let barre_6 = self.imp().barre_6_image.get();
 
         barre_2.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/prv-barre-2-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/prv-barre-2-{suffix}.svg"
         )));
         barre_3.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/prv-barre-3-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/prv-barre-3-{suffix}.svg"
         )));
         barre_4.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/prv-barre-4-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/prv-barre-4-{suffix}.svg"
         )));
         barre_5.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/prv-barre-5-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/prv-barre-5-{suffix}.svg"
         )));
         barre_6.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/prv-barre-6-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/prv-barre-6-{suffix}.svg"
         )));
     }
 }

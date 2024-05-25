@@ -1,5 +1,5 @@
 {
-    "app-id" : "dev.bragefuglseth.Fretboard",
+    "app-id" : "dev.bragefuglseth.Fretboard.Devel",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",

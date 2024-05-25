@@ -25,8 +25,8 @@ mod imp {
     use super::*;
 
     #[derive(Default, glib::Properties, gtk::CompositeTemplate)]
-    #[properties( wrapper_type = super::FretboardChordDiagram )]
-    #[template(resource = "/dev/bragefuglseth/Fretboard/chord-diagram.ui")]
+    #[properties(wrapper_type = super::FretboardChordDiagram )]
+    #[template(file = "src/widgets/chord_diagram.blp")]
     pub struct FretboardChordDiagram {
         #[template_child]
         pub top_row: TemplateChild<gtk::Box>,
@@ -358,7 +358,7 @@ impl FretboardChordDiagram {
 
         let backdrop = self.imp().diagram_backdrop.get();
         backdrop.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/chord-diagram-backdrop-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/chord-diagram-backdrop-{suffix}.svg"
         )));
 
         let barre_2 = self.imp().barre_2_image.get();
@@ -368,19 +368,19 @@ impl FretboardChordDiagram {
         let barre_6 = self.imp().barre_6_image.get();
 
         barre_2.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/barre-2-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/barre-2-{suffix}.svg"
         )));
         barre_3.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/barre-3-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/barre-3-{suffix}.svg"
         )));
         barre_4.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/barre-4-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/barre-4-{suffix}.svg"
         )));
         barre_5.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/barre-5-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/barre-5-{suffix}.svg"
         )));
         barre_6.set_resource(Some(&format!(
-            "/dev/bragefuglseth/Fretboard/barre-6-{suffix}.svg"
+            "/dev/bragefuglseth/Fretboard/assets/barre-6-{suffix}.svg"
         )));
     }
 

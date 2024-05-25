@@ -27,10 +27,10 @@ gettext_package = meson.project_name()
 
 if get_option('profile') == 'development'
   profile = 'Devel'
-  application_id = '@0@.@1@'.format(base_id, profile)
+  app_id = '@0@.@1@'.format(base_id, profile)
 else
   profile = ''
-  application_id = base_id
+  app_id = base_id
 endif
 
 meson.add_dist_script(

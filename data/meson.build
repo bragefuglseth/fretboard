@@ -1,22 +1,7 @@
 gnome = import('gnome')
 
-blueprints = custom_target('blueprints',
-  input: files(
-    'gtk/chord-diagram-toggle.blp',
-    'gtk/chord-diagram-top-toggle.blp',
-    'gtk/barre-spin.blp',
-    'gtk/chord-diagram.blp',
-    'gtk/chord-name-entry.blp',
-    'gtk/chord-preview.blp',
-    'gtk/window.blp',
-    'gtk/help-overlay.blp',
-  ),
-  output: '.',
-  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
-)
-
 desktop_conf = configuration_data()
-desktop_conf.set('icon', application_id)
+desktop_conf.set('icon', app_id)
 desktop_file = i18n.merge_file(
 	type: 'desktop',
   input: configure_file(
@@ -24,7 +9,7 @@ desktop_file = i18n.merge_file(
     output: '@BASENAME@',
     configuration: desktop_conf
   ),
-  output: '@0@.desktop'.format(application_id),
+  output: '@0@.desktop'.format(app_id),
   po_dir: podir,
   install: true,
   install_dir: datadir / 'applications'
@@ -35,16 +20,15 @@ if desktop_utils.found()
   test('Validate desktop file', desktop_utils, args: [desktop_file])
 endif
 
-appdata_conf = configuration_data()
-appdata_conf.set('app-id', application_id)
-appdata_conf.set('gettext-package', gettext_package)
+run_command('cp', 'dev.bragefuglseth.Fretboard.metainfo.xml.in.in', 'dev.bragefuglseth.Fretboard.metainfo.xml.in', check: true)
+
+# Sed is used as a poor man's `configure_file` here because we need access to it in the src dir
+sed = find_program('sed', required: true)
+run_command(sed, '-i', 's/@app-id@/' + app_id + '/g', 'dev.bragefuglseth.Fretboard.metainfo.xml.in', check: true)
+
 appstream_file = i18n.merge_file(
-  input: configure_file(
-    input:'@0@.metainfo.xml.in.in'.format(base_id),
-    output: '@BASENAME@',
-    configuration: appdata_conf
-  ),
-  output: '@0@.metainfo.xml'.format(application_id),
+  input: 'dev.bragefuglseth.Fretboard.metainfo.xml.in',
+  output: '@0@.metainfo.xml'.format(app_id),
   po_dir: podir,
   install: true,
   install_dir: datadir / 'appdata'
@@ -54,18 +38,15 @@ appstreamcli = find_program('appstreamcli', required: false, disabler: true)
 test('Validate appstream file', appstreamcli,
   args: ['validate', '--no-net', '--explain',  appstream_file])
 
-resources_conf = configuration_data()
-resources_conf.set('app-id', application_id)
-gnome.compile_resources('fretboard',
-  configure_file(
-    input: '@0@.gresource.xml.in'.format(meson.project_name()),
-    output: '@BASENAME@',
-    configuration: resources_conf
-  ),
-  gresource_bundle: true,
-  install: true,
-  install_dir: pkgdatadir,
-  dependencies: blueprints,
+# Setup a translated metainfo file in the resources dir as well
+# for use by the about dialog
+msgfmt = find_program('msgfmt', required: true)
+run_command(msgfmt,
+    '--xml',
+    '-d' + meson.project_source_root() / 'po',
+    '--template=dev.bragefuglseth.Fretboard.metainfo.xml.in',
+    '--output-file=' + 'resources' / 'dev.bragefuglseth.Fretboard.metainfo.xml',
+    check: true,
 )
 
 install_data('dev.bragefuglseth.Fretboard.gschema.xml',
