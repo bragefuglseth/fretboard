@@ -8,6 +8,8 @@ build/
 _build/
 builddir/
 build-dir/
+data/dev.bragefuglseth.Fretboard.metainfo.xml.in
+data/resources/dev.bragefuglseth.Fretboard.metainfo.xml
 src/config.rs
 .flatpak/
 vendor
