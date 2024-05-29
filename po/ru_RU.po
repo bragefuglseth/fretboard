@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the fretboard package.
 # беб <ikibastusloh1337@gmail.com>, 2023.
 # Николай Затоковенко <zatokovenko.n@gmail.com>, 2024.
+# Gusko Maksim <gusko-maksim@mail.ru>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-05-06 00:07+0000\n"
-"Last-Translator: Николай Затоковенко <zatokovenko.n@gmail.com>\n"
+"PO-Revision-Date: 2024-05-30 07:09+0000\n"
+"Last-Translator: Gusko Maksim <gusko-maksim@mail.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/ru/>\n"
 "Language: ru_RU\n"
@@ -18,12 +19,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
 msgid "Fretboard"
-msgstr "Fretboard"
+msgstr "Гриф"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
@@ -134,7 +135,7 @@ msgstr "Переход к строке ввода"
 #: data/gtk/help-overlay.blp:42
 #, fuzzy
 msgid "View Shortcuts"
-msgstr "Комбинации клавиш"
+msgstr "Просмотр ярлыков"
 
 #: data/gtk/help-overlay.blp:47
 msgid "Close Window"
