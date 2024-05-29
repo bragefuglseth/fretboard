@@ -64,6 +64,19 @@
   </supports>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <releases>
+    <release date="2024-05-29" version="7.0">
+      <description translate="no">
+        <p>Enjoy practicing some tunes for the summer with this fresh batch of improvements:</p>
+        <ul>
+          <li>Better name predictions when drawing chords on the diagram</li>
+          <li>Note names shown on hover for the neck top toggles, regardless of whether they’re open or muted</li>
+          <li>Reliable updates of note names when moving up and down the neck</li>
+          <li>Catalan, Japanese, and Hindi translations, making Fretboard available in a total of 21 languages</li>
+        </ul>
+        <p>As always, this update was made possible by volunteer bug reporters, developers, and translators. If you would like to come with suggestions, report bugs, translate the app, or contribute otherwise, feel free to reach out!</p>
+      </description>
+    </release>
+
     <release date="2024-04-06" version="6.1">
       <description translate="no">
         <p>This update improves the translations of Fretboard into other languages.</p>

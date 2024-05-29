@@ -125,6 +125,9 @@ mod imp {
             klass.install_action("win.bookmark-chord", None, move |win, _, _| {
                 win.bookmark_chord();
             });
+            klass.install_action("win.about", None, move |win, _, _| {
+                win.show_about_dialog();
+            });
 
             klass.bind_template();
         }
@@ -660,6 +663,20 @@ impl FretboardWindow {
             .set_vadjustment(Some(&gtk::Adjustment::builder().lower(0.0).build()));
 
         imp.navigation_stack.push_by_tag("bookmarks");
+    }
+
+    fn show_about_dialog(&self) {
+        let about = adw::AboutDialog::from_appdata(
+            "/dev/bragefuglseth/Fretboard/dev.bragefuglseth.Fretboard.metainfo.xml",
+            Some("7.0"),
+        );
+
+        about.set_developers(&["Brage Fuglseth https://bragefuglseth.dev"]);
+        about.set_copyright("© 2024 Brage Fuglseth");
+        // Translators: Replace "translator-credits" with your names, one name per line
+        about.set_translator_credits(&gettext("translator-credits"));
+
+        about.present(self.root().unwrap().downcast_ref::<gtk::Window>().unwrap());
     }
 }
 

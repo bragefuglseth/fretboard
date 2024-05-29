@@ -6,14 +6,9 @@
 [![Proudly part of GNOME Circle](https://circle.gnome.org/assets/button/badge.svg)](https://circle.gnome.org)
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
 
-How was that chord played, again? Fretboard lets you find guitar chords
-by typing their names or plotting them on an interactive guitar neck.
-When you have identified a chord, you can experiment with changing it,
-see more ways to play it, or bookmark it to save it for later. No matter
-if you are a beginner or an advanced guitarist, you can use Fretboard to
-practice, learn, and master your favorite songs!
-
 ![screenshot](/data/screenshots/screenshot-1.png)
+
+How was that chord played, again? Fretboard lets you find guitar chords by typing their names or plotting them on an interactive guitar neck. When you have identified a chord, you can experiment with changing it, see more ways to play it, or bookmark it to save it for later. No matter if you are a beginner or an advanced guitarist, you can use Fretboard to practice, learn, and master your favorite songs!
 
 ## Installation
 
@@ -38,12 +33,3 @@ Please take this into consideration as well:
 - This project follows the [GNOME Code of Conduct](https://conduct.gnome.org).
 - Only Flatpak is officially supported.
 - If you want to contribute major changes, please discuss them beforehand to verify that they are suitable for the project.
-
-## Roadmap
-
-- [ ] Richer chord information (notes used, etc.)
-
-## Credits
-
-The original chord data is borrowed from T-vK's [Chord Collection](https://github.com/t-vK/chord-collection). I've modified it to fit the needs of this app better.
-

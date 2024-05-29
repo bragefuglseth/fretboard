@@ -21,7 +21,6 @@
 use crate::FretboardWindow;
 use adw::prelude::*;
 use adw::subclass::prelude::*;
-use gettextrs::gettext;
 use gtk::{gio, glib};
 
 mod imp {
@@ -88,10 +87,7 @@ impl FretboardApplication {
         let quit_action = gio::ActionEntry::builder("quit")
             .activate(move |app: &Self, _, _| app.quit())
             .build();
-        let about_action = gio::ActionEntry::builder("about")
-            .activate(move |app: &Self, _, _| app.show_about())
-            .build();
-        self.add_action_entries([quit_action, about_action]);
+        self.add_action_entries([quit_action]);
 
         self.set_accels_for_action("app.quit", &["<primary>q"]);
         self.set_accels_for_action("window.close", &["<Ctrl>W"]);
@@ -101,19 +97,5 @@ impl FretboardApplication {
         self.set_accels_for_action("win.more-variants", &["<Alt>Return"]);
         self.set_accels_for_action("win.bookmark-chord", &["<Ctrl>D"]);
         self.set_accels_for_action("win.bookmarks", &["<Ctrl><Alt>D"]);
-    }
-
-    fn show_about(&self) {
-        let about = adw::AboutDialog::from_appdata(
-            "/dev/bragefuglseth/Fretboard/dev.bragefuglseth.Fretboard.metainfo.xml",
-            Some("6.0"),
-        );
-
-        about.set_developers(&["Brage Fuglseth https://bragefuglseth.dev"]);
-        about.set_copyright("© 2024 Brage Fuglseth");
-        // Translators: Replace "translator-credits" with your names, one name per line
-        about.set_translator_credits(&gettext("translator-credits"));
-
-        about.present(&self.active_window().unwrap());
     }
 }
