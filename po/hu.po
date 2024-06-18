@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the fretboard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fretboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-28 22:53+0100\n"
+"PO-Revision-Date: 2024-06-14 15:30+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+msgid "Fretboard"
+msgstr "Fretboard"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
+msgid "Look up guitar chords"
+msgstr "Nézz utána gitárakkordoknak"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+msgid "guitar;chords"
+msgstr "gitár;akkordok"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"Hogy is néz ki ez az akkord még egyszer? A Fretboard segítségével "
+"megtalálhatod a gitárakkordokat a nevük begépelésével vagy az interaktív "
+"gitárnyakra való felrajzolásával. Ha azonosítottál egy akkordot, "
+"kísérletezhetsz a módosításával, további lejátszási módokat tekinthetsz meg "
+"vagy későbbi használatra könyvjelzők közé helyezheted. Mindegy, hogy kezdő "
+"vagy haladó gitáros vagy, a Fretboard segítségével gyakorolhatod, tanulhatod "
+"és elsajátíthatod kedvenc dalaidat!"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+"A Fretboard a GNOME Kör büszke tagja, egy kezdményezésé, amely a GNOME "
+"platformon elérhető nagyszerű szoftvert támogatja. További információért "
+"látogass el a GNOME Kör webhelyére."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr "Akkord mutatása"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr "Barrefogás mutatása"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr "Egy akkord variánsainak mutatása"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
+msgstr "A könyvjelző oldal"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgstr "Lehet mind \"jobbkezes\", mind \"balkezes\"."
+
+#: data/gtk/barre-spin.blp:10
+msgid "Move Up"
+msgstr "Mozgatás fel"
+
+#: data/gtk/barre-spin.blp:30
+msgid "Move Down"
+msgstr "Mozgatás le"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
+msgid "Chord Name"
+msgstr "Akkord neve"
+
+#: data/gtk/chord-name-entry.blp:35
+msgid "Confirm"
+msgstr "Megerősítés"
+
+#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
+msgid "Enharmonic Equivalent"
+msgstr "Enharmonikus megfelelője"
+
+#: data/gtk/help-overlay.blp:11
+msgid "General"
+msgstr "Általános"
+
+#. translators: "Empty" is a verb
+#: data/gtk/help-overlay.blp:15
+msgid "Empty Chord"
+msgstr "Üres akkord"
+
+#. translators: "Bookmark" is a verb
+#: data/gtk/help-overlay.blp:21
+msgid "Bookmark Chord"
+msgstr "Akkord könyvjelzőzése"
+
+#: data/gtk/help-overlay.blp:26
+msgid "View Bookmarks"
+msgstr "Könyvjelzők megtekintése"
+
+#: data/gtk/help-overlay.blp:31
+msgid "View Chord Variants"
+msgstr "Akkord variánsok megtekintése"
+
+#. translators: "Focus" is a verb
+#: data/gtk/help-overlay.blp:37
+msgid "Focus Entry"
+msgstr "Bevitel kijelölése"
+
+#: data/gtk/help-overlay.blp:42
+msgid "View Shortcuts"
+msgstr "Billentyűparancsok megtekintése"
+
+#: data/gtk/help-overlay.blp:47
+msgid "Close Window"
+msgstr "Ablak bezárása"
+
+#: data/gtk/help-overlay.blp:52
+msgid "Quit"
+msgstr "Kilépés"
+
+#: data/gtk/window.blp:29
+msgid "Main Menu"
+msgstr "Főmenü"
+
+#: data/gtk/window.blp:83
+msgid "Chord not found"
+msgstr "Az akkord nem található"
+
+#: data/gtk/window.blp:117
+msgid "View _Variants"
+msgstr "Variánsok_megtekintése"
+
+#: data/gtk/window.blp:158
+msgid "No Variants"
+msgstr "Nincs variáns"
+
+#: data/gtk/window.blp:200 src/window.rs:368
+msgid "Bookmarks"
+msgstr "Könyvjelzők"
+
+#: data/gtk/window.blp:240
+msgid "Guitar Type"
+msgstr "Gitártípus"
+
+#: data/gtk/window.blp:243
+msgid "Right-handed"
+msgstr "Jobbkezes"
+
+#: data/gtk/window.blp:249
+msgid "Left-handed"
+msgstr "Balkezes"
+
+#. translators: "Empty" is a verb
+#: data/gtk/window.blp:258
+msgid "_Empty Chord"
+msgstr "_Üres akkord"
+
+#: data/gtk/window.blp:265
+msgid "_Keyboard Shortcuts"
+msgstr "_Billentyűparancsok"
+
+#: data/gtk/window.blp:270
+msgid "_About Fretboard"
+msgstr "_Fredboard névjegye"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.rs:116
+msgid "translator-credits"
+msgstr "Daniel Uhrinyi  <12256895+danieluhrinyi@users.noreply.github.com>"
+
+#: src/chord_diagram_top_toggle.rs:157
+msgid "Not Open"
+msgstr "Nincs nyitva"
+
+#: src/chord_diagram_top_toggle.rs:158
+msgid "Muted"
+msgstr "Némított"
+
+#. translators: this is an adjective, not a verb
+#: src/chord_diagram_top_toggle.rs:160
+msgid "Open"
+msgstr "Nyitva"
+
+#: src/window.rs:291
+msgid "Remove Bookmark"
+msgstr "Könyvjelző eltávolítása"
+
+#: src/window.rs:293
+msgid "Bookmark"
+msgstr "Könyvjelző mentése"
+
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+#: src/window.rs:304
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+"A Fretboard beépített akkordkészletében nincsenek ilyen nevű akkordok. Ha "
+"úgy gondolod, hogy szerepelnie kellene itt, {}kérlek jelezd{}."
+
+#: src/window.rs:366
+msgid "No Bookmarks"
+msgstr "Nincsenek könyvjelzők"
