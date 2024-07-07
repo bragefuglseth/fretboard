@@ -14,7 +14,7 @@ How was that chord played, again? Fretboard lets you find guitar chords by typin
 
 Fretboard is available on Flathub.
 
-[<img width="240" alt="Download on Flathub" src="https://dl.flathub.org/assets/badges/flathub-badge-en.png"/>](https://flathub.org/apps/dev.bragefuglseth.Fretboard)
+[<img width="240" alt="Download on Flathub" src="https://flathub.org/api/badge?svg&locale=en"/>](https://flathub.org/apps/dev.bragefuglseth.Fretboard)
 
 ## GNOME Circle
 
