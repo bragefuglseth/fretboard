@@ -64,6 +64,12 @@
   </supports>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <releases>
+    <release date="2024-07-07" version="7.1">
+      <description translate="no">
+        <p>This update improves the translations of Fretboard into other languages.</p>
+      </description>
+    </release>
+
     <release date="2024-05-29" version="7.0">
       <description translate="no">
         <p>Enjoy practicing some tunes for the summer with this fresh batch of improvements:</p>

@@ -1,6 +1,6 @@
 project('fretboard',
   'rust',
-  version: '7.0',
+  version: '7.1',
   license: 'GPL-3.0-or-later',
   meson_version: '>= 0.62.0',
 )
@@ -32,12 +32,6 @@ else
   profile = ''
   app_id = base_id
 endif
-
-meson.add_dist_script(
-  'build-aux/dist-vendor.sh',
-  meson.project_source_root(),
-  meson.project_build_root() / 'meson-dist' / meson.project_name() + '-' + meson.project_version(),
-)
 
 subdir('data')
 subdir('src')
