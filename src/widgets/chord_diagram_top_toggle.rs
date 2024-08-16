@@ -123,8 +123,12 @@ impl FretboardChordDiagramTopToggle {
         let imp = self.imp();
 
         // A hacky way to get the button state to update properly, better solutions are welcome :)
-        imp.button
-            .connect_toggled(glib::clone!(@weak imp, @weak self as toggle => move |_| {
+        imp.button.connect_toggled(glib::clone!(
+            #[weak]
+            imp,
+            #[weak(rename_to = toggle)]
+            self,
+            move |_| {
                 if !imp.programmatically_toggled.get() {
                     if imp.button.is_active() {
                         imp.state.set(TopToggleState::Open);
@@ -135,10 +139,15 @@ impl FretboardChordDiagramTopToggle {
                     imp.recently_toggled.set(true);
                     toggle.update_icon();
                 }
-            }));
+            }
+        ));
 
-        imp.button
-            .connect_clicked(glib::clone!(@weak imp, @weak self as toggle => move |_| {
+        imp.button.connect_clicked(glib::clone!(
+            #[weak]
+            imp,
+            #[weak(rename_to = toggle)]
+            self,
+            move |_| {
                 if !imp.recently_toggled.get() {
                     imp.state.set(match imp.state.get() {
                         TopToggleState::Open => TopToggleState::Muted,
@@ -148,16 +157,15 @@ impl FretboardChordDiagramTopToggle {
                 }
                 imp.recently_toggled.set(false);
                 toggle.update_icon();
-            }));
+            }
+        ));
     }
 
     fn update_tooltip(&self) {
         let imp = self.imp();
 
         let tooltip_text = match imp.state.get() {
-            TopToggleState::Off => i18n_fmt!(
-                i18n_fmt("Not Open ({})", self.imp().note_name.get())
-            ),
+            TopToggleState::Off => i18n_fmt!(i18n_fmt("Not Open ({})", self.imp().note_name.get())),
             TopToggleState::Muted => i18n_fmt!(
                 // translators: The text between the `{}` markers is the note of the muted string.
                 i18n_fmt("Muted ({})", self.imp().note_name.get())

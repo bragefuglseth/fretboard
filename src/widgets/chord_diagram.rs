@@ -107,13 +107,21 @@ mod imp {
 
             let style_manager = adw::StyleManager::default();
 
-            style_manager.connect_dark_notify(glib::clone!(@weak obj => move |_| {
-                obj.update_style();
-            }));
+            style_manager.connect_dark_notify(glib::clone!(
+                #[weak]
+                obj,
+                move |_| {
+                    obj.update_style();
+                }
+            ));
 
-            style_manager.connect_high_contrast_notify(glib::clone!(@weak obj => move |_| {
-                obj.update_style();
-            }));
+            style_manager.connect_high_contrast_notify(glib::clone!(
+                #[weak]
+                obj,
+                move |_| {
+                    obj.update_style();
+                }
+            ));
 
             obj.update_style();
 
@@ -124,12 +132,14 @@ mod imp {
             for i in 0..STRINGS {
                 let top_toggle =
                     FretboardChordDiagramTopToggle::new(STRINGS - i, note_name(NOTE_OFFSETS[i]));
-                top_toggle
-                    .button()
-                    .connect_clicked(glib::clone!(@weak obj => move |_| {
+                top_toggle.button().connect_clicked(glib::clone!(
+                    #[weak]
+                    obj,
+                    move |_| {
                         obj.update_chord();
                         obj.emit_by_name::<()>("user-changed-chord", &[]);
-                    }));
+                    }
+                ));
                 self.top_row.append(&top_toggle);
                 self.top_toggles.borrow_mut().push(top_toggle);
             }
@@ -140,12 +150,14 @@ mod imp {
 
                 for fret_num in 0..FRETS {
                     let toggle = FretboardChordDiagramToggle::new();
-                    toggle
-                        .button()
-                        .connect_clicked(glib::clone!(@weak obj => move |_| {
+                    toggle.button().connect_clicked(glib::clone!(
+                        #[weak]
+                        obj,
+                        move |_| {
                             obj.update_chord();
                             obj.emit_by_name::<()>("user-changed-chord", &[]);
-                        }));
+                        }
+                    ));
                     toggle.button().set_group(Some(
                         &self.top_toggles.borrow().get(string_num).unwrap().button(),
                     ));
@@ -164,15 +176,19 @@ mod imp {
             barre_spin.connect_closure(
                 "user-changed-value",
                 false,
-                closure_local!(@strong obj => move |_spin: FretboardBarreSpin, string: &str| {
-                    let message = match string {
-                        "increment" => SpinMessage::Increment,
-                        "decrement" => SpinMessage::Decrement,
-                        _ => panic!("unknown message from spin button"),
-                    };
-                    obj.update_neck_position(message);
-                    obj.emit_by_name::<()>("user-changed-chord", &[]);
-                }),
+                closure_local!(
+                    #[strong]
+                    obj,
+                    move |_spin: FretboardBarreSpin, string: &str| {
+                        let message = match string {
+                            "increment" => SpinMessage::Increment,
+                            "decrement" => SpinMessage::Decrement,
+                            _ => panic!("unknown message from spin button"),
+                        };
+                        obj.update_neck_position(message);
+                        obj.emit_by_name::<()>("user-changed-chord", &[]);
+                    }
+                ),
             );
 
             self.obj().update_visuals();

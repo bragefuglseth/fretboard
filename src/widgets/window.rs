@@ -257,11 +257,13 @@ impl FretboardWindow {
 
         let entry = self.imp().entry.get();
 
-        entry
-            .entry()
-            .connect_activate(glib::clone!(@weak self as win => move |_| {
+        entry.entry().connect_activate(glib::clone!(
+            #[weak(rename_to = win)]
+            self,
+            move |_| {
                 win.load_chord_from_name();
-            }));
+            }
+        ));
 
         let win = self.clone();
 
@@ -315,7 +317,7 @@ impl FretboardWindow {
     }
 
     fn focus_entry(&self) {
-        self.set_focus_widget(Some(&self.imp().entry.imp().entry.get()));
+        self.set_focus(Some(&self.imp().entry.imp().entry.get()));
     }
 
     fn bookmark_chord(&self) {
@@ -336,7 +338,7 @@ impl FretboardWindow {
         let current_chord = imp.chord_diagram.imp().chord.get();
         let current_name = imp.entry.serialized_buffer_text();
 
-        self.set_focus_widget(Some(&star_toggle));
+        self.set_focus(Some(&star_toggle));
 
         star_toggle.set_active(!star_toggle.is_active());
 
@@ -559,15 +561,21 @@ impl FretboardWindow {
                 .child(&preview)
                 .build();
 
-            button.connect_clicked(glib::clone!(@weak self as win, @weak preview => move |_| {
-                let name = preview.imp().chord_name.borrow();
-                let chord = preview.imp().chord.get();
+            button.connect_clicked(glib::clone!(
+                #[weak(rename_to = win)]
+                self,
+                #[weak]
+                preview,
+                move |_| {
+                    let name = preview.imp().chord_name.borrow();
+                    let chord = preview.imp().chord.get();
 
-                win.imp().chord_diagram.set_chord(chord);
-                win.imp().entry.overwrite_text(&name);
-                win.refresh_star_toggle();
-                win.imp().navigation_stack.pop();
-            }));
+                    win.imp().chord_diagram.set_chord(chord);
+                    win.imp().entry.overwrite_text(&name);
+                    win.refresh_star_toggle();
+                    win.imp().navigation_stack.pop();
+                }
+            ));
 
             // We already have a button, so having the FlowBoxChild focusable would create an
             // unnecessary layer of indirection
@@ -639,15 +647,21 @@ impl FretboardWindow {
                 .child(&bookmark_box)
                 .build();
 
-            button.connect_clicked(glib::clone!(@weak self as win, @weak preview => move |_| {
-                let name = preview.imp().chord_name.borrow();
-                let chord = preview.imp().chord.get();
+            button.connect_clicked(glib::clone!(
+                #[weak(rename_to = win)]
+                self,
+                #[weak]
+                preview,
+                move |_| {
+                    let name = preview.imp().chord_name.borrow();
+                    let chord = preview.imp().chord.get();
 
-                win.imp().chord_diagram.set_chord(chord);
-                win.imp().entry.overwrite_text(&prettify_chord_name(&name));
-                win.refresh_star_toggle();
-                win.imp().navigation_stack.pop();
-            }));
+                    win.imp().chord_diagram.set_chord(chord);
+                    win.imp().entry.overwrite_text(&prettify_chord_name(&name));
+                    win.refresh_star_toggle();
+                    win.imp().navigation_stack.pop();
+                }
+            ));
 
             // We already have a button, so having the FlowBoxChild focusable would create an
             // unnecessary layer of indirection
@@ -676,7 +690,9 @@ impl FretboardWindow {
         // Translators: Replace "translator-credits" with your names, one name per line
         about.set_translator_credits(&gettext("translator-credits"));
 
-        about.present(self.root().unwrap().downcast_ref::<gtk::Window>().unwrap());
+        about.present(Some(
+            self.root().unwrap().downcast_ref::<gtk::Window>().unwrap(),
+        ));
     }
 }
 

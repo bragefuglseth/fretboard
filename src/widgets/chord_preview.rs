@@ -104,13 +104,21 @@ mod imp {
 
             let style_manager = adw::StyleManager::default();
 
-            style_manager.connect_dark_notify(glib::clone!(@weak obj => move |_| {
-                obj.update_style();
-            }));
+            style_manager.connect_dark_notify(glib::clone!(
+                #[weak]
+                obj,
+                move |_| {
+                    obj.update_style();
+                }
+            ));
 
-            style_manager.connect_high_contrast_notify(glib::clone!(@weak obj => move |_| {
-                obj.update_style();
-            }));
+            style_manager.connect_high_contrast_notify(glib::clone!(
+                #[weak]
+                obj,
+                move |_| {
+                    obj.update_style();
+                }
+            ));
 
             obj.update_style();
         }

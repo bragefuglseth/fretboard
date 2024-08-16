@@ -114,18 +114,22 @@ impl FretboardBarreSpin {
             .sync_create()
             .build();
 
-        self.imp()
-            .increment_button
-            .connect_clicked(glib::clone!(@weak self as spin => move |_| {
+        self.imp().increment_button.connect_clicked(glib::clone!(
+            #[weak(rename_to = spin)]
+            self,
+            move |_| {
                 spin.set_value(spin.value() + 1);
                 spin.emit_by_name::<()>("user-changed-value", &[&"increment"]);
-            }));
+            }
+        ));
 
-        self.imp()
-            .decrement_button
-            .connect_clicked(glib::clone!(@weak self as spin => move |_| {
+        self.imp().decrement_button.connect_clicked(glib::clone!(
+            #[weak(rename_to = spin)]
+            self,
+            move |_| {
                 spin.set_value(spin.value() - 1);
                 spin.emit_by_name::<()>("user-changed-value", &[&"decrement"]);
-            }));
+            }
+        ));
     }
 }

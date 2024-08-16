@@ -58,10 +58,10 @@ mod imp {
 
             self.parent_constructed();
 
-            let revealer = self.revealer.get();
-
-            self.entry
-                .connect_changed(glib::clone!(@weak self as entry_wrapper => move |entry| {
+            self.entry.connect_changed(glib::clone!(
+                #[weak(rename_to = entry_wrapper)]
+                self,
+                move |entry| {
                     if entry_wrapper.programatically_changed.get() {
                         entry_wrapper.programatically_changed.set(false);
                         return;
@@ -82,31 +82,54 @@ mod imp {
                         entry_wrapper.revealer.set_visible(false);
                         entry_wrapper.revealer.set_reveal_child(false);
                     }
-                }));
+                }
+            ));
 
-            self.entry.connect_activate(
-                glib::clone!(@weak revealer, @weak self as entry_wrapper => move |_| {
+            self.entry.connect_activate(glib::clone!(
+                #[weak(rename_to = entry_wrapper)]
+                self,
+                move |_| {
                     let prettified_name = prettify_chord_name(&entry_wrapper.entry.text());
                     entry_wrapper.programatically_changed.set(true);
                     entry_wrapper.obj().overwrite_text(&prettified_name);
                     entry_wrapper.entry.set_position(-1);
-                }),
-            );
+                }
+            ));
 
             let entry = self.entry.get();
 
-            self.button
-                .connect_clicked(glib::clone!(@weak entry => move |_|{
+            self.button.connect_clicked(glib::clone!(
+                #[weak]
+                entry,
+                move |_| {
                     entry.emit_activate();
-                }));
+                }
+            ));
 
-            self.enharmonic_button.connect_clicked(glib::clone!(@weak obj, @weak entry, @weak self as entry_wrapper => move |btn| {
-                let enharmonic = btn.label().map(|gs| gs.to_string()).unwrap_or(String::from(""));
-                let modified_name = format!("{}{}", enharmonic, entry.text().chars().skip(2).collect::<String>());
-                obj.imp().programatically_changed.set(true);
-                obj.overwrite_text(&modified_name);
-                entry_wrapper.obj().emit_by_name::<()>("enharmonic-clicked", &[]);
-            }));
+            self.enharmonic_button.connect_clicked(glib::clone!(
+                #[weak]
+                obj,
+                #[weak]
+                entry,
+                #[weak(rename_to = entry_wrapper)]
+                self,
+                move |btn| {
+                    let enharmonic = btn
+                        .label()
+                        .map(|gs| gs.to_string())
+                        .unwrap_or(String::from(""));
+                    let modified_name = format!(
+                        "{}{}",
+                        enharmonic,
+                        entry.text().chars().skip(2).collect::<String>()
+                    );
+                    obj.imp().programatically_changed.set(true);
+                    obj.overwrite_text(&modified_name);
+                    entry_wrapper
+                        .obj()
+                        .emit_by_name::<()>("enharmonic-clicked", &[]);
+                }
+            ));
         }
 
         fn dispose(&self) {
