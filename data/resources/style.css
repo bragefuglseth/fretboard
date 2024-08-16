@@ -23,7 +23,7 @@ chord-diagram-toggle button, .fretboard-chord-diagram-top-toggle button{
 }
 
 chord-diagram-toggle button:checked {
-  background: @accent_bg_color;
+  background: var(--accent-bg-color);
 }
 
 chord-diagram-toggle button:hover {
@@ -31,7 +31,7 @@ chord-diagram-toggle button:hover {
 }
 
 chord-diagram-toggle button:checked:hover {
-  background: @accent_bg_color;
+  background: var(--accent-bg-color);
 }
 
 .fretboard-chord-diagram-top-toggle button:checked{
@@ -44,7 +44,7 @@ chord-diagram-toggle button:checked:hover {
 }
 
 .fretboard-chord-diagram-top-toggle.open, .fretboard-chord-diagram-top-toggle image.open {
-  color: @accent_bg_color;
+  color: var(--accent-bg-color);
 }
 
 .fretboard-chord-diagram-top-toggle button:hover {
@@ -76,7 +76,7 @@ chord-diagram-toggle button:checked:hover {
 }
 
 .fretboard-chord-preview-dot.active {
-  background: @accent_bg_color;
+  background: var(--accent-bg-color);
 } 
 
 .fretboard-chord-preview-button {

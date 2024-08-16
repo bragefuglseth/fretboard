@@ -3,7 +3,7 @@
 }
 
 .fretboard-chord-diagram-top-toggle.open, .fretboard-chord-diagram-top-toggle image.open {
-  color: @accent_bg_color;
+  color: var(--accent-bg-color);
 }
 
 .fretboard-chord-diagram-top-toggle button:checked:hover {
