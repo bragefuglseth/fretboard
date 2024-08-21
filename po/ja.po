@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the fretboard package.
 # Himmel <anonymous.colt330@aleeas.com>, 2024.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2024.
+# Assem Askarova <assask499@users.noreply.hosted.weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-05-06 00:07+0000\n"
-"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"PO-Revision-Date: 2024-08-22 12:09+0000\n"
+"Last-Translator: Assem Askarova <assask499@users.noreply.hosted.weblate.org>"
+"\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/ja/>\n"
 "Language: ja\n"
@@ -17,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.7\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -151,7 +153,7 @@ msgstr "コードが見つかりません"
 
 #: data/gtk/window.blp:117
 msgid "View _Variants"
-msgstr "バリエーションを表示(_V)"
+msgstr "バリエーションを表示（_V）"
 
 #: data/gtk/window.blp:158
 msgid "No Variants"
