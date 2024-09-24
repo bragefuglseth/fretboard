@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the fretboard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fretboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-28 22:53+0100\n"
+"PO-Revision-Date: 2024-09-24 11:17+0300\n"
+"Last-Translator: Ronnie Nissan <ronnie.nissan@proton.me>\n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+msgid "Fretboard"
+msgstr ""
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
+msgid "Look up guitar chords"
+msgstr "البحث عن كوردات الجيتار"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+msgid "guitar;chords"
+msgstr "جيتار؛ كوردات"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"كيف تم عزف هذا الكورد مرة أخرى؟ يتيح لك تطبيق Fretboard العثور على كوردات "
+"الجيتار من خلال كتابة أسمائها أو رسمها على عنق جيتار تفاعلي. عندما تحدد "
+"كوردًا، يمكنك التجربة بتغييره، استكشاف طرق أخرى لعزفه، أو حفظه لوقت لاحق. "
+"سواء كنت مبتدئًا أو عازف جيتار متقدم، يمكنك استخدام فريت بورد للتدرب، التعلم، "
+"وإتقان أغانيك المفضلة!"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+"يُعد Fretboard جزءًا من GNOME Circle بكل فخر، وهي مبادرة تدعم البرامج الرائعة "
+"المتاحة لمنصة GNOME. لمزيد من المعلومات، قم بزيارة موقع GNOME Circle."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr "عرض كورد"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr "عرض كورد باري"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr "عرض متغيرات أخرى للكورد"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
+msgstr "صفحة العلامات المرجعية"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgstr "يمكن أن يكون إما \"يميني\" أو \"يساري\"."
+
+#: data/gtk/barre-spin.blp:10
+msgid "Move Up"
+msgstr "تحرك للأعلى"
+
+#: data/gtk/barre-spin.blp:30
+msgid "Move Down"
+msgstr "تحرك للأسفل"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
+msgid "Chord Name"
+msgstr "أسم الكورد"
+
+#: data/gtk/chord-name-entry.blp:35
+msgid "Confirm"
+msgstr "أكد"
+
+#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
+msgid "Enharmonic Equivalent"
+msgstr "المعادِل التوافقي"
+
+#: data/gtk/help-overlay.blp:11
+msgid "General"
+msgstr "عام"
+
+#. translators: "Empty" is a verb
+#: data/gtk/help-overlay.blp:15
+msgid "Empty Chord"
+msgstr "كورد فارغ"
+
+#. translators: "Bookmark" is a verb
+#: data/gtk/help-overlay.blp:21
+msgid "Bookmark Chord"
+msgstr "حفظ الكورد في العلامات المرجعية"
+
+#: data/gtk/help-overlay.blp:26
+msgid "View Bookmarks"
+msgstr "عرض العلامات المرجعية"
+
+#: data/gtk/help-overlay.blp:31
+msgid "View Chord Variants"
+msgstr "عرض متغيرات أخرى للكورد"
+
+#. translators: "Focus" is a verb
+#: data/gtk/help-overlay.blp:37
+msgid "Focus Entry"
+msgstr "ركز على حقل الادخال"
+
+#: data/gtk/help-overlay.blp:42
+msgid "View Shortcuts"
+msgstr "عرض المختصرات"
+
+#: data/gtk/help-overlay.blp:47
+msgid "Close Window"
+msgstr "إغلاق النافذة"
+
+#: data/gtk/help-overlay.blp:52
+msgid "Quit"
+msgstr "الخروج"
+
+#: data/gtk/window.blp:29
+msgid "Main Menu"
+msgstr "القائمة الرئيسية"
+
+#: data/gtk/window.blp:83
+msgid "Chord not found"
+msgstr "لم يتم العثور على الكورد"
+
+#: data/gtk/window.blp:117
+msgid "View _Variants"
+msgstr "عرض ال_متغيرات"
+
+#: data/gtk/window.blp:158
+msgid "No Variants"
+msgstr "لا يوجد متغيرات"
+
+#: data/gtk/window.blp:200 src/window.rs:368
+msgid "Bookmarks"
+msgstr "العلامات المرجعية"
+
+#: data/gtk/window.blp:240
+msgid "Guitar Type"
+msgstr "نوع الجيتار"
+
+#: data/gtk/window.blp:243
+msgid "Right-handed"
+msgstr "يميني"
+
+#: data/gtk/window.blp:249
+msgid "Left-handed"
+msgstr "يساري"
+
+#. translators: "Empty" is a verb
+#: data/gtk/window.blp:258
+msgid "_Empty Chord"
+msgstr "كورد _فارغ"
+
+#: data/gtk/window.blp:265
+msgid "_Keyboard Shortcuts"
+msgstr "م_ختصرات لوحة المفاتيح"
+
+#: data/gtk/window.blp:270
+msgid "_About Fretboard"
+msgstr "_عن Fretboard"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/application.rs:116
+msgid "translator-credits"
+msgstr "Ronnie Nissan <ronnie.nissan@proton.me>"
+
+#: src/chord_diagram_top_toggle.rs:157
+msgid "Not Open"
+msgstr "غير مفتوح"
+
+#: src/chord_diagram_top_toggle.rs:158
+msgid "Muted"
+msgstr "صامت"
+
+#. translators: this is an adjective, not a verb
+#: src/chord_diagram_top_toggle.rs:160
+msgid "Open"
+msgstr "أفتح"
+
+#: src/window.rs:291
+msgid "Remove Bookmark"
+msgstr "مسح علامة مرجعية"
+
+#: src/window.rs:293
+msgid "Bookmark"
+msgstr "علامة مرجعية"
+
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+#: src/window.rs:304
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+"لا توجد كوردات بهذا الاسم في مجموعة الكوردات المدمجة في Fretboard. إذا كنت "
+"تعتقد أنه يجب أن تكون موجودة، {}تواصل معنا{}."
+
+#: src/window.rs:366
+msgid "No Bookmarks"
+msgstr "لا يوجد أي علامات مرجعية"
