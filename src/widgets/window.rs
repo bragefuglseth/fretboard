@@ -691,6 +691,15 @@ impl FretboardWindow {
         // Translators: Replace "translator-credits" with your names, one name per line
         about.set_translator_credits(&gettext("translator-credits"));
 
+        about.add_other_app(
+            "dev.bragefuglseth.Keypunch",
+            "Keypunch",
+            // Translators: The summary of the app Keypunch. This should match the translated
+            // version of Keypunch's actual summary, if it has been translated into your language.
+            // Have a look at <https://github.com/bragefuglseth/keypunch>
+            &gettext("Practice your typing skills"),
+        );
+
         about.present(Some(
             self.root().unwrap().downcast_ref::<gtk::Window>().unwrap(),
         ));
