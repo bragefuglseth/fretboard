@@ -144,6 +144,7 @@ mod imp {
 
             let obj = self.obj();
 
+            obj.set_icon_name(Some(APP_ID));
             obj.setup_settings();
             obj.load_window_size();
 
