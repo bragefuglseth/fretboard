@@ -31,7 +31,7 @@ appstream_file = i18n.merge_file(
   output: '@0@.metainfo.xml'.format(app_id),
   po_dir: podir,
   install: true,
-  install_dir: datadir / 'appdata'
+  install_dir: datadir / 'metainfo'
 )
 
 appstreamcli = find_program('appstreamcli', required: false, disabler: true)
