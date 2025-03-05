@@ -6,7 +6,7 @@
 
   <name xml:lang="en">Fretboard</name>
   <shortdesc xml:lang="en">Look up guitar chords</shortdesc>
-  <homepage rdf:resource="https://github.com/bragefuglseth/fretboard" />
+  <homepage rdf:resource="https://apps.gnome.org/Fretboard" />
   <bug-database rdf:resource="https://github.com/bragefuglseth/fretboard/issues" />
 
   <programming-language>Rust</programming-language>
