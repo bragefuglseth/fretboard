@@ -47,7 +47,7 @@
   <url type="homepage">https://apps.gnome.org/Fretboard</url>
   <url type="bugtracker">https://github.com/bragefuglseth/fretboard/issues</url>
   <url type="contribute">https://welcome.gnome.org/app/Fretboard</url>
-  <url type="translate">https://hosted.weblate.org/engage/fretboard/</url>
+  <url type="translate">https://l10n.gnome.org/module/Fretboard</url>
   <url type="vcs-browser">https://github.com/bragefuglseth/fretboard</url>
   <url type="contact">https://matrix.to/#/@bragefuglseth:matrix.org</url>
   <update_contact>bragefuglseth_AT_gnome.org</update_contact>
