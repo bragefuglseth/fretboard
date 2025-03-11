@@ -1,23 +1,24 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Brazilian Portuguese translation for Fretboard
+# Copyright (C) 2025 THE Fretboard'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # Cassio Gomes Pereira <cassiogomes00@gmail.com>, 2023.
 # Filipe Motta <luiz_filipe_motta@hotmail.com>, 2024.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2025.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-03-01 06:00+0000\n"
-"Last-Translator: Filipe Motta <luiz_filipe_motta@hotmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
-"fretboard/fretboard/pt_BR/>\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-07 15:26+0000\n"
+"PO-Revision-Date: 2025-03-08 15:18-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 47.1\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -73,148 +74,139 @@ msgstr "Mostrando variantes de um acorde"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
 msgid "The bookmarks page"
-msgstr "Página de Favoritos"
+msgstr "A página de favoritos"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr "Pode ser tanto \"right-handed\"\" quanto \"left-handed\"."
 
-#: data/gtk/barre-spin.blp:10
-msgid "Move Up"
-msgstr "Mover Para Cima"
-
-#: data/gtk/barre-spin.blp:30
-msgid "Move Down"
-msgstr "Mover Para Baixo"
-
-#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-msgid "Chord Name"
-msgstr "Acorde"
-
-#: data/gtk/chord-name-entry.blp:35
-msgid "Confirm"
-msgstr "Confirmar"
-
-#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
-msgid "Enharmonic Equivalent"
-msgstr "Equivalente Enarmônico"
-
-#: data/gtk/help-overlay.blp:11
+#: data/resources/gtk/help-overlay.ui:12
 msgid "General"
 msgstr "Geral"
 
-#. translators: "Empty" is a verb
-#: data/gtk/help-overlay.blp:15
+#: data/resources/gtk/help-overlay.ui:15
 msgid "Empty Chord"
-msgstr "Acorde Vazio"
+msgstr "Esvazia o acorde"
 
-#. translators: "Bookmark" is a verb
-#: data/gtk/help-overlay.blp:21
+#: data/resources/gtk/help-overlay.ui:21
 msgid "Bookmark Chord"
-msgstr "Favoritar Acorde"
+msgstr "Favorita o acorde"
 
-#: data/gtk/help-overlay.blp:26
+#: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
-msgstr "Ver Favoritos"
+msgstr "Vê os favoritos"
 
-#: data/gtk/help-overlay.blp:31
+#: data/resources/gtk/help-overlay.ui:33
 msgid "View Chord Variants"
-msgstr "Ver Variantes do Acorde"
+msgstr "Vê variantes do acorde"
 
-#. translators: "Focus" is a verb
-#: data/gtk/help-overlay.blp:37
+#: data/resources/gtk/help-overlay.ui:39
 msgid "Focus Entry"
-msgstr "Focar na Entrada"
+msgstr "Foca na entrada"
 
-#: data/gtk/help-overlay.blp:42
+#: data/resources/gtk/help-overlay.ui:45
 msgid "View Shortcuts"
-msgstr "Mostrar Atalhos de Teclado"
+msgstr "Mostra os atalhos de teclado"
 
-#: data/gtk/help-overlay.blp:47
+#: data/resources/gtk/help-overlay.ui:51
 msgid "Close Window"
-msgstr "Fechar Janela"
+msgstr "Fecha a janela"
 
-#: data/gtk/help-overlay.blp:52
+#: data/resources/gtk/help-overlay.ui:57
 msgid "Quit"
-msgstr "Sair"
+msgstr "Sai"
 
-#: data/gtk/window.blp:29
+#: src/widgets/barre_spin.blp:10
+msgid "Move Up"
+msgstr "Move para cima"
+
+#: src/widgets/barre_spin.blp:30
+msgid "Move Down"
+msgstr "Move para baixo"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "Não aberto ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "Silenciado ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "Aberto ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+msgid "Chord Name"
+msgstr "Nome do acorde"
+
+#: src/widgets/chord_name_entry.blp:35
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: src/widgets/chord_name_entry.blp:50
+msgid "Enharmonic Equivalent"
+msgstr "Equivalente enarmônico"
+
+#: src/widgets/window.blp:29
 msgid "Main Menu"
-msgstr "Menu Principal"
+msgstr "Menu principal"
 
-#: data/gtk/window.blp:83
+#: src/widgets/window.blp:83
 msgid "Chord not found"
 msgstr "Acorde não encontrado"
 
-#: data/gtk/window.blp:117
+#: src/widgets/window.blp:117
 msgid "View _Variants"
-msgstr "Ver _Variantes"
+msgstr "Ver _variantes"
 
-#: data/gtk/window.blp:158
+#: src/widgets/window.blp:158
 msgid "No Variants"
-msgstr "Nenhuma Variante"
+msgstr "Nenhuma variante"
 
-#: data/gtk/window.blp:200 src/window.rs:368
+#: src/widgets/window.blp:200 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Favoritos"
 
-#: data/gtk/window.blp:240
+#: src/widgets/window.blp:240
 msgid "Guitar Type"
-msgstr "Tipo de Guitarra"
+msgstr "Tipo de guitarra"
 
-#: data/gtk/window.blp:243
+#: src/widgets/window.blp:243
 msgid "Right-handed"
 msgstr "Destro"
 
-#: data/gtk/window.blp:249
+#: src/widgets/window.blp:249
 msgid "Left-handed"
 msgstr "Canhoto"
 
 #. translators: "Empty" is a verb
-#: data/gtk/window.blp:258
+#: src/widgets/window.blp:258
 msgid "_Empty Chord"
-msgstr "_Acorde Vazio"
+msgstr "_Esvaziar acorde"
 
-#: data/gtk/window.blp:265
+#: src/widgets/window.blp:265
 msgid "_Keyboard Shortcuts"
-msgstr "_Atalhos de teclado"
+msgstr "Atalhos de _teclado"
 
-#: data/gtk/window.blp:270
+#: src/widgets/window.blp:270
 msgid "_About Fretboard"
 msgstr "_Sobre o Fretboard"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr ""
-"Cassio Pereira <cassiogomes00@gmail.com>\n"
-"Filipe Motta <luizfilipemotta@gmail.com>"
-
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Not Open"
-msgstr "Não Aberto"
-
-#: src/chord_diagram_top_toggle.rs:158
-msgid "Muted"
-msgstr "Abafado"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
-msgid "Open"
-msgstr "Aberto"
-
-#: src/window.rs:291
+#: src/widgets/window.rs:297
 msgid "Remove Bookmark"
-msgstr "Remover Favorito"
+msgstr "Remover favorito"
 
-#: src/window.rs:293
+#: src/widgets/window.rs:299
 msgid "Bookmark"
 msgstr "Favorito"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/window.rs:304
+#: src/widgets/window.rs:310
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -222,9 +214,17 @@ msgstr ""
 "Não há acordes com esse nome no conjunto de acordes incluído no Fretboard. "
 "Se você acha que deveria haver, {}entre em contato{}."
 
-#: src/window.rs:366
+#: src/widgets/window.rs:372
 msgid "No Bookmarks"
-msgstr "Não Há Favoritos"
+msgstr "Não há favoritos"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:692
+msgid "translator-credits"
+msgstr ""
+"Cassio Pereira <cassiogomes00@gmail.com>\n"
+"Filipe Motta <luizfilipemotta@gmail.com>\n"
+"Rafael Fontenelle <rafaelff@gnome.org>"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
