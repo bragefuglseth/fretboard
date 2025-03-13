@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2023-12-31 20:06+0000\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-07 15:26+0000\n"
+"PO-Revision-Date: 2025-03-13 11:02+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -31,7 +31,7 @@ msgstr "חיפוש אקורדים לגיטרה"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr "אקורדים;אקורד;תצליל;תצלילים;גיטרה;"
+msgstr "אקורדים;אקורד;תצליל;תצלילים;גיטרה;תווים;נגינה;לנגן"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -55,174 +55,173 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
+"מיזם Fretboard גאה להיות חלק מ־GNOME Circle, יוזמה שמרימה לתוכנות המדהימות "
+"שזמינות לפלטפורמת GNOME. למידע נוסף, מומלץ לבקר באתר של GNOME Circle ."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr ""
+msgstr "הצגת אקורד"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr ""
+msgstr "הצגת אקורד בארה"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr ""
+msgstr "הצגת הגוונים של אקורדים"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
-#, fuzzy
 msgid "The bookmarks page"
-msgstr "הצגת סימניות"
+msgstr "עמוד הסימניות"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr "יכול להיות או \"right-handed\" או \"left-handed\"."
 
-#: data/gtk/barre-spin.blp:10
-msgid "Move Up"
-msgstr "הזזה למעלה"
-
-#: data/gtk/barre-spin.blp:30
-msgid "Move Down"
-msgstr "הזזה למטה"
-
-#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-msgid "Chord Name"
-msgstr "שם אקורד"
-
-#: data/gtk/chord-name-entry.blp:35
-msgid "Confirm"
-msgstr "אישור"
-
-#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
-msgid "Enharmonic Equivalent"
-msgstr "שוי־ערך אנהרמוניים"
-
-#: data/gtk/help-overlay.blp:11
+#: data/resources/gtk/help-overlay.ui:12
 msgid "General"
 msgstr "כללי"
 
-#. translators: "Empty" is a verb
-#: data/gtk/help-overlay.blp:15
+#: data/resources/gtk/help-overlay.ui:15
 msgid "Empty Chord"
 msgstr "אקורד ריק"
 
-#. translators: "Bookmark" is a verb
-#: data/gtk/help-overlay.blp:21
+#: data/resources/gtk/help-overlay.ui:21
 msgid "Bookmark Chord"
 msgstr "הוספה/הסרה מהסימניות"
 
-#: data/gtk/help-overlay.blp:26
+#: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
 msgstr "הצגת סימניות"
 
-#: data/gtk/help-overlay.blp:31
+#: data/resources/gtk/help-overlay.ui:33
 msgid "View Chord Variants"
 msgstr "הצגת גרסאות לאקורד"
 
-#. translators: "Focus" is a verb
-#: data/gtk/help-overlay.blp:37
+#: data/resources/gtk/help-overlay.ui:39
 msgid "Focus Entry"
 msgstr "מיקוד בשדה ההזנה"
 
-#: data/gtk/help-overlay.blp:42
-#, fuzzy
+#: data/resources/gtk/help-overlay.ui:45
 msgid "View Shortcuts"
 msgstr "הצגת צירופי מקשים"
 
-#: data/gtk/help-overlay.blp:47
+#: data/resources/gtk/help-overlay.ui:51
 msgid "Close Window"
 msgstr "סגירת חלון"
 
-#: data/gtk/help-overlay.blp:52
+#: data/resources/gtk/help-overlay.ui:57
 msgid "Quit"
 msgstr "יציאה"
 
-#: data/gtk/window.blp:29
+#: src/widgets/barre_spin.blp:10
+msgid "Move Up"
+msgstr "הזזה למעלה"
+
+#: src/widgets/barre_spin.blp:30
+msgid "Move Down"
+msgstr "הזזה למטה"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "לא פתוח ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "מושתק ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "פתוח ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+msgid "Chord Name"
+msgstr "שם אקורד"
+
+#: src/widgets/chord_name_entry.blp:35
+msgid "Confirm"
+msgstr "אישור"
+
+#: src/widgets/chord_name_entry.blp:50
+msgid "Enharmonic Equivalent"
+msgstr "שוי־ערך אנהרמוניים"
+
+#: src/widgets/window.blp:29
 msgid "Main Menu"
 msgstr "תפריט ראשי"
 
-#: data/gtk/window.blp:83
+#: src/widgets/window.blp:83
 msgid "Chord not found"
 msgstr "אקורד לא נמצא"
 
-#: data/gtk/window.blp:117
+#: src/widgets/window.blp:117
 msgid "View _Variants"
 msgstr "הצגת _גרסאות"
 
-#: data/gtk/window.blp:158
-#, fuzzy
+#: src/widgets/window.blp:158
 msgid "No Variants"
-msgstr "הצגת _גרסאות"
+msgstr "אין הגוונים"
 
-#: data/gtk/window.blp:200 src/window.rs:368
+#: src/widgets/window.blp:200 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "סימניות"
 
-#: data/gtk/window.blp:240
+#: src/widgets/window.blp:240
 msgid "Guitar Type"
 msgstr "סוג גיטרה"
 
-#: data/gtk/window.blp:243
+#: src/widgets/window.blp:243
 msgid "Right-handed"
 msgstr "יד־ימין"
 
-#: data/gtk/window.blp:249
+#: src/widgets/window.blp:249
 msgid "Left-handed"
 msgstr "יד־שמאל"
 
 #. translators: "Empty" is a verb
-#: data/gtk/window.blp:258
+#: src/widgets/window.blp:258
 msgid "_Empty Chord"
 msgstr "אקורד _ריק"
 
-#: data/gtk/window.blp:265
+#: src/widgets/window.blp:265
 msgid "_Keyboard Shortcuts"
 msgstr "_צירופי מקשים"
 
-#: data/gtk/window.blp:270
+#: src/widgets/window.blp:270
 msgid "_About Fretboard"
 msgstr "_על אודות Fretboard"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr ""
-"יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
-"מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
-
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Not Open"
-msgstr "לא פתוח"
-
-#: src/chord_diagram_top_toggle.rs:158
-msgid "Muted"
-msgstr "מושתק"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
-msgid "Open"
-msgstr "פתיחה"
-
-#: src/window.rs:291
+#: src/widgets/window.rs:297
 msgid "Remove Bookmark"
 msgstr "הסרת סימנייה"
 
-#: src/window.rs:293
+#: src/widgets/window.rs:299
 msgid "Bookmark"
 msgstr "סימנייה"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/window.rs:304
+#: src/widgets/window.rs:310
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
+"אין אקורדים בשם הזה בסדרת האקורדים המובנית של Fretboard. אם לדעתך אמור להיות "
+"כזה, {}ניתן לפנות אלינו{}."
 
-#: src/window.rs:366
+#: src/widgets/window.rs:372
 msgid "No Bookmarks"
 msgstr "אין סימניות"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:692
+msgid "translator-credits"
+msgstr ""
+"יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
+"מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
