@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
 "POT-Creation-Date: 2025-03-15 15:26+0000\n"
-"PO-Revision-Date: 2025-03-15 22:58+0100\n"
+"PO-Revision-Date: 2025-03-15 23:24+0100\n"
 "Language-Team: Slovenian <Slovenian>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -59,9 +59,9 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
-"Fretboard je ponosen del GNOME Circle, pobude, ki zagovarja odlično "
+"Fretboard je ponosen del Kroga GNOME, pobude, ki zagovarja odlično "
 "programsko opremo, ki je na voljo za platformo GNOME. Za več informacij "
-"obiščite spletno mesto GNOME Circle."
+"obiščite spletno mesto Krog GNOME."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
@@ -82,7 +82,6 @@ msgstr "Stran z zaznamki"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-#, fuzzy
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr "Lahko je »desničar« ali »levičar«."
 
@@ -97,21 +96,19 @@ msgstr "Prazen akord"
 #: data/resources/gtk/help-overlay.ui:21
 #, fuzzy
 msgid "Bookmark Chord"
-msgstr "Akord zaznamka"
+msgstr "Zaznamek akorda"
 
 #: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
 msgstr "Pokaži zaznamke"
 
 #: data/resources/gtk/help-overlay.ui:33
-#, fuzzy
 msgid "View Chord Variants"
-msgstr "Oglejte si različice tetiv"
+msgstr "Pokaži različice akorda"
 
 #: data/resources/gtk/help-overlay.ui:39
-#, fuzzy
 msgid "Focus Entry"
-msgstr "Vnos fokusa"
+msgstr "Pozornost na vnos"
 
 #: data/resources/gtk/help-overlay.ui:45
 msgid "View Shortcuts"
