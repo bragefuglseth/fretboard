@@ -5,10 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-04-06 02:17+0000\n"
-"Last-Translator: Brage Fuglseth <brage.fuglseth@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-17 15:25+0000\n"
+"PO-Revision-Date: 2025-03-17 19:53+0100\n"
+"Last-Translator: Brage <bragefuglseth@gnome.org>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "fretboard/fretboard/nb_NO/>\n"
 "Language: nb\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -79,139 +79,132 @@ msgstr "Visning av bokmerker"
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr "Kan være enten “right-handed” eller “left-handed”."
 
-#: data/gtk/barre-spin.blp:10
-msgid "Move Up"
-msgstr "Flytt opp"
-
-#: data/gtk/barre-spin.blp:30
-msgid "Move Down"
-msgstr "Flytt ned"
-
-#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-msgid "Chord Name"
-msgstr "Akkord"
-
-#: data/gtk/chord-name-entry.blp:35
-msgid "Confirm"
-msgstr "Bekreft"
-
-#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
-msgid "Enharmonic Equivalent"
-msgstr "Tilsvarende akkord"
-
-#: data/gtk/help-overlay.blp:11
+#: data/resources/gtk/help-overlay.ui:12
 msgid "General"
 msgstr "Generelt"
 
-#. translators: "Empty" is a verb
-#: data/gtk/help-overlay.blp:15
+#: data/resources/gtk/help-overlay.ui:15
 msgid "Empty Chord"
 msgstr "Tøm akkord"
 
-#. translators: "Bookmark" is a verb
-#: data/gtk/help-overlay.blp:21
+#: data/resources/gtk/help-overlay.ui:21
 msgid "Bookmark Chord"
 msgstr "Legg til bokmerke"
 
-#: data/gtk/help-overlay.blp:26
+#: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
 msgstr "Vis bokmerker"
 
-#: data/gtk/help-overlay.blp:31
+#: data/resources/gtk/help-overlay.ui:33
 msgid "View Chord Variants"
 msgstr "Vis akkordvarianter"
 
-#. translators: "Focus" is a verb
-#: data/gtk/help-overlay.blp:37
+#: data/resources/gtk/help-overlay.ui:39
 msgid "Focus Entry"
 msgstr "Marker navnefelt"
 
-#: data/gtk/help-overlay.blp:42
+#: data/resources/gtk/help-overlay.ui:45
 msgid "View Shortcuts"
 msgstr "Vis tastatursnarveier"
 
-#: data/gtk/help-overlay.blp:47
+#: data/resources/gtk/help-overlay.ui:51
 msgid "Close Window"
 msgstr "Lukk vindu"
 
-#: data/gtk/help-overlay.blp:52
+#: data/resources/gtk/help-overlay.ui:57
 msgid "Quit"
 msgstr "Avslutt"
 
-#: data/gtk/window.blp:29
+#: src/widgets/barre_spin.blp:10
+msgid "Move Up"
+msgstr "Flytt opp"
+
+#: src/widgets/barre_spin.blp:30
+msgid "Move Down"
+msgstr "Flytt ned"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "Ikke åpen ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "Dempet ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "Åpen ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+msgid "Chord Name"
+msgstr "Akkord"
+
+#: src/widgets/chord_name_entry.blp:35
+msgid "Confirm"
+msgstr "Bekreft"
+
+#: src/widgets/chord_name_entry.blp:50
+msgid "Enharmonic Equivalent"
+msgstr "Tilsvarende akkord"
+
+#: src/widgets/window.blp:29
 msgid "Main Menu"
 msgstr "Hovedmeny"
 
-#: data/gtk/window.blp:83
+#: src/widgets/window.blp:83
 msgid "Chord not found"
 msgstr "Fant ikke akkord"
 
-#: data/gtk/window.blp:117
+#: src/widgets/window.blp:117
 msgid "View _Variants"
 msgstr "Vis _varianter"
 
-#: data/gtk/window.blp:158
+#: src/widgets/window.blp:158
 msgid "No Variants"
 msgstr "Ingen varianter"
 
-#: data/gtk/window.blp:200 src/window.rs:368
+#: src/widgets/window.blp:200 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Bokmerker"
 
-#: data/gtk/window.blp:240
+#: src/widgets/window.blp:240
 msgid "Guitar Type"
 msgstr "Gitartype"
 
-#: data/gtk/window.blp:243
+#: src/widgets/window.blp:243
 msgid "Right-handed"
 msgstr "Høyrehendt"
 
-#: data/gtk/window.blp:249
+#: src/widgets/window.blp:249
 msgid "Left-handed"
 msgstr "Venstrehendt"
 
 #. translators: "Empty" is a verb
-#: data/gtk/window.blp:258
+#: src/widgets/window.blp:258
 msgid "_Empty Chord"
 msgstr "Tøm _akkord"
 
-#: data/gtk/window.blp:265
+#: src/widgets/window.blp:265
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastatursnarveier"
 
-#: data/gtk/window.blp:270
+#: src/widgets/window.blp:270
 msgid "_About Fretboard"
 msgstr "_Om Fretboard"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr "Brage Fuglseth https://bragefuglseth.dev"
-
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Not Open"
-msgstr "Ikke åpen"
-
-#: src/chord_diagram_top_toggle.rs:158
-msgid "Muted"
-msgstr "Dempet"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
-msgid "Open"
-msgstr "Åpen"
-
-#: src/window.rs:291
+#: src/widgets/window.rs:297
 msgid "Remove Bookmark"
 msgstr "Fjern bokmerke"
 
-#: src/window.rs:293
+#: src/widgets/window.rs:299
 msgid "Bookmark"
 msgstr "Legg til bokmerke"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/window.rs:304
+#: src/widgets/window.rs:310
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -219,9 +212,24 @@ msgstr ""
 "Fretboard sin innebygde akkordsamling har ingen akkorder med dette navnet. "
 "Hvis den burde ha det, {}ta kontakt{}."
 
-#: src/window.rs:366
+#: src/widgets/window.rs:372
 msgid "No Bookmarks"
 msgstr "Ingen bokmerker"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:692
+msgid "translator-credits"
+msgstr "Brage Fuglseth https://bragefuglseth.dev"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:697
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:699
+msgid "Practice your typing skills"
+msgstr "Tren opp skriveferdighetene dine"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
