@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-10 03:25+0000\n"
-"PO-Revision-Date: 2025-03-16 21:35+0100\n"
+"POT-Creation-Date: 2025-03-18 15:26+0000\n"
+"PO-Revision-Date: 2025-03-18 16:34+0100\n"
 "Last-Translator: Gabriel Brand <gabr.brand@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/de/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -231,3 +231,13 @@ msgstr ""
 "Niklas Amann <niklas.amann95@gmail.com>\n"
 "mondstern <mondstern@monocles.de>\n"
 "Gabriel Brand <gabr.brand@gmail.com>"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:697
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:699
+msgid "Practice your typing skills"
+msgstr "Üben Sie Ihre Tippfähigkeiten"
