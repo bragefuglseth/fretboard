@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-template $FretboardChordDiagramTopToggle : Widget {
+template $FretboardChordDiagramTopToggle: Widget {
   halign: center;
 
   Overlay {
@@ -21,36 +21,30 @@ template $FretboardChordDiagramTopToggle : Widget {
 
       StackPage {
         name: "off";
-        child: 
-        Image {
-          icon-name: "dot-symbolic";
-        }
 
-        ;
+        child: Image {
+          icon-name: "dot-symbolic";
+        };
       }
 
       StackPage {
         name: "open";
-        child: 
-        Image {
+
+        child: Image {
           icon-name: "circle-outline-thick-symbolic";
 
           styles [
             "open",
           ]
-        }
-
-        ;
+        };
       }
 
       StackPage {
         name: "muted";
-        child: 
-        Image {
-          icon-name: "cross-large-symbolic";
-        }
 
-        ;
+        child: Image {
+          icon-name: "cross-large-symbolic";
+        };
       }
     }
   }
