@@ -659,6 +659,7 @@ impl FretboardWindow {
 
                     win.imp().chord_diagram.set_chord(chord);
                     win.imp().entry.overwrite_text(&prettify_chord_name(&name));
+                    win.imp().feedback_stack.set_visible_child_name("chord-actions");
                     win.refresh_star_toggle();
                     win.imp().navigation_stack.pop();
                 }
