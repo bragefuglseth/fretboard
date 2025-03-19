@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $FretboardWindow : Adw.ApplicationWindow {
+template $FretboardWindow: Adw.ApplicationWindow {
   title: "Fretboard";
   default-width: 550;
   default-height: 650;
@@ -9,13 +9,11 @@ template $FretboardWindow : Adw.ApplicationWindow {
   height-request: 294;
 
   Adw.NavigationView navigation_stack {
-
     Adw.NavigationPage {
       title: "Fretboard";
       tag: "chord-view";
-      child: 
-      Adw.ToolbarView {
 
+      child: Adw.ToolbarView {
         [top]
         Adw.HeaderBar header_bar {
           [start]
@@ -67,17 +65,14 @@ template $FretboardWindow : Adw.ApplicationWindow {
 
               StackPage {
                 name: "empty";
-                child: 
-                Box {
-                }
 
-                ;
+                child: Box {};
               }
 
               StackPage {
                 name: "label";
-                child: 
-                Label feedback_label {
+
+                child: Label feedback_label {
                   wrap: true;
                   justify: center;
                   label: _("Chord not found");
@@ -85,15 +80,13 @@ template $FretboardWindow : Adw.ApplicationWindow {
                   styles [
                     "dim-label",
                   ]
-                }
-
-                ;
+                };
               }
 
               StackPage {
                 name: "chord-actions";
-                child: 
-                Box {
+
+                child: Box {
                   halign: center;
                   spacing: 12;
 
@@ -126,26 +119,19 @@ template $FretboardWindow : Adw.ApplicationWindow {
                       "flat",
                     ]
                   }
-                }
-
-                ;
+                };
               }
             }
           }
-        }
-
-        ;
-      }
-
-      ;
+        };
+      };
     }
 
     Adw.NavigationPage variants_page {
       title: "";
       tag: "more-variants";
-      child:
-      Adw.ToolbarView {
 
+      child: Adw.ToolbarView {
         [top]
         Adw.HeaderBar {}
 
@@ -156,9 +142,7 @@ template $FretboardWindow : Adw.ApplicationWindow {
             child: Adw.StatusPage no_variants_page {
               icon-name: "fretboard-symbolic";
               title: _("No Variants");
-            }
-
-            ;
+            };
           }
 
           StackPage {
@@ -184,24 +168,17 @@ template $FretboardWindow : Adw.ApplicationWindow {
                   valign: start;
                 }
               }
-            }
-
-            ;
+            };
           }
-        }
-
-        ;
-      }
-
-      ;
+        };
+      };
     }
 
     Adw.NavigationPage {
       title: _("Bookmarks");
       tag: "bookmarks";
-      child: 
-      Adw.ToolbarView {
 
+      child: Adw.ToolbarView {
         [top]
         Adw.HeaderBar {}
 
@@ -225,12 +202,8 @@ template $FretboardWindow : Adw.ApplicationWindow {
               valign: start;
             }
           }
-        }
-
-        ;
-      }
-
-      ;
+        };
+      };
     }
   }
 }

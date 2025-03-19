@@ -1,7 +1,6 @@
 using Gtk 4.0;
-using Adw 1;
 
-template $FretboardChordDiagram : Widget {
+template $FretboardChordDiagram: Widget {
   Box {
     hexpand: false;
     halign: start;
@@ -30,66 +29,53 @@ template $FretboardChordDiagram : Widget {
 
           StackPage {
             name: "empty";
-            child:
-            Box {
-            }
 
-            ;
+            child: Box {};
           }
 
           StackPage {
             name: "barre-2";
-            child:
-            Picture barre_2_image {
+
+            child: Picture barre_2_image {
               halign: end;
               valign: start;
-            }
-
-            ;
+            };
           }
 
           StackPage {
             name: "barre-3";
-            child:
-            Picture barre_3_image {
+
+            child: Picture barre_3_image {
               halign: end;
               valign: start;
-            }
-
-            ;
+            };
           }
 
           StackPage {
             name: "barre-4";
-            child:
-            Picture barre_4_image {
+
+            child: Picture barre_4_image {
               halign: end;
               valign: start;
-            }
-
-            ;
+            };
           }
 
           StackPage {
             name: "barre-5";
-            child:
-            Picture barre_5_image {
+
+            child: Picture barre_5_image {
               halign: end;
               valign: start;
-            }
-
-            ;
+            };
           }
 
           StackPage {
             name: "barre-6";
-            child:
-            Picture barre_6_image {
+
+            child: Picture barre_6_image {
               halign: end;
               valign: start;
-            }
-
-            ;
+            };
           }
         }
 
