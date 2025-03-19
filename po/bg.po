@@ -1,0 +1,242 @@
+# Bulgarian translation for Fretboard.
+# Copyright (C) 2025 twlvnn kraftwerk <kraft_werk@tutanota.com>
+# This file is distributed under the same license as the Fretboard package.
+# twlvnn kraftwerk <kraft_werk@tutanota.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Fretboard main\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-19 15:27+0000\n"
+"PO-Revision-Date: 2025-03-19 21:43+0100\n"
+"Last-Translator: \n"
+"Language-Team: Bulgarian <Bulgarian>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+msgid "Fretboard"
+msgstr "Fretboard"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
+msgid "Look up guitar chords"
+msgstr "Търсене на акорди за китара"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+msgid "guitar;chords"
+msgstr "китара;акорди;guitar;chords"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"Как се свиреше този акорд отново? „Fretboard“ ви позволява да намирате "
+"акорди за китара, като въвеждате имената им или ги чертаете на интерактивен "
+"гриф на китара. Когато идентифицирате акорд, може да експериментирате, да "
+"видите различни начини да го изсвирите или да го запишете, за да го запазите "
+"за по-късно. Без значение дали сте начинаещ или напреднал китарист, може да "
+"използвате „Fretboard“, за да упражнявате, учите и усъвършенствате любимите "
+"си песни!"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+"Fretboard е част от GNOME Circle, инициатива, която подкрепя страхотния "
+"софтуер за платформата GNOME. За повече информация, посетете уеб сайта на "
+"GNOME Circle."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr "Показване на акорд"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr "Изображение на акорд с баре"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr "Показване на вариантите на акорд"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
+msgstr "Страницата за отметки"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgstr "Може да бъде за десничари или левичари."
+
+#: data/resources/gtk/help-overlay.ui:12
+msgid "General"
+msgstr "Общи"
+
+#: data/resources/gtk/help-overlay.ui:15
+msgid "Empty Chord"
+msgstr "Изчистване на акорда"
+
+#: data/resources/gtk/help-overlay.ui:21
+msgid "Bookmark Chord"
+msgstr "Добавяне в отметките"
+
+#: data/resources/gtk/help-overlay.ui:27
+msgid "View Bookmarks"
+msgstr "Показване на отметките"
+
+#: data/resources/gtk/help-overlay.ui:33
+msgid "View Chord Variants"
+msgstr "Преглед на вариантите на акорда"
+
+#: data/resources/gtk/help-overlay.ui:39
+msgid "Focus Entry"
+msgstr "Фокусиране на полето за въвеждане"
+
+#: data/resources/gtk/help-overlay.ui:45
+msgid "View Shortcuts"
+msgstr "Показване на клавишните комбинации"
+
+#: data/resources/gtk/help-overlay.ui:51
+msgid "Close Window"
+msgstr "Затваряне на прозорецa"
+
+#: data/resources/gtk/help-overlay.ui:57
+msgid "Quit"
+msgstr "Спиране на програмата"
+
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "Преместване нагоре"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "Преместване надолу"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "Не отворена ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "Заглушена ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "Отворена ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "Име на акорда"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "Потвърждаване"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "Енхармоничен еквивалент"
+
+#: src/widgets/window.blp:27
+msgid "Main Menu"
+msgstr "Основно меню"
+
+#: src/widgets/window.blp:78
+msgid "Chord not found"
+msgstr "Акордът липсва"
+
+#: src/widgets/window.blp:110
+msgid "View _Variants"
+msgstr "Преглед на _вариантите"
+
+#: src/widgets/window.blp:144
+msgid "No Variants"
+msgstr "Няма варианти"
+
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
+msgid "Bookmarks"
+msgstr "Отметки"
+
+#: src/widgets/window.blp:213
+msgid "Guitar Type"
+msgstr "Вид китара"
+
+#: src/widgets/window.blp:216
+msgid "Right-handed"
+msgstr "За десничари"
+
+#: src/widgets/window.blp:222
+msgid "Left-handed"
+msgstr "За левичари"
+
+#. translators: "Empty" is a verb
+#: src/widgets/window.blp:231
+msgid "_Empty Chord"
+msgstr "Из_чистване на акорд"
+
+#: src/widgets/window.blp:238
+msgid "_Keyboard Shortcuts"
+msgstr "_Клавишни комбинации"
+
+#: src/widgets/window.blp:243
+msgid "_About Fretboard"
+msgstr "_Относно „Fretboard“"
+
+#: src/widgets/window.rs:297
+msgid "Remove Bookmark"
+msgstr "Премахване на отметката"
+
+#: src/widgets/window.rs:299
+msgid "Bookmark"
+msgstr "Добавяне в отметките"
+
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+#: src/widgets/window.rs:310
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+"Няма акорди с това име във вградения набор от акорди на Fretboard. Ако "
+"смятате, че трябва да имa, {}свържете се с нас{}."
+
+#: src/widgets/window.rs:372
+msgid "No Bookmarks"
+msgstr "Няма отметки"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr ""
+"twlvnn kraftwerk &lt;<a "
+"href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</a>&gt;\n"
+"\n"
+"\n"
+"Проектът за превод на GNOME има нужда от подкрепа.\n"
+"Научете повече за нас на <a href='https://fsa-bg.org/project/gtp'>уеб сайта</"
+"a> ни.\n"
+"Докладвайте за грешки в превода в <a href='https://fsa-bg.org/project/gtp/"
+"newticket'>съответния раздел</a>."
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "Упражнявайте уменията си за писане на клавиатура"
