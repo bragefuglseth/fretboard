@@ -7,8 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-15 15:26+0000\n"
-"PO-Revision-Date: 2025-03-15 23:24+0100\n"
+"POT-Creation-Date: 2025-03-19 15:27+0000\n"
+"PO-Revision-Date: 2025-03-19 22:34+0100\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <Slovenian>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -16,14 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0) ;\n"
-"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "X-Generator: Poedit 2.2.1\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
-#, fuzzy
 msgid "Fretboard"
-msgstr "Fretboard"
+msgstr "Ubiralka"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
@@ -35,7 +34,6 @@ msgid "guitar;chords"
 msgstr "kitara;akordi"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
-#, fuzzy
 msgid ""
 "How was that chord played, again? Fretboard lets you find guitar chords by "
 "typing their names or plotting them on an interactive guitar neck. When you "
@@ -44,24 +42,23 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
-"Kako je bil spet odigran ta akord? Fretboard vam omogoča, da poiščete "
+"Kako je bil spet odigran ta akord? Ubiralka vam omogoča, da poiščete "
 "kitarske akorde tako, da vnesete njihova imena ali jih narišete na "
-"interaktivni kitarski vrat. Ko prepoznate akord, ga lahko poskusite "
+"interaktivni vrat kitare. Ko prepoznate akord, ga lahko poskusite "
 "spremeniti, si ogledate več načinov igranja ali ga dodajte med zaznamke, da "
 "ga shranite za pozneje. Ne glede na to, ali ste začetnik ali napredni "
-"kitarist, lahko Fretboard uporabite za vadbo, učenje in obvladovanje svojih "
-"najljubših pesmi!"
+"kitarist, lahko Ubiralko uporabite za vadbo, učenje in obvladovanje svojih "
+"najljubših skladb!"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
-#, fuzzy
 msgid ""
 "Fretboard is proudly part of GNOME Circle, an initiative that champions the "
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
-"Fretboard je ponosen del Kroga GNOME, pobude, ki zagovarja odlično "
-"programsko opremo, ki je na voljo za platformo GNOME. Za več informacij "
-"obiščite spletno mesto Krog GNOME."
+"Ubiralka je ponosen del Kroga GNOME, pobude, ki zagovarja odlično programsko "
+"opremo, ki je na voljo za platformo GNOME. Za več informacij obiščite "
+"spletno mesto Krog GNOME."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
@@ -96,7 +93,7 @@ msgstr "Prazen akord"
 #: data/resources/gtk/help-overlay.ui:21
 #, fuzzy
 msgid "Bookmark Chord"
-msgstr "Zaznamek akorda"
+msgstr "Postavi akord med zaznamke"
 
 #: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
@@ -122,11 +119,11 @@ msgstr "Zapri okno"
 msgid "Quit"
 msgstr "Izhod"
 
-#: src/widgets/barre_spin.blp:10
+#: src/widgets/barre_spin.blp:9
 msgid "Move Up"
 msgstr "Premakni navzgor"
 
-#: src/widgets/barre_spin.blp:30
+#: src/widgets/barre_spin.blp:28
 msgid "Move Down"
 msgstr "Premakni navzdol"
 
@@ -145,82 +142,79 @@ msgid "Open ({})"
 msgstr "Odpri ({})"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
 msgid "Chord Name"
 msgstr "Ime akorda"
 
-#: src/widgets/chord_name_entry.blp:35
+#: src/widgets/chord_name_entry.blp:34
 msgid "Confirm"
 msgstr "Potrdi"
 
-#: src/widgets/chord_name_entry.blp:50
+#: src/widgets/chord_name_entry.blp:49
 #, fuzzy
 msgid "Enharmonic Equivalent"
 msgstr "Enharmonični ekvivalent"
 
-#: src/widgets/window.blp:29
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "Glavni meni"
 
-#: src/widgets/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "Akorda ni mogoče najti"
 
-#: src/widgets/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
 msgstr "Pokaži _različice"
 
-#: src/widgets/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
 msgstr "Brez različic"
 
-#: src/widgets/window.blp:200 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Zaznamki"
 
-#: src/widgets/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "Vrsta kitare"
 
-#: src/widgets/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
 msgstr "Desničar"
 
-#: src/widgets/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
 msgstr "Levičar"
 
 #. translators: "Empty" is a verb
-#: src/widgets/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "_Prazen akord"
 
-#: src/widgets/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "_Tipkovne bližnjice‫"
 
-#: src/widgets/window.blp:270
-#, fuzzy
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
-msgstr "_O programu Fretboard"
+msgstr "_O programu Ubiralka"
 
 #: src/widgets/window.rs:297
 msgid "Remove Bookmark"
 msgstr "Odstrani zaznamek"
 
 #: src/widgets/window.rs:299
-#, fuzzy
 msgid "Bookmark"
 msgstr "Zaznamek"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/widgets/window.rs:310
-#, fuzzy
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
-"V vgrajenem naboru akordov Fretboard ni akordov s tem imenom. Če menite, da "
+"V vgrajenem naboru akordov Ubiralke ni akordov s tem imenom. Če menite, da "
 "bi moralo biti, {}se javite{}."
 
 #: src/widgets/window.rs:372
@@ -228,6 +222,17 @@ msgid "No Bookmarks"
 msgstr "Brez zaznamkov"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:692
+#: src/widgets/window.rs:693
 msgid "translator-credits"
 msgstr "Martin Srebotnjak <miles@filmsi.net>"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+#, fuzzy
+msgid "Keypunch"
+msgstr "Kexpunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "Vadite svoje tipkanje"
