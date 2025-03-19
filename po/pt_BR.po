@@ -4,20 +4,21 @@
 # Cassio Gomes Pereira <cassiogomes00@gmail.com>, 2023.
 # Filipe Motta <luiz_filipe_motta@hotmail.com>, 2024.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2025.
+# Álvaro Burns <>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-07 15:26+0000\n"
-"PO-Revision-Date: 2025-03-08 15:18-0300\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
+"POT-Creation-Date: 2025-03-17 15:25+0000\n"
+"PO-Revision-Date: 2025-03-18 22:33-0300\n"
+"Last-Translator: Álvaro Burns <>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Gtranslator 47.1\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
@@ -225,6 +226,16 @@ msgstr ""
 "Cassio Pereira <cassiogomes00@gmail.com>\n"
 "Filipe Motta <luizfilipemotta@gmail.com>\n"
 "Rafael Fontenelle <rafaelff@gnome.org>"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:697
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:699
+msgid "Practice your typing skills"
+msgstr "Pratique sua digitação"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
