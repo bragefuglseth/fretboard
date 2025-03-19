@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
 "POT-Creation-Date: 2025-03-19 15:27+0000\n"
-"PO-Revision-Date: 2025-03-19 22:34+0100\n"
+"PO-Revision-Date: 2025-03-19 22:40+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <Slovenian>\n"
 "Language: sl\n"
@@ -65,7 +65,6 @@ msgid "Displaying a chord"
 msgstr "Prikaz akorda"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
-#, fuzzy
 msgid "Displaying a barre chord"
 msgstr "Prikaz barrejevega akorda"
 
@@ -228,9 +227,8 @@ msgstr "Martin Srebotnjak <miles@filmsi.net>"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
 #: src/widgets/window.rs:698
-#, fuzzy
 msgid "Keypunch"
-msgstr "Kexpunch"
+msgstr "Tipkarica"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
 #: src/widgets/window.rs:700
