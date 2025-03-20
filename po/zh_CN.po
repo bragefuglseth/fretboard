@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
-# "BenderBlog \"SuperBart\" Rodriguez" <Songze@live.cn>, 2024.
+# Benderblog Rodriguez <superbart_chen@qq.com>, 2024.
+# lumingzh <lumingzh@qq.com>, 2025.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-07-03 14:09+0000\n"
-"Last-Translator: \"BenderBlog \\\"SuperBart\\\" Rodriguez\" <Songze@live.cn>"
-"\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"fretboard/fretboard/zh_Hans/>\n"
-"Language: zh_Hans\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-19 15:27+0000\n"
+"PO-Revision-Date: 2025-03-20 18:32+0800\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Gtranslator 47.1\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -31,7 +31,7 @@ msgstr "查询吉他和弦"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr "吉他;和弦"
+msgstr "guitar;chords;吉他;和弦;"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -42,11 +42,10 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
-"是不是经常听到个和弦，但不知道如何弹出来？当当当当，Fretboard "
-"来帮助你啦！输入和弦的名字，或者在互动琴颈上表示出来，Fretboard 就可以告诉你"
-"如何弹。知道弹奏和弦的方式后，你可以边修改边弹奏，探索更多弹奏方式，或者将其"
-"放入书签，回来再看。无论你是吉他新手，还是吉他大师，你都可以使用 Fretboard "
-"来学习，并练习你喜欢的歌，并最终掌握它！"
+"是不是经常听到个和弦，但不知道如何弹出来？输入和弦的名字，或者在互动琴颈上表"
+"示出来，Fretboard 就可以告诉你如何弹。知道弹奏和弦的方式后，你可以边修改边弹"
+"奏，探索更多弹奏方式，或者将其放入书签，回来再看。无论你是吉他新手，还是吉他"
+"大师，你都可以使用 Fretboard 来学习，并练习你喜欢的歌，并最终掌握它！"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
 msgid ""
@@ -54,12 +53,12 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
-"Fretboard 荣幸地加入了 GNOME Circle，该计划旨在推广 GNOME "
-"平台上的优秀软件。更多信息，请访问 GNOME Circle 网站。"
+"Fretboard 荣幸地加入了 GNOME 生态圈，该计划旨在推广 GNOME 平台上的优秀软件。"
+"更多信息，请访问 GNOME 生态圈网站。"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr "显示一个和弦"
+msgstr "显示和弦"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
@@ -76,147 +75,158 @@ msgstr "书签页"
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "可以是右手吉他(\"right-handed\")，也可以是左手吉他(\"left-handed\")."
+msgstr "可以是右手吉他（\"right-handed\"）或左手吉他（\"left-handed\"）。"
 
-#: data/gtk/barre-spin.blp:10
-msgid "Move Up"
-msgstr "向上移动"
-
-#: data/gtk/barre-spin.blp:30
-msgid "Move Down"
-msgstr "向下移动"
-
-#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-msgid "Chord Name"
-msgstr "名称"
-
-#: data/gtk/chord-name-entry.blp:35
-msgid "Confirm"
-msgstr "确认"
-
-#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
-msgid "Enharmonic Equivalent"
-msgstr "异名同音"
-
-#: data/gtk/help-overlay.blp:11
+#: data/resources/gtk/help-overlay.ui:12
 msgid "General"
-msgstr "总菜单"
+msgstr "常规"
 
-#. translators: "Empty" is a verb
-#: data/gtk/help-overlay.blp:15
+#: data/resources/gtk/help-overlay.ui:15
 msgid "Empty Chord"
 msgstr "清空和弦"
 
-#. translators: "Bookmark" is a verb
-#: data/gtk/help-overlay.blp:21
+#: data/resources/gtk/help-overlay.ui:21
 msgid "Bookmark Chord"
 msgstr "放入书签"
 
-#: data/gtk/help-overlay.blp:26
+#: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
 msgstr "查看书签"
 
-#: data/gtk/help-overlay.blp:31
+#: data/resources/gtk/help-overlay.ui:33
 msgid "View Chord Variants"
 msgstr "查看和弦变体"
 
-#. translators: "Focus" is a verb
-#: data/gtk/help-overlay.blp:37
+#: data/resources/gtk/help-overlay.ui:39
 msgid "Focus Entry"
-msgstr "高亮输入框"
+msgstr "聚焦输入框"
 
-#: data/gtk/help-overlay.blp:42
+#: data/resources/gtk/help-overlay.ui:45
 msgid "View Shortcuts"
-msgstr "显示快捷键"
+msgstr "查看快捷键"
 
-#: data/gtk/help-overlay.blp:47
+#: data/resources/gtk/help-overlay.ui:51
 msgid "Close Window"
 msgstr "关闭窗口"
 
-#: data/gtk/help-overlay.blp:52
+#: data/resources/gtk/help-overlay.ui:57
 msgid "Quit"
 msgstr "退出"
 
-#: data/gtk/window.blp:29
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "上移"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "下移"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "未打开（{}）"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "闷音（{}）"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "打开（{}）"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "和弦名称"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "确认"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "异名同音"
+
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "主菜单"
 
-#: data/gtk/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "未找到和弦"
 
-#: data/gtk/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
-msgstr "查看 _变体"
+msgstr "查看变体(_V)"
 
-#: data/gtk/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
-msgstr "未找到变体"
+msgstr "无变体"
 
-#: data/gtk/window.blp:200 src/window.rs:368
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "书签"
 
-#: data/gtk/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "吉他类型"
 
-#: data/gtk/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
 msgstr "右手吉他"
 
-#: data/gtk/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
 msgstr "左手吉他"
 
 #. translators: "Empty" is a verb
-#: data/gtk/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
-msgstr "_重置和弦"
+msgstr "清空和弦(_E)"
 
-#: data/gtk/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
-msgstr "_键盘快捷键"
+msgstr "键盘快捷键(_K)"
 
-#: data/gtk/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
-msgstr "_关于 Fretboard"
+msgstr "关于 Fretboard(_A)"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr "Benderblog Rodriguez <superbart_chen@qq.com>"
-
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Not Open"
-msgstr "未打开"
-
-#: src/chord_diagram_top_toggle.rs:158
-msgid "Muted"
-msgstr "柔和的"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
-msgid "Open"
-msgstr "弹出声音"
-
-#: src/window.rs:291
+#: src/widgets/window.rs:297
 msgid "Remove Bookmark"
 msgstr "移除书签"
 
-#: src/window.rs:293
+#: src/widgets/window.rs:299
 msgid "Bookmark"
 msgstr "书签"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/window.rs:304
+#: src/widgets/window.rs:310
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
-msgstr "在 Fretboard "
-"内置的和弦数据中，没有和弦叫这个名字。如果你觉得这个应该有，{}和我们联系{}。"
+msgstr ""
+"在 Fretboard 内置的和弦数据中没有和弦叫这个名字。如果你觉得这个应该有，{}和我"
+"们联系{}。"
 
-#: src/window.rs:366
+#: src/widgets/window.rs:372
 msgid "No Bookmarks"
-msgstr "没有书签"
+msgstr "无书签"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr ""
+"Benderblog Rodriguez <superbart_chen@qq.com>, 2024\n"
+"lumingzh <lumingzh@qq.com>, 2025"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "练习您的打字技巧"
