@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-19 15:27+0000\n"
-"PO-Revision-Date: 2025-03-19 22:40+0100\n"
+"POT-Creation-Date: 2025-03-20 15:27+0000\n"
+"PO-Revision-Date: 2025-03-21 09:08+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <Slovenian>\n"
 "Language: sl\n"
@@ -90,9 +90,8 @@ msgid "Empty Chord"
 msgstr "Prazen akord"
 
 #: data/resources/gtk/help-overlay.ui:21
-#, fuzzy
 msgid "Bookmark Chord"
-msgstr "Postavi akord med zaznamke"
+msgstr "Akord med zaznamke"
 
 #: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
@@ -150,7 +149,6 @@ msgid "Confirm"
 msgstr "Potrdi"
 
 #: src/widgets/chord_name_entry.blp:49
-#, fuzzy
 msgid "Enharmonic Equivalent"
 msgstr "Enharmonični ekvivalent"
 
