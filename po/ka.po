@@ -1,0 +1,230 @@
+# Georgian translation for Fretboard.
+# Copyright (C) 2025 Fretboard's authors
+# This file is distributed under the same license as the Fretboard package.
+# Ekaterine Papava <papava.e@gtu.ge>,  2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Fretboard main\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-22 03:26+0000\n"
+"PO-Revision-Date: 2025-03-22 05:56+0100\n"
+"Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
+"Language-Team: Georgian <ka@li.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+msgid "Fretboard"
+msgstr "Fretboard"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
+msgid "Look up guitar chords"
+msgstr "მოძებნეთ გიტარის აკორდები"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+msgid "guitar;chords"
+msgstr "გიტარა;აკორდები"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"როგორ იკვრება ეს აკორდი, კიდევ ერთხელ? Fretboard საშუალებას გაძლევთ, იპოვოთ "
+"გიტარის აკორდები მათი სახელების აკრეფით, ან მათი დაკვრით ვირტუალურ გიტარაზე. "
+"როცა აკორდს ამოიცნობთ, შეგიძლიათ, მასზე ექსპერიმენტები ატაროთ, ან დაუკრათ, "
+"ან შეინახოთ. არ აქვს მნიშვნელობა, გამოცდილი გიტარისტი ბრძანდებით, თუ ახალი, "
+"Fretboard თქვენი საყვარელი სიმღერების სამეცადინოდ მაინც გამოგადგებათ!"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+"Fretboard ამაყად წარმოადგენს GNOME-ის წრის წევრს. ინიციატივას, რომ GNOME-ის "
+"პლატფორმას გადასარევი პროგრამები აქვს. მეტი ინფორმაციისთვის იხილეთ GNOME-ის "
+"წრის ვებგვერდი."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr "აკორდის ჩვენება"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr "ბარეს აკორდის ჩვენება"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr "ნაჩვენებია აკორდის ვარიანტი"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
+msgstr "სანიშნეების გვერდი"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgstr "შეიძლება იყოს \"მარჯვენა ხელით\" ან \"ცაცია\"."
+
+#: data/resources/gtk/help-overlay.ui:12
+msgid "General"
+msgstr "ზოგადი"
+
+#: data/resources/gtk/help-overlay.ui:15
+msgid "Empty Chord"
+msgstr "ცარიელი აკორდი"
+
+#: data/resources/gtk/help-overlay.ui:21
+msgid "Bookmark Chord"
+msgstr "აკორდის ჩამატება სანიშნეებში"
+
+#: data/resources/gtk/help-overlay.ui:27
+msgid "View Bookmarks"
+msgstr "სანიშნეების ნახვა"
+
+#: data/resources/gtk/help-overlay.ui:33
+msgid "View Chord Variants"
+msgstr "აკორდის ვარიანტების ნახვა"
+
+#: data/resources/gtk/help-overlay.ui:39
+msgid "Focus Entry"
+msgstr "ფოკუსი ჩანაწერზე"
+
+#: data/resources/gtk/help-overlay.ui:45
+msgid "View Shortcuts"
+msgstr "მალსახმობების ნახვა"
+
+#: data/resources/gtk/help-overlay.ui:51
+msgid "Close Window"
+msgstr "ფანჯრის დახურვა"
+
+#: data/resources/gtk/help-overlay.ui:57
+msgid "Quit"
+msgstr "გასვლა"
+
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "აწევა"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "ჩამოწევა"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "არაა ღია ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "დადუმებულია ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "გახსნა ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "აკორდის სახელი"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "დადასტურება"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "ენჰარმონიული ეკვივალენტი"
+
+#: src/widgets/window.blp:27
+msgid "Main Menu"
+msgstr "მთავარი მენიუ"
+
+#: src/widgets/window.blp:78
+msgid "Chord not found"
+msgstr "აკორდი აღმოჩენილი არაა"
+
+#: src/widgets/window.blp:110
+msgid "View _Variants"
+msgstr "_ვარიანტების ნახვა"
+
+#: src/widgets/window.blp:144
+msgid "No Variants"
+msgstr "ვარიანტების გარეშე"
+
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
+msgid "Bookmarks"
+msgstr "სანიშნეები"
+
+#: src/widgets/window.blp:213
+msgid "Guitar Type"
+msgstr "გიტარის ტიპი"
+
+#: src/widgets/window.blp:216
+msgid "Right-handed"
+msgstr "მარჯვენახელიანი"
+
+#: src/widgets/window.blp:222
+msgid "Left-handed"
+msgstr "ცაცია"
+
+#. translators: "Empty" is a verb
+#: src/widgets/window.blp:231
+msgid "_Empty Chord"
+msgstr "ცარი_ელი აკორდი"
+
+#: src/widgets/window.blp:238
+msgid "_Keyboard Shortcuts"
+msgstr "_კლავიატურის მალსახმობები"
+
+#: src/widgets/window.blp:243
+msgid "_About Fretboard"
+msgstr "Fretboard-ის შეს_ახებ"
+
+#: src/widgets/window.rs:297
+msgid "Remove Bookmark"
+msgstr "სანიშნეს წაშლა"
+
+#: src/widgets/window.rs:299
+msgid "Bookmark"
+msgstr "სანიშნე"
+
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+#: src/widgets/window.rs:310
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+"ამ სახელის მქონე აკორდი Fretboard-ის ჩაშენებულებში დაყენებული არაა. თუ "
+"ფიქრობთ, რომ უნდა იყოს, {}მოგვწერეთ{}."
+
+#: src/widgets/window.rs:372
+msgid "No Bookmarks"
+msgstr "სანიშნების გარეშე"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr "თემური დოღონაძე"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "ივარჯიშეთ კრეფაში"
