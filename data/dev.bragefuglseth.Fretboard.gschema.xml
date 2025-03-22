@@ -13,7 +13,7 @@
 	  <key name="handedness" type="s">
 			<default>'right-handed'</default>
 	    <!-- translators: "right-handed" and "left-handed" are enum values, and should not be translated -->
-	    <description>Can be either "right-handed"" or "left-handed".</description>
+	    <description>Can be either "right-handed" or "left-handed".</description>
 		</key>
 	</schema>
 </schemalist>
