@@ -5,16 +5,16 @@
 # Niklas Amann <niklas.amann95@googlemail.com>, 2023.
 # mondstern <mondstern@monocles.de>, 2024.
 # Gabriel Brand <gabr.brand@gmail.com>, 2025.
+# Philipp Kiemle <l10n@prly.mozmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-18 15:26+0000\n"
-"PO-Revision-Date: 2025-03-18 16:34+0100\n"
-"Last-Translator: Gabriel Brand <gabr.brand@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/fretboard/"
-"fretboard/de/>\n"
+"POT-Creation-Date: 2025-03-19 15:27+0000\n"
+"PO-Revision-Date: 2025-03-22 18:09+0100\n"
+"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
+"Language-Team: German <https://gitlab.gnome.org/Teams/Translation/de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,7 @@ msgstr "Gitarrenakkorde nachschlagen"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr "Gitarre;Akkorde"
+msgstr "guitar;chords;Gitarre;Akkorde"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -59,9 +59,9 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
-"Griffbrett ist stolzer Teil des GNOME-Circle, einer Initiative, die sich für "
+"Griffbrett ist stolzer Teil von GNOME Circle, einer Initiative, die sich für "
 "die großartige Software einsetzt, die für die GNOME-Plattform verfügbar ist. "
-"Weitere Informationen finden Sie auf der GNOME-Circle-Website."
+"Weitere Informationen finden Sie auf der GNOME Circle-Webseite."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
@@ -122,11 +122,11 @@ msgstr "Fenster schließen"
 msgid "Quit"
 msgstr "Beenden"
 
-#: src/widgets/barre_spin.blp:10
+#: src/widgets/barre_spin.blp:9
 msgid "Move Up"
 msgstr "Nach oben bewegen"
 
-#: src/widgets/barre_spin.blp:30
+#: src/widgets/barre_spin.blp:28
 msgid "Move Down"
 msgstr "Nach unten bewegen"
 
@@ -145,60 +145,60 @@ msgid "Open ({})"
 msgstr "Offen ({})"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
 msgid "Chord Name"
 msgstr "Akkordname"
 
-#: src/widgets/chord_name_entry.blp:35
+#: src/widgets/chord_name_entry.blp:34
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/widgets/chord_name_entry.blp:50
+#: src/widgets/chord_name_entry.blp:49
 msgid "Enharmonic Equivalent"
 msgstr "Enharmonisches Äquivalent"
 
-#: src/widgets/window.blp:29
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-#: src/widgets/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "Akkord nicht gefunden"
 
-#: src/widgets/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
 msgstr "_Varianten anzeigen"
 
-#: src/widgets/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
 msgstr "Keine Varianten"
 
-#: src/widgets/window.blp:200 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Lesezeichen"
 
-#: src/widgets/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "Gitarrentyp"
 
-#: src/widgets/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
 msgstr "Rechtshänder"
 
-#: src/widgets/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
 msgstr "Linkshänder"
 
 #. translators: "Empty" is a verb
-#: src/widgets/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "Akkord _leeren"
 
-#: src/widgets/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastenkürzel"
 
-#: src/widgets/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
 msgstr "_Info zu Griffbrett"
 
@@ -225,19 +225,20 @@ msgid "No Bookmarks"
 msgstr "Keine Lesezeichen"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:692
+#: src/widgets/window.rs:693
 msgid "translator-credits"
 msgstr ""
 "Niklas Amann <niklas.amann95@gmail.com>\n"
 "mondstern <mondstern@monocles.de>\n"
-"Gabriel Brand <gabr.brand@gmail.com>"
+"Gabriel Brand <gabr.brand@gmail.com>\n"
+"Philipp Kiemle <l10n@prly.mozmail.com>"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:697
+#: src/widgets/window.rs:698
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:699
+#: src/widgets/window.rs:700
 msgid "Practice your typing skills"
 msgstr "Üben Sie Ihre Tippfähigkeiten"
