@@ -1,17 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
-# Sabri Ünal <libreajans@gmail.com>, 2023, 2024.
-# Sabri Ünal <yakushabb@gmail.com>, 2024.
+#
+# Sabri Ünal <yakushabb@gmail.com>, 2023, 2024.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2025.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-03-18 10:01+0000\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/fretboard/"
-"fretboard/tr/>\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-19 15:27+0000\n"
+"PO-Revision-Date: 2025-03-23 08:00+0000\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgstr "Gitar akorlarına bakın"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
-msgstr "gitar;akor;chords;guitar"
+msgstr "gitar;tını;akor;chords;guitar"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -42,11 +43,11 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
-"Bu akor nasıl çalınıyordu? Fretboard, gitar akorlarını isimlerini yazarak "
-"veya interaktif bir gitar sapı üzerinde çizerek bulmanızı sağlar. Bir akor "
-"belirlediğinizde, onu değiştirmeyi deneyebilir, çalmanın daha fazla yolunu "
-"görebilir veya daha sonra kaydetmek için yer imlerine ekleyebilirsiniz. "
-"İster yeni başlayan ister ileri düzey bir gitarist olun, Fretboard'u en "
+"Bu akor nasıl çalınıyordu? Fretboard, gitar akorlarını adlarını yazarak "
+"veya etkileşimli bir gitar sapı üzerinde çizerek bulmanızı sağlar. Bir akor "
+"belirlediğinizde, değiştirmeyi deneyebilir, çalmanın daha çok yolunu "
+"görebilir ya da daha sonra kaydetmek için yer imlerine ekleyebilirsiniz. "
+"İster yeni başlayan ister ileri düzey bir gitarist olun, Fretboard’u en "
 "sevdiğiniz şarkıları pratik yapmak, öğrenmek ve ustalaşmak için "
 "kullanabilirsiniz!"
 
@@ -57,8 +58,8 @@ msgid ""
 "information, visit the GNOME Circle website."
 msgstr ""
 "Fretboard, GNOME platformu için var olan harika yazılımları destekleyen bir "
-"girişim olan GNOME Circleʼın bir parçasıdır. Daha fazla bilgi için GNOME "
-"Circle web sitesini ziyaret edin."
+"girişim olan GNOME Circleʼın bir parçasıdır. Daha çok bilgi için GNOME "
+"Circle web sitesine göz atın."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
@@ -81,164 +82,156 @@ msgstr "Yer imleri sayfası"
 msgid "Can be either \"right-handed\"\" or \"left-handed\"."
 msgstr "\"right-handed\" (sağ el) ya da \"left-handed\" (sol el) olabilir."
 
-#: data/gtk/barre-spin.blp:10
-msgid "Move Up"
-msgstr "Yukarı Taşı"
-
-#: data/gtk/barre-spin.blp:30
-msgid "Move Down"
-msgstr "Aşağı Taşı"
-
-#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-msgid "Chord Name"
-msgstr "Akor Adı"
-
-#: data/gtk/chord-name-entry.blp:35
-msgid "Confirm"
-msgstr "Doğrula"
-
-#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
-msgid "Enharmonic Equivalent"
-msgstr "Anarmonik Denklik"
-
-#: data/gtk/help-overlay.blp:11
+#: data/resources/gtk/help-overlay.ui:12
 msgid "General"
 msgstr "Genel"
 
-#. translators: "Empty" is a verb
-#: data/gtk/help-overlay.blp:15
+#: data/resources/gtk/help-overlay.ui:15
 msgid "Empty Chord"
 msgstr "Boş Akor"
 
-#. translators: "Bookmark" is a verb
-#: data/gtk/help-overlay.blp:21
+#: data/resources/gtk/help-overlay.ui:21
 msgid "Bookmark Chord"
 msgstr "Akoru Yer İmlerine Ekle"
 
-#: data/gtk/help-overlay.blp:26
+#: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
 msgstr "Yer İmlerini Göster"
 
-#: data/gtk/help-overlay.blp:31
+#: data/resources/gtk/help-overlay.ui:33
 msgid "View Chord Variants"
 msgstr "Akor Türevlerini Göster"
 
-#. translators: "Focus" is a verb
-#: data/gtk/help-overlay.blp:37
+#: data/resources/gtk/help-overlay.ui:39
 msgid "Focus Entry"
 msgstr "Girdiye Odaklan"
 
-#: data/gtk/help-overlay.blp:42
+#: data/resources/gtk/help-overlay.ui:45
 msgid "View Shortcuts"
 msgstr "Kısayolları Göster"
 
-#: data/gtk/help-overlay.blp:47
+#: data/resources/gtk/help-overlay.ui:51
 msgid "Close Window"
 msgstr "Pencereyi Kapat"
 
-#: data/gtk/help-overlay.blp:52
+#: data/resources/gtk/help-overlay.ui:57
 msgid "Quit"
 msgstr "Çık"
 
-#: data/gtk/window.blp:29
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "Yukarı Taşı"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "Aşağı Taşı"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "Açık Değil ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "Sessiz ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "Açık ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "Akor Adı"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "Doğrula"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "Anarmonik Denklik"
+
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: data/gtk/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "Akor bulunamadı"
 
-#: data/gtk/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
 msgstr "_Türevleri Göster"
 
-#: data/gtk/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
 msgstr "Türev Yok"
 
-#: data/gtk/window.blp:200 src/window.rs:368
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Yer İmleri"
 
-#: data/gtk/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
-msgstr "Gitar Tipi"
+msgstr "Gitar Türü"
 
-#: data/gtk/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
-msgstr "Sağ el"
+msgstr "Sağ El"
 
-#: data/gtk/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
-msgstr "Sol el"
+msgstr "Sol El"
 
 #. translators: "Empty" is a verb
-#: data/gtk/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "_Boş Akor"
 
-#: data/gtk/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "_Klavye Kısayolları"
 
-#: data/gtk/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
 msgstr "Fretboard _Hakkında"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr "Sabri Ünal <yakushabb@gmail.com>"
-
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Not Open"
-msgstr "Açık Değil"
-
-#: src/chord_diagram_top_toggle.rs:158
-msgid "Muted"
-msgstr "Sessiz"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
-msgid "Open"
-msgstr "Açık"
-
-#: src/window.rs:291
+#: src/widgets/window.rs:297
 msgid "Remove Bookmark"
 msgstr "Yer İmini Kaldır"
 
-#: src/window.rs:293
+#: src/widgets/window.rs:299
 msgid "Bookmark"
 msgstr "Yer İmi"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/window.rs:304
+#: src/widgets/window.rs:310
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
-"Fretboard yerleşik akor setinde bu isimde bir akor yok. Eğer olması "
+"Fretboard yerleşik akor takımda bu adda bir akor yok. Eğer olması "
 "gerektiğini düşünüyorsanız, {}bize ulaşın{}."
 
-#: src/window.rs:366
+#: src/widgets/window.rs:372
 msgid "No Bookmarks"
 msgstr "Yer İmi Yok"
 
-#~ msgid "Brage Fuglseth"
-#~ msgstr "Brage Fuglseth"
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr ""
+"Sabri Ünal <yakushabb@gmail.com>\n"
+"Emin Tufan Çetin <etcetin@gmail.com>"
 
-#~ msgid "guitar"
-#~ msgstr "gitar"
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "Keypunch"
 
-#~ msgid "chords"
-#~ msgstr "akorlar"
-
-#~ msgid "Window width"
-#~ msgstr "Pencere genişliği"
-
-#~ msgid "Window height"
-#~ msgstr "Pencere yüksekliği"
-
-#~ msgid "Window maximized state"
-#~ msgstr "Pencerenin ekranı kaplama durumu"
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "Yazma becerinizi geliştirin"
