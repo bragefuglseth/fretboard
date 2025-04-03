@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-07 15:26+0000\n"
-"PO-Revision-Date: 2025-03-13 11:02+0200\n"
+"POT-Creation-Date: 2025-03-19 15:27+0000\n"
+"PO-Revision-Date: 2025-04-03 14:18+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/he/>\n"
@@ -115,11 +115,11 @@ msgstr "סגירת חלון"
 msgid "Quit"
 msgstr "יציאה"
 
-#: src/widgets/barre_spin.blp:10
+#: src/widgets/barre_spin.blp:9
 msgid "Move Up"
 msgstr "הזזה למעלה"
 
-#: src/widgets/barre_spin.blp:30
+#: src/widgets/barre_spin.blp:28
 msgid "Move Down"
 msgstr "הזזה למטה"
 
@@ -138,60 +138,60 @@ msgid "Open ({})"
 msgstr "פתוח ({})"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
 msgid "Chord Name"
 msgstr "שם אקורד"
 
-#: src/widgets/chord_name_entry.blp:35
+#: src/widgets/chord_name_entry.blp:34
 msgid "Confirm"
 msgstr "אישור"
 
-#: src/widgets/chord_name_entry.blp:50
+#: src/widgets/chord_name_entry.blp:49
 msgid "Enharmonic Equivalent"
 msgstr "שוי־ערך אנהרמוניים"
 
-#: src/widgets/window.blp:29
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "תפריט ראשי"
 
-#: src/widgets/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "אקורד לא נמצא"
 
-#: src/widgets/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
 msgstr "הצגת _גרסאות"
 
-#: src/widgets/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
 msgstr "אין הגוונים"
 
-#: src/widgets/window.blp:200 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "סימניות"
 
-#: src/widgets/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "סוג גיטרה"
 
-#: src/widgets/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
 msgstr "יד־ימין"
 
-#: src/widgets/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
 msgstr "יד־שמאל"
 
 #. translators: "Empty" is a verb
-#: src/widgets/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "אקורד _ריק"
 
-#: src/widgets/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "_צירופי מקשים"
 
-#: src/widgets/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
 msgstr "_על אודות Fretboard"
 
@@ -217,11 +217,21 @@ msgid "No Bookmarks"
 msgstr "אין סימניות"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:692
+#: src/widgets/window.rs:693
 msgid "translator-credits"
 msgstr ""
 "יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
 "מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "הקלדה עיוורת"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "לתרגול מיומנויות ההקלדה שלך"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
