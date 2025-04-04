@@ -684,7 +684,7 @@ impl FretboardWindow {
     fn show_about_dialog(&self) {
         let about = adw::AboutDialog::from_appdata(
             "/dev/bragefuglseth/Fretboard/dev.bragefuglseth.Fretboard.metainfo.xml",
-            Some("8.0"),
+            Some("9.0"),
         );
 
         about.set_developers(&["Brage Fuglseth https://bragefuglseth.dev"]);

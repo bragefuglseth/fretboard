@@ -64,6 +64,16 @@
   </supports>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <releases>
+    <release date="2025-04-05" version="9.0">
+      <description translate="no">
+        <p>GNOME 49 is here! Let’s celebrate:</p>
+        <ul>
+          <li>An upgraded base taking advantage of the latest platform improvements</li>
+          <li>Arabic, Bulgarian, British English, Kabyle, and Slovenian translations, making Fretboard available in a total of 28 languages</li>
+        </ul>
+      </description>
+    </release>
+
     <release date="2024-09-18" version="8.0">
       <description translate="no">
         <p>GNOME 47 is here! This update moves Fretboard to an upgraded base taking advantage of the latest platform improvements.</p>
