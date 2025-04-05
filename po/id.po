@@ -1,0 +1,232 @@
+# Indonesian translation for Fretboard.
+# Copyright (C) 2025 Fretboard's COPYRIGHT HOLDER
+# This file is distributed under the same license as the Fretboard package.
+# Andika Triwidada <atriwidada@gnome.org>,  2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Fretboard main\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-03-30 08:41+0000\n"
+"PO-Revision-Date: 2025-04-05 20:10+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <Indonesian>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+msgid "Fretboard"
+msgstr "Fretboard"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
+msgid "Look up guitar chords"
+msgstr "Cari akor gitar"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+msgid "guitar;chords"
+msgstr "gitar;akor"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"Bagaimana akor itu dimainkan, lagi? Fretboard memungkinkan Anda menemukan "
+"akor gitar dengan mengetikkan namanya atau memetakannya pada leher gitar "
+"interaktif. Setelah Anda mengidentifikasi akor, Anda dapat bereksperimen "
+"dengan mengubahnya, melihat lebih banyak cara untuk memainkannya, atau "
+"menandainya untuk disimpan nanti. Tidak peduli apakah Anda seorang pemula "
+"atau gitaris tingkat lanjut, Anda dapat menggunakan Fretboard untuk "
+"berlatih, belajar, dan menguasai lagu-lagu favorit Anda!"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+"Fretboard dengan bangga menjadi bagian dari GNOME Circle, sebuah inisiatif "
+"yang mendukung perangkat lunak hebat yang tersedia untuk platform GNOME. "
+"Untuk informasi lebih lanjut, kunjungi situs web GNOME Circle."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr "Menampilkan suatu akor"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr "Menampilkan suatu akor bar"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr "Menunjukkan varian dari suatu akor"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
+msgstr "Halaman markah"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgstr "Bisa \"tangan kanan\" ata \"kidal\"."
+
+#: data/resources/gtk/help-overlay.ui:12
+msgid "General"
+msgstr "Umum"
+
+#: data/resources/gtk/help-overlay.ui:15
+msgid "Empty Chord"
+msgstr "Akor Kosong"
+
+#: data/resources/gtk/help-overlay.ui:21
+msgid "Bookmark Chord"
+msgstr "Markahi Akor"
+
+#: data/resources/gtk/help-overlay.ui:27
+msgid "View Bookmarks"
+msgstr "Lihat Markah"
+
+#: data/resources/gtk/help-overlay.ui:33
+msgid "View Chord Variants"
+msgstr "Lihat Varian Akor"
+
+#: data/resources/gtk/help-overlay.ui:39
+msgid "Focus Entry"
+msgstr "Entri Fokus"
+
+#: data/resources/gtk/help-overlay.ui:45
+msgid "View Shortcuts"
+msgstr "Lihat Pintasan"
+
+#: data/resources/gtk/help-overlay.ui:51
+msgid "Close Window"
+msgstr "Tutup Jendela"
+
+#: data/resources/gtk/help-overlay.ui:57
+msgid "Quit"
+msgstr "Keluar"
+
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "Naikkan"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "Turunkan"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "Tidak Terbuka ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "Dibisukan ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "Terbuka ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "Nama Akor"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "Ekuivalen Enharmonik"
+
+#: src/widgets/window.blp:27
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+#: src/widgets/window.blp:78
+msgid "Chord not found"
+msgstr "Akor tidak ditemukan"
+
+#: src/widgets/window.blp:110
+msgid "View _Variants"
+msgstr "Lihat _Varian"
+
+#: src/widgets/window.blp:144
+msgid "No Variants"
+msgstr "Tidak Ada Varian"
+
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
+msgid "Bookmarks"
+msgstr "Markah"
+
+#: src/widgets/window.blp:213
+msgid "Guitar Type"
+msgstr "Tipe Gitar"
+
+#: src/widgets/window.blp:216
+msgid "Right-handed"
+msgstr "Tangan kanan"
+
+#: src/widgets/window.blp:222
+msgid "Left-handed"
+msgstr "Kidal"
+
+#. translators: "Empty" is a verb
+#: src/widgets/window.blp:231
+msgid "_Empty Chord"
+msgstr "Ako_r Kosong"
+
+#: src/widgets/window.blp:238
+msgid "_Keyboard Shortcuts"
+msgstr "Pintasan Papan Ti_k"
+
+#: src/widgets/window.blp:243
+msgid "_About Fretboard"
+msgstr "Tent_ang Fretboard"
+
+#: src/widgets/window.rs:297
+msgid "Remove Bookmark"
+msgstr "Hapus Markah"
+
+#: src/widgets/window.rs:299
+msgid "Bookmark"
+msgstr "Markah"
+
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+#: src/widgets/window.rs:310
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+"Tidak ada akor dengan nama ini dalam set akor bawaan Fretboard. Bila Anda "
+"pikir mestinya Ada, {}hubungi kami{}."
+
+#: src/widgets/window.rs:372
+msgid "No Bookmarks"
+msgstr "Tidak Ada Markah"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr "Andika Triwidada <andika@gmail.com>, 2025."
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "Praktikkan ketrampilan mengetik Anda"
