@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-19 15:27+0000\n"
-"PO-Revision-Date: 2025-03-20 18:32+0800\n"
+"POT-Creation-Date: 2025-04-08 18:18+0000\n"
+"PO-Revision-Date: 2025-04-09 18:18+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -74,8 +74,8 @@ msgstr "书签页"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "可以是右手吉他（\"right-handed\"）或左手吉他（\"left-handed\"）。"
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr "可以是 \"right-handed\" 或 \"left-handed\"。"
 
 #: data/resources/gtk/help-overlay.ui:12
 msgid "General"
