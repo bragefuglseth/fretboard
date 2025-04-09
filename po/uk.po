@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-17 15:25+0000\n"
-"PO-Revision-Date: 2025-03-17 22:15+0200\n"
+"POT-Creation-Date: 2025-04-08 18:18+0000\n"
+"PO-Revision-Date: 2025-04-09 18:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -77,7 +77,8 @@ msgstr "Сторінка закладок"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+#| msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgid "Can be either \"right-handed\" or \"left-handed\"."
 msgstr "Може бути як «праворуким», так і «ліворуким»."
 
 #: data/resources/gtk/help-overlay.ui:12
@@ -116,86 +117,83 @@ msgstr "Закрити вікно"
 msgid "Quit"
 msgstr "Звільнися"
 
-#: src/widgets/barre_spin.blp:10
+#: src/widgets/barre_spin.blp:9
 msgid "Move Up"
 msgstr "Перемістити Вгору"
 
-#: src/widgets/barre_spin.blp:30
+#: src/widgets/barre_spin.blp:28
 msgid "Move Down"
 msgstr "Перемістити вниз"
 
 #: src/widgets/chord_diagram_top_toggle.rs:168
-#| msgid "Not Open"
 msgid "Not Open ({})"
 msgstr "Не відкрита ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
 #: src/widgets/chord_diagram_top_toggle.rs:171
-#| msgid "Muted"
 msgid "Muted ({})"
 msgstr "Заглушена ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
 #: src/widgets/chord_diagram_top_toggle.rs:175
-#| msgid "Open"
 msgid "Open ({})"
 msgstr "Відкрита ({})"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
 msgid "Chord Name"
 msgstr "Назва акорду"
 
-#: src/widgets/chord_name_entry.blp:35
+#: src/widgets/chord_name_entry.blp:34
 msgid "Confirm"
 msgstr "Підтвердити"
 
-#: src/widgets/chord_name_entry.blp:50
+#: src/widgets/chord_name_entry.blp:49
 msgid "Enharmonic Equivalent"
 msgstr "Енгармонійний еквівалент"
 
-#: src/widgets/window.blp:29
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "Головне меню"
 
-#: src/widgets/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "Акорд не знайдено"
 
-#: src/widgets/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
 msgstr "Перегляд _Варіанти"
 
-#: src/widgets/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
 msgstr "Без варіантів"
 
-#: src/widgets/window.blp:200 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: src/widgets/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "Тип гітари"
 
-#: src/widgets/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
 msgstr "Правша"
 
-#: src/widgets/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
 msgstr "Шульга"
 
 #. translators: "Empty" is a verb
-#: src/widgets/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "_Порожній акорд"
 
-#: src/widgets/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "_Клавіатурні скорочення"
 
-#: src/widgets/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
 msgstr "_Про гриф"
 
@@ -221,16 +219,16 @@ msgid "No Bookmarks"
 msgstr "Немає закладок"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:692
+#: src/widgets/window.rs:693
 msgid "translator-credits"
 msgstr "mondstern https://moooon.dresden.network/"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:697
+#: src/widgets/window.rs:698
 msgid "Keypunch"
 msgstr "Кіпанч"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:699
+#: src/widgets/window.rs:700
 msgid "Practice your typing skills"
 msgstr "Вправляння у друкарському наборі"
