@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-19 15:27+0000\n"
-"PO-Revision-Date: 2025-03-22 09:33+0100\n"
+"POT-Creation-Date: 2025-04-08 18:18+0000\n"
+"PO-Revision-Date: 2025-04-08 20:27+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -78,7 +78,7 @@ msgstr "Bokmärkessidan"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgid "Can be either \"right-handed\" or \"left-handed\"."
 msgstr "Kan vara antigen ”right-handed” eller ”left-handed”."
 
 #: data/resources/gtk/help-overlay.ui:12
@@ -187,7 +187,7 @@ msgstr "Vänsterhänt"
 #. translators: "Empty" is a verb
 #: src/widgets/window.blp:231
 msgid "_Empty Chord"
-msgstr "Tomt _ackord"
+msgstr "Töm _ackord"
 
 #: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
