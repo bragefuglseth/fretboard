@@ -10,16 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-17 15:25+0000\n"
-"PO-Revision-Date: 2025-03-18 22:33-0300\n"
+"POT-Creation-Date: 2025-04-08 18:18+0000\n"
+"PO-Revision-Date: 2025-04-09 20:58-0300\n"
 "Last-Translator: Álvaro Burns <>\n"
-"Language-Team: Brazilian Portuguese\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -79,8 +79,8 @@ msgstr "A página de favoritos"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "Pode ser tanto \"right-handed\"\" quanto \"left-handed\"."
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr "Pode ser \"right-handed\" ou \"left-handed\"."
 
 #: data/resources/gtk/help-overlay.ui:12
 msgid "General"
@@ -118,11 +118,11 @@ msgstr "Fecha a janela"
 msgid "Quit"
 msgstr "Sai"
 
-#: src/widgets/barre_spin.blp:10
+#: src/widgets/barre_spin.blp:9
 msgid "Move Up"
 msgstr "Move para cima"
 
-#: src/widgets/barre_spin.blp:30
+#: src/widgets/barre_spin.blp:28
 msgid "Move Down"
 msgstr "Move para baixo"
 
@@ -141,60 +141,60 @@ msgid "Open ({})"
 msgstr "Aberto ({})"
 
 #. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: src/widgets/chord_name_entry.blp:10 src/widgets/chord_name_entry.blp:13
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
 msgid "Chord Name"
 msgstr "Nome do acorde"
 
-#: src/widgets/chord_name_entry.blp:35
+#: src/widgets/chord_name_entry.blp:34
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: src/widgets/chord_name_entry.blp:50
+#: src/widgets/chord_name_entry.blp:49
 msgid "Enharmonic Equivalent"
 msgstr "Equivalente enarmônico"
 
-#: src/widgets/window.blp:29
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: src/widgets/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "Acorde não encontrado"
 
-#: src/widgets/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
 msgstr "Ver _variantes"
 
-#: src/widgets/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
 msgstr "Nenhuma variante"
 
-#: src/widgets/window.blp:200 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Favoritos"
 
-#: src/widgets/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "Tipo de guitarra"
 
-#: src/widgets/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
 msgstr "Destro"
 
-#: src/widgets/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
 msgstr "Canhoto"
 
 #. translators: "Empty" is a verb
-#: src/widgets/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "_Esvaziar acorde"
 
-#: src/widgets/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "Atalhos de _teclado"
 
-#: src/widgets/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
 msgstr "_Sobre o Fretboard"
 
@@ -220,7 +220,7 @@ msgid "No Bookmarks"
 msgstr "Não há favoritos"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:692
+#: src/widgets/window.rs:693
 msgid "translator-credits"
 msgstr ""
 "Cassio Pereira <cassiogomes00@gmail.com>\n"
@@ -228,12 +228,12 @@ msgstr ""
 "Rafael Fontenelle <rafaelff@gnome.org>"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:697
+#: src/widgets/window.rs:698
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:699
+#: src/widgets/window.rs:700
 msgid "Practice your typing skills"
 msgstr "Pratique sua digitação"
 
