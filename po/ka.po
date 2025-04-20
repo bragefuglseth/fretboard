@@ -1,14 +1,14 @@
 # Georgian translation for Fretboard.
 # Copyright (C) 2025 Fretboard's authors
 # This file is distributed under the same license as the Fretboard package.
-# Ekaterine Papava <papava.e@gtu.ge>,  2025.
+# Ekaterine Papava <papava.e@gtu.ge>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-22 03:26+0000\n"
-"PO-Revision-Date: 2025-03-22 05:56+0100\n"
+"POT-Creation-Date: 2025-04-08 18:18+0000\n"
+"PO-Revision-Date: 2025-04-20 04:36+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "Language: ka\n"
@@ -74,8 +74,8 @@ msgstr "სანიშნეების გვერდი"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "შეიძლება იყოს \"მარჯვენა ხელით\" ან \"ცაცია\"."
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr "შეიძლება იყოს \"right-handed\" ან \"left-handed\"."
 
 #: data/resources/gtk/help-overlay.ui:12
 msgid "General"
