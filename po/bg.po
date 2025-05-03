@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-19 15:27+0000\n"
-"PO-Revision-Date: 2025-03-19 21:43+0100\n"
+"POT-Creation-Date: 2025-05-03 15:26+0000\n"
+"PO-Revision-Date: 2025-04-13 21:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: Bulgarian <Bulgarian>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Gtranslator 47.1\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -77,8 +77,9 @@ msgstr "Страницата за отметки"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "Може да бъде за десничари или левичари."
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr ""
+"Може да бъде „right-handed“ (за десничари) или „left-handed“ (за левичари)."
 
 #: data/resources/gtk/help-overlay.ui:12
 msgid "General"
