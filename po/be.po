@@ -5,10 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-03-05 09:01+0000\n"
-"Last-Translator: Yahor <k1llo2810@protonmail.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-04-08 18:18+0000\n"
+"PO-Revision-Date: 2025-05-30 02:49+0300\n"
+"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/be/>\n"
 "Language: be\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
@@ -27,7 +27,7 @@ msgstr "Fretboard"
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
-msgstr "Знайдзіце акорды для гітары"
+msgstr "Пошук гітарных акордаў"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
 msgid "guitar;chords"
@@ -73,151 +73,142 @@ msgid "Showing variants of a chord"
 msgstr "Паказ варыянтаў акорда"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
-#, fuzzy
 msgid "The bookmarks page"
-msgstr "Закладкі"
+msgstr "Старонка закладак"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "Можа быць як \"right-handed\"\", так і \"left-handed\"."
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr ""
+"Можа быць або значэнне «right-handed» (пад правую руку), або «left-handed» "
+"(пад левую руку)."
 
-#: data/gtk/barre-spin.blp:10
-msgid "Move Up"
-msgstr "Перайсці ўверх"
-
-#: data/gtk/barre-spin.blp:30
-msgid "Move Down"
-msgstr "Перайсці ўніз"
-
-#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-msgid "Chord Name"
-msgstr "Назва акорда"
-
-#: data/gtk/chord-name-entry.blp:35
-msgid "Confirm"
-msgstr "Пацвердзіць"
-
-#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
-msgid "Enharmonic Equivalent"
-msgstr "Энгарманічны эквівалент"
-
-#: data/gtk/help-overlay.blp:11
+#: data/resources/gtk/help-overlay.ui:12
 msgid "General"
 msgstr "Агульныя"
 
-#. translators: "Empty" is a verb
-#: data/gtk/help-overlay.blp:15
+#: data/resources/gtk/help-overlay.ui:15
 msgid "Empty Chord"
 msgstr "Ачысціць акорд"
 
-#. translators: "Bookmark" is a verb
-#: data/gtk/help-overlay.blp:21
+#: data/resources/gtk/help-overlay.ui:21
 msgid "Bookmark Chord"
 msgstr "Дадаць у закладкі"
 
-#: data/gtk/help-overlay.blp:26
+#: data/resources/gtk/help-overlay.ui:27
 msgid "View Bookmarks"
 msgstr "Закладкі"
 
-#: data/gtk/help-overlay.blp:31
+#: data/resources/gtk/help-overlay.ui:33
 msgid "View Chord Variants"
 msgstr "Варыянты акорда"
 
-#. translators: "Focus" is a verb
-#: data/gtk/help-overlay.blp:37
-#, fuzzy
+#: data/resources/gtk/help-overlay.ui:39
 msgid "Focus Entry"
-msgstr "Уваход у фокус"
+msgstr "Перанесці фокус на радок уводу"
 
-#: data/gtk/help-overlay.blp:42
-#, fuzzy
+#: data/resources/gtk/help-overlay.ui:45
 msgid "View Shortcuts"
-msgstr "Спалучэнні клавіш"
+msgstr "Праглядзець спалучэнні клавіш"
 
-#: data/gtk/help-overlay.blp:47
+#: data/resources/gtk/help-overlay.ui:51
 msgid "Close Window"
 msgstr "Закрыць акно"
 
-#: data/gtk/help-overlay.blp:52
+#: data/resources/gtk/help-overlay.ui:57
 msgid "Quit"
 msgstr "Выйсці"
 
-#: data/gtk/window.blp:29
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "Перайсці ўверх"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "Перайсці ўніз"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "Не адкрытая ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "Прыглушаная ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "Адкрытая ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "Назва акорда"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "Пацвердзіць"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "Энгарманічны эквівалент"
+
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "Галоўнае меню"
 
-#: data/gtk/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "Акорд не знойдзены"
 
-#: data/gtk/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
 msgstr "Праглядзець _варыянты"
 
-#: data/gtk/window.blp:158
-#, fuzzy
+#: src/widgets/window.blp:144
 msgid "No Variants"
-msgstr "Праглядзець _варыянты"
+msgstr "Без варыянтаў"
 
-#: data/gtk/window.blp:200 src/window.rs:368
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "Закладкі"
 
-#: data/gtk/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "Тып гітары"
 
-#: data/gtk/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
 msgstr "Праўша"
 
-#: data/gtk/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
 msgstr "Ляўша"
 
 #. translators: "Empty" is a verb
-#: data/gtk/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "_Ачысціць акорд"
 
-#: data/gtk/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "_Спалучэнні клавіш"
 
-#: data/gtk/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
 msgstr "_Аб праграме"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr "Yahor Haurylenka <k1llo2810@gmail.com> 2024"
-
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Not Open"
-msgstr "Не адкрыта"
-
-#: src/chord_diagram_top_toggle.rs:158
-msgid "Muted"
-msgstr "Прыглушаны"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
-msgid "Open"
-msgstr "Адкрыты"
-
-#: src/window.rs:291
+#: src/widgets/window.rs:297
 msgid "Remove Bookmark"
 msgstr "Выдаліць закладку"
 
-#: src/window.rs:293
+#: src/widgets/window.rs:299
 msgid "Bookmark"
 msgstr "Дадаць у закладкі"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/window.rs:304
+#: src/widgets/window.rs:310
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -225,9 +216,24 @@ msgstr ""
 "Ва ўбудаваным наборы акордаў Fretboard няма акордаў з такой назвай. Калі вы "
 "лічыце, што гэта памылка, {}звярніцеся{}."
 
-#: src/window.rs:366
+#: src/widgets/window.rs:372
 msgid "No Bookmarks"
 msgstr "Няма закладак"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr "Yahor Haurylenka <k1llo2810@gmail.com> 2024"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "Практыкуйце навыкі друку"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
