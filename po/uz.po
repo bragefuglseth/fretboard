@@ -1,0 +1,236 @@
+# Uzbek (Latin) translation for Fretboard.
+# Copyright (C) 2025 Fretboard's COPYRIGHT HOLDER
+# This file is distributed under the same license as the Fretboard package.
+# let rec <toxtayevhamidulloh6997@gmail.com>,  2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Fretboard main\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-10-10 18:16+0000\n"
+"PO-Revision-Date: 2025-10-13 11:09+0500\n"
+"Last-Translator: Baxrom Raxmatov <https://t.me/bahrom04>\n"
+"Language-Team: Uzbek (Latin) <Uzbek>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+msgid "Fretboard"
+msgstr "Fretboard"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
+msgid "Look up guitar chords"
+msgstr "Gitara akkordlarini ko‘rib chiqing"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
+msgid "guitar;chords"
+msgstr "gitara;akkordlar"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"O‘sha akkord qanday chalingan edi? Fretboard gitara akkordlarini nomlarini "
+"kiritish yoki interaktiv gitara dastasida belgilash orqali topishga imkon "
+"beradi. Akkordni aniqlaganingizdan so‘ng, uni o‘zgartirish, chalishning "
+"boshqa usullarini ko‘rish yoki keyinchalik foydalanish uchun xatcho‘pga "
+"qo‘shishingiz mumkin. Gitarada yangi boshlovchi yoki tajribali ijrochi "
+"bo‘lishingizdan qat’i nazar, sevimli qo‘shiqlaringizni mashq qilish, "
+"o‘rganish va mukammal darajada ijro etish uchun Fretboarddan "
+"foydalanishingiz mumkin!"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+"Fretboard GNOME platformasi uchun mavjud bo‘lgan ajoyib dasturiy ta’minotni "
+"qo‘llab-quvvatlovchi GNOME Circle tashabbusining faxrli qismidir. "
+"Tafsilotlar uchun GNOME Circle vebsaytiga kiring."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr "Akkordni ko‘rsatish"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr "Moslama akkordini ko‘rsatish"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr "Akkordning variantlarini ko‘rsatish"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
+msgstr "Xatcho‘plar sahifasi"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr "Oʻnaqay yoki chapaqay bo'lishi mumkin."
+
+#: data/resources/gtk/help-overlay.ui:12
+msgid "General"
+msgstr "Umumiy"
+
+#: data/resources/gtk/help-overlay.ui:15
+msgid "Empty Chord"
+msgstr "Bo‘sh akkord"
+
+#: data/resources/gtk/help-overlay.ui:21
+msgid "Bookmark Chord"
+msgstr "Xatcho‘p akkord"
+
+#: data/resources/gtk/help-overlay.ui:27
+msgid "View Bookmarks"
+msgstr "Xatcho‘plarni ko‘rish"
+
+#: data/resources/gtk/help-overlay.ui:33
+msgid "View Chord Variants"
+msgstr "Akkord variantlarini ko‘rish"
+
+#: data/resources/gtk/help-overlay.ui:39
+msgid "Focus Entry"
+msgstr "Diqqat markazida"
+
+#: data/resources/gtk/help-overlay.ui:45
+msgid "View Shortcuts"
+msgstr "Yorliqlarni ko‘rish"
+
+#: data/resources/gtk/help-overlay.ui:51
+msgid "Close Window"
+msgstr "Oynani yopish"
+
+#: data/resources/gtk/help-overlay.ui:57
+msgid "Quit"
+msgstr "Chiqish"
+
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "Yuqoriga siljitish"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "Pastga siljitish"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+msgid "Not Open ({})"
+msgstr "Ochilmagan ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+msgid "Muted ({})"
+msgstr "Ovozsiz ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+msgid "Open ({})"
+msgstr "Ochish ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "Akkord nomi"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "Tasdiqlash"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "Garmonik tengdosh"
+
+#: src/widgets/window.blp:27
+msgid "Main Menu"
+msgstr "Asosiy menyu"
+
+#: src/widgets/window.blp:78
+msgid "Chord not found"
+msgstr "Akkord topilmadi"
+
+#: src/widgets/window.blp:110
+msgid "View _Variants"
+msgstr "Variantlarni ko‘rish"
+
+#: src/widgets/window.blp:144
+msgid "No Variants"
+msgstr "Variantlar yo‘q"
+
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
+msgid "Bookmarks"
+msgstr "Xatchoʻplar"
+
+#: src/widgets/window.blp:213
+msgid "Guitar Type"
+msgstr "Gitara turi"
+
+#: src/widgets/window.blp:216
+msgid "Right-handed"
+msgstr "O‘naqay"
+
+#: src/widgets/window.blp:222
+msgid "Left-handed"
+msgstr "Chapaqay"
+
+#. translators: "Empty" is a verb
+#: src/widgets/window.blp:231
+msgid "_Empty Chord"
+msgstr "Bo‘sh akkord"
+
+#: src/widgets/window.blp:238
+msgid "_Keyboard Shortcuts"
+msgstr "Klaviatura yorliqlari"
+
+#: src/widgets/window.blp:243
+msgid "_About Fretboard"
+msgstr "Fretbord haqida"
+
+#: src/widgets/window.rs:297
+msgid "Remove Bookmark"
+msgstr "Xatchoʻpni olib tashlash"
+
+#: src/widgets/window.rs:299
+msgid "Bookmark"
+msgstr "Xatchoʻp"
+
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+#: src/widgets/window.rs:310
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+"Fretboardning o‘rnatilgan akkordlar to‘plamida bunday nomdagi akkordlar "
+"mavjud emas. Agar bu akkord bo‘lishi kerak deb o‘ylasangiz, {} biz bilan "
+"bog‘laning {}."
+
+#: src/widgets/window.rs:372
+msgid "No Bookmarks"
+msgstr "Xatchoʻplar yoʻq"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr ""
+"Hamidulloh To'xtayev <toxtayevhamidulloh6997@gmail.com>\n"
+"Baxrom Raxmatov"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "Yozuv mahoratingizni mashq qiling"
