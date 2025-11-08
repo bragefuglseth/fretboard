@@ -18,6 +18,7 @@ dependency('gtk4', version: '>= 4.10.1')
 dependency('libadwaita-1', version: '>= 1.5.alpha')
 
 prefix = get_option('prefix')
+bindir = prefix / get_option('bindir')
 localedir = prefix / get_option('localedir')
 datadir = prefix / get_option('datadir')
 pkgdatadir = datadir / meson.project_name()
