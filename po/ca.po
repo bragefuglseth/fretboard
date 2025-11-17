@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-10-27 03:27+0000\n"
-"PO-Revision-Date: 2025-10-27 13:02+0100\n"
+"POT-Creation-Date: 2025-11-11 03:27+0000\n"
+"PO-Revision-Date: 2025-11-11 10:33+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: ca\n"
@@ -72,6 +72,11 @@ msgstr "Mostrant variants d'un acord"
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
 msgid "The bookmarks page"
 msgstr "La pàgina dels destacats"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr "Pot ser «dretà» o «esquerrà»."
 
 #: data/resources/gtk/help-overlay.ui:12
 msgid "General"
