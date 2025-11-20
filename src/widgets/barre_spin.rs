@@ -85,7 +85,8 @@ mod imp {
 
 glib::wrapper! {
     pub struct FretboardBarreSpin(ObjectSubclass<imp::FretboardBarreSpin>)
-        @extends gtk::Widget;
+        @extends gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl Default for FretboardBarreSpin {
