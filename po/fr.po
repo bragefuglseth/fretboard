@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-03-30 08:41+0000\n"
-"PO-Revision-Date: 2025-03-31 21:55+0200\n"
-"Last-Translator: Denojean <swandenojean@duck.com>\n"
+"POT-Creation-Date: 2025-04-13 23:39+0000\n"
+"PO-Revision-Date: 2026-03-07 08:56+0100\n"
+"Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/fretboard/"
 "fretboard/fr/>\n"
 "Language: fr\n"
@@ -16,18 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Poedit 3.8\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "Rechercher des accords de guitare"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
 msgstr "guitare;accords"
 
@@ -76,7 +77,7 @@ msgstr "La page des favoris"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
+msgid "Can be either \"right-handed\" or \"left-handed\"."
 msgstr "Peut être « droitier » ou « gaucher »."
 
 #: data/resources/gtk/help-overlay.ui:12
