@@ -3,7 +3,7 @@ use gettextrs::gettext;
 use gtk::glib;
 use gtk::prelude::*;
 use i18n_format::i18n_fmt;
-use std::cell::Cell;
+use std::cell::{Cell, RefCell};
 
 #[derive(Default, Clone, Copy, Debug)]
 pub enum TopToggleState {
@@ -33,6 +33,9 @@ mod imp {
         pub state: Cell<TopToggleState>,
         pub number: Cell<usize>,
         pub note_name: Cell<&'static str>,
+
+        pub note_label: RefCell<Option<gtk::Label>>,
+        pub show_chord_notes: Cell<bool>,
     }
 
     #[glib::object_subclass]
@@ -64,6 +67,11 @@ mod imp {
 
             let obj = self.obj();
             obj.add_css_class("fretboard-chord-diagram-top-toggle");
+
+            let label = gtk::Label::new(None);
+            self.icon_stack.add_named(&label, Some("note_name"));
+            self.note_label.replace(Some(label));
+
             obj.setup_callbacks();
         }
     }
@@ -94,6 +102,11 @@ impl FretboardChordDiagramTopToggle {
         self.imp().button.get()
     }
 
+    pub fn set_show_chord_notes(&self, show: bool) {
+        self.imp().show_chord_notes.set(show);
+        self.update_icon();
+    }
+
     pub fn set_state(&self, state: TopToggleState) {
         let imp = self.imp();
 
@@ -116,6 +129,11 @@ impl FretboardChordDiagramTopToggle {
 
     pub fn set_note_name(&self, note_name: &'static str) {
         self.imp().note_name.set(note_name);
+
+        if let Some(label) = &*self.imp().note_label.borrow() {
+            label.set_label(note_name);
+        }
+
         self.update_tooltip();
     }
 
@@ -182,10 +200,25 @@ impl FretboardChordDiagramTopToggle {
     pub fn update_icon(&self) {
         let imp = self.imp();
 
+        let show_notes = imp.show_chord_notes.get();
+        let is_open = matches!(imp.state.get(), TopToggleState::Open);
+
+        if show_notes && is_open {
+            self.add_css_class("show-notes");
+        } else {
+            self.remove_css_class("show-notes");
+        }
+
         imp.icon_stack
             .set_visible_child_name(match imp.state.get() {
                 TopToggleState::Off => "off",
-                TopToggleState::Open => "open",
+                TopToggleState::Open => {
+                    if show_notes {
+                        "note_name"
+                    } else {
+                        "open"
+                    }
+                }
                 TopToggleState::Muted => "muted",
             });
 
