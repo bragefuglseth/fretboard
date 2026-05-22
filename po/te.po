@@ -1,0 +1,235 @@
+# Telugu translation for Fretboard.
+# Copyright (C) 2026 Fretboard's COPYRIGHT HOLDER
+# This file is distributed under the same license as the Fretboard package.
+# Aryan Karamtoth <spaciouskarter78@disroot.org>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Fretboard main\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2025-04-13 23:39+0000\n"
+"PO-Revision-Date: 2026-05-22 18:09+0530\n"
+"Last-Translator: Aryan Karamtoth <spaciouskarter78@disroot.org>\n"
+"Language-Team: GNOME Telugu Translation Team <l10n-te@lists.fsci.in>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 50.0\n"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+msgid "Fretboard"
+msgstr "Fretboard"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
+msgid "Look up guitar chords"
+msgstr "గిటార్ తీగలను వెతకండి"
+
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
+msgid "guitar;chords"
+msgstr "guitar;chords"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
+msgid ""
+"How was that chord played, again? Fretboard lets you find guitar chords by "
+"typing their names or plotting them on an interactive guitar neck. When you "
+"have identified a chord, you can experiment with changing it, see more ways "
+"to play it, or bookmark it to save it for later. No matter if you are a "
+"beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
+"and master your favorite songs!"
+msgstr ""
+"ఆ కార్డ్‌ను మళ్ళీ ఎలా వాయించారు? ఫ్రెట్‌బోర్డ్ ద్వారా మీరు కార్డ్‌ల పేర్లను టైప్ చేయడం ద్వారా గానీ, లేదా వాటిని "
+"ఇంటరాక్టివ్ గిటార్ నెక్ మీద గుర్తించడం ద్వారా గానీ గిటార్ కార్డ్‌లను కనుగొనవచ్చు. మీరు ఒక కార్డ్‌ను గుర్తించిన "
+"తర్వాత, దానిని మార్చడానికి ప్రయోగాలు చేయవచ్చు, దానిని వాయించడానికి మరిన్ని మార్గాలను చూడవచ్చు, లేదా తర్వాత "
+"ఉపయోగించుకోవడానికి దాన్ని బుక్‌మార్క్ చేసుకోవచ్చు. మీరు ప్రారంభకుడైనా లేదా నిష్ణాతుడైన గిటారిస్ట్ అయినా సరే, మీకు "
+"ఇష్టమైన పాటలను సాధన చేయడానికి, నేర్చుకోవడానికి మరియు వాటిలో ప్రావీణ్యం సంపాదించడానికి ఫ్రెట్‌బోర్డ్‌ను "
+"ఉపయోగించవచ్చు!"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
+msgid ""
+"Fretboard is proudly part of GNOME Circle, an initiative that champions the "
+"great software that is available for the GNOME platform. For more "
+"information, visit the GNOME Circle website."
+msgstr ""
+"GNOME ప్లాట్‌ఫారమ్ కోసం అందుబాటులో ఉన్న గొప్ప సాఫ్ట్‌వేర్‌ను ప్రోత్సహించే ఒక కార్యక్రమమైన GNOME సర్కిల్‌లో "
+"Fretboard గర్వంగా భాగం. మరింత సమాచారం కోసం, GNOME సర్కిల్ వెబ్‌సైట్‌ను సందర్శించండి."
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
+msgid "Displaying a chord"
+msgstr "తీగను ప్రదర్శిస్తోంది"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
+msgid "Displaying a barre chord"
+msgstr "బ్యారే కార్డ్‌ను ప్రదర్శించడం"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
+msgid "Showing variants of a chord"
+msgstr "తీగ యొక్క వైవిధ్యాలను చూపించడం"
+
+#: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
+msgid "The bookmarks page"
+msgstr "బుక్‌మార్క్‌ల పేజీ"
+
+#. translators: "right-handed" and "left-handed" are enum values, and should not be translated
+#: data/dev.bragefuglseth.Fretboard.gschema.xml:16
+msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgstr "కుడిచేతి వాటం లేదా ఎడమచేతి వాటం కావచ్చు."
+
+#: data/resources/gtk/help-overlay.ui:12
+msgid "General"
+msgstr "సాధారణ"
+
+#: data/resources/gtk/help-overlay.ui:15
+msgid "Empty Chord"
+msgstr "ఖాళీ తీగ"
+
+#: data/resources/gtk/help-overlay.ui:21
+msgid "Bookmark Chord"
+msgstr "బుక్‌మార్క్ తీగ"
+
+#: data/resources/gtk/help-overlay.ui:27
+msgid "View Bookmarks"
+msgstr "బుక్‌మార్క్‌లను చుడండి "
+
+#: data/resources/gtk/help-overlay.ui:33
+msgid "View Chord Variants"
+msgstr "తీగ వైవిధ్యాలను చుడండి "
+
+#: data/resources/gtk/help-overlay.ui:39
+msgid "Focus Entry"
+msgstr "ఎంట్రీ మీద దృష్టి "
+
+#: data/resources/gtk/help-overlay.ui:45
+msgid "View Shortcuts"
+msgstr "సత్వరమార్గాలను చుడండి"
+
+#: data/resources/gtk/help-overlay.ui:51
+msgid "Close Window"
+msgstr "విండోను మూసివేయండి"
+
+#: data/resources/gtk/help-overlay.ui:57
+msgid "Quit"
+msgstr "నిష్క్రమించు"
+
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "పైకి తరలించు"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "క్రిందికి తరలించు"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+#, rust-format
+msgid "Not Open ({})"
+msgstr "({}) తెరవబడలేదు "
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+#, rust-format
+msgid "Muted ({})"
+msgstr "({}) మ్యూట్ చేయబడింది "
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+#, rust-format
+msgid "Open ({})"
+msgstr "({}) ను  తెరవండి "
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "తీగ పేరు"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "నిర్ధారించండి"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "ఎన్హార్మోనిక్ ఈక్వివలెంట్"
+
+#: src/widgets/window.blp:27
+msgid "Main Menu"
+msgstr "మెయిన్ మెనూ  "
+
+#: src/widgets/window.blp:78
+msgid "Chord not found"
+msgstr "తీగ కనుగొనబడలేదు"
+
+#: src/widgets/window.blp:110
+msgid "View _Variants"
+msgstr "వేరియంట్‌లను చుడండి (_V)"
+
+#: src/widgets/window.blp:144
+msgid "No Variants"
+msgstr "వేరియంట్లు లేవు"
+
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
+msgid "Bookmarks"
+msgstr "బుక్‌మార్క్‌లు"
+
+#: src/widgets/window.blp:213
+msgid "Guitar Type"
+msgstr "గిటార్ రకం"
+
+#: src/widgets/window.blp:216
+msgid "Right-handed"
+msgstr "కుడిచేతి వాటం"
+
+#: src/widgets/window.blp:222
+msgid "Left-handed"
+msgstr "ఎడమచేతి వాటం"
+
+#. translators: "Empty" is a verb
+#: src/widgets/window.blp:231
+msgid "_Empty Chord"
+msgstr "ఖాళీ తీగ (_E)"
+
+#: src/widgets/window.blp:238
+msgid "_Keyboard Shortcuts"
+msgstr "కీబోర్డ్ షార్ట్‌కట్‌లు (_K)"
+
+#: src/widgets/window.blp:243
+msgid "_About Fretboard"
+msgstr "ఫ్రెట్‌బోర్డ్ గురించి (_A)"
+
+#: src/widgets/window.rs:297
+msgid "Remove Bookmark"
+msgstr "బుక్‌మార్క్‌ని తీసివేయండి"
+
+#: src/widgets/window.rs:299
+msgid "Bookmark"
+msgstr "బుక్‌మార్క్"
+
+#. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
+#: src/widgets/window.rs:310
+#, rust-format
+msgid ""
+"There are no chords with this name in Fretboard’s built-in chord set. If you "
+"think there should be, {}reach out{}."
+msgstr ""
+"ఫ్రెట్‌బోర్డ్ యొక్క అంతర్నిర్మిత కార్డ్ సెట్‌లో ఈ పేరుతో కార్డ్‌లు లేవు. ఒకవేళ ఉండాలని మీరు భావిస్తే, మమ్మల్ని {}"
+"reach out{} లో  సంప్రదించండి. "
+
+#: src/widgets/window.rs:372
+msgid "No Bookmarks"
+msgstr "బుక్‌మార్క్‌లు లేవు"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr "Aryan Karamtoth"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:698
+msgid "Keypunch"
+msgstr "కీపంచ్"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Practice your typing skills"
+msgstr "మీ టైపింగ్ నైపుణ్యాలను సాధన చేయండి"
