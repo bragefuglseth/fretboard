@@ -60,4 +60,14 @@ if compile_schemas.found()
     args: ['--strict', '--dry-run', meson.current_source_dir()])
 endif
 
+service_conf = configuration_data()
+service_conf.set('app-id', app_id)
+service_conf.set('bindir', bindir)
+configure_file(
+  input: '@0@.service.in'.format(base_id),
+  output: '@0@.service'.format(app_id),
+  configuration: service_conf,
+  install_dir: datadir / 'dbus-1' / 'services'
+)
+
 subdir('icons')
