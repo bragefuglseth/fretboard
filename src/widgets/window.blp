@@ -2,7 +2,7 @@ using Gtk 4.0;
 using Adw 1;
 
 template $FretboardWindow: Adw.ApplicationWindow {
-  title: "Fretboard";
+  title: _("Fretboard");
   default-width: 550;
   default-height: 650;
   width-request: 360;
@@ -10,7 +10,7 @@ template $FretboardWindow: Adw.ApplicationWindow {
 
   Adw.NavigationView navigation_stack {
     Adw.NavigationPage {
-      title: "Fretboard";
+      title: _("Fretboard");
       tag: "chord-view";
 
       child: Adw.ToolbarView {
