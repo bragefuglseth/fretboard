@@ -692,6 +692,8 @@ impl FretboardWindow {
         // Translators: Replace "translator-credits" with your names, one name per line
         about.set_translator_credits(&gettext("translator-credits"));
 
+        about.add_link(&gettext("Donate"), "https://bragefuglseth.no/donate.html");
+
         about.add_other_app(
             "dev.bragefuglseth.Keypunch",
             // Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
