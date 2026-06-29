@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # mondstern <mondstern@monocles.de>, 2024.
-# Yuri Chornoivan <yurchor@ukr.net>, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-08 18:18+0000\n"
-"PO-Revision-Date: 2025-04-09 18:44+0300\n"
+"POT-Creation-Date: 2026-06-29 13:32+0000\n"
+"PO-Revision-Date: 2026-06-29 22:05+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,17 +18,18 @@ msgstr ""
 "=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "Шукайте акорди для гітари"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
 msgstr "гітара; акорди"
 
@@ -77,45 +78,69 @@ msgstr "Сторінка закладок"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-#| msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgid "Can be either \"right-handed\" or \"left-handed\"."
+#| msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgid "Can be either “right-handed” or “left-handed”."
 msgstr "Може бути як «праворуким», так і «ліворуким»."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+#| msgid "General"
+msgctxt "shortcut dialog"
 msgid "General"
-msgstr "Генерал"
+msgstr "Загальні"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+#| msgid "Main Menu"
+msgid "Open Menu"
+msgstr "Відкрити меню"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+#| msgid "Empty Chord"
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
-msgstr "Порожній акорд"
+msgstr "Спорожнити акорд"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Закладка Акорд"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Переглянути закладки"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+#| msgid "View Chord Variants"
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Переглянути варіанти акордів"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+#| msgid "Focus Entry"
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
-msgstr "Вхід у фокус"
+msgstr "Фокусувати запис"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Перегляд ярликів"
+#: data/resources/shortcuts-dialog.ui:38
+#| msgid "Bookmark Chord"
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Створити закладку для акорду"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+#| msgid "View Bookmarks"
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Переглянути закладки"
+
+#: data/resources/shortcuts-dialog.ui:54
+#| msgid "_Keyboard Shortcuts"
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Клавіатурні скорочення"
+
+#: data/resources/shortcuts-dialog.ui:60
+#| msgid "Close Window"
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Закрити вікно"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+#| msgid "Quit"
+msgctxt "shortcut dialog"
 msgid "Quit"
-msgstr "Звільнися"
+msgstr "Вийти"
 
 #: src/widgets/barre_spin.blp:9
 msgid "Move Up"
@@ -126,16 +151,19 @@ msgid "Move Down"
 msgstr "Перемістити вниз"
 
 #: src/widgets/chord_diagram_top_toggle.rs:168
+#, rust-format
 msgid "Not Open ({})"
 msgstr "Не відкрита ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
 #: src/widgets/chord_diagram_top_toggle.rs:171
+#, rust-format
 msgid "Muted ({})"
 msgstr "Заглушена ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
 #: src/widgets/chord_diagram_top_toggle.rs:175
+#, rust-format
 msgid "Open ({})"
 msgstr "Відкрита ({})"
 
@@ -207,6 +235,7 @@ msgstr "Закладка"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/widgets/window.rs:310
+#, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -223,12 +252,19 @@ msgstr "Немає закладок"
 msgid "translator-credits"
 msgstr "mondstern https://moooon.dresden.network/"
 
+#: src/widgets/window.rs:695
+msgid "Donate"
+msgstr "Підтримати фінансово"
+
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:698
+#: src/widgets/window.rs:700
 msgid "Keypunch"
 msgstr "Кіпанч"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:702
 msgid "Practice your typing skills"
 msgstr "Вправляння у друкарському наборі"
+
+#~ msgid "View Shortcuts"
+#~ msgstr "Перегляд ярликів"
