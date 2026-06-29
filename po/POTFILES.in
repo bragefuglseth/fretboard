@@ -1,7 +1,7 @@
 data/dev.bragefuglseth.Fretboard.desktop.in.in
 data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in
 data/dev.bragefuglseth.Fretboard.gschema.xml
-data/resources/gtk/help-overlay.ui
+data/resources/shortcuts-dialog.ui
 src/widgets/barre_spin.blp
 src/widgets/chord_diagram_top_toggle.rs
 src/widgets/chord_name_entry.blp
