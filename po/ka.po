@@ -1,33 +1,34 @@
 # Georgian translation for Fretboard.
 # Copyright (C) 2025 Fretboard's authors
 # This file is distributed under the same license as the Fretboard package.
-# Ekaterine Papava <papava.e@gtu.ge>, 2025.
+# Ekaterine Papava <papava.e@gtu.ge>, 2025-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-08 18:18+0000\n"
-"PO-Revision-Date: 2025-04-20 04:36+0200\n"
+"POT-Creation-Date: 2026-06-29 13:32+0000\n"
+"PO-Revision-Date: 2026-06-30 02:26+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "მოძებნეთ გიტარის აკორდები"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
 msgstr "გიტარა;აკორდები"
 
@@ -74,42 +75,56 @@ msgstr "სანიშნეების გვერდი"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\" or \"left-handed\"."
-msgstr "შეიძლება იყოს \"right-handed\" ან \"left-handed\"."
+msgid "Can be either “right-handed” or “left-handed”."
+msgstr "შეიძლება იყოს \"მარჯვენახელიანი\", ან \"ცაცია\"."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "ზოგადი"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+msgid "Open Menu"
+msgstr "მენიუს გახსნა"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "ცარიელი აკორდი"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "აკორდის ჩამატება სანიშნეებში"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "სანიშნეების ნახვა"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "აკორდის ვარიანტების ნახვა"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "ფოკუსი ჩანაწერზე"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "მალსახმობების ნახვა"
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "აკორდის ჩამატება სანიშნეებში"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "სანიშნეების ნახვა"
+
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "კლავიატურის მალსახმობები"
+
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "ფანჯრის დახურვა"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "გასვლა"
 
@@ -122,16 +137,19 @@ msgid "Move Down"
 msgstr "ჩამოწევა"
 
 #: src/widgets/chord_diagram_top_toggle.rs:168
+#, rust-format
 msgid "Not Open ({})"
 msgstr "არაა ღია ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
 #: src/widgets/chord_diagram_top_toggle.rs:171
+#, rust-format
 msgid "Muted ({})"
 msgstr "დადუმებულია ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
 #: src/widgets/chord_diagram_top_toggle.rs:175
+#, rust-format
 msgid "Open ({})"
 msgstr "გახსნა ({})"
 
@@ -203,6 +221,7 @@ msgstr "სანიშნე"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/widgets/window.rs:310
+#, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -217,14 +236,21 @@ msgstr "სანიშნების გარეშე"
 #. Translators: Replace "translator-credits" with your names, one name per line
 #: src/widgets/window.rs:693
 msgid "translator-credits"
-msgstr "თემური დოღონაძე"
+msgstr "ეკატერინე პაპავა"
+
+#: src/widgets/window.rs:695
+msgid "Donate"
+msgstr "შეწირვა"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:698
+#: src/widgets/window.rs:700
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:702
 msgid "Practice your typing skills"
-msgstr "ივარჯიშეთ კრეფაში"
+msgstr "ივარჯიშეთ კლავიატურაზე კრეფაში"
+
+#~ msgid "View Shortcuts"
+#~ msgstr "მალსახმობების ნახვა"
