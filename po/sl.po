@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2026-06-29 13:32+0000\n"
-"PO-Revision-Date: 2026-06-29 17:51+0200\n"
+"POT-Creation-Date: 2026-06-30 23:16+0000\n"
+"PO-Revision-Date: 2026-07-01 19:11+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <Slovenian>\n"
 "Language: sl\n"
@@ -88,8 +88,9 @@ msgid "General"
 msgstr "Splošno"
 
 #: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
 msgid "Open Menu"
-msgstr "Odpri meni"
+msgstr "Odpre meni"
 
 #. translators: "Empty" is a verb
 #: data/resources/shortcuts-dialog.ui:16
