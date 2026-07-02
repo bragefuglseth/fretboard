@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2026-06-29 13:32+0000\n"
-"PO-Revision-Date: 2026-06-29 22:05+0300\n"
+"POT-Creation-Date: 2026-06-30 23:16+0000\n"
+"PO-Revision-Date: 2026-07-02 20:01+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -78,66 +78,57 @@ msgstr "Сторінка закладок"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-#| msgid "Can be either \"right-handed\" or \"left-handed\"."
 msgid "Can be either “right-handed” or “left-handed”."
 msgstr "Може бути як «праворуким», так і «ліворуким»."
 
 #: data/resources/shortcuts-dialog.ui:6
-#| msgid "General"
 msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Загальні"
 
 #: data/resources/shortcuts-dialog.ui:9
-#| msgid "Main Menu"
+#| msgid "Open Menu"
+msgctxt "shortcut dialog"
 msgid "Open Menu"
 msgstr "Відкрити меню"
 
 #. translators: "Empty" is a verb
 #: data/resources/shortcuts-dialog.ui:16
-#| msgid "Empty Chord"
 msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "Спорожнити акорд"
 
 #: data/resources/shortcuts-dialog.ui:22
-#| msgid "View Chord Variants"
 msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Переглянути варіанти акордів"
 
 #: data/resources/shortcuts-dialog.ui:28
-#| msgid "Focus Entry"
 msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "Фокусувати запис"
 
 #: data/resources/shortcuts-dialog.ui:38
-#| msgid "Bookmark Chord"
 msgctxt "shortcut dialog"
 msgid "Bookmark Chord"
 msgstr "Створити закладку для акорду"
 
 #: data/resources/shortcuts-dialog.ui:44
-#| msgid "View Bookmarks"
 msgctxt "shortcut dialog"
 msgid "View Bookmarks"
 msgstr "Переглянути закладки"
 
 #: data/resources/shortcuts-dialog.ui:54
-#| msgid "_Keyboard Shortcuts"
 msgctxt "shortcut dialog"
 msgid "Keyboard Shortcuts"
 msgstr "Клавіатурні скорочення"
 
 #: data/resources/shortcuts-dialog.ui:60
-#| msgid "Close Window"
 msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Закрити вікно"
 
 #: data/resources/shortcuts-dialog.ui:66
-#| msgid "Quit"
 msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Вийти"
