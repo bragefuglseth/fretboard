@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-13 23:39+0000\n"
-"PO-Revision-Date: 2026-02-02 18:31+0000\n"
+"POT-Creation-Date: 2026-06-30 23:16+0000\n"
+"PO-Revision-Date: 2026-07-02 17:28+0100\n"
 "Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
 "Language-Team: kw\n"
 "Language: kw\n"
@@ -23,21 +23,22 @@ msgstr ""
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretbordh"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
-msgstr "Hwilas kordys gitar"
+msgstr "Hwilas kordys gyttern"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
-msgstr "gitar;kordys"
+msgstr "gyttern;gitar;kordys"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -48,12 +49,12 @@ msgid ""
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
 msgstr ""
-"Fatel veu an kord na senys, arta? Fretbordh gasa ty kavos kordys gitar gans "
-"ow jynnskrifa aga henwyn i po ow splattya i war'n konna gitar kesvewek. Pan "
-"vi re kavas kord, ty a yll arbrevi gans ow chanjya yth, gweles agwedhow moy "
-"rag seni yth, po lyververkya yth rag sawya yth rag diwettha. Na fors os "
-"dallether po gwarier avonsys, ty a yll devnydhya Fretbordh rag omassaya, "
-"dyski, ha perfydhhe dha kanow drudh!"
+"Fatel veu an kord na senys, arta? Fretbordh a as dhywgh kavos kordys gyttern "
+"gans ow jynnskrifa aga henwyn po ow splattya dhedha war'n konna gyttern "
+"kesvewek. Pan vi re kavas kord, hwi a yll arbrevi gans ow chanjya, gweles "
+"agwedhow moy rag seni, po lyververkya rag sawya rag wosa henna. Na fors owgh "
+"dallether po gwarier avonsys, hwi a yll devnydhya Fretbordh rag omassaya, "
+"dyski, ha perfydhhe agas kanow drudh!"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
 msgid ""
@@ -61,20 +62,21 @@ msgid ""
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
 msgstr ""
-"Fretbordh yw darn a GNOME Kylgh, ragdres may skoodhya an medhelweyth bryntin "
-"kavadow rag an bynk GNOME. Rag kedhlow moy, omweles an gwiasva GNOME Kylgh."
+"Fretbordh yw darn a GNOME Kylgh, ragdres mayth a skoodh an medhelweyth "
+"bryntin kavadow rag an vynk GNOME. Rag moy kedhlow, vysytyewgh an wiasva "
+"GNOME Kylgh."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
-msgstr "Ow diskwedhes kord"
+msgstr "Ow tiskwedhes kord"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:31
 msgid "Displaying a barre chord"
-msgstr "Ow diskwedhes kord barre"
+msgstr "Ow tiskwedhes kord barre"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:35
 msgid "Showing variants of a chord"
-msgstr "Ow diskwedhes variennow a kord"
+msgstr "Ow tiskwedhes variennow a gord"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:39
 msgid "The bookmarks page"
@@ -82,42 +84,57 @@ msgstr "An folen lyververkys"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\" or \"left-handed\"."
-msgstr "A yll bos po \"dyghowek\" po \"kledhek\"."
+msgid "Can be either “right-handed” or “left-handed”."
+msgstr "A yll bos po “dyghowek” po “kledhek”."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Ollgemmyn"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "Ygeri Rol"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "Kord Gwag"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Lyververkya Kord"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Gweles Lyververkys"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Gweles Variennow Kord"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "Fogella Enworrans"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Gweles Kesunyansow Bysowek"
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Lyververkya Kord"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Gweles Lyververkys"
+
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Kesunyansow Bysowek"
+
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Degea Fenester"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Kwytya"
 
@@ -132,7 +149,7 @@ msgstr "Diyskynna"
 #: src/widgets/chord_diagram_top_toggle.rs:168
 #, rust-format
 msgid "Not Open ({})"
-msgstr "Na Ygor ({})"
+msgstr "Nag Ygor ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
 #: src/widgets/chord_diagram_top_toggle.rs:171
@@ -161,11 +178,11 @@ msgstr "Egwal Enkessenek"
 
 #: src/widgets/window.blp:27
 msgid "Main Menu"
-msgstr "Rol Chif"
+msgstr "Pennrol"
 
 #: src/widgets/window.blp:78
 msgid "Chord not found"
-msgstr "Kord na kavas"
+msgstr "Kord nag yw kevys"
 
 #: src/widgets/window.blp:110
 msgid "View _Variants"
@@ -181,7 +198,7 @@ msgstr "Lyververkys"
 
 #: src/widgets/window.blp:213
 msgid "Guitar Type"
-msgstr "Eghen Gitar"
+msgstr "Eghen Yttern"
 
 #: src/widgets/window.blp:216
 msgid "Right-handed"
@@ -202,7 +219,7 @@ msgstr "_Kesunyansow Bysowek"
 
 #: src/widgets/window.blp:243
 msgid "_About Fretboard"
-msgstr "_A-dro Fretbordh"
+msgstr "_A-dro dhe Fretbordh"
 
 #: src/widgets/window.rs:297
 msgid "Remove Bookmark"
@@ -219,8 +236,8 @@ msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
 msgstr ""
-"Yma kordys vyth gans an hanow ma y'n sett pervedhek Fretbordh. Mar ty krysi "
-"yma kodh, {}ystyn{}."
+"Nyns eus kordys gans an hanow ma y'n sett a-bervedh Fretbordh. Mar krysowgh "
+"yma edhom dhe vos, {}ystyn{}."
 
 #: src/widgets/window.rs:372
 msgid "No Bookmarks"
@@ -231,12 +248,19 @@ msgstr "Lyververkys Vyth"
 msgid "translator-credits"
 msgstr "Flynn"
 
+#: src/widgets/window.rs:695
+msgid "Donate"
+msgstr "Argevri"
+
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:698
+#: src/widgets/window.rs:700
 msgid "Keypunch"
 msgstr "Alhwedhen-Toller"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:702
 msgid "Practice your typing skills"
-msgstr "Omassaya dha sleyneth ow jynnskrifa"
+msgstr "Omassaya agas sleyneth jynnskrifa"
+
+#~ msgid "View Shortcuts"
+#~ msgstr "Gweles Kesunyansow Bysowek"
