@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2026-06-29 13:32+0000\n"
-"PO-Revision-Date: 2026-07-01 08:01+0800\n"
+"POT-Creation-Date: 2026-06-30 23:16+0000\n"
+"PO-Revision-Date: 2026-07-02 09:29+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -84,6 +84,7 @@ msgid "General"
 msgstr "常规"
 
 #: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
 msgid "Open Menu"
 msgstr "打开菜单"
 
