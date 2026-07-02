@@ -31,7 +31,7 @@ use gtk::{gio, glib};
 use i18n_format::i18n_fmt;
 use once_cell::sync::OnceCell;
 use serde::{Deserialize, Serialize};
-use std::cell::RefCell;
+use std::cell::{Cell, RefCell};
 use std::fs::File;
 use std::path::PathBuf;
 
@@ -96,6 +96,9 @@ mod imp {
         pub handedness: RefCell<String>,
 
         pub settings: OnceCell<gio::Settings>,
+
+        #[property(get, set)]
+        pub show_chord_notes: Cell<bool>,
     }
 
     #[glib::object_subclass]
@@ -106,6 +109,7 @@ mod imp {
 
         fn class_init(klass: &mut Self::Class) {
             klass.install_property_action("win.set-handedness", "handedness");
+            klass.install_property_action("win.show-chord-notes", "show-chord-notes");
 
             klass.install_action("win.empty-chord", None, move |win, _, _| {
                 win.empty_chord();
@@ -240,8 +244,18 @@ impl FretboardWindow {
                 });
         });
 
+        self.connect_notify_local(Some("show-chord-notes"), move |win, _| {
+            let imp = win.imp();
+            imp.chord_diagram
+                .set_show_chord_notes(win.show_chord_notes());
+        });
+
         self.settings()
             .bind("handedness", self, "handedness")
+            .build();
+
+        self.settings()
+            .bind("show-chord-notes", self, "show-chord-notes")
             .build();
 
         let chord_diagram = imp.chord_diagram.get();
@@ -659,7 +673,9 @@ impl FretboardWindow {
 
                     win.imp().chord_diagram.set_chord(chord);
                     win.imp().entry.overwrite_text(&prettify_chord_name(&name));
-                    win.imp().feedback_stack.set_visible_child_name("chord-actions");
+                    win.imp()
+                        .feedback_stack
+                        .set_visible_child_name("chord-actions");
                     win.refresh_star_toggle();
                     win.imp().navigation_stack.pop();
                 }
