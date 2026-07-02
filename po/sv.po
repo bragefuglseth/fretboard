@@ -1,16 +1,16 @@
 # Swedish translation for fretboard.
-# Copyright © 2023-2025 fretboard's COPYRIGHT HOLDER
+# Copyright © 2023-2026 fretboard's COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # sköldpadda <weblate@turtle.garden>, 2023.
 # bittin1ddc447d824349b2 <bittin@reimu.nl>, 2024.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2025.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2025, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-08 18:18+0000\n"
-"PO-Revision-Date: 2025-04-08 20:27+0200\n"
+"POT-Creation-Date: 2026-06-30 23:16+0000\n"
+"PO-Revision-Date: 2026-07-02 16:38+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -18,19 +18,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "Hitta gitarrackord"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
 msgstr "gitarr;ackord"
 
@@ -78,42 +79,57 @@ msgstr "Bokmärkessidan"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\" or \"left-handed\"."
-msgstr "Kan vara antigen ”right-handed” eller ”left-handed”."
+msgid "Can be either “right-handed” or “left-handed”."
+msgstr "Kan vara antingen ”right-handed” eller ”left-handed”."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Allmänt"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "Öppna meny"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
-msgstr "Tomt ackord"
+msgstr "Töm ackord"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Lägg till bokmärke för ackord"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Visa bokmärken"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Visa ackordvarianter"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "Markera namnfält"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Visa genvägar"
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Lägg till bokmärke för ackord"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Visa bokmärken"
+
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Stäng fönstret"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Avsluta"
 
@@ -225,12 +241,16 @@ msgstr ""
 "skøldis <fretboard@turtle.garden>\n"
 "Anders Jonsson <anders.jonsson@norsjovallen.se>"
 
+#: src/widgets/window.rs:695
+msgid "Donate"
+msgstr "Donera"
+
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:698
+#: src/widgets/window.rs:700
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:702
 msgid "Practice your typing skills"
 msgstr "Träna på dina skrivfärdigheter"
