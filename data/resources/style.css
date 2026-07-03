@@ -23,8 +23,7 @@ chord-diagram-toggle button,
   transition-duration: 150ms;
 }
 
-chord-diagram-toggle button:checked,
-.fretboard-chord-diagram-top-toggle.show-notes button:checked {
+chord-diagram-toggle button:checked {
   background: var(--accent-bg-color);
 }
 
@@ -32,12 +31,11 @@ chord-diagram-toggle button:hover {
   background: rgba(153, 153, 153, 0.3);
 }
 
-chord-diagram-toggle button:checked:hover,
-.fretboard-chord-diagram-top-toggle.show-notes button:checked:hover {
+chord-diagram-toggle button:checked:hover {
   background: var(--accent-bg-color);
 }
 
-.fretboard-chord-diagram-top-toggle:not(.show-notes) button:checked {
+.fretboard-chord-diagram-top-toggle button:checked {
   background: transparent;
   box-shadow: none;
 }
@@ -54,6 +52,15 @@ chord-diagram-toggle button:checked:hover,
 
 .fretboard-chord-diagram-top-toggle button:hover {
   background: rgba(153, 153, 153, 0.3);
+}
+
+.fretboard-chord-diagram-top-toggle.show-notes button:checked {
+  background: var(--accent-bg-color);
+}
+
+.fretboard-chord-diagram-top-toggle.show-notes button:checked:hover {
+  background: var(--accent-bg-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
 }
 
 .fretboard-chord-name-entry entry {
