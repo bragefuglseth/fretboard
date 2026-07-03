@@ -1,39 +1,37 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Japanese translation for Fretboard.
+# Copyright (C) 2026 Brage Fuglseth
 # This file is distributed under the same license as the fretboard package.
 # Himmel <anonymous.colt330@aleeas.com>, 2024.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2024.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2024, 2026.
 # Assem Askarova <assask499@users.noreply.hosted.weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 22:53+0100\n"
-"PO-Revision-Date: 2024-08-22 12:09+0000\n"
-"Last-Translator: Assem Askarova <assask499@users.noreply.hosted.weblate.org>"
-"\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/fretboard/"
-"fretboard/ja/>\n"
+"Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
+"POT-Creation-Date: 2026-06-30 23:16+0000\n"
+"PO-Revision-Date: 2026-07-03 20:31+0900\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: \n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "ギターコードを調べる"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
-msgstr "guitar;chords"
+msgstr "guitar;chords;ギター;コード"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:13
 msgid ""
@@ -45,11 +43,11 @@ msgid ""
 "and master your favorite songs!"
 msgstr ""
 "「あのコードはどうやって弾いたんだっけ？」Fretboard では、コードネームをご入"
-"力いただくか、インタラクティブなギターネック上にプロットすることで、ギターコ"
-"ードを見つけることができます。コードを特定したら、そのコードを変更してみたり"
-"、より多くの演奏方法を見たり、ブックマークして後で保存したりすることができま"
-"す。初心者から上級者まで、Fretboard "
-"を使ってお気に入りの曲を練習し、学び、マスターすることができます！"
+"力いただくか、インタラクティブなギターネック上にプロットすることで、ギター"
+"コードを見つけることができます。コードを特定したら、そのコードを変更してみた"
+"り、より多くの演奏方法を見たり、ブックマークして後で保存したりすることができ"
+"ます。初心者から上級者まで、Fretboard を使ってお気に入りの曲を練習し、学び、"
+"マスターすることができます！"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
 msgid ""
@@ -58,9 +56,8 @@ msgid ""
 "information, visit the GNOME Circle website."
 msgstr ""
 "Fretboard は、GNOME プラットフォームで利用可能な素晴らしいソフトウェアを推奨"
-"するイニシアチブである GNOME Circle "
-"の一員であることを誇りに思っております。詳細につきましては、GNOME Circle "
-"のウェブサイトをご覧下さい。"
+"するイニシアチブである GNOME Circle の一員であることを誇りに思っております。"
+"詳細につきましては、GNOME Circle のウェブサイトをご覧ください。"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
@@ -80,148 +77,182 @@ msgstr "ブックマークページ"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgstr "「right-handed」または「left-handed」のいずれかをお選びいただけます。"
+msgid "Can be either “right-handed” or “left-handed”."
+msgstr "「右利き」または「左利き」のいずれかをお選びいただけます。"
 
-#: data/gtk/barre-spin.blp:10
-msgid "Move Up"
-msgstr "上に移動"
-
-#: data/gtk/barre-spin.blp:30
-msgid "Move Down"
-msgstr "下に移動"
-
-#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
-#: data/gtk/chord-name-entry.blp:10 data/gtk/chord-name-entry.blp:13
-msgid "Chord Name"
-msgstr "コードネーム"
-
-#: data/gtk/chord-name-entry.blp:35
-msgid "Confirm"
-msgstr "確認"
-
-#: data/gtk/chord-name-entry.blp:50 src/chord_name_entry.rs:160
-msgid "Enharmonic Equivalent"
-msgstr "異名同音"
-
-#: data/gtk/help-overlay.blp:11
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "一般"
 
+#: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "メニューを開く"
+
 #. translators: "Empty" is a verb
-#: data/gtk/help-overlay.blp:15
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "コードを空にする"
 
-#. translators: "Bookmark" is a verb
-#: data/gtk/help-overlay.blp:21
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
+msgid "View Chord Variants"
+msgstr "コードのバリエーションを表示する"
+
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
+msgid "Focus Entry"
+msgstr "入力欄にフォーカスする"
+
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
 msgid "Bookmark Chord"
 msgstr "コードをブックマークする"
 
-#: data/gtk/help-overlay.blp:26
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
 msgid "View Bookmarks"
-msgstr "ブックマークを表示"
+msgstr "ブックマークを表示する"
 
-#: data/gtk/help-overlay.blp:31
-msgid "View Chord Variants"
-msgstr "コードのバリエーションを表示"
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "キーボードショートカット"
 
-#. translators: "Focus" is a verb
-#: data/gtk/help-overlay.blp:37
-msgid "Focus Entry"
-msgstr "エントリーに集中"
-
-#: data/gtk/help-overlay.blp:42
-msgid "View Shortcuts"
-msgstr "ショートカットを表示"
-
-#: data/gtk/help-overlay.blp:47
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "ウィンドウを閉じる"
 
-#: data/gtk/help-overlay.blp:52
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
-msgstr "終了"
+msgstr "終了する"
 
-#: data/gtk/window.blp:29
+#: src/widgets/barre_spin.blp:9
+msgid "Move Up"
+msgstr "上に移動"
+
+#: src/widgets/barre_spin.blp:28
+msgid "Move Down"
+msgstr "下に移動"
+
+#: src/widgets/chord_diagram_top_toggle.rs:168
+#, rust-format
+msgid "Not Open ({})"
+msgstr "押さえる ({})"
+
+#. translators: The text between the `{}` markers is the note of the muted string.
+#: src/widgets/chord_diagram_top_toggle.rs:171
+#, rust-format
+msgid "Muted ({})"
+msgstr "ミュート ({})"
+
+#. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
+#: src/widgets/chord_diagram_top_toggle.rs:175
+#, rust-format
+msgid "Open ({})"
+msgstr "離す ({})"
+
+#. translators: keep this short! use only 'chord' or 'name' instead of both if necessary.
+#: src/widgets/chord_name_entry.blp:9 src/widgets/chord_name_entry.blp:12
+msgid "Chord Name"
+msgstr "コードネーム"
+
+#: src/widgets/chord_name_entry.blp:34
+msgid "Confirm"
+msgstr "確認"
+
+#: src/widgets/chord_name_entry.blp:49
+msgid "Enharmonic Equivalent"
+msgstr "異名同音"
+
+#: src/widgets/window.blp:27
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: data/gtk/window.blp:83
+#: src/widgets/window.blp:78
 msgid "Chord not found"
 msgstr "コードが見つかりません"
 
-#: data/gtk/window.blp:117
+#: src/widgets/window.blp:110
 msgid "View _Variants"
-msgstr "バリエーションを表示（_V）"
+msgstr "バリエーションを表示(_V)"
 
-#: data/gtk/window.blp:158
+#: src/widgets/window.blp:144
 msgid "No Variants"
 msgstr "バリエーションがありません"
 
-#: data/gtk/window.blp:200 src/window.rs:368
+#: src/widgets/window.blp:178 src/widgets/window.rs:374
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
-#: data/gtk/window.blp:240
+#: src/widgets/window.blp:213
 msgid "Guitar Type"
 msgstr "ギターの種類"
 
-#: data/gtk/window.blp:243
+#: src/widgets/window.blp:216
 msgid "Right-handed"
-msgstr "Right-handed"
+msgstr "右利き用"
 
-#: data/gtk/window.blp:249
+#: src/widgets/window.blp:222
 msgid "Left-handed"
-msgstr "Left-handed"
+msgstr "左利き用"
 
 #. translators: "Empty" is a verb
-#: data/gtk/window.blp:258
+#: src/widgets/window.blp:231
 msgid "_Empty Chord"
 msgstr "コードを空にする(_E)"
 
-#: data/gtk/window.blp:265
+#: src/widgets/window.blp:238
 msgid "_Keyboard Shortcuts"
 msgstr "キーボードショートカット(_K)"
 
-#: data/gtk/window.blp:270
+#: src/widgets/window.blp:243
 msgid "_About Fretboard"
 msgstr "Fretboard について(_A)"
 
-#. Translators: Replace "translator-credits" with your names, one name per line
-#: src/application.rs:116
-msgid "translator-credits"
-msgstr "Himmel https://hosted.weblate.org/user/Himmel/"
-
-#: src/chord_diagram_top_toggle.rs:157
-msgid "Not Open"
-msgstr "非公開"
-
-#: src/chord_diagram_top_toggle.rs:158
-msgid "Muted"
-msgstr "ミュート"
-
-#. translators: this is an adjective, not a verb
-#: src/chord_diagram_top_toggle.rs:160
-msgid "Open"
-msgstr "公開"
-
-#: src/window.rs:291
+#: src/widgets/window.rs:297
 msgid "Remove Bookmark"
 msgstr "ブックマークを削除"
 
-#: src/window.rs:293
+#: src/widgets/window.rs:299
 msgid "Bookmark"
 msgstr "ブックマーク"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/window.rs:304
+#: src/widgets/window.rs:310
+#, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
-msgstr "Fretboard の内蔵コードセットには、この名前のコードはありません。あると思われ"
-"る場合、{}確認しましょう{}。"
+msgstr ""
+"Fretboard の内蔵コードセットには、この名前のコードはありません。あるべきコー"
+"ドの場合、{}報告してください{}。"
 
-#: src/window.rs:366
+#: src/widgets/window.rs:372
 msgid "No Bookmarks"
-msgstr "ブックマークはありません"
+msgstr "ブックマークなし"
+
+#. Translators: Replace "translator-credits" with your names, one name per line
+#: src/widgets/window.rs:693
+msgid "translator-credits"
+msgstr ""
+"Himmel https://hosted.weblate.org/user/Himmel/\n"
+"Ryo Nakano <ryonakaknock3@gmail.com>"
+
+#: src/widgets/window.rs:695
+msgid "Donate"
+msgstr "寄付"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:700
+msgid "Keypunch"
+msgstr "Keypunch"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:702
+msgid "Practice your typing skills"
+msgstr "タイピングを練習する"
