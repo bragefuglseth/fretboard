@@ -1,37 +1,44 @@
 # Brazilian Portuguese translation for Fretboard
-# Copyright (C) 2025 THE Fretboard'S COPYRIGHT HOLDER
+# Copyright (C) 2026 THE Fretboard'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the fretboard package.
 # Cassio Gomes Pereira <cassiogomes00@gmail.com>, 2023.
 # Filipe Motta <luiz_filipe_motta@hotmail.com>, 2024.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2025.
 # Álvaro Burns <>, 2025.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2025-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-08 18:18+0000\n"
-"PO-Revision-Date: 2025-04-09 20:58-0300\n"
-"Last-Translator: Álvaro Burns <>\n"
+"POT-Creation-Date: 2026-06-30 23:16+0000\n"
+"PO-Revision-Date: 2026-07-09 22:11-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 50.0\n"
+"X-DL-VCS-Web: https://github.com/bragefuglseth/fretboard\n"
+"X-DL-Lang: pt_BR\n"
+"X-DL-Module: Fretboard\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "Procure acordes de guitarra"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
 msgstr "guitarra;acordes"
 
@@ -79,42 +86,57 @@ msgstr "A página de favoritos"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\" or \"left-handed\"."
-msgstr "Pode ser \"right-handed\" ou \"left-handed\"."
+msgid "Can be either “right-handed” or “left-handed”."
+msgstr "Pode ser “right-handed” ou “left-handed”."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Geral"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "Abre o menu"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "Esvazia o acorde"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Favorita o acorde"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Vê os favoritos"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
-msgstr "Vê variantes do acorde"
+msgstr "Visualiza variantes do acorde"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "Foca na entrada"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Mostra os atalhos de teclado"
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Favorita o acorde"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Visualiza os favoritos"
+
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Atalhos de teclado"
+
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Fecha a janela"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Sai"
 
@@ -127,16 +149,19 @@ msgid "Move Down"
 msgstr "Move para baixo"
 
 #: src/widgets/chord_diagram_top_toggle.rs:168
+#, rust-format
 msgid "Not Open ({})"
 msgstr "Não aberto ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
 #: src/widgets/chord_diagram_top_toggle.rs:171
+#, rust-format
 msgid "Muted ({})"
 msgstr "Silenciado ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
 #: src/widgets/chord_diagram_top_toggle.rs:175
+#, rust-format
 msgid "Open ({})"
 msgstr "Aberto ({})"
 
@@ -208,6 +233,7 @@ msgstr "Favorito"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
 #: src/widgets/window.rs:310
+#, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -227,15 +253,22 @@ msgstr ""
 "Filipe Motta <luizfilipemotta@gmail.com>\n"
 "Rafael Fontenelle <rafaelff@gnome.org>"
 
+#: src/widgets/window.rs:695
+msgid "Donate"
+msgstr "Doar"
+
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:698
+#: src/widgets/window.rs:700
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:702
 msgid "Practice your typing skills"
 msgstr "Pratique sua digitação"
+
+#~ msgid "View Shortcuts"
+#~ msgstr "Mostra os atalhos de teclado"
 
 #~ msgid "Brage Fuglseth"
 #~ msgstr "Brage Fuglseth"
