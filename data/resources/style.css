@@ -79,11 +79,52 @@ chord-diagram-toggle button:checked:hover {
   background: var(--accent-bg-color);
 } 
 
-.fretboard-chord-preview-button {
-  padding: 16px 0;
-  border-radius: 12px;
+.no-hover-active:hover, .no-hover-active:active {
+  background: transparent;
+  box-shadow: none;
 }
 
-.fretboard-chord-preview-button:hover {
-  background-color: alpha(currentColor, 0.025);
+@media (prefers-contrast: more) {
+  .fretboard-chord-diagram-top-toggle, .fretboard-chord-diagram-top-toggle image {
+    color: rgb(0, 0, 0);
+  }
+
+  .fretboard-chord-diagram-top-toggle.open, .fretboard-chord-diagram-top-toggle image.open {
+    color: @accent_bg_color;
+  }
+
+  .fretboard-chord-diagram-top-toggle button:checked:hover {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .fretboard-chord-name-entry entry placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .fretboard-star-toggle:checked:not(:hover) {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .fretboard-chord-preview-dot.active {
+    border: 1px solid @border-color;
+  }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  .fretboard-chord-diagram-top-toggle, .fretboard-chord-diagram-top-toggle image {
+    color: rgb(255, 255, 255);
+  }
+
+  .fretboard-chord-diagram-top-toggle.open, .fretboard-chord-diagram-top-toggle image.open {
+    color: var(--accent-bg-color);
+  }
+
+  .fretboard-chord-diagram-top-toggle button:checked:hover {
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.6);
+  }
+
+  .fretboard-chord-name-entry entry placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }

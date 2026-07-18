@@ -584,6 +584,7 @@ impl FretboardWindow {
                 .focusable(false)
                 .child(&button)
                 .build();
+            flow_box_child.add_css_class("no-hover-active");
 
             container.insert(&flow_box_child, -1);
         }
@@ -671,6 +672,7 @@ impl FretboardWindow {
                 .focusable(false)
                 .child(&button)
                 .build();
+            flow_box_child.add_css_class("no-hover-active");
 
             container.insert(&flow_box_child, -1);
         }
