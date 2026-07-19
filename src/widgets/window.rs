@@ -176,7 +176,8 @@ mod imp {
 glib::wrapper! {
     pub struct FretboardWindow(ObjectSubclass<imp::FretboardWindow>)
         @extends gtk::Widget, gtk::Window, gtk::ApplicationWindow, adw::ApplicationWindow,
-        @implements gio::ActionGroup, gio::ActionMap;
+        @implements gio::ActionGroup, gio::ActionMap, gtk::Accessible, gtk::Buildable,
+                    gtk::ConstraintTarget, gtk::Native, gtk::Root, gtk::ShortcutManager;
 }
 
 impl FretboardWindow {
@@ -318,7 +319,7 @@ impl FretboardWindow {
     }
 
     fn focus_entry(&self) {
-        self.set_focus(Some(&self.imp().entry.imp().entry.get()));
+        self.imp().entry.imp().entry.grab_focus();
     }
 
     fn bookmark_chord(&self) {
@@ -339,7 +340,7 @@ impl FretboardWindow {
         let current_chord = imp.chord_diagram.imp().chord.get();
         let current_name = imp.entry.serialized_buffer_text();
 
-        self.set_focus(Some(&star_toggle));
+        star_toggle.grab_focus();
 
         star_toggle.set_active(!star_toggle.is_active());
 
