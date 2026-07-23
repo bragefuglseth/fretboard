@@ -57,6 +57,9 @@ mod imp {
 
         pub top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
         pub toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
+
+        #[property(get, set)]
+        pub show_chord_notes: Cell<bool>,
     }
 
     #[glib::object_subclass]
@@ -191,6 +194,15 @@ mod imp {
                 ),
             );
 
+            obj.connect_notify_local(Some("show-chord-notes"), move |diag, _| {
+                let show = diag.show_chord_notes();
+                for top_toggle in diag.imp().top_toggles.borrow().iter() {
+                    top_toggle.set_show_chord_notes(show);
+                }
+
+                diag.update_chord_notes();
+            });
+
             self.obj().update_visuals();
         }
 
@@ -265,6 +277,7 @@ impl FretboardChordDiagram {
         }
 
         self.imp().chord.set(chord);
+        self.update_chord_notes();
         self.update_barre_visuals();
     }
 
@@ -342,6 +355,24 @@ impl FretboardChordDiagram {
                 toggle.set_tooltip_text(Some(note_name(
                     offset + num + self.neck_position() as usize,
                 )));
+            }
+        }
+        self.update_chord_notes();
+    }
+
+    fn update_chord_notes(&self) {
+        let show = self.show_chord_notes();
+        let toggles = self.imp().toggles.borrow();
+
+        for string in 0..STRINGS {
+            for toggle in toggles.get(string).unwrap().iter() {
+                if toggle.is_active() && show {
+                    if let Some(name) = toggle.tooltip_text() {
+                        toggle.set_label(&name);
+                    }
+                } else {
+                    toggle.set_label("");
+                }
             }
         }
     }

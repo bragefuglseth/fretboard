@@ -29,6 +29,12 @@
             <property name="action-name">win.focus-entry</property>
           </object>
         </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcut dialog">Show Chord Notes</property>
+            <property name="action-name">win.show-chord-notes</property>
+          </object>
+        </child>
       </object>
     </child>
     <child>
