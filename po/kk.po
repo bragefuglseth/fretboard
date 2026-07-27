@@ -7,18 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-13 23:39+0000\n"
-"PO-Revision-Date: 2026-01-25 21:08+0500\n"
+"POT-Creation-Date: 2026-07-19 20:24+0000\n"
+"PO-Revision-Date: 2026-07-27 16:36+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <Kazakh>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretboard"
 
@@ -77,42 +78,58 @@ msgstr "Бетбелгілер беті"
 #. translators: "right-handed" and "left-handed" are enum values, and should
 #. not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\" or \"left-handed\"."
-msgstr "\"Оң қолды\" немесе \"солақай\" болуы мүмкін."
+msgid "Can be either “right-handed” or “left-handed”."
+msgstr ""
+"“right-handed” (оң қолды) немесе “left-handed” (солақай) болуы мүмкін."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Жалпы"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "Мәзірді ашу"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "Бос аккорд"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Аккордты бетбелгілерге қосу"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Бетбелгілерді қарау"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Аккорд нұсқаларын қарау"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
-msgstr "Енгізу өрісіне фокустау"
+msgstr "Жазбаға фокус жасау"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Жарлықтарды қарау"
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Аккордты бетбелгілерге қосу"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Бетбелгілерді қарау"
+
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Пернетақта жарлықтары"
+
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Терезені жабу"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Шығу"
 
@@ -124,21 +141,21 @@ msgstr "Жоғары жылжыту"
 msgid "Move Down"
 msgstr "Төмен жылжыту"
 
-#: src/widgets/chord_diagram_top_toggle.rs:168
+#: src/widgets/chord_diagram_top_toggle.rs:169
 #, rust-format
 msgid "Not Open ({})"
 msgstr "Ашық емес ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted
 #. string.
-#: src/widgets/chord_diagram_top_toggle.rs:171
+#: src/widgets/chord_diagram_top_toggle.rs:172
 #, rust-format
 msgid "Muted ({})"
 msgstr "Дыбысы өшірілген ({})"
 
 #. translators: The text between the `{}` markers is the note of the open
 #. string. "Open" is an adjective, not a verb.
-#: src/widgets/chord_diagram_top_toggle.rs:175
+#: src/widgets/chord_diagram_top_toggle.rs:176
 #, rust-format
 msgid "Open ({})"
 msgstr "Ашық ({})"
@@ -173,7 +190,7 @@ msgstr "_Нұсқаларды қарау"
 msgid "No Variants"
 msgstr "Нұсқалар жоқ"
 
-#: src/widgets/window.blp:178 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:375
 msgid "Bookmarks"
 msgstr "Бетбелгілер"
 
@@ -202,17 +219,17 @@ msgstr "_Пернетақта жарлықтары"
 msgid "_About Fretboard"
 msgstr "Fretboard _туралы"
 
-#: src/widgets/window.rs:297
+#: src/widgets/window.rs:298
 msgid "Remove Bookmark"
 msgstr "Бетбелгіні өшіру"
 
-#: src/widgets/window.rs:299
+#: src/widgets/window.rs:300
 msgid "Bookmark"
 msgstr "Бетбелгі"
 
 #. translators: The text between the `{}` markers becomes a link to the app's
 #. issue tracker. Include both of the markers.
-#: src/widgets/window.rs:310
+#: src/widgets/window.rs:311
 #, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If "
@@ -221,24 +238,31 @@ msgstr ""
 "Fretboard бағдарламасының ішкі аккордтар жинағында мұндай атаулы аккордтар "
 "жоқ. Егер болуы керек деп санасаңыз, {}бізге хабарласыңыз{}."
 
-#: src/widgets/window.rs:372
+#: src/widgets/window.rs:373
 msgid "No Bookmarks"
 msgstr "Бетбелгілер жоқ"
 
 #. Translators: Replace "translator-credits" with your names, one name per
 #. line
-#: src/widgets/window.rs:693
+#: src/widgets/window.rs:696
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
+#: src/widgets/window.rs:698
+msgid "Donate"
+msgstr "Демеушілік ету"
+
 #. Translators: Metainfo for the app Keypunch.
 #. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:698
+#: src/widgets/window.rs:703
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch.
 #. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:705
 msgid "Practice your typing skills"
 msgstr "Теру дағдыларыңызды жаттықтырыңыз"
+
+#~ msgid "View Shortcuts"
+#~ msgstr "Жарлықтарды қарау"
