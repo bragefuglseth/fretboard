@@ -375,6 +375,11 @@ impl FretboardChordDiagram {
                 )));
             }
         }
+
+        // Reset toggle flags to allow the user to clear selected frets
+        for flag in imp.toggle_flags.borrow().iter().flatten() {
+            flag.set(false);
+        }
     }
 
     fn update_barre_visuals(&self) {
