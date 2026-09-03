@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2026-06-29 13:32+0000\n"
-"PO-Revision-Date: 2026-06-30 16:17+0300\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"POT-Creation-Date: 2026-07-19 20:24+0000\n"
+"PO-Revision-Date: 2026-09-03 23:45+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -90,6 +90,7 @@ msgid "General"
 msgstr "Genel"
 
 #: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
 msgid "Open Menu"
 msgstr "Menüyü Aç"
 
@@ -142,19 +143,19 @@ msgstr "Yukarı Taşı"
 msgid "Move Down"
 msgstr "Aşağı Taşı"
 
-#: src/widgets/chord_diagram_top_toggle.rs:168
+#: src/widgets/chord_diagram_top_toggle.rs:169
 #, rust-format
 msgid "Not Open ({})"
 msgstr "Açık Değil ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
-#: src/widgets/chord_diagram_top_toggle.rs:171
+#: src/widgets/chord_diagram_top_toggle.rs:172
 #, rust-format
 msgid "Muted ({})"
 msgstr "Sessiz ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
-#: src/widgets/chord_diagram_top_toggle.rs:175
+#: src/widgets/chord_diagram_top_toggle.rs:176
 #, rust-format
 msgid "Open ({})"
 msgstr "Açık ({})"
@@ -188,7 +189,7 @@ msgstr "_Türevleri Göster"
 msgid "No Variants"
 msgstr "Türev Yok"
 
-#: src/widgets/window.blp:178 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:375
 msgid "Bookmarks"
 msgstr "Yer İmleri"
 
@@ -217,16 +218,16 @@ msgstr "_Klavye Kısayolları"
 msgid "_About Fretboard"
 msgstr "Fretboard _Hakkında"
 
-#: src/widgets/window.rs:297
+#: src/widgets/window.rs:298
 msgid "Remove Bookmark"
 msgstr "Yer İmini Kaldır"
 
-#: src/widgets/window.rs:299
+#: src/widgets/window.rs:300
 msgid "Bookmark"
 msgstr "Yer İmi"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/widgets/window.rs:310
+#: src/widgets/window.rs:311
 #, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
@@ -235,27 +236,27 @@ msgstr ""
 "Fretboard yerleşik akor takımda bu adda bir akor yok. Eğer olması "
 "gerektiğini düşünüyorsanız, {}bize ulaşın{}."
 
-#: src/widgets/window.rs:372
+#: src/widgets/window.rs:373
 msgid "No Bookmarks"
 msgstr "Yer İmi Yok"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:693
+#: src/widgets/window.rs:696
 msgid "translator-credits"
 msgstr ""
 "Sabri Ünal <yakushabb@gmail.com>\n"
 "Emin Tufan Çetin <etcetin@gmail.com>"
 
-#: src/widgets/window.rs:695
+#: src/widgets/window.rs:698
 msgid "Donate"
 msgstr "Bağış Yap"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:703
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:702
+#: src/widgets/window.rs:705
 msgid "Practice your typing skills"
 msgstr "Yazma becerinizi geliştirin"
