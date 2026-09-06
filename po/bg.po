@@ -1,34 +1,35 @@
-# Bulgarian translation for Fretboard.
-# Copyright (C) 2025 twlvnn kraftwerk <kraft_werk@tutanota.com>
+# Bulgarian translation of Fretboard po-file.
+# Copyright (C) 2025, 2026 twlvnn kraftwerk <kraft_werk@tutanota.com>
 # This file is distributed under the same license as the Fretboard package.
-# twlvnn kraftwerk <kraft_werk@tutanota.com>, 2025.
+# twlvnn kraftwerk <kraft_werk@tutanota.com>, 2025, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-05-03 15:26+0000\n"
-"PO-Revision-Date: 2025-04-13 21:13+0200\n"
+"POT-Creation-Date: 2026-07-19 20:24+0000\n"
+"PO-Revision-Date: 2026-09-06 12:51+0200\n"
 "Last-Translator: \n"
-"Language-Team: Bulgarian <Bulgarian>\n"
+"Language-Team: Bulgarian <dict-notifications@fsa-bg.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-Generator: Poedit 3.9\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fretboard"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "Търсене на акорди за китара"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
 msgstr "китара;акорди;guitar;chords"
 
@@ -77,43 +78,58 @@ msgstr "Страницата за отметки"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgid "Can be either “right-handed” or “left-handed”."
 msgstr ""
 "Може да бъде „right-handed“ (за десничари) или „left-handed“ (за левичари)."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Общи"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "Отваряне на менюто"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "Изчистване на акорда"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Добавяне в отметките"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Показване на отметките"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Преглед на вариантите на акорда"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "Фокусиране на полето за въвеждане"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Показване на клавишните комбинации"
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Добавяне в отметките"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Показване на отметките"
+
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Клавишни комбинации"
+
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Затваряне на прозорецa"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Спиране на програмата"
 
@@ -125,17 +141,20 @@ msgstr "Преместване нагоре"
 msgid "Move Down"
 msgstr "Преместване надолу"
 
-#: src/widgets/chord_diagram_top_toggle.rs:168
+#: src/widgets/chord_diagram_top_toggle.rs:169
+#, rust-format
 msgid "Not Open ({})"
 msgstr "Не отворена ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
-#: src/widgets/chord_diagram_top_toggle.rs:171
+#: src/widgets/chord_diagram_top_toggle.rs:172
+#, rust-format
 msgid "Muted ({})"
 msgstr "Заглушена ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
-#: src/widgets/chord_diagram_top_toggle.rs:175
+#: src/widgets/chord_diagram_top_toggle.rs:176
+#, rust-format
 msgid "Open ({})"
 msgstr "Отворена ({})"
 
@@ -168,7 +187,7 @@ msgstr "Преглед на _вариантите"
 msgid "No Variants"
 msgstr "Няма варианти"
 
-#: src/widgets/window.blp:178 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:375
 msgid "Bookmarks"
 msgstr "Отметки"
 
@@ -197,16 +216,17 @@ msgstr "_Клавишни комбинации"
 msgid "_About Fretboard"
 msgstr "_Относно „Fretboard“"
 
-#: src/widgets/window.rs:297
+#: src/widgets/window.rs:298
 msgid "Remove Bookmark"
 msgstr "Премахване на отметката"
 
-#: src/widgets/window.rs:299
+#: src/widgets/window.rs:300
 msgid "Bookmark"
 msgstr "Добавяне в отметките"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/widgets/window.rs:310
+#: src/widgets/window.rs:311
+#, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -214,12 +234,12 @@ msgstr ""
 "Няма акорди с това име във вградения набор от акорди на Fretboard. Ако "
 "смятате, че трябва да имa, {}свържете се с нас{}."
 
-#: src/widgets/window.rs:372
+#: src/widgets/window.rs:373
 msgid "No Bookmarks"
 msgstr "Няма отметки"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:693
+#: src/widgets/window.rs:696
 msgid "translator-credits"
 msgstr ""
 "twlvnn kraftwerk &lt;<a "
@@ -232,12 +252,16 @@ msgstr ""
 "Докладвайте за грешки в превода в <a href='https://fsa-bg.org/project/gtp/"
 "newticket'>съответния раздел</a>."
 
-#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
 #: src/widgets/window.rs:698
+msgid "Donate"
+msgstr "Дарете"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:703
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:705
 msgid "Practice your typing skills"
 msgstr "Упражнявайте уменията си за писане на клавиатура"
