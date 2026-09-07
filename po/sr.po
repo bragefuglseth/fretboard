@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fretboard main\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-13 23:39+0000\n"
+"POT-Creation-Date: 2026-07-19 20:24+0000\n"
 "PO-Revision-Date: 2026-03-21 10:40+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <Serbian>\n"
@@ -21,6 +21,7 @@ msgstr ""
 
 #: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Гриф"
 
@@ -41,14 +42,23 @@ msgid ""
 "to play it, or bookmark it to save it for later. No matter if you are a "
 "beginner or an advanced guitarist, you can use Fretboard to practice, learn, "
 "and master your favorite songs!"
-msgstr "Како се оно беше свира тај акорд? Гриф вам омогућава да пронађете акорде за гитару куцањем њихових назива или њиховим исцртавањем на интерактивном врату гитаре. Када препознате акорд, можете експериментисати са његовим мењањем, видети више начина за његово свирање или га забележити како бисте га сачували за касније. Без обзира да ли сте почетник или напредни гитариста, можете користити Гриф да вежбате, учите и савладате своје омиљене песме!"
+msgstr ""
+"Како се оно беше свира тај акорд? Гриф вам омогућава да пронађете акорде за "
+"гитару куцањем њихових назива или њиховим исцртавањем на интерактивном врату "
+"гитаре. Када препознате акорд, можете експериментисати са његовим мењањем, "
+"видети више начина за његово свирање или га забележити како бисте га "
+"сачували за касније. Без обзира да ли сте почетник или напредни гитариста, "
+"можете користити Гриф да вежбате, учите и савладате своје омиљене песме!"
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:21
 msgid ""
 "Fretboard is proudly part of GNOME Circle, an initiative that champions the "
 "great software that is available for the GNOME platform. For more "
 "information, visit the GNOME Circle website."
-msgstr "Гриф је са поносом део Гномовог круга, иницијативе која подржава одличан софтвер доступан за Гномову платформу. За више информација, посетите веб страницу Гномовог круга."
+msgstr ""
+"Гриф је са поносом део Гномовог круга, иницијативе која подржава одличан "
+"софтвер доступан за Гномову платформу. За више информација, посетите веб "
+"страницу Гномовог круга."
 
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:27
 msgid "Displaying a chord"
@@ -68,42 +78,57 @@ msgstr "Страница са обележивачима"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgid "Can be either “right-handed” or “left-handed”."
 msgstr "Може бити „right-handed“ или „left-handed“."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Опште"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "Отвори мени"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "Празан акорд"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Забележи акорд"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Прегледај обележиваче"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Прегледај варијанте акорда"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "Фокус на унос"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Прегледај пречице"
+#: data/resources/shortcuts-dialog.ui:38
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Забележи акорд"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Прикажи обележиваче"
+
+#: data/resources/shortcuts-dialog.ui:54
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Пречице тастатуре"
+
+#: data/resources/shortcuts-dialog.ui:60
+msgctxt "shortcut dialog"
 msgid "Close Window"
-msgstr "Затвора прозор"
+msgstr "Затвори прозор"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Изађи"
 
@@ -115,19 +140,19 @@ msgstr "Помери горе"
 msgid "Move Down"
 msgstr "Помери доле"
 
-#: src/widgets/chord_diagram_top_toggle.rs:168
+#: src/widgets/chord_diagram_top_toggle.rs:169
 #, rust-format
 msgid "Not Open ({})"
 msgstr "Није отворена ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
-#: src/widgets/chord_diagram_top_toggle.rs:171
+#: src/widgets/chord_diagram_top_toggle.rs:172
 #, rust-format
 msgid "Muted ({})"
 msgstr "Утишана ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
-#: src/widgets/chord_diagram_top_toggle.rs:175
+#: src/widgets/chord_diagram_top_toggle.rs:176
 #, rust-format
 msgid "Open ({})"
 msgstr "Отворена ({})"
@@ -161,7 +186,7 @@ msgstr "Прегледај _варијанте"
 msgid "No Variants"
 msgstr "Нема варијанти"
 
-#: src/widgets/window.blp:178 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:375
 msgid "Bookmarks"
 msgstr "Обележивачи"
 
@@ -190,39 +215,45 @@ msgstr "Пречице _тастатуре"
 msgid "_About Fretboard"
 msgstr "_О Грифу"
 
-#: src/widgets/window.rs:297
+#: src/widgets/window.rs:298
 msgid "Remove Bookmark"
 msgstr "Уклони обележивач"
 
-#: src/widgets/window.rs:299
+#: src/widgets/window.rs:300
 msgid "Bookmark"
 msgstr "Забележи"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/widgets/window.rs:310
+#: src/widgets/window.rs:311
 #, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
-msgstr "Нема акорда са овим називом у Грифовом уграђеном скупу акорда. Ако мислите да би требало да их буде, {}обратите нам се{}."
+msgstr ""
+"Нема акорда са овим називом у Грифовом уграђеном скупу акорда. Ако мислите "
+"да би требало да их буде, {}обратите нам се{}."
 
-#: src/widgets/window.rs:372
+#: src/widgets/window.rs:373
 msgid "No Bookmarks"
 msgstr "Без обележивач"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:693
+#: src/widgets/window.rs:696
 msgid "translator-credits"
 msgstr ""
 "Марко Костић <marko.m.kostic@gmail.com>\n"
 "Превод на српски језик https://гном.срб"
 
-#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
 #: src/widgets/window.rs:698
+msgid "Donate"
+msgstr "Донирај"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:703
 msgid "Keypunch"
 msgstr "Дактилограф"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:705
 msgid "Practice your typing skills"
 msgstr "Вежбајте своју вештину куцања"
