@@ -1,35 +1,36 @@
 # Hungarian translation for fretboard.
-# Copyright (C) 2025 Free Software Foundation, Inc.
+# Copyright (C) 2025, 2026 Free Software Foundation, Inc.
 # This file is distributed under the same license as the fretboard package.
 #
 # Balázs Meskó <mesko.balazs at fsf dot hu>, 2025.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2025.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: fretboard\n"
 "Report-Msgid-Bugs-To: https://github.com/bragefuglseth/fretboard/issues\n"
-"POT-Creation-Date: 2025-04-08 18:18+0000\n"
-"PO-Revision-Date: 2025-05-14 21:28+0200\n"
+"POT-Creation-Date: 2026-07-19 20:24+0000\n"
+"PO-Revision-Date: 2026-09-09 00:06+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:2
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:7
+#: src/widgets/window.blp:5 src/widgets/window.blp:13
 msgid "Fretboard"
 msgstr "Fogólap"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:4
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:3
 #: data/dev.bragefuglseth.Fretboard.metainfo.xml.in.in:8
 msgid "Look up guitar chords"
 msgstr "Gitárakkordok kikeresése"
 
-#: data/dev.bragefuglseth.Fretboard.desktop.in.in:10
+#: data/dev.bragefuglseth.Fretboard.desktop.in.in:9
 msgid "guitar;chords"
 msgstr "gitár;akkordok"
 
@@ -78,45 +79,70 @@ msgstr "A könyvjelzők oldala"
 
 #. translators: "right-handed" and "left-handed" are enum values, and should not be translated
 #: data/dev.bragefuglseth.Fretboard.gschema.xml:16
-#| msgid "Can be either \"right-handed\"\" or \"left-handed\"."
-msgid "Can be either \"right-handed\" or \"left-handed\"."
+#| msgid "Can be either \"right-handed\" or \"left-handed\"."
+msgid "Can be either “right-handed” or “left-handed”."
 msgstr ""
-"A következő egyike lehet: „right-handed” (jobbkezes) vagy „ĺeft-handed” "
-"(balkezes)."
+"A következő egyike lehet: „right-handed” (jobbkezes) vagy „ĺeft-handed” (balke"
+"zes)."
 
-#: data/resources/gtk/help-overlay.ui:12
+#: data/resources/shortcuts-dialog.ui:6
+#| msgid "General"
+msgctxt "shortcut dialog"
 msgid "General"
 msgstr "Általános"
 
-#: data/resources/gtk/help-overlay.ui:15
+#: data/resources/shortcuts-dialog.ui:9
+#| msgid "Main Menu"
+msgctxt "shortcut dialog"
+msgid "Open Menu"
+msgstr "Menü megnyitása"
+
+#. translators: "Empty" is a verb
+#: data/resources/shortcuts-dialog.ui:16
+#| msgid "Empty Chord"
+msgctxt "shortcut dialog"
 msgid "Empty Chord"
 msgstr "Üres akkord"
 
-#: data/resources/gtk/help-overlay.ui:21
-msgid "Bookmark Chord"
-msgstr "Akkord könyvjelzőzése"
-
-#: data/resources/gtk/help-overlay.ui:27
-msgid "View Bookmarks"
-msgstr "Könyvjelzők megtekintése"
-
-#: data/resources/gtk/help-overlay.ui:33
+#: data/resources/shortcuts-dialog.ui:22
+#| msgid "View Chord Variants"
+msgctxt "shortcut dialog"
 msgid "View Chord Variants"
 msgstr "Akkord variánsainak megtekintése"
 
-#: data/resources/gtk/help-overlay.ui:39
+#: data/resources/shortcuts-dialog.ui:28
+#| msgid "Focus Entry"
+msgctxt "shortcut dialog"
 msgid "Focus Entry"
 msgstr "Bevitel kijelölése"
 
-#: data/resources/gtk/help-overlay.ui:45
-msgid "View Shortcuts"
-msgstr "Gyorsbillentyűk megtekintése"
+#: data/resources/shortcuts-dialog.ui:38
+#| msgid "Bookmark Chord"
+msgctxt "shortcut dialog"
+msgid "Bookmark Chord"
+msgstr "Akkord könyvjelzőzése"
 
-#: data/resources/gtk/help-overlay.ui:51
+#: data/resources/shortcuts-dialog.ui:44
+#| msgid "View Bookmarks"
+msgctxt "shortcut dialog"
+msgid "View Bookmarks"
+msgstr "Könyvjelzők megtekintése"
+
+#: data/resources/shortcuts-dialog.ui:54
+#| msgid "_Keyboard Shortcuts"
+msgctxt "shortcut dialog"
+msgid "Keyboard Shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#: data/resources/shortcuts-dialog.ui:60
+#| msgid "Close Window"
+msgctxt "shortcut dialog"
 msgid "Close Window"
 msgstr "Ablak bezárása"
 
-#: data/resources/gtk/help-overlay.ui:57
+#: data/resources/shortcuts-dialog.ui:66
+#| msgid "Quit"
+msgctxt "shortcut dialog"
 msgid "Quit"
 msgstr "Kilépés"
 
@@ -128,20 +154,20 @@ msgstr "Mozgatás fel"
 msgid "Move Down"
 msgstr "Mozgatás le"
 
-#: src/widgets/chord_diagram_top_toggle.rs:168
-#| msgid "Not Open"
+#: src/widgets/chord_diagram_top_toggle.rs:169
+#, rust-format
 msgid "Not Open ({})"
 msgstr "Nem nyitott ({})"
 
 #. translators: The text between the `{}` markers is the note of the muted string.
-#: src/widgets/chord_diagram_top_toggle.rs:171
-#| msgid "Muted"
+#: src/widgets/chord_diagram_top_toggle.rs:172
+#, rust-format
 msgid "Muted ({})"
 msgstr "Némított ({})"
 
 #. translators: The text between the `{}` markers is the note of the open string. "Open" is an adjective, not a verb.
-#: src/widgets/chord_diagram_top_toggle.rs:175
-#| msgid "Open"
+#: src/widgets/chord_diagram_top_toggle.rs:176
+#, rust-format
 msgid "Open ({})"
 msgstr "Nyitott ({})"
 
@@ -174,7 +200,7 @@ msgstr "_Variánsok megtekintése"
 msgid "No Variants"
 msgstr "Nincsenek variánsok"
 
-#: src/widgets/window.blp:178 src/widgets/window.rs:374
+#: src/widgets/window.blp:178 src/widgets/window.rs:375
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
@@ -203,16 +229,17 @@ msgstr "_Gyorsbillentyűk"
 msgid "_About Fretboard"
 msgstr "A Fogólap _névjegye"
 
-#: src/widgets/window.rs:297
+#: src/widgets/window.rs:298
 msgid "Remove Bookmark"
 msgstr "Könyvjelző eltávolítása"
 
-#: src/widgets/window.rs:299
+#: src/widgets/window.rs:300
 msgid "Bookmark"
 msgstr "Könyvjelzőzés"
 
 #. translators: The text between the `{}` markers becomes a link to the app's issue tracker. Include both of the markers.
-#: src/widgets/window.rs:310
+#: src/widgets/window.rs:311
+#, rust-format
 msgid ""
 "There are no chords with this name in Fretboard’s built-in chord set. If you "
 "think there should be, {}reach out{}."
@@ -220,23 +247,27 @@ msgstr ""
 "A Fogólap beépített akkordkészletében nincsenek ilyen nevű akkordok. Ha úgy "
 "gondolja, hogy szerepelnie kellene itt, {}jelezze{}."
 
-#: src/widgets/window.rs:372
+#: src/widgets/window.rs:373
 msgid "No Bookmarks"
 msgstr "Nincsenek könyvjelzők"
 
 #. Translators: Replace "translator-credits" with your names, one name per line
-#: src/widgets/window.rs:693
+#: src/widgets/window.rs:696
 msgid "translator-credits"
 msgstr ""
 "Meskó Balázs <mesko dot balazs at fsf dot hu>\n"
 "Úr Balázs <ur dot balazs at fsf dot hu>"
 
-#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
 #: src/widgets/window.rs:698
+msgid "Donate"
+msgstr "Adományozás"
+
+#. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
+#: src/widgets/window.rs:703
 msgid "Keypunch"
 msgstr "Keypunch"
 
 #. Translators: Metainfo for the app Keypunch. <https://github.com/bragefuglseth/keypunch>
-#: src/widgets/window.rs:700
+#: src/widgets/window.rs:705
 msgid "Practice your typing skills"
 msgstr "Gyakorolja a gépelési készségeit"
