@@ -10,6 +10,7 @@ use gtk::glib;
 use gtk::prelude::*;
 use once_cell::sync::Lazy;
 use std::cell::{Cell, RefCell};
+use std::rc::Rc;
 
 const STRINGS: usize = 6;
 const NOTE_OFFSETS: [usize; STRINGS] = [7, 0, 5, 10, 2, 7];
@@ -57,6 +58,7 @@ mod imp {
 
         pub top_toggles: RefCell<Vec<FretboardChordDiagramTopToggle>>,
         pub toggles: RefCell<Vec<Vec<gtk::ToggleButton>>>,
+        pub toggle_flags: RefCell<Vec<Vec<Rc<Cell<bool>>>>>,
     }
 
     #[glib::object_subclass]
@@ -147,28 +149,57 @@ mod imp {
             // Setup toggles
             for string_num in 0..STRINGS {
                 let mut current_string_toggles = Vec::with_capacity(FRETS);
+                let mut current_string_flags = Vec::with_capacity(FRETS);
+
+                let top_toggle = self
+                    .top_toggles
+                    .borrow()
+                    .get(string_num)
+                    .unwrap()
+                    .clone();
 
                 for fret_num in 0..FRETS {
                     let toggle = FretboardChordDiagramToggle::new();
-                    toggle.button().connect_clicked(glib::clone!(
+                    let button = toggle.button();
+                    let recently_toggled = Rc::new(Cell::new(false));
+
+                    button.connect_toggled(glib::clone!(
+                        #[strong]
+                        recently_toggled,
+                        move |_| {
+                            recently_toggled.set(true);
+                        }
+                    ));
+
+                    button.connect_clicked(glib::clone!(
                         #[weak]
                         obj,
+                        #[strong]
+                        recently_toggled,
+                        #[strong]
+                        top_toggle,
                         move |_| {
+                            if !recently_toggled.get() {
+                                top_toggle.set_state(TopToggleState::Muted);
+                            }
+                            recently_toggled.set(false);
+
                             obj.update_chord();
                             obj.emit_by_name::<()>("user-changed-chord", &[]);
                         }
                     ));
-                    toggle.button().set_group(Some(
-                        &self.top_toggles.borrow().get(string_num).unwrap().button(),
-                    ));
+
+                    button.set_group(Some(&top_toggle.button()));
 
                     self.grid
                         .attach(&toggle, string_num as i32, fret_num as i32, 1, 1);
 
-                    current_string_toggles.push(toggle.button());
+                    current_string_toggles.push(button);
+                    current_string_flags.push(recently_toggled);
                 }
 
                 self.toggles.borrow_mut().push(current_string_toggles);
+                self.toggle_flags.borrow_mut().push(current_string_flags);
             }
 
             let barre_spin = self.barre_spin.get();
@@ -343,6 +374,11 @@ impl FretboardChordDiagram {
                     offset + num + self.neck_position() as usize,
                 )));
             }
+        }
+
+        // Reset toggle flags to allow the user to clear selected frets
+        for flag in imp.toggle_flags.borrow().iter().flatten() {
+            flag.set(false);
         }
     }
 
