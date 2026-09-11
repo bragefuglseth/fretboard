@@ -97,5 +97,6 @@ impl FretboardApplication {
         self.set_accels_for_action("win.more-variants", &["<Alt>Return"]);
         self.set_accels_for_action("win.bookmark-chord", &["<Ctrl>D"]);
         self.set_accels_for_action("win.bookmarks", &["<Ctrl><Alt>D"]);
+        self.set_accels_for_action("win.show-chord-notes", &["<Ctrl><Alt>C"]);
     }
 }
